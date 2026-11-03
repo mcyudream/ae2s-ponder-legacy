@@ -1,0 +1,37 @@
+{
+  "minecraft": "1.12.2",
+  "cleanroom": "0.4.0",
+  "java": 25,
+  "ponder": {
+    "modid": "ponder-legacy",
+    "version": "1.4.0-cleanroom-alpha.1",
+    "project": "../ponder",
+    "optional": true
+  },
+  "ae2s": {
+    "modid": "ae2",
+    "version": "1.1.0",
+    "release": "https://github.com/FormlessDragon/Applied-Energistics-2-Supergiant/releases/tag/v1.1.0",
+    "identity": "https://www.mcmod.cn/class/28382.html",
+    "dev": {
+      "file": "AppliedEnergistics2-Supergiant-1.1.0-dev.jar",
+      "url": "https://github.com/FormlessDragon/Applied-Energistics-2-Supergiant/releases/download/v1.1.0/AppliedEnergistics2-Supergiant-1.1.0-dev.jar",
+      "sha256": "71e1bc6873840bf94b792ee6bbfc1d0ccdc41d734d2e134d9707955778970524"
+    },
+    "runtime": {
+      "file": "AppliedEnergistics2-Supergiant-1.1.0.jar",
+      "url": "https://github.com/FormlessDragon/Applied-Energistics-2-Supergiant/releases/download/v1.1.0/AppliedEnergistics2-Supergiant-1.1.0.jar",
+      "sha256": "1f15fcda479f6b6a15e0640e0bf0f8a86e88c08c2bbd20e63b4145ea7e5efe26"
+    }
+  },
+  "cleanroom_userdev": "0.7.14-alpha",
+  "cleanroom_runtime": {
+    "installer": "https://maven.cleanroommc.com/com/cleanroommc/cleanroom/0.4.0/cleanroom-0.4.0-installer.jar",
+    "installer_sha256": "882435d851a51e14b802e0a9384e4a05cfbb3890fca435c40c494af75e5a166f",
+    "universal_sha256": "703121f60cd20363752320b9574f927084d0cd69973a0aff24ce3fbea9dbb351"
+  },
+  "crafttweaker": {
+    "version": "4.1.20.698",
+    "sha256": "b2e5e443f18d0d5bcfd1364f9ec89565e6a1e2ad4568b899c590aa5507978b27"
+  }
+}
