@@ -1,0 +1,67 @@
+ae2s_ponder.ponder.tag.basics=ME Network Basics
+ae2s_ponder.ponder.tag.basics.description=Power, storage cells and channels.
+ae2s_ponder.ponder.tag.automation=Storage and Automation
+ae2s_ponder.ponder.tag.automation.description=External inventories and item transfers.
+ae2s_ponder.ponder.tag.crafting=Autocrafting
+ae2s_ponder.ponder.tag.crafting.description=Encode patterns, build a CPU and return products.
+ae2s_ponder.ponder.tag.networks=P2P Networks
+ae2s_ponder.ponder.tag.networks.description=Connect tunnel inputs and outputs using a memory card.
+ae2s_ponder.ponder.first_network.header=Your First ME Network
+ae2s_ponder.ponder.storage_cells.header=Storage Cells and Partitioning
+ae2s_ponder.ponder.channels.header=Channels and Cable Capacity
+ae2s_ponder.ponder.storage_bus.header=Using External Inventories
+ae2s_ponder.ponder.import_export.header=Importing and Exporting Items
+ae2s_ponder.ponder.autocrafting.header=Autocrafting with a Pattern Provider
+ae2s_ponder.ponder.processing.header=Processing Patterns and Product Return
+ae2s_ponder.ponder.p2p.header=Connecting ME P2P Tunnels
+
+ae2s_ponder.ponder.shared.first.power=Connect a Vibration Chamber to the network and add fuel. An Energy Cell stores energy; it does not generate power.
+ae2s_ponder.ponder.shared.first.acceptor=Alternatively, connect an external power source through an Energy Acceptor. A powered small network can work without an ME Controller.
+ae2s_ponder.ponder.shared.first.storage=Connect an ME Drive with Fluix Cable and insert an item storage cell. An empty drive provides no storage.
+ae2s_ponder.ponder.shared.first.terminal=Place an ME Terminal on a cable face. Open it to insert, find and withdraw items stored on the network.
+ae2s_ponder.ponder.shared.first.check=If the terminal is offline, check power, cable connections and available channels. Item movement here is a schematic animation.
+
+ae2s_ponder.ponder.shared.cells.insert=Put a storage cell into the ME Drive. Keep the drive powered and connected to a terminal.
+ae2s_ponder.ponder.shared.cells.capacity=Bytes and type capacity are separate limits. A larger cell is not unlimited; inspect its tooltip. Use a cell that supports the resource you want to store.
+ae2s_ponder.ponder.shared.cells.partition=Take the cell to a Cell Workbench. Add filter entries to partition which resources it may accept; partitioning does not create items or erase existing contents.
+ae2s_ponder.ponder.shared.cells.return=Return the configured cell to the drive. Test inserting an allowed item and a different item to check your filter.
+ae2s_ponder.ponder.shared.cells.safety=Removing a cell keeps its contents on that cell. Keep valuable cells safe and check the remaining network storage before removing one.
+
+ae2s_ponder.ponder.shared.channels.controller=With normal channel settings, a controllerless network supports up to 8 channels. Add an ME Controller when you need more devices.
+ae2s_ponder.ponder.shared.channels.eight=Ordinary glass, covered and smart cables carry up to 8 channels. Smart cable markings show channel use; they do not increase capacity.
+ae2s_ponder.ponder.shared.channels.dense=Dense cable carries up to 32 channels per connection. Branch into ordinary cable near devices; an 8-channel bottleneck still limits that branch.
+ae2s_ponder.ponder.shared.channels.color=Different cable colors do not connect directly. Fluix cable connects to any color. Plan branches to prevent unwanted network connections.
+ae2s_ponder.ponder.shared.channels.fiber=Quartz Fiber shares power between networks without passing channels or stored items. Channel limits in these examples assume normal settings; packs can change them.
+
+ae2s_ponder.ponder.shared.storage.attach=Place a Storage Bus on the cable face touching an inventory. Here it connects a chest to the ME network.
+ae2s_ponder.ponder.shared.storage.access=The terminal can access the chest's contents through the bus. Items stay in the chest until inserted or extracted; the bus does not copy them into a cell.
+ae2s_ponder.ponder.shared.storage.priority=Set a higher storage priority if new matching items should go into this inventory before lower-priority storage.
+ae2s_ponder.ponder.shared.storage.filter=Configure the bus filter and access mode. Check the chest has room and the selected mode allows the operation you want.
+ae2s_ponder.ponder.shared.storage.loop=Avoid exposing the same inventory back into the same network through multiple storage paths. Interfaces and Storage Buses have different roles.
+
+ae2s_ponder.ponder.shared.io.import=An Import Bus pulls items from the inventory it faces into ME storage. The arrow points from the source chest toward the network.
+ae2s_ponder.ponder.shared.io.filter=An Export Bus pushes selected items from ME storage into its target. Open it and add a filter item first.
+ae2s_ponder.ponder.shared.io.export=The export arrow points from the network into the destination chest. The target must accept the item and have free space.
+ae2s_ponder.ponder.shared.io.storage=Imports need available ME storage. Both buses need power and channels. A Storage Bus exposes an inventory instead of continuously moving all its items.
+ae2s_ponder.ponder.shared.io.control=An unregulated Export Bus keeps exporting while space is available. Use redstone control and an appropriate upgrade to control transfers; test with a small batch.
+
+ae2s_ponder.ponder.shared.craft.encode=In a Pattern Encoding Terminal, insert a Blank Pattern and select crafting mode. Encode a real recipe, such as 9 iron ingots into 1 iron block.
+ae2s_ponder.ponder.shared.craft.provider=Put the encoded Crafting Pattern in a Pattern Provider touching a Molecular Assembler. Connect the provider to the powered ME network.
+ae2s_ponder.ponder.shared.craft.cpu=Build a solid cuboid Crafting CPU containing Crafting Storage. A Co-Processing Unit adds parallel operations; it does not replace Crafting Storage.
+ae2s_ponder.ponder.shared.craft.request=Store enough ingredients on the network. Open a Crafting Terminal, select the craftable result, choose an amount and confirm the crafting plan.
+ae2s_ponder.ponder.shared.craft.result=The provider supplies the assembler. The assembler crafts the encoded recipe and returns its result through the provider to the network.
+ae2s_ponder.ponder.shared.craft.interface=AE2S has a dedicated Pattern Provider. An ME Interface is not a substitute for the provider used in this layout. These arrows illustrate the item path.
+
+ae2s_ponder.ponder.shared.processing.encode=Select processing mode in the Pattern Encoding Terminal. For this example, encode exactly 1 iron ore into 1 iron ingot, then store the pattern in the provider.
+ae2s_ponder.ponder.shared.processing.provider=Place the Pattern Provider above the furnace and configure it to output downward into the top input. Processing patterns describe a recipe but do not perform it.
+ae2s_ponder.ponder.shared.processing.machine=A vanilla furnace accepts smelting input from above, fuel from a side and output from below. Add fuel manually for this example; a real machine must process the ingredients.
+ae2s_ponder.ponder.shared.processing.return=The Import Bus below the furnace faces upward and extracts the ingot from its bottom output. Keep this return path connected to the same crafting network.
+ae2s_ponder.ponder.shared.processing.wait=Start the job from a Crafting Terminal. The CPU waits for the declared result to return to ME storage; correct input alone does not complete the job.
+ae2s_ponder.ponder.shared.processing.blocking=If a job stalls, check fuel, machine sides, output extraction, storage space and exact pattern amounts. Blocking mode can help prevent mixing batches when a machine still contains ingredients.
+
+ae2s_ponder.ponder.shared.p2p.input=Place an ME P2P input facing the source controller. The tunnel's outer face receives the channels you want to transport.
+ae2s_ponder.ponder.shared.p2p.carrier=Connect the backs of both tunnels to a separate powered carrier network. Quartz Fiber supplies power here without merging the carrier with the source network.
+ae2s_ponder.ponder.shared.p2p.save=Use a Memory Card: sneak + right-click the input tunnel to save its connection. Aim at the tunnel face, not the cable behind it.
+ae2s_ponder.ponder.shared.p2p.bind=Right-click the output tunnel with that Memory Card. It becomes an output on the same frequency; additional outputs share the input's available channels.
+ae2s_ponder.ponder.shared.p2p.capacity=With normal settings, an ME tunnel transports up to 32 channels. Use dense cable on the outer side for more than 8; P2P does not create extra controller capacity.
+ae2s_ponder.ponder.shared.p2p.check=Each tunnel needs power and a channel on the carrier. Check input/output roles, matching frequency and carrier capacity before adding more devices.

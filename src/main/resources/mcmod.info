@@ -1,0 +1,23 @@
+[
+  {
+    "modid": "ae2s-ponder-legacy",
+    "name": "AE2S Ponder Legacy",
+    "description": "AE2S Ponder Legacy: Minecraft 1.12.2 / Cleanroom 0.4.0 / Java 25. Targets Applied Energistics 2 Supergiant (AE2S), loader ID ae2. Migration status: see PUBLICATION.md.",
+    "version": "${version}",
+    "mcversion": "1.12.2",
+    "authorList": [
+      "yudream"
+    ],
+    "dependencies": [
+      "cleanroom",
+      "ae2"
+    ],
+    "useDependencyInformation": false,
+    "url": "https://github.com/mcyudream/ae2s-ponder-legacy",
+    "requiredMods": [
+      "ae2"
+    ],
+    "credits": "Original author(s): yudream (original addon). Original repository: https://github.com/mcyudream/ae2s-ponder-legacy.",
+    "logoFile": "assets/ae2s_ponder/branding/icon.png"
+  }
+]

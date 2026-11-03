@@ -9,8 +9,10 @@
   "java": 25,
   "ae2_implementation": "Applied Energistics 2 Supergiant (AE2S)",
   "ae2_loader_modid": "ae2",
-  "status": "awaiting-renamed-artifact-verification",
+  "status": "verified-cleanroom-0.4.0",
   "author": "yudream",
   "original_authors": "yudream (original addon)",
-  "original_repository": "https://github.com/mcyudream/ae2s-ponder-legacy"
+  "original_repository": "https://github.com/mcyudream/ae2s-ponder-legacy",
+  "verification_document": "LEGACY-VERIFICATION.md",
+  "verified_jar_sha256": "2ab4282a0ec10c40c5eabd0e89494994e98c0a8fe5807269f6f2a0aa7a27ef6b"
 }

@@ -1,0 +1,15 @@
+{
+  "result": "BLOCKED_UPSTREAM",
+  "cleanroom": "0.4.0-alpha",
+  "java": "25.0.5",
+  "installed_mods": [
+    "AE2S-Ponder-1.12.2-0.1.0.jar",
+    "AppliedEnergistics2-Supergiant-1.1.0.jar",
+    "Ponder-Cleanroom-1.12.2-1.4.0-cleanroom-alpha.1.jar",
+    "ae2s-ponder-verification-srg.jar",
+    "crafttweaker-4.1.20.698.jar"
+  ],
+  "stage": "Loader.identifyMods before addon initialization",
+  "exception": "NoClassDefFoundError: net/minecraft/client/entity/EntityPlayerSP",
+  "empty_official_server_reproduces": true
+}

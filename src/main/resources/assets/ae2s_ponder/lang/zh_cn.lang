@@ -1,0 +1,67 @@
+ae2s_ponder.ponder.tag.basics=ME 网络入门
+ae2s_ponder.ponder.tag.basics.description=供电、存储元件与频道规划。
+ae2s_ponder.ponder.tag.automation=存储与自动化
+ae2s_ponder.ponder.tag.automation.description=接入外部容器，设置物品输入与输出。
+ae2s_ponder.ponder.tag.crafting=自动合成
+ae2s_ponder.ponder.tag.crafting.description=编码样板、搭建合成 CPU、回收加工产物。
+ae2s_ponder.ponder.tag.networks=P2P 网络
+ae2s_ponder.ponder.tag.networks.description=使用内存卡连接隧道输入端与输出端。
+ae2s_ponder.ponder.first_network.header=搭建第一个 ME 网络
+ae2s_ponder.ponder.storage_cells.header=存储元件与分区
+ae2s_ponder.ponder.channels.header=频道与线缆容量
+ae2s_ponder.ponder.storage_bus.header=接入外部容器
+ae2s_ponder.ponder.import_export.header=物品输入与输出
+ae2s_ponder.ponder.autocrafting.header=使用样板供应器自动合成
+ae2s_ponder.ponder.processing.header=处理样板与产物回收
+ae2s_ponder.ponder.p2p.header=连接 ME P2P 隧道
+
+ae2s_ponder.ponder.shared.first.power=将振动仓接入网络并放入燃料。能量元件用于储能，本身不会发电。
+ae2s_ponder.ponder.shared.first.acceptor=也可以通过能量接收器接入外部电源。规模较小的网络只需供电，并不一定需要 ME 控制器。
+ae2s_ponder.ponder.shared.first.storage=用福鲁伊克斯线缆连接 ME 驱动器，再放入物品存储元件。空的驱动器不能存储物品。
+ae2s_ponder.ponder.shared.first.terminal=在线缆表面安装 ME 终端。打开终端，即可存入、搜索并取出网络中存储的物品。
+ae2s_ponder.ponder.shared.first.check=终端离线时，依次检查供电、线缆连接与剩余频道。演示中的物品移动用于说明传输路径。
+
+ae2s_ponder.ponder.shared.cells.insert=将存储元件放入 ME 驱动器，并保持驱动器供电、连接终端。
+ae2s_ponder.ponder.shared.cells.capacity=字节容量与类型容量是两个限制。更大的元件也有上限，请查看提示；还要选择支持目标资源的存储元件。
+ae2s_ponder.ponder.shared.cells.partition=取出元件并放入元件工作台，添加过滤条目来限制可接收的资源。分区不会生成物品，也不会清空原有内容。
+ae2s_ponder.ponder.shared.cells.return=把配置好的元件放回驱动器。分别尝试存入允许的物品和其他物品，确认过滤规则生效。
+ae2s_ponder.ponder.shared.cells.safety=取出的存储元件会保留其中的内容。请妥善保管，并在取出前确认网络还有足够的可用存储空间。
+
+ae2s_ponder.ponder.shared.channels.controller=正常频道设置下，无控制器网络最多支持 8 个频道。需要接入更多设备时，添加 ME 控制器。
+ae2s_ponder.ponder.shared.channels.eight=普通玻璃、包覆与智能线缆最多承载 8 个频道。智能线缆的亮线显示使用量，并不会提高容量。
+ae2s_ponder.ponder.shared.channels.dense=致密线缆每个连接最多承载 32 个频道，在设备附近再分支为普通线缆。分支中的 8 频道瓶颈仍然有效。
+ae2s_ponder.ponder.shared.channels.color=不同颜色的线缆不会直接连接；福鲁伊克斯线缆可以连接所有颜色。规划分支时要避免网络意外相连。
+ae2s_ponder.ponder.shared.channels.fiber=石英纤维只在网络之间传递能量，不传递频道与存储内容。本演示的频道数量以正常设置为准，整合包可以调整这些规则。
+
+ae2s_ponder.ponder.shared.storage.attach=在线缆朝向容器的一面安装存储总线。这里用它把箱子接入 ME 网络。
+ae2s_ponder.ponder.shared.storage.access=终端通过总线访问箱内物品。物品仍保存在箱子中，总线不会把它们自动复制到存储元件。
+ae2s_ponder.ponder.shared.storage.priority=如果希望新存入的匹配物品优先进入这个容器，将它的存储优先级设得高于其他存储设备。
+ae2s_ponder.ponder.shared.storage.filter=配置总线的过滤条目与访问模式，同时确认箱子有空间，所选模式允许需要的存入或取出操作。
+ae2s_ponder.ponder.shared.storage.loop=避免通过多条存储路径，把同一个容器重复暴露给同一个网络。ME 接口和存储总线的作用也不同。
+
+ae2s_ponder.ponder.shared.io.import=输入总线从它朝向的容器提取物品，送入 ME 存储。箭头从来源箱子指向网络。
+ae2s_ponder.ponder.shared.io.filter=输出总线把网络中指定的物品送入目标容器。先打开它，添加需要输出的过滤物品。
+ae2s_ponder.ponder.shared.io.export=输出方向是从网络到目标箱子。目标必须允许接收该物品，而且要有剩余空间。
+ae2s_ponder.ponder.shared.io.storage=输入物品需要网络有可用存储。两个总线都需要能量与频道；存储总线则是开放容器访问，不会持续搬空容器。
+ae2s_ponder.ponder.shared.io.control=未加控制的输出总线会在有空间时持续输出。可配合红石控制及相应升级控制传输，先用少量物品验证。
+
+ae2s_ponder.ponder.shared.craft.encode=在样板编码终端中放入空白样板，选择合成模式。编码一条实际配方，例如 9 个铁锭合成 1 个铁块。
+ae2s_ponder.ponder.shared.craft.provider=把编码后的合成样板放入样板供应器，让它紧贴分子装配室，并将供应器接入有电的 ME 网络。
+ae2s_ponder.ponder.shared.craft.cpu=搭建实心长方体合成 CPU，至少包含一个合成存储器。并行处理单元用于增加并行操作，不能代替合成存储器。
+ae2s_ponder.ponder.shared.craft.request=确保网络中有足够原料。打开合成终端，选中可合成的产物，填写数量并确认合成计划。
+ae2s_ponder.ponder.shared.craft.result=样板供应器向装配室提供原料。装配室按样板合成，再通过供应器把成品送回网络。
+ae2s_ponder.ponder.shared.craft.interface=AE2S 使用独立的样板供应器。此结构中的供应器不能直接用 ME 接口代替。箭头用于说明物品流向。
+
+ae2s_ponder.ponder.shared.processing.encode=在样板编码终端中切换到处理模式。本例精确编码“1 个铁矿石 → 1 个铁锭”，再将样板放入供应器。
+ae2s_ponder.ponder.shared.processing.provider=把样板供应器放在熔炉上方，设置为向下输出，对准顶部原料入口。处理样板只描述配方，本身不会执行加工。
+ae2s_ponder.ponder.shared.processing.machine=原版熔炉从上方收原料、侧面收燃料、下方出成品。本例手动补充燃料，必须由真正的机器执行加工。
+ae2s_ponder.ponder.shared.processing.return=熔炉下方的输入总线朝上，从底部提取铁锭。回收线路必须连回发起任务的同一个 ME 网络。
+ae2s_ponder.ponder.shared.processing.wait=从合成终端发起任务。CPU 会等待样板声明的产物回到 ME 存储，仅投入正确原料还不能完成任务。
+ae2s_ponder.ponder.shared.processing.blocking=任务卡住时，检查燃料、机器各面、产物提取、存储空间与样板数量。机器仍有原料时，阻挡模式可帮助避免批次混料。
+
+ae2s_ponder.ponder.shared.p2p.input=把 ME P2P 输入隧道朝向来源控制器。隧道的外侧接收需要传输的频道。
+ae2s_ponder.ponder.shared.p2p.carrier=把两个隧道背面的线缆接入独立的承载网络，并为其供电。这里用石英纤维传递能量，避免承载网与来源网合并。
+ae2s_ponder.ponder.shared.p2p.save=手持内存卡，潜行并右键输入隧道，保存连接。注意对准隧道表面，而不是背后的线缆。
+ae2s_ponder.ponder.shared.p2p.bind=用同一张内存卡右键输出隧道，将它设为同频率输出端。可以继续绑定更多输出端，它们共享输入端可用的频道。
+ae2s_ponder.ponder.shared.p2p.capacity=正常设置下，ME 隧道最多传输 32 个频道。外侧超过 8 频道时应使用致密线缆；P2P 不会凭空增加控制器容量。
+ae2s_ponder.ponder.shared.p2p.check=每个隧道都需要承载网提供能量与频道。扩建设备前，检查输入输出角色、绑定频率和承载网剩余容量。

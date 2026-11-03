@@ -7,9 +7,7 @@
 
 ## 当前状态
 
-> **公开仓库目前包含项目介绍、上游差异、图像与 CI 框架。Mod 源码尚未提交，等待对应迁移验收完成。CI 此时只报告 scaffold，没有执行 Mod 编译。**
-
-当前为进行中的迁移或改名后验收阶段。构建通过、接口已导入和历史测试结果均不等于完整移植完成。当前源码提交与产物状态见 [PUBLICATION.md](PUBLICATION.md)；未通过验收的项目暂不提供成品发布。
+本版本已完成当前声明范围的正式 Cleanroom 0.4.0 安装包验收。实际运行包的 SHA-256、检查项和限制见 [验收记录](LEGACY-VERIFICATION.md)。这不表示上游所有扩展或任意整合包组合均已验证。
 
 <!-- legacy-authorship:start -->
 ## 作者与来源 / Authors and upstream
@@ -88,3 +86,92 @@ CI 会准备固定版本的源码依赖，构建完整主源码与测试，并�
 以代表物品或概念表现项目；不作为游戏实机截图，也不改变上游游戏资源的授权。生成记录见 `branding/provenance.json`。
 
 <!-- legacy-overview:end -->
+
+## 详细使用与开发说明
+
+为 **Applied Energistics 2 Supergiant（应用能源 2 超巨星，AE2S）** 制作的独立思索附属模组。
+版本 `0.1.0`，客户端兼容目标为 **AE2S 1.1.0 / Cleanroom 0.4.0 / Java 25**。
+AE2S 身份见 [MC 百科](https://www.mcmod.cn/class/28382.html)，运行依赖见 [AE2S 1.1.0 发布页](https://github.com/FormlessDragon/Applied-Energistics-2-Supergiant/releases/tag/v1.1.0)。
+
+## 安装与使用
+
+1. 在 **Cleanroom 0.4.0 / Minecraft 1.12.2 / Java 25** 客户端安装 **AE2S 1.1.0**。
+2. 安装本仓库的 **Ponder Cleanroom 1.4.0-cleanroom-alpha.1** 及其运行依赖 **CraftTweaker 4.1.20.698**。
+3. 将 `build/libs/ae2s-ponder-legacy-0.1.0.jar` 放入 `mods/`。
+4. 悬停相应物品，按住 **W**；或运行 `/ponder ae2:drive`、`/ponder ae2:pattern_provider`、`/ponder ae2:me_p2p_tunnel`。
+   `/ponder index` 打开索引，包含本附属的四个分类。界面语言跟随游戏，支持简体中文和英文。
+
+`-mcp.jar` 和 `-sources.jar` 是开发文件，不要作为第二份模组安装。
+本模组为客户端教程附属，服务端无需安装。Ponder 为可选依赖：不安装时，附属不会注册教程，AE2S 核心玩法正常运行。
+Ponder 自身在远程服务器上的版本和联网要求以 [Ponder 文档](https://github.com/mcyudream/ponder-legacy) 为准。
+请使用本工作区重新构建的 Ponder 安装 jar；本次同时修复了多物品关联的重复场景误报和发布包缺少 Mixin refmap 的问题。
+
+## 八个教程
+
+| 场景 | 演示内容 | 部分入口物品 |
+| --- | --- | --- |
+| 第一个 ME 网络 | 振动仓供电、能量接收器、储能、驱动器与终端 | 振动仓、驱动器、终端 |
+| 存储元件与分区 | 元件装入、容量限制、工作台分区、取出保管 | 存储元件、元件工作台 |
+| 频道与线缆容量 | 无控制器网络、8/32 频道、线缆颜色、石英纤维 | 控制器、各色线缆、石英纤维 |
+| 接入外部容器 | 存储总线方向、箱子访问、优先级与过滤 | 存储总线、ME 接口 |
+| 物品输入与输出 | 输入总线、输出过滤、目标空间和传输控制 | 输入/输出总线、存储水平发信器 |
+| 自动合成 | 编码 9 铁锭 → 1 铁块、样板供应器、装配室与 CPU | 样板供应器、装配室、合成存储器 |
+| 处理样板 | 编码铁矿石 → 铁锭、熔炉各面、燃料和成品回收 | 处理样板、样板供应器、输入总线 |
+| ME P2P 隧道 | 独立承载网、石英纤维供电、内存卡保存与绑定 | ME P2P 隧道、内存卡 |
+
+结构使用真实 AE2S 方块与 multipart 部件。说明、框选与物品移动在 Ponder 虚拟世界中编排，
+不是在虚拟世界里运行完整的 ME 自动合成系统；实际操作步骤与所需供电、存储、频道均在讲解中说明。
+频道数值以正常频道设置为准；整合包修改配置后可能不同。
+
+## 构建与开发
+
+本工程与 `../ponder` 并列存放，通过编译期依赖使用其公共插件 API，不把 Ponder 或 AE2S 打入发布 jar。
+编译工具链使用 Cleanroom `0.7.14-alpha` 的 userdev；官方 `0.4.0` 未提供当前 CleanroomGradle 所需的 userdev 工件。
+最低加载器声明保持 `0.4.0`，基线验证使用官方 0.4.0 安装环境与真实安装 jar。
+
+```bash
+export JAVA_HOME=/path/to/jdk-25
+./gradlew :build
+./gradlew :runClient -PwithPonder
+./gradlew :runClient                  # 不安装 Ponder 的运行环境
+
+# 自动真实客户端验证，完成后退出
+./gradlew :runClient -PwithPonder -Psmoke
+./gradlew :runClient -PwithPonder -Psmoke -PpackagedSmoke
+./gradlew :runClient -Psmoke -PpackagedSmoke
+
+# 结构为本项目原创，可确定性再生成和校验
+python3 tools/generate-structures.py
+python3 tools/generate-structures.py --check
+
+# 官方 CR 0.4.0 环境，无 userdev 重映射（Linux x64）
+./gradlew :build :reobfDevHarnessJar :ponder:reobfJar
+python3 tools/verify-cleanroom.py client --with-ponder
+python3 tools/verify-cleanroom.py client
+python3 tools/verify-cleanroom.py server --with-ponder
+python3 tools/verify-cleanroom.py server
+```
+
+本工作区可使用 `./tools/dev.sh :build`，自动选择 `../../.dev/` 的 Java 25；
+其他位置可设置 `AE2S_PONDER_JAVA_HOME`。
+第一次开发运行会从官方发布下载 AE2S `-dev.jar`，并按 `dependency-lock.json` 校验 SHA-256。
+可通过 `AE2S_CACHE` 指定保存了相同官方文件的缓存目录。所有运行依赖均独立安装，不在本模组中重新分发。
+
+开发客户端和独立服务器分别位于 `run/client/` 和 `run/server/`。
+专用服务器可执行 `./gradlew :runServer -Psmoke` 或加上 `-PwithPonder`；
+完整开服前需由服务器所有者自行阅读并接受 Minecraft EULA。验证程序不会代为接受；
+官方运行验证会复用 `run/server/eula.txt` 中已有的本地测试服确认。
+本附属无需在服务端安装；若装入正式 0.4.0 专服，包含限定于该版本的 Kirino 发现兼容修复。当前两种组合的检查见 PUBLICATION.md。
+
+## 维护入口
+
+- `src/main/java/dev/yudream/ae2sponder/AE2SPonder.java`：无 Ponder 类型引用的客户端条件入口。
+- `compat/Lesson.java`：场景、物品关联与分类；所有场景 ID 使用 `ae2s_ponder` 命名空间。
+- `compat/AE2SScenes.java`：逐步流程、关键帧、输入提示、框选与物品动画。
+- `assets/ae2s_ponder/lang/`：中英文标题与讲解；英文文件同时提供 Ponder 的后备语言。
+- `tools/generate-structures.py`：结构源数据及 AE2S 1.1.0 部件 NBT，生成到 `assets/ae2s_ponder/ponder/`。
+- `src/dev/`：独立验证模组，只在 `-Psmoke` 时安装，不进入发布 jar。
+- [验证记录](docs/VERIFICATION.md)：本次实际执行的检查与范围。
+
+支持 AE2S / Supergiant，不声明兼容原版 AE2 1.12.2、AE2UEL 或现代官方 Ponder。
+当前附属覆盖上述基础流程；AE2S 的高级内存卡专属界面、多输入 P2P、请求器等功能可在此基础上继续补充。

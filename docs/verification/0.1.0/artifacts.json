@@ -1,0 +1,17 @@
+[
+  {
+    "file": "AE2S-Ponder-1.12.2-0.1.0.jar",
+    "sha256": "e197fbf6138106c79e4381b076c6cdba58354c53484f59edfab2a9264e76f16e",
+    "bytes": 31014
+  },
+  {
+    "file": "AE2S-Ponder-1.12.2-0.1.0-sources.jar",
+    "sha256": "c8875a2b52e268f101a4b7d40d568bfafac9b34edcb99c2627f726d07c89b203",
+    "bytes": 20870
+  },
+  {
+    "file": "Ponder-Cleanroom-1.12.2-1.4.0-cleanroom-alpha.1.jar",
+    "sha256": "9eb72197a6b396a1f044b55b34c518b8c82ed99398b22a0a5e3010c965a5354c",
+    "bytes": 1181916
+  }
+]

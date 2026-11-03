@@ -1,0 +1,9 @@
+{
+  "result": "BLOCKED_UPSTREAM",
+  "cleanroom": "0.4.0-alpha",
+  "java": "25.0.5",
+  "installed_mods": [],
+  "stage": "Loader.identifyMods before addon initialization",
+  "exception": "NoClassDefFoundError: net/minecraft/client/entity/EntityPlayerSP",
+  "empty_official_server_reproduces": true
+}

@@ -1,0 +1,161 @@
+plugins {
+    id 'java-library'
+    id 'com.cleanroommc.cleanroomgradle'
+}
+
+group = 'dev.yudream.ae2sponder'
+version = '0.1.0'
+base.archivesName = 'ae2s-ponder-legacy'
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(25)
+    withSourcesJar()
+}
+repositories {
+    mavenCentral()
+    maven {
+        url = 'https://api.modrinth.com/maven'
+        content { includeGroup 'maven.modrinth' }
+    }
+}
+
+def ae2sJar = file('libs/AppliedEnergistics2-Supergiant-1.1.0-dev.jar')
+tasks.register('fetchAE2S', Exec) {
+    commandLine 'python3', 'tools/fetch-ae2s.py'
+    inputs.files 'dependency-lock.json', 'tools/fetch-ae2s.py'
+    outputs.file ae2sJar
+}
+def ae2sRuntimeJar = file('libs/AppliedEnergistics2-Supergiant-1.1.0.jar')
+tasks.register('fetchAE2SRuntime', Exec) {
+    commandLine 'python3', 'tools/fetch-ae2s.py', '--artifact', 'runtime'
+    inputs.files 'dependency-lock.json', 'tools/fetch-ae2s.py'
+    outputs.file ae2sRuntimeJar
+}
+def ae2sDevelopment = files(ae2sJar).builtBy('fetchAE2S')
+def ae2sInstallation = files(ae2sRuntimeJar).builtBy('fetchAE2SRuntime')
+dependencies {
+    implementation cleanroom.userdev(cleanroom_version)
+    compileOnly project(':ponder')
+    runtimeOnly(project.hasProperty('packagedSmoke') ? ae2sInstallation : ae2sDevelopment)
+    if (project.hasProperty('withPonder')) runtimeOnly project(':ponder')
+}
+sourceSets {
+    dev {
+        compileClasspath += sourceSets.main.output + sourceSets.main.compileClasspath + ae2sDevelopment
+        runtimeClasspath += output + compileClasspath
+    }
+}
+tasks.register('devHarnessJar', Jar) {
+    dependsOn 'devClasses'
+    archiveFileName = 'ae2s-ponder-verification.jar'
+    destinationDirectory = layout.buildDirectory.dir('dev')
+    from sourceSets.dev.output
+}
+extensions.getByType(net.minecraftforge.renamer.gradle.RenamerExtension).classes('reobfDevHarnessJar', tasks.named('devHarnessJar')) {
+    map.from tasks.named('reobfJar').get().map
+    libraries.from sourceSets.dev.compileClasspath
+    output = layout.buildDirectory.file('dev/ae2s-ponder-verification-srg.jar')
+}
+
+['Client', 'Server'].each { side ->
+    tasks.register("prepareDev${side}") {
+        dependsOn 'fetchAE2S'
+        if (project.hasProperty('smoke')) dependsOn 'devHarnessJar'
+        doLast {
+            def run = file("run/${side.toLowerCase()}")
+            def harness = new File(run, 'mods/ae2s-ponder-verification.jar')
+            if (side == 'Client') {
+                def splash = new File(run, 'config/splash.properties')
+                if (!splash.exists()) { splash.parentFile.mkdirs(); splash.text = 'enabled=false\n' }
+            }
+            if (side == 'Server' && project.hasProperty('smoke')) {
+                def properties = new File(run, 'server.properties')
+                if (!properties.exists()) {
+                    properties.parentFile.mkdirs()
+                    properties.text = 'server-ip=127.0.0.1\nserver-port=0\nonline-mode=false\nview-distance=2\nlevel-type=FLAT\n'
+                }
+            }
+            if (project.hasProperty('smoke')) {
+                copy { from tasks.devHarnessJar; into harness.parentFile }
+                delete new File(run, 'ae2s-ponder-smoke')
+            } else delete harness
+        }
+    }
+}
+cleanroom {
+    runs {
+        client {
+            configure {
+                username = 'AE2SPonderDev'
+                maxHeapSize = '3G'
+                args '--width', '1280', '--height', '720'
+            }
+        }
+        server {
+            configure {
+                maxHeapSize = '2G'
+                if (project.hasProperty('smoke')) offline = true
+            }
+        }
+        configureEach {
+            configure {
+                jvmArgs '-Dfoundation.loadsall=true'
+                def coremods = ['ae2.core.mixins.AE2Core']
+                if (project.hasProperty('withPonder')) coremods.add('net.createmod.ponder.mixin.PonderMixinLoader')
+                jvmArgs "-Dfml.coreMods.load=${coremods.join(',')}"
+                if (project.hasProperty('smoke')) {
+                    jvmArgs '-Dae2sponder.smoke=true', "-Dae2sponder.expectedCleanroom=${cleanroom_version}"
+                    if (project.hasProperty('packagedSmoke')) jvmArgs '-Dae2sponder.packaged=true'
+                }
+            }
+        }
+    }
+}
+['Client', 'Server'].each { side ->
+    tasks.named("run${side}") {
+        dependsOn "prepareDev${side}"
+        if (project.hasProperty('packagedSmoke')) {
+            dependsOn 'reobfJar'
+            if (project.hasProperty('withPonder')) dependsOn ':ponder:reobfJar'
+            doFirst {
+                classpath = classpath.minus(sourceSets.main.output).plus(files(tasks.reobfJar.output))
+                if (project.hasProperty('withPonder')) {
+                    def ponderProject = project(':ponder')
+                    classpath = classpath.minus(files(ponderProject.tasks.jar.archiveFile))
+                        .plus(files(ponderProject.tasks.reobfJar.output))
+                }
+            }
+        }
+        if (project.hasProperty('smoke')) {
+            doLast {
+                def report = file("run/${side.toLowerCase()}/ae2s-ponder-smoke/report.json")
+                if (!report.exists() || new groovy.json.JsonSlurper().parse(report).result != 'PASS')
+                    throw new GradleException("AE2S Ponder verification failed: ${report}")
+                def variant = "${side.toLowerCase()}-${project.hasProperty('withPonder') ? 'with' : 'without'}-ponder"
+                def destination = layout.buildDirectory.dir("reports/verification-userdev/${cleanroom_version}/${variant}")
+                delete destination
+                copy {
+                    from report.parentFile
+                    into destination
+                }
+            }
+        }
+    }
+}
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+tasks.withType(net.minecraftforge.renamer.gradle.RenameJar).configureEach {
+    javaLauncher.set(javaToolchains.launcherFor { spec -> spec.languageVersion.set(JavaLanguageVersion.of(25)) })
+}
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('mcmod.info') { expand version: project.version }
+}
+tasks.register('verifyAssets', Exec) {
+    commandLine 'python3', 'tools/verify-assets.py'
+}
+tasks.named('check') { dependsOn 'verifyAssets' }
+jar {
+    manifest { attributes 'Implementation-Version': project.version,
+        'FMLCorePlugin': 'dev.yudream.ae2sponder.compat.cleanroom.Cleanroom040ServerPlugin',
+        'FMLCorePluginContainsFMLMod': 'true' }
+    from 'LICENSE', 'NOTICE.md', 'dependency-lock.json'
+}
