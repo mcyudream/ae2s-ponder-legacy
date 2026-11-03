@@ -111,8 +111,9 @@ def prepare(side):
     main = metadata["downloads"][side]
     vanilla = GRADLE / f"caches/cleanroom_gradle/versions/1.12.2/{side}.jar"
     classpath.append(download(main["url"], CACHE / f"minecraft-{side}-1.12.2.jar", main["sha1"], candidates=[vanilla]))
-    natives = CACHE / "natives"
-    natives.mkdir(exist_ok=True)
+    # Never let concurrent verifiers overwrite ELF files mapped by this JVM.
+    natives = PROJECT / "build/verification-natives" / str(os.getpid())
+    natives.mkdir(parents=True, exist_ok=True)
     for jar in classpath:
         if "natives-linux" in jar.name:
             with ZipFile(jar) as archive:
@@ -157,7 +158,8 @@ def main():
             raise RuntimeError("Build with Ponder once to cache CraftTweaker 4.1.20.698")
         if digest(craft[0], "sha256") != lock["crafttweaker"]["sha256"]:
             raise ValueError("CraftTweaker differs from the pinned artifact")
-        jars += [PROJECT.parent / "ponder/build/libs/ponder-legacy-1.4.0-cleanroom-alpha.1.jar", craft[0]]
+        ponder = Path(os.environ.get("LEGACY_PONDER_JAR", PROJECT.parent / "ponder/build/libs/ponder-legacy-1.4.0-cleanroom-alpha.1.jar"))
+        jars += [ponder, craft[0]]
     for jar in jars:
         if not jar.is_file():
             raise FileNotFoundError(f"Build the addon, Ponder and SRG harness first: {jar}")

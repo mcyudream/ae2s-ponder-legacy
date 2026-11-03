@@ -67,7 +67,7 @@ Mod 的 alpha 版本号与加载器版本无关。开发 SDK 可以较新，兼�
 
 ## 构建与 CI
 
-源码提交后，使用 Java 25，在项目目录执行：
+在完整源码项目目录使用 Java 25 执行：
 
 ```bash
 python3 tools/bootstrap_legacy.py
@@ -77,6 +77,10 @@ python3 tools/verify_legacy_package.py
 
 CI 会准备固定版本的源码依赖，构建完整主源码与测试，并检查发行 jar 的身份、作者和图标。
 仅有文档的仓库会明确报告 scaffold，不把跳过编译标为 Mod 构建成功。CI 构建不能替代客户端玩法和专服验收。
+
+## 发布平台
+
+CurseForge / Modrinth 的项目资料、文件、依赖和 CI 凭据配置见 [发布说明](docs/PUBLISHING.md)。平台尚未发布的状态见 PUBLICATION.md。
 
 ## 授权与图像
 
@@ -125,7 +129,7 @@ Ponder 自身在远程服务器上的版本和联网要求以 [Ponder 文档](ht
 
 ## 构建与开发
 
-本工程与 `../ponder` 并列存放，通过编译期依赖使用其公共插件 API，不把 Ponder 或 AE2S 打入发布 jar。
+本工程使用同级 `../ponder` 或 bootstrap 获取的 `.legacy-deps/ponder`，通过编译期依赖使用其公共插件 API，不把 Ponder 或 AE2S 打入发布 jar。
 编译工具链使用 Cleanroom `0.7.14-alpha` 的 userdev；官方 `0.4.0` 未提供当前 CleanroomGradle 所需的 userdev 工件。
 最低加载器声明保持 `0.4.0`，基线验证使用官方 0.4.0 安装环境与真实安装 jar。
 
