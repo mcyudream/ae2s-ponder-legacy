@@ -1,0 +1,16 @@
+{
+  "directory": "ae2s-ponder",
+  "modid": "ae2s-ponder-legacy",
+  "name": "AE2S Ponder Legacy",
+  "resource_namespace": "ae2s_ponder",
+  "repository": "mcyudream/ae2s-ponder-legacy",
+  "minecraft": "1.12.2",
+  "cleanroom_baseline": "0.4.0",
+  "java": 25,
+  "ae2_implementation": "Applied Energistics 2 Supergiant (AE2S)",
+  "ae2_loader_modid": "ae2",
+  "status": "awaiting-renamed-artifact-verification",
+  "author": "yudream",
+  "original_authors": "yudream (original addon)",
+  "original_repository": "https://github.com/mcyudream/ae2s-ponder-legacy"
+}
