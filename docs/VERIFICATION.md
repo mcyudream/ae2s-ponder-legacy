@@ -1,4 +1,6 @@
-# AE2S Ponder 0.1.0 验证记录
+# AE2S Ponder 0.1.0 早期 0.4.0-alpha 验证档案
+
+此档案对应旧 loader ID、旧安装包和 **0.4.0-alpha**；当前正式 **0.4.0** 发行验收见 [LEGACY-VERIFICATION.md](../LEGACY-VERIFICATION.md)。本页保留历史结果，不用于声明正式版兼容。
 
 日期：2026-11-03。客户端基线为 [Cleanroom 官方 0.4.0-alpha](https://github.com/CleanroomMC/Cleanroom/releases/tag/0.4.0-alpha)。
 
@@ -6,11 +8,11 @@
 
 | 环境 | 结果 | 证据 |
 | --- | --- | --- |
-| 官方 CR 0.4.0 客户端，AE2S + 本附属 + Ponder + CraftTweaker | **PASS，551 项检查** | [报告](verification/0.1.0/client-with-ponder/report.json)、[启动日志](verification/0.1.0/client-with-ponder/startup.log) |
-| 官方 CR 0.4.0 客户端，AE2S + 本附属，未安装 Ponder | **PASS，5 项检查** | [报告](verification/0.1.0/client-without-ponder/report.json)、[启动日志](verification/0.1.0/client-without-ponder/startup.log) |
-| 官方 CR 0.4.0 专用服务器，安装 Ponder | **上游阻塞，未通过** | [结果](verification/0.1.0/server-with-ponder/result.json)、[日志](verification/0.1.0/server-with-ponder/startup.log) |
-| 官方 CR 0.4.0 专用服务器，未安装 Ponder | **上游阻塞，未通过** | [结果](verification/0.1.0/server-without-ponder/result.json)、[日志](verification/0.1.0/server-without-ponder/startup.log) |
-| 官方 CR 0.4.0 空服，无任何外部模组 | **复现相同上游异常** | [结果](verification/0.1.0/empty-server/result.json)、[日志](verification/0.1.0/empty-server/startup.log) |
+| 官方 CR 0.4.0-alpha 客户端，AE2S + 本附属 + Ponder + CraftTweaker | **PASS，551 项检查** | [报告](verification/0.1.0/client-with-ponder/report.json)、[启动日志](verification/0.1.0/client-with-ponder/startup.txt) |
+| 官方 CR 0.4.0-alpha 客户端，AE2S + 本附属，未安装 Ponder | **PASS，5 项检查** | [报告](verification/0.1.0/client-without-ponder/report.json)、[启动日志](verification/0.1.0/client-without-ponder/startup.txt) |
+| 官方 CR 0.4.0-alpha 专用服务器，安装 Ponder | **上游阻塞，未通过** | [结果](verification/0.1.0/server-with-ponder/result.json)、[日志](verification/0.1.0/server-with-ponder/startup.txt) |
+| 官方 CR 0.4.0-alpha 专用服务器，未安装 Ponder | **上游阻塞，未通过** | [结果](verification/0.1.0/server-without-ponder/result.json)、[日志](verification/0.1.0/server-without-ponder/startup.txt) |
+| 官方 CR 0.4.0-alpha 空服，无任何外部模组 | **复现相同上游异常** | [结果](verification/0.1.0/empty-server/result.json)、[日志](verification/0.1.0/empty-server/startup.txt) |
 | Ponder 多物品关联诊断回归测试 | **7 项通过，0 失败** | [JUnit 原始报告](verification/0.1.0/ponder-diagnostic-tests.xml) |
 
 **客户端基线验收通过；CR 0.4.0-alpha 专用服务器验收未通过。**
@@ -56,7 +58,7 @@
 ## Ponder 修正
 
 - 相同 storyboard 实例与结构关联不同物品时，原诊断逻辑会报重复场景。现保留这些合法关联；重复关联同一物品、不同脚本或不同结构仍会报错，并增加回归测试。
-- 原安装包声明了 `mixins.ponder.refmap.json`，构建时没有生成它。现通过 Mixin annotation processor 生成并打包四个 Mixin 的 MCP → SRG 映射；官方 CR 0.4.0 环境已实际加载并播放教程。
+- 原安装包声明了 `mixins.ponder.refmap.json`，构建时没有生成它。现通过 Mixin annotation processor 生成并打包四个 Mixin 的 MCP → SRG 映射；官方 CR 0.4.0-alpha 环境已实际加载并播放教程。
 
 使用本附属时请配合本工作区重新构建的 Ponder 安装文件。
 

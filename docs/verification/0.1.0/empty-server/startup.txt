@@ -1,0 +1,83 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldOffset has been called by zone.rong.imaginebreaker.ImagineBreaker (file:/home/yudream/code/mods/.dev/cleanroom-0.4.0-alpha-runtime/libraries/zone/rong/imaginebreaker/2.1/imaginebreaker-2.1.jar)
+WARNING: Please consider reporting this to the maintainers of class zone.rong.imaginebreaker.ImagineBreaker
+WARNING: sun.misc.Unsafe::staticFieldOffset will be removed in a future release
+[14:23:37] [main/INFO] [Foundation]: Loading tweak name net.minecraftforge.fml.common.launcher.FMLServerTweaker
+[14:23:37] [main/INFO] [FML.TWEAK]: Initializing Mixins...
+[14:23:37] [main/INFO] [mixin]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:/home/yudream/code/mods/.dev/cleanroom-0.4.0-alpha-runtime/libraries/com/cleanroommc/sponge-mixin/0.20.12+mixin.0.8.7/sponge-mixin-0.20.12+mixin.0.8.7.jar!/org/spongepowered/asm/mixin/MixinEnvironment.class Service=LaunchWrapper Env=UNKNOWN
+[14:23:37] [main/INFO] [FML.TWEAK]: Initializing MixinExtras...
+[14:23:37] [main/INFO] [Foundation]: Using primary tweak name net.minecraftforge.fml.common.launcher.FMLServerTweaker
+[14:23:37] [main/INFO] [Foundation]: Loading tweak name org.spongepowered.asm.mixin.EnvironmentStateTweaker
+[14:23:37] [main/INFO] [Foundation]: Calling tweak net.minecraftforge.fml.common.launcher.FMLServerTweaker@7fc44dec
+[14:23:37] [main/INFO] [FML.TWEAK]: Jar location: file:/home/yudream/code/mods/.dev/cleanroom-0.4.0-alpha-runtime/libraries/com/cleanroommc/cleanroom/0.4.0-alpha/cleanroom-0.4.0-alpha.jar
+[14:23:37] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2864 for Minecraft 1.12.2 loading
+[14:23:37] [main/INFO] [FML]: Cleanroom version 0.4.0-alpha
+[14:23:37] [main/INFO] [FML]: Java is OpenJDK 64-Bit Server VM, version 25.0.5, running on Linux:amd64:7.0.0-42-generic, installed at /home/yudream/code/mods/.dev/jdk-25.0.5+8
+[14:23:37] [main/INFO] [FML]: Searching /home/yudream/code/mods/1.12.2/ae2s-ponder/run/cleanroom-0.4.0-alpha/empty-server/./mods for mods
+[14:23:37] [main/INFO] [Foundation]: Calling tweak org.spongepowered.asm.mixin.EnvironmentStateTweaker@5400db36
+[14:23:37] [main/INFO] [Foundation]: Loading tweak name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[14:23:37] [main/INFO] [Foundation]: Loading tweak name org.spongepowered.asm.launch.MixinTweaker
+[14:23:37] [main/INFO] [Foundation]: Loading tweak name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[14:23:37] [main/INFO] [Foundation]: Calling tweak net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker@f713686
+[14:23:37] [main/INFO] [Foundation]: Calling tweak net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker@f713686
+[14:23:37] [main/INFO] [Foundation]: Calling tweak FMLCorePlugin
+[14:23:38] [main/INFO] [mixin]: Initialised Mixin FML Remapper Adapter with net.minecraftforge.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper@76889e60
+[14:23:38] [main/INFO] [FML]: FML appears to be missing any signature data. This is expected, don't worry.
+[14:23:38] [main/INFO] [Foundation]: Calling tweak FMLForgePlugin
+[14:23:38] [main/INFO] [Foundation]: Calling tweak org.spongepowered.asm.launch.MixinTweaker@56380231
+[14:23:38] [main/INFO] [Foundation]: Calling tweak MixinBooter
+[14:23:38] [main/INFO] [Foundation]: Calling tweak net.minecraftforge.fml.common.launcher.FMLDeobfTweaker@64f1fd08
+[14:23:38] [main/WARN] [Foundation]: Tweak name org.spongepowered.asm.mixin.EnvironmentStateTweaker has already been visited -- skipping
+[14:23:38] [main/INFO] [Foundation]: Launching wrapped minecraft net.minecraft.server.MinecraftServer
+[14:23:39] [Server thread/INFO] [minecraft/DedicatedServer]: Starting minecraft server version 1.12.2
+[14:23:39] [Server thread/INFO] [FML]: Cleanroom v0.4.0-alpha Initialized
+[14:23:39] [Server thread/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
+[14:23:39] [Server thread/INFO] [FML]: Invalid recipe found with multiple oredict ingredients in the same ingredient...
+[14:23:39] [Server thread/INFO] [FML]: Replaced 1227 ore ingredients
+> > > > > > > > 
+  
+[14:23:39] [Server thread/ERROR] [minecraft/MinecraftServer]: Encountered an unexpected exception
+java.lang.NoClassDefFoundError: net/minecraft/client/entity/EntityPlayerSP
+	at net.minecraftforge.fml.common.Loader.identifyMods(Loader.java:379) ~[Loader.class:?]
+	at net.minecraftforge.fml.common.Loader.loadMods(Loader.java:562) ~[Loader.class:?]
+	at net.minecraftforge.fml.server.FMLServerHandler.beginServerLoading(FMLServerHandler.java:98) ~[FMLServerHandler.class:?]
+	at net.minecraftforge.fml.common.FMLCommonHandler.onServerStart(FMLCommonHandler.java:344) ~[FMLCommonHandler.class:?]
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:127) ~[nz.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:486) [MinecraftServer.class:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) [?:?]
+Caused by: java.lang.ClassNotFoundException: net.minecraft.client.entity.EntityPlayerSP
+	at top.outlands.foundation.boot.ActualClassLoader.findClass(ActualClassLoader.java:264) ~[foundation-0.18.4.jar:?]
+	at top.outlands.foundation.boot.ActualClassLoader.loadClass(ActualClassLoader.java:273) ~[foundation-0.18.4.jar:?]
+	... 7 more
+Caused by: net.minecraftforge.fml.common.asm.ASMTransformerWrapper$TransformerException: Exception in class transformer net.minecraftforge.fml.common.asm.transformers.SideTransformer@6c15e8c7 from coremod FMLCorePlugin
+	at net.minecraftforge.fml.common.asm.ASMTransformerWrapper$TransformerWrapper.transform(ASMTransformerWrapper.java:261) ~[cleanroom-0.4.0-alpha.jar:?]
+	at top.outlands.foundation.TransformerDelegate.lambda$fillTransformerHolder$1(TransformerDelegate.java:149) ~[foundation-0.18.4.jar:?]
+	at top.outlands.foundation.boot.ActualClassLoader.runTransformers(ActualClassLoader.java:340) ~[foundation-0.18.4.jar:?]
+	at net.minecraft.launchwrapper.LaunchClassLoader.runTransformers(LaunchClassLoader.java:55) ~[foundation-0.18.4.jar:?]
+	at top.outlands.foundation.boot.ActualClassLoader.findClass(ActualClassLoader.java:241) ~[foundation-0.18.4.jar:?]
+	... 8 more
+Caused by: java.lang.RuntimeException: Attempted to load class bud/net.minecraft.client.entity.EntityPlayerSP for invalid side SERVER
+	at net.minecraftforge.fml.common.asm.transformers.SideTransformer.transform(SideTransformer.java:61) ~[cleanroom-0.4.0-alpha.jar:?]
+	at net.minecraftforge.fml.common.asm.ASMTransformerWrapper$TransformerWrapper.transform(ASMTransformerWrapper.java:257) ~[cleanroom-0.4.0-alpha.jar:?]
+	... 12 more
+
+> 
+  
+[14:23:39] [Server thread/ERROR] [minecraft/MinecraftServer]: This crash report has been saved to: /home/yudream/code/mods/1.12.2/ae2s-ponder/run/cleanroom-0.4.0-alpha/empty-server/./crash-reports/crash-2026-11-03_14.23.39-server.txt
+
+> 
+  
+[14:23:39] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
+> 
+  
+[14:23:39] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
+> 
+  
+[14:23:39] [Server thread/INFO] [FML]: The state engine was in incorrect state CONSTRUCTING and forced into state SERVER_STOPPED. Errors may have been discarded.
+> 
+  
+[14:23:39] [Server Shutdown Thread/INFO] [minecraft/MinecraftServer]: Stopping server
+> 
+  
+[14:23:39] [Server Shutdown Thread/INFO] [minecraft/MinecraftServer]: Saving worlds
+> 

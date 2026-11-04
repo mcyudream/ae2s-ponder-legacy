@@ -15,5 +15,7 @@
   "original_repository": "https://github.com/mcyudream/ae2s-ponder-legacy",
   "verification_document": "LEGACY-VERIFICATION.md",
   "verified_jar_sha256": "2ab4282a0ec10c40c5eabd0e89494994e98c0a8fe5807269f6f2a0aa7a27ef6b",
-  "verified_main_source_sha256": "a1e749671bd722f5a54dd71e3c61f80f2c1827781072fb16ee2285242a4cc053"
+  "verified_main_source_sha256": "a1e749671bd722f5a54dd71e3c61f80f2c1827781072fb16ee2285242a4cc053",
+  "release_tag": "v0.1.0",
+  "verified_ponder_release_sha256": "9be55d18dff404d74b886521395c47cc6d2c5ec1ff3d22d73fecb1553f9ee4ab"
 }

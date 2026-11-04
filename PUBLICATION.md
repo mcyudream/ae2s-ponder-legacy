@@ -1,9 +1,10 @@
 # AE2S Ponder Legacy 发布状态
 
-- Legacy 作者：**yudream**；原作者、仓库、固定上游和授权见 [README](README.md)。
-- 正式 Minecraft 1.12.2 / Cleanroom 0.4.0 / Java 25 验收：**PASS**，见 [记录](LEGACY-VERIFICATION.md)。
-- GitHub：[源码与 Actions](https://github.com/mcyudream/ae2s-ponder-legacy)；源码提交和 CI 以仓库实际状态为准。
+- 原创附属作者与维护者：**yudream**。源码、结构与讲解按 MIT 发布；依赖来源与授权见 [README](README.md) / [NOTICE](NOTICE.md)。
+- Minecraft 1.12.2 / **Cleanroom 0.4.0 正式版** / Java 25 验收：**PASS**，见 [正式记录](LEGACY-VERIFICATION.md)。
+- GitHub：[源码](https://github.com/mcyudream/ae2s-ponder-legacy)、[构建与发布 CI](https://github.com/mcyudream/ae2s-ponder-legacy/actions/workflows/ci.yml)、[0.1.0 发行页](https://github.com/mcyudream/ae2s-ponder-legacy/releases/tag/v0.1.0)。
+- `v0.1.0` 标签触发 CI 构建，核对实际运行验收哈希后发布安装包、源码包与 `SHA256SUMS`。更新说明见 [0.1.0](docs/releases/0.1.0.md)。
 - CurseForge / Modrinth：尚未创建项目或上传版本。
-- Loader Mod ID：`ae2s-ponder-legacy`；保留资源空间：`ae2s_ponder`。
+- Loader Mod ID：`ae2s-ponder-legacy`；资源与场景空间：`ae2s_ponder`。
 
-安装时替换本项目旧 jar，按 README 安装独立依赖。验收结论只覆盖记录中列出的组合与功能；历史证据保留原始版本及校验值。
+安装时替换本项目旧 jar，并独立安装 README 中的依赖。早期 `0.4.0-alpha` 记录与正式 `0.4.0` 验收分别保留。
