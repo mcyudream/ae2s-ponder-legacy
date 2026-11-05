@@ -7,18 +7,22 @@
 
 为 **Applied Energistics 2 Supergiant（应用能源 2 超巨星，AE2S）** 制作的独立思索附属模组，由 **yudream** 编写。通过八个可回放的中英文教程，演示 ME 网络、存储、频道、总线、自动合成、处理样板和 P2P 的搭建与操作。
 
-**当前版本：0.1.0。运行基线：Minecraft 1.12.2 / Cleanroom 0.4.0 正式版（不带 `-alpha`）/ Java 25。**
+**当前版本：0.1.1。运行基线：Minecraft 1.12.2 / Cleanroom 0.4.0 正式版（不带 `-alpha`）/ Java 25。**
 
 ## 下载与安装
 
 1. 准备 **Minecraft 1.12.2、Cleanroom 0.4.0 正式版、Java 25**。
 2. 安装 [AE2S / Supergiant 1.1.0](https://github.com/FormlessDragon/Applied-Energistics-2-Supergiant/releases/tag/v1.1.0)。请下载普通安装 jar。
-3. 观看教程另需 [Ponder Legacy 1.4.0-cleanroom-alpha.1](https://github.com/mcyudream/ponder-legacy/releases/tag/v1.4.0-cleanroom-alpha.1) 和 **CraftTweaker 4.1.20.698**。
-4. 从 [GitHub Releases](https://github.com/mcyudream/ae2s-ponder-legacy/releases) 下载 `ae2s-ponder-legacy-0.1.0.jar`，放入客户端的 `mods/`，替换本项目旧 jar。
+3. 观看教程另需 [Ponder Legacy 1.4.0](https://github.com/mcyudream/ponder-legacy/releases/tag/v1.4.0) 和 **CraftTweaker 4.1.20.698**。
+4. 从 [GitHub Releases](https://github.com/mcyudream/ae2s-ponder-legacy/releases) 下载 `ae2s-ponder-legacy-0.1.1.jar`，放入客户端的 `mods/`，替换本项目旧 jar。
 
 `-sources.jar` 供开发使用；`-mcp.jar` 和验证模组不作为安装文件发布。Ponder 与 AE2S 独立安装，均未打入本附属。
 
-本附属只需装在客户端。**Ponder 为可选依赖**：未安装时正常启动并进入世界，教程入口停用。Ponder 版本中的 `alpha` 是该模组的版本标记；本附属的加载器验收基线仍为正式 **Cleanroom 0.4.0**，与 `0.4.0-alpha` 分别记录。
+本附属只需装在客户端。**Ponder 为可选依赖**：未安装时正常启动并进入世界，教程入口停用。本版已实测 **Ponder Legacy 1.4.0 正式版**。加载器验收基线为正式 **Cleanroom 0.4.0**，与 `0.4.0-alpha` 分别记录。
+
+## 从 0.1.0 升级
+
+`0.1.0` 的 Ponder 最低版本写成 `1.4.0-cleanroom-alpha.1`，加载器将这个自定义后缀排在正式 `1.4.0` 之后，导致正确安装的 1.4.0 被拒绝。`0.1.1` 改为 `after:ponder-legacy@[1.4.0,)`，保持 Ponder 可选；移除旧附属 jar 并安装 0.1.1，保留 Ponder 1.4.0 即可。
 
 ## 如何观看
 
@@ -61,6 +65,8 @@
 - 验收范围及图形环境见记录；没有覆盖任意整合包、硬件或音频输出。
 - [早期 0.4.0-alpha 验证档案](docs/VERIFICATION.md) 保留当时的安装包与失败记录，不能替代正式版验收。
 
+本次对其他已发布 1.12.2 模组的依赖范围检查见 [巡检记录](docs/DEPENDENCY-AUDIT-2026-11-05.md)。
+
 ## 构建与 CI 发布
 
 使用 Java 25，在克隆的独立仓库中执行：
@@ -76,7 +82,7 @@ python3 tools/prepare_release.py
 
 编译 SDK 使用 Cleanroom `0.7.14-alpha` userdev；实际最低加载器声明与生产验收基线为 **0.4.0 正式版**。SDK 上的运行结果不替代基线验收。
 
-GitHub Actions 在 push / PR 时构建、检查八个结构及语言资源、验证发布包身份并生成归档。推送与包内版本一致的 `v0.1.0` 标签后，CI 还会核对正式基线报告及安装包 SHA-256，再创建 GitHub Release，上传安装 jar、源码 jar 和 `SHA256SUMS`。发布页使用 [0.1.0 更新说明](docs/releases/0.1.0.md)。
+GitHub Actions 在 push / PR 时构建、检查八个结构及语言资源、验证发布包身份并生成归档。推送与包内版本一致的 `v0.1.1` 标签后，CI 还会核对正式基线报告及安装包 SHA-256，再创建 GitHub Release，上传安装 jar、源码 jar 和 `SHA256SUMS`。发布页使用 [0.1.1 更新说明](docs/releases/0.1.1.md)。
 
 ### 开发验证
 

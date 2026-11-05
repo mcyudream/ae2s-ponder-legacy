@@ -11,7 +11,8 @@ parser.add_argument('--require-verified-hash', action='store_true',
                     help='Require this installation jar and all baseline reports to match runtime acceptance')
 args = parser.parse_args()
 identity = json.loads((p/'legacy-identity.json').read_text())
-jars = [f for f in (p/'build/libs').glob(identity['modid']+'-*.jar') if not f.stem.endswith(('-sources','-api','-mcp','-javadoc'))]
+version = identity['release_tag'].removeprefix('v')
+jars = list((p/'build/libs').glob(identity['modid']+'-'+version+'.jar'))
 if len(jars) != 1:
     raise SystemExit('Expected exactly one production jar: '+repr(jars))
 with ZipFile(jars[0]) as archive:
@@ -32,23 +33,22 @@ if args.require_verified_hash:
     if sha256 != identity['verified_jar_sha256']:
         raise SystemExit('Runtime acceptance required for new jar SHA-256: ' + sha256
                          + '\nAccepted: ' + identity['verified_jar_sha256'])
-    evidence = p / 'docs/verification/legacy-identity/cleanroom-0.4.0-final'
+    evidence = p / identity['verification_directory']
+    lock = json.loads((p/'dependency-lock.json').read_text())
     for variant in ('client-with-ponder', 'client-without-ponder',
                     'server-with-ponder', 'server-without-ponder'):
         report = json.loads((evidence / variant / 'report.json').read_text())
         runtime = json.loads((evidence / variant / 'runtime.json').read_text())
         if (report.get('result') != 'PASS' or report.get('cleanroom') != '0.4.0'
                 or runtime.get('cleanroom') != '0.4.0'
-                or runtime['jars'].get(jars[0].name) != sha256):
-            raise SystemExit('Formal Cleanroom 0.4.0 acceptance mismatch: ' + variant)
-    for variant in ('client-with-ponder', 'server-with-ponder'):
-        evidence = p / 'docs/verification/release-0.1.0' / variant
-        report = json.loads((evidence / 'report.json').read_text())
-        runtime = json.loads((evidence / 'runtime.json').read_text())
-        if (report.get('result') != 'PASS' or report.get('cleanroom') != '0.4.0'
-                or runtime.get('cleanroom') != '0.4.0'
                 or runtime['jars'].get(jars[0].name) != sha256
-                or runtime['jars'].get('ponder-legacy-1.4.0-cleanroom-alpha.1.jar')
-                != identity['verified_ponder_release_sha256']):
+                or report.get('ponder') != ('-with-ponder' in variant)
+                or (variant.startswith('client-') and report.get('addonVersion') != version)):
+            raise SystemExit('Formal Cleanroom 0.4.0 acceptance mismatch: ' + variant)
+        if '-with-ponder' not in variant:
+            continue
+        if (runtime['jars'].get(lock['ponder']['runtime']['file'])
+                != identity['verified_ponder_release_sha256']
+                or report.get('ponderVersion') != lock['ponder']['version']):
             raise SystemExit('Published Ponder release acceptance mismatch: ' + variant)
 print('PASS:', jars[0].name, metadata['modid'], 'SHA-256:', sha256)

@@ -13,7 +13,7 @@ import urllib.request
 from zipfile import ZipFile
 
 PROJECT = Path(__file__).resolve().parent.parent
-WORKSPACE = PROJECT.parent.parent
+WORKSPACE = Path(os.environ.get("AE2S_PONDER_WORKSPACE", str(PROJECT.parent.parent)))
 VERSION = "0.4.0"
 CACHE = WORKSPACE / ".dev" / f"cleanroom-{VERSION}-runtime"
 GRADLE = Path(os.environ.get("GRADLE_USER_HOME", Path.home() / ".gradle"))
@@ -146,7 +146,9 @@ def main():
     if mods.exists():
         shutil.rmtree(mods)
     mods.mkdir(parents=True)
-    jars = [PROJECT / "build/libs/ae2s-ponder-legacy-0.1.0.jar",
+    identity = json.loads((PROJECT / "legacy-identity.json").read_text())
+    addon_version = identity["release_tag"].removeprefix("v")
+    jars = [PROJECT / "build/libs" / f"{identity['modid']}-{addon_version}.jar",
             PROJECT / "libs/AppliedEnergistics2-Supergiant-1.1.0.jar",
             PROJECT / "build/dev/ae2s-ponder-verification-srg.jar"]
     lock = json.loads((PROJECT / "dependency-lock.json").read_text())
@@ -158,7 +160,9 @@ def main():
             raise RuntimeError("Build with Ponder once to cache CraftTweaker 4.1.20.698")
         if digest(craft[0], "sha256") != lock["crafttweaker"]["sha256"]:
             raise ValueError("CraftTweaker differs from the pinned artifact")
-        ponder = Path(os.environ.get("LEGACY_PONDER_JAR", PROJECT.parent / "ponder/build/libs/ponder-legacy-1.4.0-cleanroom-alpha.1.jar"))
+        ponder = Path(os.environ.get("LEGACY_PONDER_JAR", PROJECT.parent / "ponder/build/libs" / lock["ponder"]["runtime"]["file"]))
+        if digest(ponder, "sha256") != lock["ponder"]["runtime"]["sha256"]:
+            raise ValueError("Ponder differs from the pinned official installation jar")
         jars += [ponder, craft[0]]
     for jar in jars:
         if not jar.is_file():
@@ -175,7 +179,10 @@ def main():
                str(local_jdk) if (local_jdk / "bin/java").is_file() else os.environ.get("JAVA_HOME", "")))
     command = [str(jdk / "bin/java"), "-Xmx3G", "-Dfile.encoding=UTF-8", "--enable-native-access=ALL-UNNAMED",
                f"-Djava.library.path={natives}", "-Dae2sponder.smoke=true", "-Dae2sponder.packaged=true",
+               f"-Dae2sponder.expectedAddon={addon_version}",
                f"-Dae2sponder.expectedCleanroom={VERSION}", "-cp", os.pathsep.join(map(str, classpath))]
+    if args.with_ponder:
+        command.insert(1, f"-Dae2sponder.expectedPonder={lock['ponder']['version']}")
     if args.side == "client":
         command += ["top.outlands.foundation.boot.Foundation", "--tweakClass", "net.minecraftforge.fml.common.launcher.FMLTweaker",
                     "--username", "AE2SPonderDev", "--uuid", "8b543c6b-0aaf-3b93-bf4a-e15e899058c8", "--accessToken", "0",

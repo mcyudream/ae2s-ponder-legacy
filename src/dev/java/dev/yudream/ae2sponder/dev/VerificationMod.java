@@ -46,6 +46,11 @@ public final class VerificationMod {
             json.addProperty("artifacts", Boolean.getBoolean("ae2sponder.packaged") ? "installation" : "development");
             json.addProperty("ae2s", Loader.instance().getIndexedModList().get("ae2").getVersion());
             json.addProperty("ponder", Loader.isModLoaded("ponder-legacy"));
+            var addon = Loader.instance().getIndexedModList().get("ae2s-ponder-legacy");
+            json.addProperty("addonEnabled", addon != null);
+            if (addon != null) json.addProperty("addonVersion", addon.getVersion());
+            if (Loader.isModLoaded("ponder-legacy"))
+                json.addProperty("ponderVersion", Loader.instance().getIndexedModList().get("ponder-legacy").getVersion());
             json.add("checks", checks);
             if (failure != null) {
                 var trace = new java.io.StringWriter();
@@ -64,6 +69,18 @@ public final class VerificationMod {
         String expected = System.getProperty("ae2sponder.expectedCleanroom");
         if (expected == null || !expected.equals(cleanroomVersion()))
             throw new IllegalStateException("Unexpected Cleanroom: " + cleanroomVersion() + ", expected " + expected);
+        if (FMLCommonHandler.instance().getSide().isClient())
+            verifyModVersion("ae2s-ponder-legacy", "ae2sponder.expectedAddon");
+        verifyModVersion("ponder-legacy", "ae2sponder.expectedPonder");
+    }
+
+    private static void verifyModVersion(String modId, String property) {
+        String expected = System.getProperty(property);
+        if (expected == null) return;
+        var mod = Loader.instance().getIndexedModList().get(modId);
+        if (mod == null || !expected.equals(mod.getVersion()))
+            throw new IllegalStateException("Expected " + modId + " " + expected + ", found "
+                + (mod == null ? "missing" : mod.getVersion()));
     }
 
     public static class CommonVerification { public void init() {} }

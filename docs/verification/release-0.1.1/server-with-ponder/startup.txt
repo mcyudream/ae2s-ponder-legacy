@@ -1,0 +1,141 @@
+Starting official Cleanroom 0.4.0: server-with-ponder; installation jars, no userdev remapping
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldOffset has been called by zone.rong.imaginebreaker.ImagineBreaker (file:/home/yudream/code/mods/.dev/cleanroom-0.4.0-runtime/libraries/zone/rong/imaginebreaker/2.1/imaginebreaker-2.1.jar)
+WARNING: Please consider reporting this to the maintainers of class zone.rong.imaginebreaker.ImagineBreaker
+WARNING: sun.misc.Unsafe::staticFieldOffset will be removed in a future release
+[12:05:51] [main/INFO] [Foundation]: Loading tweak name net.minecraftforge.fml.common.launcher.FMLServerTweaker
+[12:05:51] [main/INFO] [FML.TWEAK]: Initializing Mixins...
+[12:05:51] [main/INFO] [mixin]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:/home/yudream/code/mods/.dev/cleanroom-0.4.0-runtime/libraries/com/cleanroommc/sponge-mixin/0.20.12+mixin.0.8.7/sponge-mixin-0.20.12+mixin.0.8.7.jar!/org/spongepowered/asm/mixin/MixinEnvironment.class Service=LaunchWrapper Env=UNKNOWN
+[12:05:51] [main/INFO] [FML.TWEAK]: Initializing MixinExtras...
+[12:05:52] [main/INFO] [Foundation]: Using primary tweak name net.minecraftforge.fml.common.launcher.FMLServerTweaker
+[12:05:52] [main/INFO] [Foundation]: Loading tweak name org.spongepowered.asm.mixin.EnvironmentStateTweaker
+[12:05:52] [main/INFO] [Foundation]: Calling tweak net.minecraftforge.fml.common.launcher.FMLServerTweaker@1de5f0ef
+[12:05:52] [main/INFO] [FML.TWEAK]: Jar location: file:/home/yudream/code/mods/.dev/cleanroom-0.4.0-runtime/libraries/com/cleanroommc/cleanroom/0.4.0/cleanroom-0.4.0.jar
+[12:05:52] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2864 for Minecraft 1.12.2 loading
+[12:05:52] [main/INFO] [FML]: Cleanroom version 0.4.0
+[12:05:52] [main/INFO] [FML]: Java is OpenJDK 64-Bit Server VM, version 25.0.5, running on Linux:amd64:7.0.0-42-generic, installed at /home/yudream/code/mods/.dev/jdk-25.0.5+8
+[12:05:52] [main/INFO] [FML]: Searching /home/yudream/code/mods/.dev/github-legacy/ae2s-ponder-legacy/run/cleanroom-0.4.0-legacy/server-with-ponder/./mods for mods
+[12:05:52] [main/INFO] [FML]: Found FMLCorePluginContainsFMLMod marker in ae2s-ponder-legacy-0.1.1.jar.
+[12:05:52] [main/INFO] [FML]: Found FMLCorePluginContainsFMLMod marker in AppliedEnergistics2-Supergiant-1.1.0.jar.
+[12:05:52] [main/INFO] [FML]: Found FMLCorePluginContainsFMLMod marker in ponder-legacy-1.4.0.jar.
+[12:05:52] [main/INFO] [Foundation]: Calling tweak org.spongepowered.asm.mixin.EnvironmentStateTweaker@ec2bf82
+[12:05:52] [main/INFO] [Foundation]: Loading tweak name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[12:05:52] [main/INFO] [Foundation]: Loading tweak name org.spongepowered.asm.launch.MixinTweaker
+[12:05:52] [main/INFO] [Foundation]: Loading tweak name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[12:05:52] [main/INFO] [Foundation]: Calling tweak net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker@251f7d26
+[12:05:52] [main/INFO] [Foundation]: Calling tweak net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker@251f7d26
+[12:05:52] [main/INFO] [Foundation]: Calling tweak AE2Core
+[12:05:52] [main/INFO] [Foundation]: Calling tweak FMLCorePlugin
+[12:05:52] [main/INFO] [mixin]: Initialised Mixin FML Remapper Adapter with net.minecraftforge.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper@11a8042c
+[12:05:52] [main/INFO] [FML]: FML appears to be missing any signature data. This is expected, don't worry.
+[12:05:52] [main/INFO] [Foundation]: Calling tweak FMLForgePlugin
+[12:05:52] [main/INFO] [Foundation]: Calling tweak AE2SPonderCleanroom040ServerCompatibility
+[12:05:52] [main/INFO] [Foundation]: Calling tweak PonderMixinLoader
+[12:05:52] [main/INFO] [Foundation]: Calling tweak org.spongepowered.asm.launch.MixinTweaker@71d9cb05
+[33;1m[12:05:52] [main/WARN] [mixin]: The requested compatibility level JAVA_25 is higher than the level supported by the active subsystem 'LaunchWrapper' which supports JAVA_21. This is not a supported configuration and instability may occur.
+[39;0m[12:05:52] [main/INFO] [mixin]: Compatibility level set to JAVA_25
+[12:05:52] [main/INFO] [Foundation]: Calling tweak MixinBooter
+[12:05:52] [main/INFO] [FML]: Loading early loader net.createmod.ponder.mixin.PonderMixinLoader for its mixins.
+[12:05:52] [main/INFO] [FML]: Adding mixins.ponder.json mixin configuration.
+[12:05:52] [main/INFO] [Foundation]: Calling tweak net.minecraftforge.fml.common.launcher.FMLDeobfTweaker@cf518cf
+[12:05:53] [main/INFO] [STDOUT]: [dev.yudream.ae2sponder.compat.cleanroom.Cleanroom040ServerTransformer:transform:35]: [AE2S Ponder compatibility] Isolated client Kirino discovery from the Cleanroom 0.4.0 dedicated server
+[33;1m[12:05:53] [main/WARN] [Foundation]: Tweak name org.spongepowered.asm.mixin.EnvironmentStateTweaker has already been visited -- skipping
+[39;0m[12:05:54] [main/INFO] [Foundation]: Launching wrapped minecraft net.minecraft.server.MinecraftServer
+[12:05:54] [main/INFO] [MixinExtras|Service]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
+[12:05:57] [Server thread/INFO] [minecraft/DedicatedServer]: Starting minecraft server version 1.12.2
+[12:05:57] [Server thread/INFO] [FML]: Cleanroom v0.4.0 Initialized
+[12:05:57] [Server thread/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
+[12:05:57] [Server thread/INFO] [FML]: Invalid recipe found with multiple oredict ingredients in the same ingredient...
+[12:05:57] [Server thread/INFO] [FML]: Replaced 1227 ore ingredients
+> > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > >   [12:05:58] [Server thread/INFO] [FML]: Disabling mod ae2s-ponder-legacy it is client side only.
+> >   [12:05:58] [Server thread/INFO] [FML]: Disabling mod ctgui it is client side only.
+>   [12:05:58] [Server thread/INFO] [FML]: Forge Mod Loader has identified 12 mods to load
+>   [33;1m[12:05:58] [Server thread/WARN] [FML]: Missing English translation for cleanroom: assets/cleanroom/lang/en_us.lang
+[39;0m
+>   [33;1m[12:05:58] [Server thread/WARN] [FML]: Missing English translation for mixinbooter: assets/mixinbooter/lang/en_us.lang
+[39;0m
+>   [33;1m[12:05:58] [Server thread/WARN] [FML]: Missing English translation for configanytime: assets/configanytime/lang/en_us.lang
+[39;0m
+>   [33;1m[12:05:58] [Server thread/WARN] [FML]: Missing English translation for FML: assets/fml/lang/en_us.lang
+[39;0m
+>   [33;1m[12:05:58] [Server thread/WARN] [FML]: Missing English translation for ae2s_ponder_verification: assets/ae2s_ponder_verification/lang/en_us.lang
+[39;0m
+> >   [33;1m[12:05:58] [Server thread/WARN] [FML]: Missing English translation for crafttweakerjei: assets/crafttweakerjei/lang/en_us.lang
+[39;0m
+>   [33;1m[12:05:58] [Server thread/WARN] [FML]: Missing English translation for ponder-legacy: assets/ponder-legacy/lang/en_us.lang
+[39;0m
+>   [12:05:58] [Server thread/INFO] [FML]: FML has found a non-mod file ae2s-ponder-legacy-0.1.1.jar in your mods directory. It will now be injected into your classpath.
+>   [12:05:58] [Server thread/INFO] [FML]: Instantiating all ILateMixinLoader implemented classes...
+>   [12:05:58] [Server thread/INFO] [FML]: Instantiating class net.createmod.ponder.compat.revoui.PonderRevoMixinLoader for its mixins.
+> > > > >   [12:05:58] [Server thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, cleanroom, mixinbooter, configanytime, FML, forge, ae2s_ponder_verification, ae2, crafttweaker, crafttweakerjei, ponder-legacy] at CLIENT
+>   [12:05:58] [Server thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, cleanroom, mixinbooter, configanytime, FML, forge, ae2s_ponder_verification, ae2, crafttweaker, crafttweakerjei, ponder-legacy] at SERVER
+> > > > > > > > > > > > > > > > > > >   [12:05:59] [Server thread/INFO] [FML]: Processing ObjectHolder annotations
+> >   [12:05:59] [Server thread/INFO] [FML]: Found 1168 ObjectHolder annotations
+>   [12:05:59] [Server thread/INFO] [FML]: Identifying ItemStackHolder annotations
+>   [12:05:59] [Server thread/INFO] [FML]: Found 0 ItemStackHolder annotations
+> >   [12:05:59] [Server thread/INFO] [FML]: Configured a dormant chunk cache size of 0
+>   [12:05:59] [Cleanroom Version Check/INFO] [forge.VersionCheck]: [cleanroom] Starting version check at https://download.cleanroommc.com/api/forge
+>   [12:05:59] [Server thread/INFO] [Applied Energistics 2 - Supergiant]: Applied Energistics 2 - Supergiant preInit
+> > > > > > > > > >   [12:05:59] [Server thread/INFO] [AE2:S]: Registered spatial storage dimension -256
+> > > > > > > > > > > > > > > > > > > > > > > > > >   [12:06:01] [Server thread/INFO] [Ponder Legacy]: Starting Ponder Legacy 1.4.0 for Minecraft 1.12.2
+> > > > > > > > >   [12:06:01] [Server thread/INFO] [FML]: Setting Object Holders with value...
+>   [12:06:01] [Server thread/INFO] [FML]: Object Holders set.
+> > > > > > > > > > > >   [12:06:01] [Cleanroom Version Check/INFO] [forge.VersionCheck]: [cleanroom] Found status: BETA_OUTDATED Target: 0.7.14-alpha
+>   [12:06:01] [Cleanroom Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+> > > > > >   [12:06:01] [Server thread/INFO] [FML]: Setting Object Holders with value...
+> >   [12:06:01] [Server thread/INFO] [FML]: Object Holders set.
+> >   [12:06:01] [Server thread/INFO] [FML]: Setting Object Holders with value...
+> >   [12:06:01] [Server thread/INFO] [FML]: Object Holders set.
+>   [12:06:01] [Server thread/INFO] [FML]: Setting Object Holders with value...
+> >   [12:06:01] [Server thread/INFO] [FML]: Object Holders set.
+>   [12:06:01] [Server thread/INFO] [FML]: Injecting itemstacks
+>   [12:06:01] [Server thread/INFO] [FML]: Itemstack injection complete
+> > > >   [12:06:01] [Server thread/INFO] [minecraft/DedicatedServer]: Loading properties
+> >   [12:06:01] [Server thread/INFO] [minecraft/DedicatedServer]: Default game type: SURVIVAL
+>   [12:06:01] [Server thread/INFO] [minecraft/DedicatedServer]: Generating keypair
+> > > > > >   [12:06:01] [Server thread/INFO] [minecraft/DedicatedServer]: Starting Minecraft server on 127.0.0.1:0
+> > > >   [12:06:02] [Server thread/INFO] [minecraft/NetworkSystem]: Using epoll channel type
+>   [33;1m[12:06:02] [Server thread/WARN] [minecraft/DedicatedServer]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[39;0m
+>   [33;1m[12:06:02] [Server thread/WARN] [minecraft/DedicatedServer]: The server will make no attempt to authenticate usernames. Beware.
+[39;0m
+>   [33;1m[12:06:02] [Server thread/WARN] [minecraft/DedicatedServer]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[39;0m
+>   [33;1m[12:06:02] [Server thread/WARN] [minecraft/DedicatedServer]: To change this, set "online-mode" to "true" in the server.properties file.
+[39;0m
+> > > > > > > > > >   [12:06:02] [Server thread/INFO] [FML]: Setting Object Holders with value...
+>   [12:06:02] [Server thread/INFO] [FML]: Object Holders set.
+>   [12:06:02] [Server thread/INFO] [Applied Energistics 2 - Supergiant]: Applied Energistics 2 - Supergiant init
+>   [12:06:02] [Server thread/INFO] [FML]: Injecting itemstacks
+>   [12:06:02] [Server thread/INFO] [FML]: Itemstack injection complete
+>   [33;1m[12:06:02] [Server thread/WARN] [FML]: No types have been added to Biome ae2:spatial_storage, types have been assigned on a best-effort guess: [PLAINS]
+[39;0m
+>   [12:06:02] [Server thread/INFO] [Applied Energistics 2 - Supergiant]: Applied Energistics 2 - Supergiant postInit
+> > > > > > >   [12:06:02] [Server thread/INFO] [Ponder Legacy]: Registered 2 Ponder plugin(s) and 0 storyboard(s)
+>   [12:06:02] [Server thread/INFO] [Ponder Legacy]: Registered 2 Ponder plugin(s) and 0 storyboard(s)
+>   [12:06:02] [Server thread/INFO] [Ponder Legacy]: Loaded 0 Ponder JSON pack(s), 0 scene(s), 0 warning(s), 0 error(s)
+> > > > > > > > > > >   [12:06:02] [Server thread/INFO] [FML]: Forge Mod Loader has successfully loaded 12 mods
+>   [12:06:02] [Server thread/INFO] [minecraft/DedicatedServer]: Preparing level "world"
+> >   [12:06:02] [Server thread/INFO] [FML]: Injecting existing registry data into this server instance
+> > > > > > >   [12:06:03] [Server thread/INFO] [FML]: Setting Object Holders with value...
+>   [12:06:03] [Server thread/INFO] [FML]: Object Holders set.
+> > > >   [12:06:03] [Server thread/INFO] [FML]: Loading dimension 0 (world) (net.minecraft.server.dedicated.DedicatedServer@7b42d9bf)
+> > > > > > > > >   [12:06:03] [Server thread/INFO] [minecraft/AdvancementList]: Loaded 516 advancements
+>   [12:06:03] [Server thread/INFO] [FML]: Loading dimension -1 (world) (net.minecraft.server.dedicated.DedicatedServer@7b42d9bf)
+> > > > > > > > > > > > > > > > > >   [12:06:03] [Server thread/INFO] [FML]: Loading dimension 1 (world) (net.minecraft.server.dedicated.DedicatedServer@7b42d9bf)
+>   [12:06:03] [Server thread/INFO] [FML]: Loading dimension -256 (world) (net.minecraft.server.dedicated.DedicatedServer@7b42d9bf)
+>   [12:06:03] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for level 0
+> > > > >   [12:06:03] [Server thread/INFO] [minecraft/DedicatedServer]: Done (1.076s)! For help, type "help" or "?"
+> >   [12:06:04] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
+>   [12:06:04] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
+>   [12:06:04] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
+>   [12:06:04] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'world'/overworld
+>   [12:06:04] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'world'/the_nether
+>   [12:06:04] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'world'/the_end
+>   [12:06:04] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'world'/ae2_spatial_storage
+> [12:06:04] [Server thread/INFO] [FML]: Unloading dimension 0
+[12:06:04] [Server thread/INFO] [FML]: Unloading dimension -1
+[12:06:04] [Server thread/INFO] [FML]: Unloading dimension 1
+[12:06:04] [Server thread/INFO] [FML]: Unloading dimension -256
+[12:06:04] [Server Shutdown Thread/INFO] [minecraft/MinecraftServer]: Stopping server
+PASS: /home/yudream/code/mods/.dev/github-legacy/ae2s-ponder-legacy/build/reports/verification/server-with-ponder/report.json

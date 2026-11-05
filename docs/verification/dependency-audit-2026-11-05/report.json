@@ -1,0 +1,844 @@
+{
+  "candidateVersions": {
+    "ae2": "1.1.0",
+    "ae2s-ponder-legacy": "0.1.0",
+    "cleanroom": "0.4.0",
+    "crafttweaker": "4.1.20.698",
+    "hostile-neural-networks-legacy": "6.5.1-cleanroom.3",
+    "industrial_platform": "2.4.4",
+    "ponder-legacy": "1.4.0",
+    "powah-legacy": "5.1.0-cleanroom-alpha.2",
+    "smart_workbench": "1.0.1"
+  },
+  "mods": [
+    {
+      "artifact": {
+        "name": "Industrial.Platform-1.12.2-2.4.4.jar",
+        "url": "https://github.com/mcyudream/IndustrialPlatform/releases/download/v2.4.4/Industrial.Platform-1.12.2-2.4.4.jar",
+        "size": 140226,
+        "digest": "sha256:d2bfa1e52abbfe95dc951e7ca9b530ec3843ba5a47fdb17abe9724a5c8273971",
+        "repository": "mcyudream/IndustrialPlatform",
+        "tag": "v2.4.4",
+        "release_url": "https://github.com/mcyudream/IndustrialPlatform/releases/tag/v2.4.4",
+        "sha256": "d2bfa1e52abbfe95dc951e7ca9b530ec3843ba5a47fdb17abe9724a5c8273971",
+        "checksum_verified": true
+      },
+      "annotation": {
+        "class": "dev/celestiacraft/industrialplatform/IndustrialPlatform.class",
+        "modid": "industrial_platform",
+        "name": "Industrial Platform",
+        "version": "2.4.4",
+        "acceptedMinecraftVersions": "[1.12,1.13)",
+        "dependencies": "after:kubejs;after:create"
+      },
+      "metadata": {
+        "modid": "industrial_platform",
+        "name": "Industrial Platform",
+        "description": "Custom chunk-aligned industrial platform builder with KubeJS-style blueprint support",
+        "version": "2.4.4",
+        "mcversion": "1.12.2",
+        "url": "",
+        "updateUrl": "",
+        "authorList": [
+          "TeamNebula"
+        ],
+        "credits": "",
+        "logoFile": "",
+        "screenshots": [],
+        "dependencies": []
+      }
+    },
+    {
+      "artifact": {
+        "name": "smart_workbench-1.12.2-1.0.1.jar",
+        "url": "https://github.com/mcyudream/Smart-workbench/releases/download/v1.0.1/smart_workbench-1.12.2-1.0.1.jar",
+        "size": 471631,
+        "digest": "sha256:c7a5bc42c306cafa88c586245634b80e726edc42c38bbc262651642524aeddf1",
+        "repository": "mcyudream/Smart-workbench",
+        "tag": "v1.0.1",
+        "release_url": "https://github.com/mcyudream/Smart-workbench/releases/tag/v1.0.1",
+        "sha256": "c7a5bc42c306cafa88c586245634b80e726edc42c38bbc262651642524aeddf1",
+        "checksum_verified": true
+      },
+      "annotation": {
+        "class": "cn/blockforge/smartworkbench/SmartWorkbenchMod.class",
+        "modid": "smart_workbench",
+        "name": "Smart Workbench",
+        "version": "1.0.1",
+        "acceptedMinecraftVersions": "[1.12,1.13)"
+      },
+      "metadata": {
+        "modid": "smart_workbench",
+        "name": "Smart Workbench",
+        "description": "Smart Workbench for Minecraft 1.12.2 (Forge / Cleanroom). Auto-detect nearby containers for one-click material extraction and crafting.\n1.12.2 port by ZCode migration.",
+        "version": "1.0.1",
+        "mcversion": "1.12.2",
+        "url": "https://github.com/BarryAlen777/Smart-workbench",
+        "updateUrl": "",
+        "authorList": [
+          "BarryAlen777"
+        ],
+        "credits": "BarryAlen777",
+        "logoFile": "logo.png",
+        "screenshots": [],
+        "dependencies": []
+      }
+    },
+    {
+      "artifact": {
+        "name": "ae2s-ponder-legacy-0.1.0.jar",
+        "url": "https://github.com/mcyudream/ae2s-ponder-legacy/releases/download/v0.1.0/ae2s-ponder-legacy-0.1.0.jar",
+        "size": 1735861,
+        "digest": "sha256:2ab4282a0ec10c40c5eabd0e89494994e98c0a8fe5807269f6f2a0aa7a27ef6b",
+        "repository": "mcyudream/ae2s-ponder-legacy",
+        "tag": "v0.1.0",
+        "release_url": "https://github.com/mcyudream/ae2s-ponder-legacy/releases/tag/v0.1.0",
+        "sha256": "2ab4282a0ec10c40c5eabd0e89494994e98c0a8fe5807269f6f2a0aa7a27ef6b",
+        "checksum_verified": true
+      },
+      "annotation": {
+        "class": "dev/yudream/ae2sponder/AE2SPonder.class",
+        "modid": "ae2s-ponder-legacy",
+        "name": "AE2S Ponder Legacy",
+        "version": "0.1.0",
+        "acceptedMinecraftVersions": "[1.12.2]",
+        "clientSideOnly": true,
+        "acceptableRemoteVersions": "*",
+        "dependencies": "required-after:cleanroom@[0.4.0,);required-after:ae2@[1.1.0,1.2.0);after:ponder-legacy@[1.4.0-cleanroom-alpha.1,)"
+      },
+      "metadata": {
+        "modid": "ae2s-ponder-legacy",
+        "name": "AE2S Ponder Legacy",
+        "description": "AE2S Ponder Legacy: Minecraft 1.12.2 / Cleanroom 0.4.0 / Java 25. Targets Applied Energistics 2 Supergiant (AE2S), loader ID ae2. Migration status: see PUBLICATION.md.",
+        "version": "0.1.0",
+        "mcversion": "1.12.2",
+        "authorList": [
+          "yudream"
+        ],
+        "dependencies": [
+          "cleanroom",
+          "ae2"
+        ],
+        "useDependencyInformation": false,
+        "url": "https://github.com/mcyudream/ae2s-ponder-legacy",
+        "requiredMods": [
+          "ae2"
+        ],
+        "credits": "Original author(s): yudream (original addon). Original repository: https://github.com/mcyudream/ae2s-ponder-legacy.",
+        "logoFile": "assets/ae2s_ponder/branding/icon.png"
+      }
+    },
+    {
+      "artifact": {
+        "name": "hostile-neural-networks-legacy-6.5.1-cleanroom.3.jar",
+        "url": "https://github.com/mcyudream/hostile-neural-networks-legacy/releases/download/v6.5.1-cleanroom.3/hostile-neural-networks-legacy-6.5.1-cleanroom.3.jar",
+        "size": 2157135,
+        "digest": "sha256:0f0c8d53f22e9f12594f870e61a0faf2be0ffaf34453ab1ccf89a0ec97dfdcd7",
+        "repository": "mcyudream/hostile-neural-networks-legacy",
+        "tag": "v6.5.1-cleanroom.3",
+        "release_url": "https://github.com/mcyudream/hostile-neural-networks-legacy/releases/tag/v6.5.1-cleanroom.3",
+        "sha256": "0f0c8d53f22e9f12594f870e61a0faf2be0ffaf34453ab1ccf89a0ec97dfdcd7",
+        "checksum_verified": true
+      },
+      "annotation": {
+        "class": "dev/shadowsoffire/hostilenetworks/HostileNetworks.class",
+        "modid": "hostile-neural-networks-legacy",
+        "name": "Hostile Neural Networks Legacy",
+        "version": "6.5.1-cleanroom.3",
+        "acceptedMinecraftVersions": "[1.12.2]",
+        "dependencies": "required-after:cleanroom@[0.4.0,);after:ponder-legacy;after:jei;after:draconicevolution;after:thermalfoundation;after:tconstruct;after:bloodmagic"
+      },
+      "metadata": {
+        "modid": "hostile-neural-networks-legacy",
+        "name": "Hostile Neural Networks Legacy",
+        "description": "Hostile simulations and loot production. Independent Cleanroom backport of HNN 6.5.1.",
+        "version": "6.5.1-cleanroom.3",
+        "mcversion": "1.12.2",
+        "authorList": [
+          "yudream"
+        ],
+        "url": "https://github.com/mcyudream/hostile-neural-networks-legacy",
+        "dependencies": [
+          "cleanroom"
+        ],
+        "useDependencyInformation": false,
+        "credits": "Original author(s): Brennan Ward / Shadows_of_Fire. Original repository: https://github.com/Shadows-of-Fire/Hostile-Neural-Networks.",
+        "logoFile": "assets/hostilenetworks/branding/icon.png"
+      }
+    },
+    {
+      "artifact": {
+        "name": "ponder-legacy-1.4.0.jar",
+        "url": "https://github.com/mcyudream/ponder-legacy/releases/download/v1.4.0/ponder-legacy-1.4.0.jar",
+        "size": 2867358,
+        "digest": "sha256:4c02d70c6f38ddf5305fa4be47a5e410e693c57f2cd8576ed5f78f8b7f32f14b",
+        "repository": "mcyudream/ponder-legacy",
+        "tag": "v1.4.0",
+        "release_url": "https://github.com/mcyudream/ponder-legacy/releases/tag/v1.4.0",
+        "sha256": "4c02d70c6f38ddf5305fa4be47a5e410e693c57f2cd8576ed5f78f8b7f32f14b",
+        "checksum_verified": true
+      },
+      "annotation": {
+        "class": "net/createmod/ponder/PonderMod.class",
+        "modid": "ponder-legacy",
+        "name": "Ponder Legacy",
+        "version": "1.4.0",
+        "acceptedMinecraftVersions": "[1.12.2]",
+        "dependencies": "required-after:cleanroom@[0.4.0,);required-after:forge@[14.23.5.2847,);required-after:mixinbooter@[9.1,);required-after:crafttweaker@[4.1.20,);after:modularmachinery",
+        "guiFactory": "net.createmod.ponder.client.PonderGuiFactory",
+        "acceptableRemoteVersions": "*"
+      },
+      "metadata": {
+        "modid": "ponder-legacy",
+        "name": "Ponder Legacy",
+        "description": "Ponder for Cleanroom 1.12.2 with JSON packs, addon APIs and an in-game scene and animation editor.",
+        "version": "1.4.0",
+        "mcversion": "1.12.2",
+        "url": "https://github.com/mcyudream/ponder-legacy",
+        "authorList": [
+          "yudream"
+        ],
+        "credits": "Original author(s): The Create Team (original Ponder), MCMGGF (1.12.2 base). Original repository: https://github.com/MCMGGF/ponder-for-1.12.2.",
+        "logoFile": "assets/ponder/branding/icon.png",
+        "screenshots": [],
+        "dependencies": [
+          "required-after:cleanroom@[0.4.0,)",
+          "required-after:forge@[14.23.5.2847,)",
+          "required-after:mixinbooter@[9.1,)",
+          "required-after:crafttweaker@[4.1.20,)",
+          "after:modularmachinery"
+        ],
+        "useDependencyInformation": false
+      }
+    },
+    {
+      "artifact": {
+        "name": "powah-legacy-5.1.0-cleanroom-alpha.2.jar",
+        "url": "https://github.com/mcyudream/powah-legacy/releases/download/v5.1.0-cleanroom-alpha.2/powah-legacy-5.1.0-cleanroom-alpha.2.jar",
+        "size": 3507432,
+        "digest": "sha256:ffa681c0fd8f5c36c3748dec95646d6c080c417101aaa478e625ece67ecba909",
+        "repository": "mcyudream/powah-legacy",
+        "tag": "v5.1.0-cleanroom-alpha.2",
+        "release_url": "https://github.com/mcyudream/powah-legacy/releases/tag/v5.1.0-cleanroom-alpha.2",
+        "sha256": "ffa681c0fd8f5c36c3748dec95646d6c080c417101aaa478e625ece67ecba909",
+        "checksum_verified": true
+      },
+      "annotation": {
+        "class": "owmii/powah/Powah.class",
+        "modid": "powah-legacy",
+        "name": "Powah Legacy",
+        "version": "5.1.0-cleanroom-alpha.2",
+        "acceptedMinecraftVersions": "[1.12.2]",
+        "dependencies": "required-after:cleanroom@[0.4.0,);after:ponder-legacy"
+      },
+      "metadata": {
+        "modid": "powah-legacy",
+        "name": "Powah Legacy",
+        "description": "Powah! for Minecraft 1.12.2 Cleanroom. Optional Ponder tutorials.",
+        "version": "5.1.0-cleanroom-alpha.2",
+        "mcversion": "1.12.2",
+        "url": "https://github.com/mcyudream/powah-legacy",
+        "authorList": [
+          "yudream"
+        ],
+        "dependencies": [
+          "cleanroom@[0.4.0,)"
+        ],
+        "useDependencyInformation": false,
+        "credits": "Original author(s): owmii (original), Technici4n and Powah contributors. Original repository: https://github.com/Technici4n/Powah.",
+        "logoFile": "assets/powah/branding/icon.png"
+      }
+    },
+    {
+      "artifact": {
+        "name": "Industrial.Platform-1.12.2-2.4.2.jar",
+        "url": "https://github.com/mcyudream/IndustrialPlatform/releases/download/v2.4.2/Industrial.Platform-1.12.2-2.4.2.jar",
+        "size": 137919,
+        "digest": "sha256:09b8f3d7594e2b015a45b4e99ec2b07b6148bcde719e472e0d7958229c5f707b",
+        "repository": "mcyudream/IndustrialPlatform",
+        "tag": "v2.4.2",
+        "release_url": "https://github.com/mcyudream/IndustrialPlatform/releases/tag/v2.4.2",
+        "historical": true,
+        "sha256": "09b8f3d7594e2b015a45b4e99ec2b07b6148bcde719e472e0d7958229c5f707b",
+        "checksum_verified": true
+      },
+      "annotation": {
+        "class": "dev/celestiacraft/industrialplatform/IndustrialPlatform.class",
+        "modid": "industrial_platform",
+        "name": "Industrial Platform",
+        "version": "2.4.2",
+        "acceptedMinecraftVersions": "[1.12,1.13)",
+        "dependencies": "after:kubejs;after:create"
+      },
+      "metadata": {
+        "modid": "industrial_platform",
+        "name": "Industrial Platform",
+        "description": "Custom chunk-aligned industrial platform builder with KubeJS-style blueprint support",
+        "version": "2.4.2",
+        "mcversion": "1.12.2",
+        "url": "",
+        "updateUrl": "",
+        "authorList": [
+          "TeamNebula"
+        ],
+        "credits": "",
+        "logoFile": "",
+        "screenshots": [],
+        "dependencies": []
+      }
+    },
+    {
+      "artifact": {
+        "name": "Industrial.Platform-1.12.2-2.1.0.jar",
+        "url": "https://github.com/mcyudream/IndustrialPlatform/releases/download/nightly/Industrial.Platform-1.12.2-2.1.0.jar",
+        "size": 99939,
+        "digest": "sha256:f02c01d6c1e35ce47fec6bd9370ccf60289d54b8d9274b4fe32444023d79f674",
+        "repository": "mcyudream/IndustrialPlatform",
+        "tag": "nightly",
+        "release_url": "https://github.com/mcyudream/IndustrialPlatform/releases/tag/nightly",
+        "historical": true,
+        "sha256": "f02c01d6c1e35ce47fec6bd9370ccf60289d54b8d9274b4fe32444023d79f674",
+        "checksum_verified": true
+      },
+      "annotation": {
+        "class": "dev/celestiacraft/industrialplatform/IndustrialPlatform.class",
+        "modid": "industrial_platform",
+        "name": "Industrial Platform",
+        "version": "2.1.0",
+        "acceptedMinecraftVersions": "[1.12,1.13)",
+        "dependencies": "after:kubejs;after:create"
+      },
+      "metadata": {
+        "modid": "industrial_platform",
+        "name": "Industrial Platform",
+        "description": "Custom chunk-aligned industrial platform builder with KubeJS-style blueprint support",
+        "version": "2.1.0",
+        "mcversion": "1.12.2",
+        "url": "",
+        "updateUrl": "",
+        "authorList": [
+          "TeamNebula"
+        ],
+        "credits": "",
+        "logoFile": "",
+        "screenshots": [],
+        "dependencies": []
+      }
+    },
+    {
+      "artifact": {
+        "name": "Industrial.Platform-1.12.2-2.4.2.jar",
+        "url": "https://github.com/mcyudream/IndustrialPlatform/releases/download/nightly/Industrial.Platform-1.12.2-2.4.2.jar",
+        "size": 137919,
+        "digest": "sha256:06902e94910e22fc3fde6bbf7adda1f91256897c0b1e48ae86d0aebe3bc9a111",
+        "repository": "mcyudream/IndustrialPlatform",
+        "tag": "nightly",
+        "release_url": "https://github.com/mcyudream/IndustrialPlatform/releases/tag/nightly",
+        "historical": true,
+        "sha256": "06902e94910e22fc3fde6bbf7adda1f91256897c0b1e48ae86d0aebe3bc9a111",
+        "checksum_verified": true
+      },
+      "annotation": {
+        "class": "dev/celestiacraft/industrialplatform/IndustrialPlatform.class",
+        "modid": "industrial_platform",
+        "name": "Industrial Platform",
+        "version": "2.4.2",
+        "acceptedMinecraftVersions": "[1.12,1.13)",
+        "dependencies": "after:kubejs;after:create"
+      },
+      "metadata": {
+        "modid": "industrial_platform",
+        "name": "Industrial Platform",
+        "description": "Custom chunk-aligned industrial platform builder with KubeJS-style blueprint support",
+        "version": "2.4.2",
+        "mcversion": "1.12.2",
+        "url": "",
+        "updateUrl": "",
+        "authorList": [
+          "TeamNebula"
+        ],
+        "credits": "",
+        "logoFile": "",
+        "screenshots": [],
+        "dependencies": []
+      }
+    },
+    {
+      "artifact": {
+        "name": "Industrial.Platform-1.12.2-2.4.4.jar",
+        "url": "https://github.com/mcyudream/IndustrialPlatform/releases/download/nightly/Industrial.Platform-1.12.2-2.4.4.jar",
+        "size": 140226,
+        "digest": "sha256:91014f4977a0e0d5ca7fefa5c264420dd5fbb007222ec33af919e0f365057741",
+        "repository": "mcyudream/IndustrialPlatform",
+        "tag": "nightly",
+        "release_url": "https://github.com/mcyudream/IndustrialPlatform/releases/tag/nightly",
+        "historical": true,
+        "sha256": "91014f4977a0e0d5ca7fefa5c264420dd5fbb007222ec33af919e0f365057741",
+        "checksum_verified": true
+      },
+      "annotation": {
+        "class": "dev/celestiacraft/industrialplatform/IndustrialPlatform.class",
+        "modid": "industrial_platform",
+        "name": "Industrial Platform",
+        "version": "2.4.4",
+        "acceptedMinecraftVersions": "[1.12,1.13)",
+        "dependencies": "after:kubejs;after:create"
+      },
+      "metadata": {
+        "modid": "industrial_platform",
+        "name": "Industrial Platform",
+        "description": "Custom chunk-aligned industrial platform builder with KubeJS-style blueprint support",
+        "version": "2.4.4",
+        "mcversion": "1.12.2",
+        "url": "",
+        "updateUrl": "",
+        "authorList": [
+          "TeamNebula"
+        ],
+        "credits": "",
+        "logoFile": "",
+        "screenshots": [],
+        "dependencies": []
+      }
+    },
+    {
+      "artifact": {
+        "name": "smart_workbench-1.12.2-1.0.0.jar",
+        "url": "https://github.com/mcyudream/Smart-workbench/releases/download/v1.0.0/smart_workbench-1.12.2-1.0.0.jar",
+        "size": 471465,
+        "digest": "sha256:b4ced84bd7c95e8170b489307549ccfdf2e5987ca20af842256f88a8178d4f12",
+        "repository": "mcyudream/Smart-workbench",
+        "tag": "v1.0.0",
+        "release_url": "https://github.com/mcyudream/Smart-workbench/releases/tag/v1.0.0",
+        "historical": true,
+        "sha256": "b4ced84bd7c95e8170b489307549ccfdf2e5987ca20af842256f88a8178d4f12",
+        "checksum_verified": true
+      },
+      "annotation": {
+        "class": "cn/blockforge/smartworkbench/SmartWorkbenchMod.class",
+        "modid": "smart_workbench",
+        "name": "Smart Workbench",
+        "version": "2.0.0-beta.8",
+        "acceptedMinecraftVersions": "[1.12,1.13)"
+      },
+      "metadata": {
+        "modid": "smart_workbench",
+        "name": "Smart Workbench",
+        "description": "Smart Workbench for Minecraft 1.12.2 (Forge / Cleanroom). Auto-detect nearby containers for one-click material extraction and crafting.\n1.12.2 port by ZCode migration.",
+        "version": "1.0.0",
+        "mcversion": "1.12.2",
+        "url": "https://github.com/BarryAlen777/Smart-workbench",
+        "updateUrl": "",
+        "authorList": [
+          "BarryAlen777"
+        ],
+        "credits": "BarryAlen777",
+        "logoFile": "logo.png",
+        "screenshots": [],
+        "dependencies": []
+      }
+    },
+    {
+      "artifact": {
+        "name": "hostile-neural-networks-legacy-6.5.1-cleanroom.2.jar",
+        "url": "https://github.com/mcyudream/hostile-neural-networks-legacy/releases/download/v6.5.1-cleanroom.2/hostile-neural-networks-legacy-6.5.1-cleanroom.2.jar",
+        "size": 2006066,
+        "digest": "sha256:3b1fc502314b510fc0b4a10143e1db63f4c6dc82fbe0f81d6546c2933c28bd13",
+        "repository": "mcyudream/hostile-neural-networks-legacy",
+        "tag": "v6.5.1-cleanroom.2",
+        "release_url": "https://github.com/mcyudream/hostile-neural-networks-legacy/releases/tag/v6.5.1-cleanroom.2",
+        "historical": true,
+        "sha256": "3b1fc502314b510fc0b4a10143e1db63f4c6dc82fbe0f81d6546c2933c28bd13",
+        "checksum_verified": true
+      },
+      "annotation": {
+        "class": "dev/shadowsoffire/hostilenetworks/HostileNetworks.class",
+        "modid": "hostile-neural-networks-legacy",
+        "name": "Hostile Neural Networks Legacy",
+        "version": "6.5.1-cleanroom.2",
+        "acceptedMinecraftVersions": "[1.12.2]",
+        "dependencies": "required-after:cleanroom@[0.4.0,);after:ponder-legacy;after:jei;after:draconicevolution;after:thermalfoundation;after:tconstruct;after:bloodmagic"
+      },
+      "metadata": {
+        "modid": "hostile-neural-networks-legacy",
+        "name": "Hostile Neural Networks Legacy",
+        "description": "Hostile simulations and loot production. Independent Cleanroom backport of HNN 6.5.1.",
+        "version": "6.5.1-cleanroom.2",
+        "mcversion": "1.12.2",
+        "authorList": [
+          "yudream"
+        ],
+        "url": "https://github.com/mcyudream/hostile-neural-networks-legacy",
+        "dependencies": [
+          "cleanroom"
+        ],
+        "useDependencyInformation": false,
+        "credits": "Original author(s): Brennan Ward / Shadows_of_Fire. Original repository: https://github.com/Shadows-of-Fire/Hostile-Neural-Networks.",
+        "logoFile": "assets/hostilenetworks/branding/icon.png"
+      }
+    },
+    {
+      "artifact": {
+        "name": "hostile-neural-networks-legacy-6.5.1-cleanroom.1.jar",
+        "url": "https://github.com/mcyudream/hostile-neural-networks-legacy/releases/download/v6.5.1-cleanroom.1/hostile-neural-networks-legacy-6.5.1-cleanroom.1.jar",
+        "size": 2001460,
+        "digest": "sha256:3b920160364857763e3c6c4320620900f55998106a33176550e1815a11e96d24",
+        "repository": "mcyudream/hostile-neural-networks-legacy",
+        "tag": "v6.5.1-cleanroom.1",
+        "release_url": "https://github.com/mcyudream/hostile-neural-networks-legacy/releases/tag/v6.5.1-cleanroom.1",
+        "historical": true,
+        "sha256": "3b920160364857763e3c6c4320620900f55998106a33176550e1815a11e96d24",
+        "checksum_verified": true
+      },
+      "annotation": {
+        "class": "dev/shadowsoffire/hostilenetworks/HostileNetworks.class",
+        "modid": "hostile-neural-networks-legacy",
+        "name": "Hostile Neural Networks Legacy",
+        "version": "6.5.1-cleanroom.1",
+        "acceptedMinecraftVersions": "[1.12.2]",
+        "dependencies": "required-after:cleanroom@[0.4.0,);after:ponder-legacy;after:jei"
+      },
+      "metadata": {
+        "modid": "hostile-neural-networks-legacy",
+        "name": "Hostile Neural Networks Legacy",
+        "description": "Hostile simulations and loot production. Independent Cleanroom backport of HNN 6.5.1.",
+        "version": "6.5.1-cleanroom.1",
+        "mcversion": "1.12.2",
+        "authorList": [
+          "yudream"
+        ],
+        "url": "https://github.com/mcyudream/hostile-neural-networks-legacy",
+        "dependencies": [
+          "cleanroom"
+        ],
+        "useDependencyInformation": false,
+        "credits": "Original author(s): Brennan Ward / Shadows_of_Fire. Original repository: https://github.com/Shadows-of-Fire/Hostile-Neural-Networks.",
+        "logoFile": "assets/hostilenetworks/branding/icon.png"
+      }
+    },
+    {
+      "artifact": {
+        "name": "ponder-legacy-1.4.0-cleanroom-alpha.1.jar",
+        "url": "https://github.com/mcyudream/ponder-legacy/releases/download/v1.4.0-cleanroom-alpha.1/ponder-legacy-1.4.0-cleanroom-alpha.1.jar",
+        "size": 2859443,
+        "digest": "sha256:9be55d18dff404d74b886521395c47cc6d2c5ec1ff3d22d73fecb1553f9ee4ab",
+        "repository": "mcyudream/ponder-legacy",
+        "tag": "v1.4.0-cleanroom-alpha.1",
+        "release_url": "https://github.com/mcyudream/ponder-legacy/releases/tag/v1.4.0-cleanroom-alpha.1",
+        "historical": true,
+        "sha256": "9be55d18dff404d74b886521395c47cc6d2c5ec1ff3d22d73fecb1553f9ee4ab",
+        "checksum_verified": true
+      },
+      "annotation": {
+        "class": "net/createmod/ponder/PonderMod.class",
+        "modid": "ponder-legacy",
+        "name": "Ponder Legacy",
+        "version": "1.4.0-cleanroom-alpha.1",
+        "acceptedMinecraftVersions": "[1.12.2]",
+        "dependencies": "required-after:cleanroom@[0.4.0-alpha,);required-after:forge@[14.23.5.2847,);required-after:mixinbooter@[9.1,);required-after:crafttweaker@[4.1.20,);after:modularmachinery",
+        "guiFactory": "net.createmod.ponder.client.PonderGuiFactory",
+        "acceptableRemoteVersions": "*"
+      },
+      "metadata": {
+        "modid": "ponder-legacy",
+        "name": "Ponder Legacy",
+        "description": "Ponder for Cleanroom 1.12.2 with JSON packs, addon APIs and an in-game scene and animation editor.",
+        "version": "1.4.0-cleanroom-alpha.1",
+        "mcversion": "1.12.2",
+        "url": "https://github.com/mcyudream/ponder-legacy",
+        "authorList": [
+          "yudream"
+        ],
+        "credits": "Original author(s): The Create Team (original Ponder), MCMGGF (1.12.2 base). Original repository: https://github.com/MCMGGF/ponder-for-1.12.2.",
+        "logoFile": "assets/ponder/branding/icon.png",
+        "screenshots": [],
+        "dependencies": [
+          "required-after:cleanroom@[0.4.0-alpha,)",
+          "required-after:forge@[14.23.5.2847,)",
+          "required-after:mixinbooter@[9.1,)",
+          "required-after:crafttweaker@[4.1.20,)",
+          "after:modularmachinery"
+        ],
+        "useDependencyInformation": false
+      }
+    }
+  ],
+  "dependencyChecks": [
+    {
+      "modid": "industrial_platform",
+      "declaration": "after:kubejs",
+      "dependency": "kubejs",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "industrial_platform",
+      "declaration": "after:create",
+      "dependency": "create",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "ae2s-ponder-legacy",
+      "declaration": "required-after:cleanroom@[0.4.0,)",
+      "dependency": "cleanroom",
+      "candidateVersion": "0.4.0",
+      "result": "PASS"
+    },
+    {
+      "modid": "ae2s-ponder-legacy",
+      "declaration": "required-after:ae2@[1.1.0,1.2.0)",
+      "dependency": "ae2",
+      "candidateVersion": "1.1.0",
+      "result": "PASS"
+    },
+    {
+      "modid": "ae2s-ponder-legacy",
+      "declaration": "after:ponder-legacy@[1.4.0-cleanroom-alpha.1,)",
+      "dependency": "ponder-legacy",
+      "candidateVersion": "1.4.0",
+      "result": "FAIL"
+    },
+    {
+      "modid": "hostile-neural-networks-legacy",
+      "declaration": "required-after:cleanroom@[0.4.0,)",
+      "dependency": "cleanroom",
+      "candidateVersion": "0.4.0",
+      "result": "PASS"
+    },
+    {
+      "modid": "hostile-neural-networks-legacy",
+      "declaration": "after:ponder-legacy",
+      "dependency": "ponder-legacy",
+      "candidateVersion": "1.4.0",
+      "result": "PASS"
+    },
+    {
+      "modid": "hostile-neural-networks-legacy",
+      "declaration": "after:jei",
+      "dependency": "jei",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "hostile-neural-networks-legacy",
+      "declaration": "after:draconicevolution",
+      "dependency": "draconicevolution",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "hostile-neural-networks-legacy",
+      "declaration": "after:thermalfoundation",
+      "dependency": "thermalfoundation",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "hostile-neural-networks-legacy",
+      "declaration": "after:tconstruct",
+      "dependency": "tconstruct",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "hostile-neural-networks-legacy",
+      "declaration": "after:bloodmagic",
+      "dependency": "bloodmagic",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "ponder-legacy",
+      "declaration": "required-after:cleanroom@[0.4.0,)",
+      "dependency": "cleanroom",
+      "candidateVersion": "0.4.0",
+      "result": "PASS"
+    },
+    {
+      "modid": "ponder-legacy",
+      "declaration": "required-after:forge@[14.23.5.2847,)",
+      "dependency": "forge",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "ponder-legacy",
+      "declaration": "required-after:mixinbooter@[9.1,)",
+      "dependency": "mixinbooter",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "ponder-legacy",
+      "declaration": "required-after:crafttweaker@[4.1.20,)",
+      "dependency": "crafttweaker",
+      "candidateVersion": "4.1.20.698",
+      "result": "PASS"
+    },
+    {
+      "modid": "ponder-legacy",
+      "declaration": "after:modularmachinery",
+      "dependency": "modularmachinery",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "powah-legacy",
+      "declaration": "required-after:cleanroom@[0.4.0,)",
+      "dependency": "cleanroom",
+      "candidateVersion": "0.4.0",
+      "result": "PASS"
+    },
+    {
+      "modid": "powah-legacy",
+      "declaration": "after:ponder-legacy",
+      "dependency": "ponder-legacy",
+      "candidateVersion": "1.4.0",
+      "result": "PASS"
+    },
+    {
+      "modid": "industrial_platform",
+      "declaration": "after:kubejs",
+      "dependency": "kubejs",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "industrial_platform",
+      "declaration": "after:create",
+      "dependency": "create",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "industrial_platform",
+      "declaration": "after:kubejs",
+      "dependency": "kubejs",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "industrial_platform",
+      "declaration": "after:create",
+      "dependency": "create",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "industrial_platform",
+      "declaration": "after:kubejs",
+      "dependency": "kubejs",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "industrial_platform",
+      "declaration": "after:create",
+      "dependency": "create",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "industrial_platform",
+      "declaration": "after:kubejs",
+      "dependency": "kubejs",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "industrial_platform",
+      "declaration": "after:create",
+      "dependency": "create",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "hostile-neural-networks-legacy",
+      "declaration": "required-after:cleanroom@[0.4.0,)",
+      "dependency": "cleanroom",
+      "candidateVersion": "0.4.0",
+      "result": "PASS"
+    },
+    {
+      "modid": "hostile-neural-networks-legacy",
+      "declaration": "after:ponder-legacy",
+      "dependency": "ponder-legacy",
+      "candidateVersion": "1.4.0",
+      "result": "PASS"
+    },
+    {
+      "modid": "hostile-neural-networks-legacy",
+      "declaration": "after:jei",
+      "dependency": "jei",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "hostile-neural-networks-legacy",
+      "declaration": "after:draconicevolution",
+      "dependency": "draconicevolution",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "hostile-neural-networks-legacy",
+      "declaration": "after:thermalfoundation",
+      "dependency": "thermalfoundation",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "hostile-neural-networks-legacy",
+      "declaration": "after:tconstruct",
+      "dependency": "tconstruct",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "hostile-neural-networks-legacy",
+      "declaration": "after:bloodmagic",
+      "dependency": "bloodmagic",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "hostile-neural-networks-legacy",
+      "declaration": "required-after:cleanroom@[0.4.0,)",
+      "dependency": "cleanroom",
+      "candidateVersion": "0.4.0",
+      "result": "PASS"
+    },
+    {
+      "modid": "hostile-neural-networks-legacy",
+      "declaration": "after:ponder-legacy",
+      "dependency": "ponder-legacy",
+      "candidateVersion": "1.4.0",
+      "result": "PASS"
+    },
+    {
+      "modid": "hostile-neural-networks-legacy",
+      "declaration": "after:jei",
+      "dependency": "jei",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "ponder-legacy",
+      "declaration": "required-after:cleanroom@[0.4.0-alpha,)",
+      "dependency": "cleanroom",
+      "candidateVersion": "0.4.0",
+      "result": "PASS"
+    },
+    {
+      "modid": "ponder-legacy",
+      "declaration": "required-after:forge@[14.23.5.2847,)",
+      "dependency": "forge",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "ponder-legacy",
+      "declaration": "required-after:mixinbooter@[9.1,)",
+      "dependency": "mixinbooter",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    },
+    {
+      "modid": "ponder-legacy",
+      "declaration": "required-after:crafttweaker@[4.1.20,)",
+      "dependency": "crafttweaker",
+      "candidateVersion": "4.1.20.698",
+      "result": "PASS"
+    },
+    {
+      "modid": "ponder-legacy",
+      "declaration": "after:modularmachinery",
+      "dependency": "modularmachinery",
+      "result": "EXTERNAL_NOT_IN_AUDIT"
+    }
+  ],
+  "scope": "Six published Minecraft 1.12.2 projects; latest and all available older installation assets, excluding source/API jars. Static loader dependency/version checks, not full gameplay acceptance.",
+  "checked_on": "2026-11-05",
+  "known_old_identity_mismatch": {
+    "repository": "mcyudream/Smart-workbench",
+    "tag": "v1.0.0",
+    "annotation_version": "2.0.0-beta.8",
+    "metadata_version": "1.0.0",
+    "fixed_in": "v1.0.1"
+  }
+}

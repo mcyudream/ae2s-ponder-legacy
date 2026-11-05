@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.yudream.ae2sponder.PonderDependencyTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-11-05T16:59:43.311Z" hostname="yudream-dev" time="0.015">
+  <properties/>
+  <testcase name="rejectsVersionsBeforeTheSupportedApi" classname="dev.yudream.ae2sponder.PonderDependencyTest" time="0.01"/>
+  <testcase name="acceptsPublishedStablePonder" classname="dev.yudream.ae2sponder.PonderDependencyTest" time="0.001"/>
+  <testcase name="keepsExistingCleanroomPrereleaseCompatible" classname="dev.yudream.ae2sponder.PonderDependencyTest" time="0.001"/>
+  <testcase name="ponderRemainsOptional" classname="dev.yudream.ae2sponder.PonderDependencyTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

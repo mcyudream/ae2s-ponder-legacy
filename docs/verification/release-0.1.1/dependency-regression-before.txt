@@ -1,0 +1,53 @@
+> Task :ponder:extractUserdevMcpToSrg
+> Task :processResources
+
+> Task :fetchAE2S
+Verified AppliedEnergistics2-Supergiant-1.1.0-dev.jar: 71e1bc6873840bf94b792ee6bbfc1d0ccdc41d734d2e134d9707955778970524
+
+> Task :processTestResources NO-SOURCE
+> Task :ponder:generateMixinSrg
+
+> Task :ponder:compileJava
+Note: SpongePowered MIXIN Annotation Processor Version=0.8.7
+Note: Supported obfuscation types: ObfuscationServiceMCP supports [searge,notch]
+Note: Loading searge mappings from /home/yudream/code/mods/.dev/github-legacy/ae2s-ponder-legacy/.legacy-deps/ponder/build/generated/mixins/mcp2srg.srg
+Note: Writing refmap to /home/yudream/code/mods/.dev/github-legacy/ae2s-ponder-legacy/.legacy-deps/ponder/build/classes/java/main/mixins.ponder.refmap.json
+Note: Writing refmap to /home/yudream/code/mods/.dev/github-legacy/ae2s-ponder-legacy/.legacy-deps/ponder/build/classes/java/main/mixins.ponder.refmap.json
+Note: Writing refmap to /home/yudream/code/mods/.dev/github-legacy/ae2s-ponder-legacy/.legacy-deps/ponder/build/classes/java/main/mixins.ponder.refmap.json
+Note: Writing refmap to /home/yudream/code/mods/.dev/github-legacy/ae2s-ponder-legacy/.legacy-deps/ponder/build/classes/java/main/mixins.ponder.refmap.json
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :compileJava
+> Task :classes
+> Task :compileTestJava
+> Task :testClasses
+
+> Task :test FAILED
+
+PonderDependencyTest > acceptsPublishedStablePonder FAILED
+    java.lang.AssertionError at PonderDependencyTest.java:27
+
+4 tests completed, 1 failed
+
+[Incubating] Problems report is available at: file:///home/yudream/code/mods/.dev/github-legacy/ae2s-ponder-legacy/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///home/yudream/code/mods/.dev/github-legacy/ae2s-ponder-legacy/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.8.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 6s
+8 actionable tasks: 8 executed
