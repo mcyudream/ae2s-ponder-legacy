@@ -155,15 +155,10 @@ def main():
     if digest(jars[1], "sha256") != lock["ae2s"]["runtime"]["sha256"]:
         raise ValueError("AE2S installation jar differs from the official pinned artifact")
     if args.with_ponder:
-        craft = list((GRADLE / "caches/modules-2/files-2.1/maven.modrinth/crafttweaker/4.1.20.698").glob("*/*.jar"))
-        if len(craft) != 1:
-            raise RuntimeError("Build with Ponder once to cache CraftTweaker 4.1.20.698")
-        if digest(craft[0], "sha256") != lock["crafttweaker"]["sha256"]:
-            raise ValueError("CraftTweaker differs from the pinned artifact")
         ponder = Path(os.environ.get("LEGACY_PONDER_JAR", PROJECT.parent / "ponder/build/libs" / lock["ponder"]["runtime"]["file"]))
         if digest(ponder, "sha256") != lock["ponder"]["runtime"]["sha256"]:
             raise ValueError("Ponder differs from the pinned official installation jar")
-        jars += [ponder, craft[0]]
+        jars += [ponder]
     for jar in jars:
         if not jar.is_file():
             raise FileNotFoundError(f"Build the addon, Ponder and SRG harness first: {jar}")

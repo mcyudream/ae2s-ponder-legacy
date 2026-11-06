@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "cleanroom": "0.4.0",
+  "java": "25.0.5",
+  "artifacts": "installation",
+  "ae2s": "1.1.0",
+  "ponder": true,
+  "addonEnabled": false,
+  "ponderVersion": "1.5.0",
+  "checks": [
+    "Actual Cleanroom 0.4.0 matches the configured verification baseline",
+    "Dedicated server reached FMLServerStarted with AE2S and tutorial addon installed",
+    "Ponder present: true"
+  ]
+}

@@ -69,7 +69,7 @@ class Structure:
         return self
 
     def machine(self, x, y, z, name, **nbt):
-        tile = name if name != "dense_energy_cell" else "energy_cell"
+        tile = {"dense_energy_cell": "energy_cell", "quantum_link": "quantum_ring"}.get(name, name)
         if name.endswith("_crafting_storage") or name == "crafting_accelerator": tile = "crafting_unit"
         return self.block(x, y, z, "ae2:" + name, nbt={
             "id": "ae2:" + tile, "x": x, "y": y, "z": z, "forward": "SOUTH", "up": "UP", **nbt})
@@ -197,20 +197,75 @@ def p2p():
     s.blocks[6, 1, 3]["nbt"]["east"].update(freq=Short(0), output=Byte(0))
     return s
 
+def guide_structures():
+    """Native AE2S diagrams for the additional shared Markdown lessons."""
+    def network():
+        s = Structure()
+        s.machine(1, 1, 3, "energy_cell").machine(2, 1, 3, "drive")
+        for x in range(3, 6):
+            s.cable(x, 1, 3, connections=("west", "east"), **({"south": "terminal"} if x == 3 else {}))
+        return s
+    out = {}
+    s = network(); s.machine(4, 1, 2, "charger").machine(5, 1, 2, "charger").block(4, 2, 2, "ae2:crank"); out["charger"] = s
+    s = network()
+    for x in (2, 4, 5): s.machine(x, 1, 2, "inscriber")
+    out["processors"] = s
+    s = network(); s.block(2, 1, 2, "ae2:flawless_budding_quartz").block(2, 2, 2, "ae2:quartz_cluster")
+    s.machine(3, 1, 2, "growth_accelerator").block(4, 1, 2, "minecraft:water"); out["quartz_growth"] = s
+    s = network(); s.machine(5, 1, 3, "interface").chest(5, 1, 2); out["interfaces"] = s
+    s = import_export(); s.cable(4, 1, 3, connections=("west", "south"), south="level_emitter"); out["level_stocking"] = s
+    s = Structure()
+    s.machine(1, 1, 3, "energy_cell").machine(2, 1, 3, "drive").machine(3, 1, 3, "interface")
+    s.cable(4, 1, 3, "blue_glass_cable", connections=("east", "south"), west="storage_bus")
+    s.cable(5, 1, 3, "blue_glass_cable", connections=("west",), south="terminal")
+    s.cable(3, 1, 4, "red_glass_cable", connections=("north",), east="quartz_fiber")
+    s.cable(4, 1, 4, "blue_glass_cable", connections=("north",)); out["subnetworks"] = s
+    s = network(); s.machine(4, 1, 2, "io_port"); out["cell_io"] = s
+    s = network(); s.machine(4, 1, 2, "wireless_access_point").machine(5, 1, 2, "charger"); out["wireless"] = s
+    s = Structure(9)
+    for center in (2, 6):
+        for dx in (-1, 0, 1):
+            for dy in (-1, 0, 1): s.machine(center+dx, 2+dy, 3, "quantum_link" if dx == 0 and dy == 0 else "quantum_ring")
+        s.machine(center, 1, 2, "energy_cell")
+    # Each bridge end has its own local cable; do not bypass the quantum link with a direct cable.
+    s.cable(2, 1, 4, connections=("north",), south="terminal")
+    s.cable(6, 1, 4, connections=("north",), south="terminal"); out["quantum_bridge"] = s
+    s = Structure(9)
+    for x in range(2, 7):
+        for y in range(1, 6):
+            for z in range(2, 7):
+                if sum((x in (2, 6), y in (1, 5), z in (2, 6))) >= 2: s.machine(x, y, z, "spatial_pylon")
+    s.machine(1, 1, 3, "dense_energy_cell").machine(1, 1, 4, "spatial_io_port").block(4, 2, 4, "minecraft:stone")
+    out["spatial_io"] = s
+    s = network()
+    for z, part in ((2, "formation_plane"), (4, "annihilation_plane")):
+        s.cable(3, 1, z, connections=("south" if z == 2 else "north", "east"))
+        s.cable(4, 1, z, connections=("west",), east=part)
+    s.block(5, 1, 4, "minecraft:stone"); out["planes"] = s
+    out["upgrades"] = import_export()
+    s = autocrafting(); s.machine(4, 1, 1, "crafting_accelerator"); out["crafting_cpu"] = s
+    s = network();s.cable(3,1,3,connections=("west","east"),south="storage_monitor")
+    s.cable(4,1,3,connections=("west","east"),south="conversion_monitor"); out["monitors_tools"] = s
+    s = network();s.machine(5,1,3,"sky_stone_tank");s.cable(4,1,3,connections=("west",),east="storage_bus");out["fluid_storage"] = s
+    s = network();s.machine(4,1,2,"condenser").chest(5,1,2);out["condenser"] = s
+    return out
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
     scenes = (first_network, storage_cells, channels, storage_bus, import_export, autocrafting, processing, p2p)
-    for factory in scenes:
-        output = DEST / (factory.__name__ + ".nbt")
-        data = factory().data()
+    structures = {factory.__name__: factory() for factory in scenes}
+    structures.update(guide_structures())
+    for name, structure in structures.items():
+        output = DEST / (name + ".nbt")
+        data = structure.data()
         if args.check:
             if not output.exists() or output.read_bytes() != data:
                 raise SystemExit(f"Structure differs: {output}")
         else:
             output.parent.mkdir(parents=True, exist_ok=True)
             output.write_bytes(data)
-        print(f"{factory.__name__}: {len(data)} bytes")
+        print(f"{name}: {len(data)} bytes")
 
 if __name__ == "__main__": main()

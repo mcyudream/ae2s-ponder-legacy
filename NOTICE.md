@@ -11,3 +11,8 @@
 
 没有从 AE2S 复制纹理、模型或实现类；教程中的这些资源由用户安装的 AE2S 提供。
 `dependency-lock.json` 记录实际使用的官方 AE2S 1.1.0 文件和 SHA-256。
+
+## 教程主题参考
+
+新增教程按官方 AE2 GuideME 的主题组织，参考 [AppliedEnergistics/Applied-Energistics-2](https://github.com/AppliedEnergistics/Applied-Energistics-2) 1.21.1 分支，固定参考提交 `7a11e9af14dd3283bc7122f3879e7793a6e1b7c7`。
+讲解与结构由本项目重新编写，并核对 AE2S 1.1.0 的注册、接口与使用方式。未复制官方教程纹理、模型或现代渲染器；未将现代版行为直接声明为 AE2S 行为。生成器保留对应主题的来源路径。

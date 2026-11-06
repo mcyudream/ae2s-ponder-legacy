@@ -1,4 +1,25 @@
-# AE2S Ponder Legacy 0.1.1 正式基线验收
+# AE2S Ponder Legacy 0.2.0 正式基线验收
+
+- 日期：2026-11-06。Minecraft 1.12.2 / **Cleanroom 0.4.0 正式版（不带 -alpha）** / Java 25.0.5。
+- 安装包：`ae2s-ponder-legacy-0.2.0.jar`，SHA-256：`1f6c095c8859cf0053a431b5c0535a0a45a33d25ac10f3d96eef3c67997e0614`。
+- AE2S / Supergiant 1.1.0；Ponder Legacy **1.5.0**，SHA-256：`bf668461d714313326ecf095614b58eee5b6fa5e5317c7ee5cb5de3bd92176d6`。Ponder 独立安装，不打入附属。
+
+| 组合 | 结果 | 检查项 |
+| --- | --- | --- |
+| client-with-ponder | PASS | 1382 |
+| client-without-ponder | PASS | 5 |
+| server-with-ponder | PASS | 3 |
+| server-without-ponder | PASS | 3 |
+
+原八个 Java 动画保留，16 个 Markdown 生成动画和 1 篇静态排障页新增；共 24 个动画、25 篇双语页面。实际安装包播放与回退、原生结构和 multipart 重建、简体中文／英文、静态页与共享编排通过。额外核对首个网络及 P2P 的投影材料能解析 AE2S 终端、线缆和隧道物品。真实内置服务器中的 P2P 承载网、内存卡及基础机器供电测试继续通过。
+
+[本版全部报告、环境与截图](docs/verification/release-0.2.0/summary.json)。四种组合均使用实际生产 SRG jar，**没有 CraftTweaker**；无 Ponder 时正常进入世界。专服到达启动完成事件且不加载客户端教程入口；编译 SDK 0.7.14-alpha 不作为基线证据。
+
+Linux x64 / llvmpipe；未覆盖所有硬件、整合包或音频。虚拟世界展示操作顺序，不声称执行完整 ME 自动合成任务。现代官方 GuideME 只作为主题参考，行为按 AE2S 1.1.0 核对；不背书原版 AE2、AE2UEL。
+
+---
+
+## 历史：0.1.1 正式基线验收
 
 - 日期：2026-11-05。
 - Minecraft 1.12.2 / **Cleanroom 0.4.0 正式版（不带 -alpha）** / Java 25.0.5。

@@ -28,5 +28,14 @@ scene_ids = re.findall(r'begin\(scene, "([^"]+)"', source)
 for scene_id in scene_ids:
     assert f"ae2s_ponder.ponder.{scene_id}.header" in en, f"Missing title: {scene_id}"
     assert (root / f"src/main/resources/assets/ae2s_ponder/ponder/{scene_id}.nbt").is_file()
-assert len(scene_ids) == 8 and len(set(scene_ids)) == 8
+assert len(scene_ids) == len(set(scene_ids))
+subprocess.run([sys.executable, str(root / "tools/generate-guides.py"), "--check"], check=True)
+import json
+index = json.loads((root / "src/main/resources/assets/ae2s_ponder/ponder/guides/index.json").read_text())["pages"]
+assert len(index) == 25 and len(set(index)) == len(index)
+for page in index:
+    for code in ("en_us", "zh_cn"):
+        assert (root / f"src/main/resources/assets/ae2s_ponder/ponder/guides/{code}/{page}.md").is_file()
+    if page != "troubleshooting":
+        assert (root / f"src/main/resources/assets/ae2s_ponder/ponder/{page}.nbt").is_file()
 print(f"Verified {len(scene_ids)} scenes, {len(references)} narration steps, {len(en)} keys in each language")

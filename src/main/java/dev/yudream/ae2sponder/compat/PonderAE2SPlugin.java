@@ -16,6 +16,10 @@ import net.minecraft.util.ResourceLocation;
 public final class PonderAE2SPlugin implements PonderPlugin {
     @Override public String getModId() { return AE2SPonder.MOD_ID; }
 
+    @Override public void registerTutorials(net.createmod.ponder.api.guide.TutorialRegistrationHelper helper) {
+        helper.addMarkdownIndex(id("index"));
+    }
+
     @Override public void registerScenes(PonderSceneRegistrationHelper<ResourceLocation> helper) {
         for (Lesson lesson : Lesson.values()) {
             for (String component : lesson.components()) {

@@ -1,0 +1,7 @@
+{
+  "local_development_sha256": "1f6c095c8859cf0053a431b5c0535a0a45a33d25ac10f3d96eef3c67997e0614",
+  "local_standalone_sha256": "1f6c095c8859cf0053a431b5c0535a0a45a33d25ac10f3d96eef3c67997e0614",
+  "byte_identical": true,
+  "ponder_source_commit": "5d0f5e74c4cbeea6f0707747df11a64435874fd1",
+  "runtime_acceptance": "summary.json"
+}

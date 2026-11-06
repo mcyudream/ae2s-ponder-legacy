@@ -24,15 +24,16 @@ public class PonderDependencyTest {
     }
 
     @Test public void acceptsPublishedStablePonder() {
-        assertTrue("Ponder Legacy 1.4.0 must load", accepts("1.4.0"));
+        assertTrue("Ponder Legacy 1.5.0 must load", accepts("1.5.0"));
     }
 
-    @Test public void keepsExistingCleanroomPrereleaseCompatible() {
-        assertTrue(accepts("1.4.0-cleanroom-alpha.1"));
+    @Test public void acceptsNewerPresentationCompatiblePonder() {
+        assertTrue(accepts("1.5.1"));
     }
 
     @Test public void rejectsVersionsBeforeTheSupportedApi() {
         assertFalse(accepts("1.3.9"));
+        assertFalse(accepts("1.4.1"));
     }
 
     @Test public void ponderRemainsOptional() {

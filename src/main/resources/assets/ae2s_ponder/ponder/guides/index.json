@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "first_network",
+    "storage_cells",
+    "channels",
+    "storage_bus",
+    "import_export",
+    "autocrafting",
+    "processing",
+    "p2p",
+    "charger",
+    "processors",
+    "quartz_growth",
+    "interfaces",
+    "level_stocking",
+    "subnetworks",
+    "cell_io",
+    "wireless",
+    "quantum_bridge",
+    "spatial_io",
+    "planes",
+    "upgrades",
+    "crafting_cpu",
+    "monitors_tools",
+    "fluid_storage",
+    "condenser",
+    "troubleshooting"
+  ]
+}

@@ -5,22 +5,26 @@
 
 ![AE2S Ponder Legacy 展示插画](branding/cover.png)
 
-为 **Applied Energistics 2 Supergiant（应用能源 2 超巨星，AE2S）** 制作的独立思索附属模组，由 **yudream** 编写。通过八个可回放的中英文教程，演示 ME 网络、存储、频道、总线、自动合成、处理样板和 P2P 的搭建与操作。
+为 **Applied Energistics 2 Supergiant（应用能源 2 超巨星，AE2S）** 制作的独立思索附属模组，由 **yudream** 编写。通过 25 篇中英文教程（24 个动画与静态双展示教程、1 篇排障索引），覆盖 ME 网络、存储、自动化、材料制备及进阶网络。
 
-**当前版本：0.1.1。运行基线：Minecraft 1.12.2 / Cleanroom 0.4.0 正式版（不带 `-alpha`）/ Java 25。**
+**当前版本：0.2.0。运行基线：Minecraft 1.12.2 / Cleanroom 0.4.0 正式版（不带 `-alpha`）/ Java 25。**
 
 ## 下载与安装
 
 1. 准备 **Minecraft 1.12.2、Cleanroom 0.4.0 正式版、Java 25**。
 2. 安装 [AE2S / Supergiant 1.1.0](https://github.com/FormlessDragon/Applied-Energistics-2-Supergiant/releases/tag/v1.1.0)。请下载普通安装 jar。
-3. 观看教程另需 [Ponder Legacy 1.4.0](https://github.com/mcyudream/ponder-legacy/releases/tag/v1.4.0) 和 **CraftTweaker 4.1.20.698**。
-4. 从 [GitHub Releases](https://github.com/mcyudream/ae2s-ponder-legacy/releases) 下载 `ae2s-ponder-legacy-0.1.1.jar`，放入客户端的 `mods/`，替换本项目旧 jar。
+3. 观看教程另需 [Ponder Legacy 1.5.0](https://github.com/mcyudream/ponder-legacy/releases/tag/v1.5.0)；CraftTweaker、GuideME 均无需安装。
+4. 从 [GitHub Releases](https://github.com/mcyudream/ae2s-ponder-legacy/releases) 下载 `ae2s-ponder-legacy-0.2.0.jar`，放入客户端的 `mods/`，替换本项目旧 jar。
 
 `-sources.jar` 供开发使用；`-mcp.jar` 和验证模组不作为安装文件发布。Ponder 与 AE2S 独立安装，均未打入本附属。
 
-本附属只需装在客户端。**Ponder 为可选依赖**：未安装时正常启动并进入世界，教程入口停用。本版已实测 **Ponder Legacy 1.4.0 正式版**。加载器验收基线为正式 **Cleanroom 0.4.0**，与 `0.4.0-alpha` 分别记录。
+本附属只需装在客户端。**Ponder 为可选依赖**：未安装时正常启动并进入世界，教程入口停用。本版使用 **Ponder Legacy 1.5.0 正式版** 验收。加载器验收基线为正式 **Cleanroom 0.4.0**，与 `0.4.0-alpha` 分别记录。
 
-## 从 0.1.0 升级
+## 升级
+
+0.2.0 的双展示和 Markdown 教程需要 Ponder Legacy 1.5.0 或更新版本；Ponder 保持可选。请同时替换旧教程附属与旧 Ponder jar。
+
+### 历史 0.1.0 → 0.1.1 修复
 
 `0.1.0` 的 Ponder 最低版本写成 `1.4.0-cleanroom-alpha.1`，加载器将这个自定义后缀排在正式 `1.4.0` 之后，导致正确安装的 1.4.0 被拒绝。`0.1.1` 改为 `after:ponder-legacy@[1.4.0,)`，保持 Ponder 可选；移除旧附属 jar 并安装 0.1.1，保留 Ponder 1.4.0 即可。
 
@@ -29,9 +33,11 @@
 - 悬停驱动器、样板供应器、ME P2P 隧道等关联物品，按住 **W**。
 - `/ponder index` 打开包含四个分类的教程索引。
 - `/ponder ae2:drive`、`/ponder ae2:pattern_provider`、`/ponder ae2:me_p2p_tunnel` 可直接进入相应教程。
-- 支持关键帧、框选、物品移动和时间轴回放；简体中文和英文跟随游戏语言切换。
+- W 为唯一入口，界面内切换动画／静态图文，并可保存默认展示。简体中文和英文跟随游戏语言切换。
+- 支持关键帧与回放；静态页可搜索、滚动和旋转 3D 场景，F7 编辑 Markdown。
+- 教程结构可投影到世界；材料按钮检查背包，清单可钉在 HUD／背包并拖拽保存位置。
 
-## 八个教程
+## 原有八个教程（均补充静态展示）
 
 | 场景 | 演示内容 | 部分入口物品 |
 | --- | --- | --- |
@@ -46,16 +52,30 @@
 
 结构使用 AE2S 1.1.0 的真实方块与 multipart 部件，在 Ponder 虚拟世界中编排流程和动画。讲解包含供电、存储、频道及操作顺序；虚拟世界中的动画不代表执行了完整的 ME 自动合成任务。
 
+## 新增 17 篇 Markdown 教程
+
+| 分类 | 内容 |
+| --- | --- |
+| 基础材料 | 充能器、石英生长与福鲁伊克斯材料 |
+| 存储 | 流体存储、物质聚合器 |
+| 自动化 | 接口备货、存储水平控制、IO 端口、成型与湮灭面板、升级卡 |
+| 合成 | 压印器与处理器、合成 CPU |
+| 网络 | 子网络、无线终端、量子桥、空间 IO、监视器与网络工具 |
+| 排障 | 供电、频道、过滤、容量、处理样板与回收检查索引（静态页） |
+
+按官方 AE2 GuideME 的主题补全，使用原创中英文讲解，并按 **AE2S 1.1.0** 的真实注册、配方与操作重写。例如无线终端在访问点界面配对，量子桥两端没有直连线缆绕过桥。现代版的配方和专有 API 不直接照搬。
+
+源码位于 `assets/ae2s_ponder/ponder/guides/`；一份 Markdown 编排讲解、步骤动作和静态快照。`<GuideOnly>` 支持参数与排障补充，`<AnimationOnly>` 支持动画特化。生成工具 `tools/generate-guides.py`、`tools/generate-structures.py` 可重复检查资源。
+
 ## 验收与兼容范围
 
 实际生产安装包在**正式 Cleanroom 0.4.0**上完成以下验收，文件 SHA-256 和原始报告见 [正式基线验收](LEGACY-VERIFICATION.md)：
 
 | 运行组合 | 结果 |
 | --- | --- |
-| 客户端，安装 Ponder | 551 项检查通过，八个教程中英文播放与回退重放 |
-| 客户端，未安装 Ponder | 5 项检查通过，正常进入世界 |
-| 专用服务器，安装 Ponder | 3 项检查通过，到达服务器启动完成事件 |
-| 专用服务器，未安装 Ponder | 3 项检查通过，到达服务器启动完成事件 |
+| 客户端，安装 Ponder 1.5.0 | 24 个动画及 25 篇图文，中英文完整播放、回退与静态展示；实际报告见验收记录 |
+| 客户端，未安装 Ponder | 正常进入世界，教程入口停用 |
+| 专用服务器，安装／未安装 Ponder | 到达服务器启动完成事件，客户端代码隔离 |
 
 教程入口和渲染保持客户端隔离。包内包含仅用于正式 0.4.0 物理专服的 Kirino 模组发现兼容修复；服务端仍无需安装本附属。
 
@@ -82,7 +102,7 @@ python3 tools/prepare_release.py
 
 编译 SDK 使用 Cleanroom `0.7.14-alpha` userdev；实际最低加载器声明与生产验收基线为 **0.4.0 正式版**。SDK 上的运行结果不替代基线验收。
 
-GitHub Actions 在 push / PR 时构建、检查八个结构及语言资源、验证发布包身份并生成归档。推送与包内版本一致的 `v0.1.1` 标签后，CI 还会核对正式基线报告及安装包 SHA-256，再创建 GitHub Release，上传安装 jar、源码 jar 和 `SHA256SUMS`。发布页使用 [0.1.1 更新说明](docs/releases/0.1.1.md)。
+GitHub Actions 在 push / PR 时构建、检查 24 个结构、25 篇双语教程及语言资源、验证发布包身份并生成归档。推送与包内版本一致的 `v0.2.0` 标签后，CI 还会核对正式基线报告及安装包 SHA-256，再创建 GitHub Release，上传安装 jar、源码 jar 和 `SHA256SUMS`。发布页使用 [0.2.0 更新说明](docs/releases/0.2.0.md)。
 
 ### 开发验证
 

@@ -1,0 +1,42 @@
+{
+  "version": "0.2.0",
+  "date": "2026-11-06",
+  "minecraft": "1.12.2",
+  "cleanroom": "0.4.0",
+  "java": "25.0.5",
+  "ae2s": "1.1.0",
+  "production_jar": "ae2s-ponder-legacy-0.2.0.jar",
+  "sha256": "1f6c095c8859cf0053a431b5c0535a0a45a33d25ac10f3d96eef3c67997e0614",
+  "ponder_version": "1.5.0",
+  "ponder_sha256": "bf668461d714313326ecf095614b58eee5b6fa5e5317c7ee5cb5de3bd92176d6",
+  "tutorial_pages": 25,
+  "animated_tutorials": 24,
+  "fixtures": [
+    {
+      "fixture": "client-with-ponder",
+      "result": "PASS",
+      "checks": 1382,
+      "report": "client-with-ponder/report.json"
+    },
+    {
+      "fixture": "client-without-ponder",
+      "result": "PASS",
+      "checks": 5,
+      "report": "client-without-ponder/report.json"
+    },
+    {
+      "fixture": "server-with-ponder",
+      "result": "PASS",
+      "checks": 3,
+      "report": "server-with-ponder/report.json"
+    },
+    {
+      "fixture": "server-without-ponder",
+      "result": "PASS",
+      "checks": 3,
+      "report": "server-without-ponder/report.json"
+    }
+  ],
+  "main_source_sha256": "c27e550acfab3d97336c771ed8ef58f2b97a1a58e341c1ceb818d6899125d777",
+  "main_source_hash_format": "Sorted src/main relative path UTF-8 + NUL + content for every regular file."
+}
