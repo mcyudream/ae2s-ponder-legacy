@@ -13,7 +13,7 @@
 
 1. 准备 **Minecraft 1.12.2、Cleanroom 0.4.0 正式版、Java 25**。
 2. 安装 [AE2S / Supergiant 1.1.0](https://github.com/FormlessDragon/Applied-Energistics-2-Supergiant/releases/tag/v1.1.0)。请下载普通安装 jar。
-3. 观看教程另需 [Ponder Legacy 1.5.0](https://github.com/mcyudream/ponder-legacy/releases/tag/v1.5.0)；CraftTweaker、GuideME 均无需安装。
+3. 观看教程另需 [Ponder Legacy 1.5.1](https://github.com/mcyudream/ponder-legacy/releases/tag/v1.5.1)；CraftTweaker、GuideME 均无需安装。
 4. 从 [GitHub Releases](https://github.com/mcyudream/ae2s-ponder-legacy/releases) 下载 `ae2s-ponder-legacy-0.2.0.jar`，放入客户端的 `mods/`，替换本项目旧 jar。
 
 `-sources.jar` 供开发使用；`-mcp.jar` 和验证模组不作为安装文件发布。Ponder 与 AE2S 独立安装，均未打入本附属。
@@ -21,6 +21,8 @@
 本附属只需装在客户端。**Ponder 为可选依赖**：未安装时正常启动并进入世界，教程入口停用。本版使用 **Ponder Legacy 1.5.0 正式版** 验收。加载器验收基线为正式 **Cleanroom 0.4.0**，与 `0.4.0-alpha` 分别记录。
 
 ## 升级
+
+同装新版 FTB Quests 时，请使用 **Ponder Legacy 1.5.1 或更新版本**。1.5.0 与声明 `after:ponder-legacy` 的 FTBQ 会形成双向加载顺序循环；该问题由 Ponder 1.5.1 修复，**本附属 0.2.0 无需更新**。联合安装的正式 Cleanroom 0.4.0 报告见 [Ponder 补丁验收](https://github.com/mcyudream/ponder-legacy/blob/v1.5.1/docs/verification/release-1.5.1-cleanroom-0.4.0/summary.json)。
 
 0.2.0 的双展示和 Markdown 教程需要 Ponder Legacy 1.5.0 或更新版本；Ponder 保持可选。请同时替换旧教程附属与旧 Ponder jar。
 
