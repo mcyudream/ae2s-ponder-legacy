@@ -1,0 +1,196 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:pattern_processing",
+  "title": "@ae2s_ponder.gui.pattern_processing.title",
+  "components": [
+    "ae2:pattern_encoding_terminal",
+    "ae2:processing_pattern",
+    "ae2:blank_pattern"
+  ],
+  "screen": "ae2.client.gui.me.patternencode.GuiPatternEncodingTerm",
+  "adapter": "ae2s",
+  "width": 195,
+  "height": 251,
+  "texture": "ae2:textures/guis/pattern.png",
+  "targets": {
+    "widget.modeTabButton1": {
+      "type": "button",
+      "x": 173,
+      "y": 98,
+      "width": 22,
+      "height": 22,
+      "label": "@ae2s_ponder.gui.pattern_processing.target.widget.modeTabButton1",
+      "item": "",
+      "count": 0
+    },
+    "slot.BLANK_PATTERN.0": {
+      "type": "slot",
+      "x": 147,
+      "y": 86,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.pattern_processing.target.slot.BLANK_PATTERN.0",
+      "item": "",
+      "count": 0
+    },
+    "slot.PROCESSING_INPUTS.0": {
+      "type": "slot",
+      "x": 24,
+      "y": 93,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.pattern_processing.target.slot.PROCESSING_INPUTS.0",
+      "item": "",
+      "count": 0
+    },
+    "slot.PROCESSING_OUTPUTS.0": {
+      "type": "slot",
+      "x": 109,
+      "y": 93,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.pattern_processing.target.slot.PROCESSING_OUTPUTS.0",
+      "item": "",
+      "count": 0
+    },
+    "widget.encodePattern": {
+      "type": "button",
+      "x": 147,
+      "y": 106,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.pattern_processing.target.widget.encodePattern",
+      "item": "",
+      "count": 0
+    },
+    "slot.ENCODED_PATTERN.0": {
+      "type": "slot",
+      "x": 147,
+      "y": 133,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.pattern_processing.target.slot.ENCODED_PATTERN.0",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.pattern_processing.target.widget.modeTabButton1",
+      "text": "@ae2s_ponder.gui.pattern_processing.step.0",
+      "target": "widget.modeTabButton1",
+      "duration": 75,
+      "wait": {
+        "type": "value_equals",
+        "field": "pattern.mode",
+        "value": "PROCESSING"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "pattern.mode",
+          "value": "PROCESSING",
+          "at": 20
+        },
+        {
+          "op": "click",
+          "target": "widget.modeTabButton1",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.pattern_processing.target.slot.BLANK_PATTERN.0",
+      "text": "@ae2s_ponder.gui.pattern_processing.step.1",
+      "target": "slot.BLANK_PATTERN.0",
+      "duration": 75,
+      "wait": {
+        "type": "slot_has",
+        "item": "ae2:blank_pattern"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.BLANK_PATTERN.0",
+          "item": "ae2:blank_pattern",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.pattern_processing.target.slot.PROCESSING_INPUTS.0",
+      "text": "@ae2s_ponder.gui.pattern_processing.step.2",
+      "target": "slot.PROCESSING_INPUTS.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.PROCESSING_INPUTS.0",
+          "item": "minecraft:iron_ore",
+          "count": 1,
+          "at": 20
+        },
+        {
+          "op": "set_slot",
+          "target": "slot.PROCESSING_OUTPUTS.0",
+          "item": "minecraft:iron_ingot",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.pattern_processing.target.widget.encodePattern",
+      "text": "@ae2s_ponder.gui.pattern_processing.step.3",
+      "target": "widget.encodePattern",
+      "duration": 75,
+      "wait": {
+        "type": "slot_has",
+        "target": "slot.ENCODED_PATTERN.0"
+      },
+      "demo": [
+        {
+          "op": "click",
+          "target": "widget.encodePattern",
+          "at": 20
+        },
+        {
+          "op": "set_slot",
+          "target": "slot.BLANK_PATTERN.0",
+          "item": "",
+          "count": 0,
+          "at": 20
+        },
+        {
+          "op": "set_slot",
+          "target": "slot.ENCODED_PATTERN.0",
+          "item": "ae2:processing_pattern",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.pattern_processing.target.slot.ENCODED_PATTERN.0",
+      "text": "@ae2s_ponder.gui.pattern_processing.step.4",
+      "target": "slot.ENCODED_PATTERN.0",
+      "duration": 75,
+      "wait": {
+        "type": "slot_empty"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.ENCODED_PATTERN.0",
+          "item": "",
+          "count": 0,
+          "at": 20
+        }
+      ]
+    }
+  ]
+}

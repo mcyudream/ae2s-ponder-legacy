@@ -33,6 +33,8 @@ Use the matching press to print a circuit, and the Silicon Press to print silico
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:inscriber" duration={400} side="right" />
+
 ## Assemble the processor
 
 A second operation combines the printed circuit, printed silicon and redstone into a processor. Use a separate assembly Inscriber so presses stay in place.
@@ -101,6 +103,8 @@ Encode printing and final assembly as separate processing patterns. List consume
   }
 ]
 ```
+
+<GuiTutorial id="ae2s_ponder:pattern_processing" duration={400} side="right" />
 
 ## Diagnose a stalled job
 

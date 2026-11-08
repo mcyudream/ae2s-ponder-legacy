@@ -1,0 +1,332 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:pattern_crafting",
+  "title": "@ae2s_ponder.gui.pattern_crafting.title",
+  "components": [
+    "ae2:pattern_encoding_terminal",
+    "ae2:crafting_pattern",
+    "ae2:blank_pattern"
+  ],
+  "screen": "ae2.client.gui.me.patternencode.GuiPatternEncodingTerm",
+  "adapter": "ae2s",
+  "width": 195,
+  "height": 251,
+  "texture": "ae2:textures/guis/pattern.png",
+  "targets": {
+    "widget.modeTabButton0": {
+      "type": "button",
+      "x": 173,
+      "y": 77,
+      "width": 22,
+      "height": 22,
+      "label": "@ae2s_ponder.gui.pattern_crafting.target.widget.modeTabButton0",
+      "item": "",
+      "count": 0
+    },
+    "slot.BLANK_PATTERN.0": {
+      "type": "slot",
+      "x": 147,
+      "y": 86,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.pattern_crafting.target.slot.BLANK_PATTERN.0",
+      "item": "",
+      "count": 0
+    },
+    "slot.CRAFTING_GRID.0": {
+      "type": "slot",
+      "x": 15,
+      "y": 93,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.pattern_crafting.target.slot.CRAFTING_GRID.0",
+      "item": "",
+      "count": 0
+    },
+    "slot.CRAFTING_GRID.1": {
+      "type": "slot",
+      "x": 33,
+      "y": 93,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.pattern_crafting.target.slot.CRAFTING_GRID.1",
+      "item": "",
+      "count": 0
+    },
+    "slot.CRAFTING_GRID.2": {
+      "type": "slot",
+      "x": 51,
+      "y": 93,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.pattern_crafting.target.slot.CRAFTING_GRID.2",
+      "item": "",
+      "count": 0
+    },
+    "slot.CRAFTING_GRID.3": {
+      "type": "slot",
+      "x": 15,
+      "y": 111,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.pattern_crafting.target.slot.CRAFTING_GRID.3",
+      "item": "",
+      "count": 0
+    },
+    "slot.CRAFTING_GRID.4": {
+      "type": "slot",
+      "x": 33,
+      "y": 111,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.pattern_crafting.target.slot.CRAFTING_GRID.4",
+      "item": "",
+      "count": 0
+    },
+    "slot.CRAFTING_GRID.5": {
+      "type": "slot",
+      "x": 51,
+      "y": 111,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.pattern_crafting.target.slot.CRAFTING_GRID.5",
+      "item": "",
+      "count": 0
+    },
+    "slot.CRAFTING_GRID.6": {
+      "type": "slot",
+      "x": 15,
+      "y": 129,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.pattern_crafting.target.slot.CRAFTING_GRID.6",
+      "item": "",
+      "count": 0
+    },
+    "slot.CRAFTING_GRID.7": {
+      "type": "slot",
+      "x": 33,
+      "y": 129,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.pattern_crafting.target.slot.CRAFTING_GRID.7",
+      "item": "",
+      "count": 0
+    },
+    "slot.CRAFTING_GRID.8": {
+      "type": "slot",
+      "x": 51,
+      "y": 129,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.pattern_crafting.target.slot.CRAFTING_GRID.8",
+      "item": "",
+      "count": 0
+    },
+    "slot.CRAFTING_RESULT.0": {
+      "type": "slot",
+      "x": 106,
+      "y": 111,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.pattern_crafting.target.slot.CRAFTING_RESULT.0",
+      "item": "",
+      "count": 0
+    },
+    "widget.encodePattern": {
+      "type": "button",
+      "x": 147,
+      "y": 106,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.pattern_crafting.target.widget.encodePattern",
+      "item": "",
+      "count": 0
+    },
+    "slot.ENCODED_PATTERN.0": {
+      "type": "slot",
+      "x": 147,
+      "y": 133,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.pattern_crafting.target.slot.ENCODED_PATTERN.0",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.pattern_crafting.target.widget.modeTabButton0",
+      "text": "@ae2s_ponder.gui.pattern_crafting.step.0",
+      "target": "widget.modeTabButton0",
+      "duration": 75,
+      "wait": {
+        "type": "value_equals",
+        "field": "pattern.mode",
+        "value": "CRAFTING"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "pattern.mode",
+          "value": "CRAFTING",
+          "at": 20
+        },
+        {
+          "op": "click",
+          "target": "widget.modeTabButton0",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.pattern_crafting.target.slot.BLANK_PATTERN.0",
+      "text": "@ae2s_ponder.gui.pattern_crafting.step.1",
+      "target": "slot.BLANK_PATTERN.0",
+      "duration": 75,
+      "wait": {
+        "type": "slot_has",
+        "item": "ae2:blank_pattern"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.BLANK_PATTERN.0",
+          "item": "ae2:blank_pattern",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.pattern_crafting.target.slot.CRAFTING_GRID.0",
+      "text": "@ae2s_ponder.gui.pattern_crafting.step.2",
+      "target": "slot.CRAFTING_GRID.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.CRAFTING_GRID.0",
+          "item": "minecraft:iron_ingot",
+          "count": 1,
+          "at": 20
+        },
+        {
+          "op": "set_slot",
+          "target": "slot.CRAFTING_GRID.1",
+          "item": "minecraft:iron_ingot",
+          "count": 1,
+          "at": 20
+        },
+        {
+          "op": "set_slot",
+          "target": "slot.CRAFTING_GRID.2",
+          "item": "minecraft:iron_ingot",
+          "count": 1,
+          "at": 20
+        },
+        {
+          "op": "set_slot",
+          "target": "slot.CRAFTING_GRID.3",
+          "item": "minecraft:iron_ingot",
+          "count": 1,
+          "at": 20
+        },
+        {
+          "op": "set_slot",
+          "target": "slot.CRAFTING_GRID.4",
+          "item": "minecraft:iron_ingot",
+          "count": 1,
+          "at": 20
+        },
+        {
+          "op": "set_slot",
+          "target": "slot.CRAFTING_GRID.5",
+          "item": "minecraft:iron_ingot",
+          "count": 1,
+          "at": 20
+        },
+        {
+          "op": "set_slot",
+          "target": "slot.CRAFTING_GRID.6",
+          "item": "minecraft:iron_ingot",
+          "count": 1,
+          "at": 20
+        },
+        {
+          "op": "set_slot",
+          "target": "slot.CRAFTING_GRID.7",
+          "item": "minecraft:iron_ingot",
+          "count": 1,
+          "at": 20
+        },
+        {
+          "op": "set_slot",
+          "target": "slot.CRAFTING_GRID.8",
+          "item": "minecraft:iron_ingot",
+          "count": 1,
+          "at": 20
+        },
+        {
+          "op": "set_slot",
+          "target": "slot.CRAFTING_RESULT.0",
+          "item": "minecraft:iron_block",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.pattern_crafting.target.widget.encodePattern",
+      "text": "@ae2s_ponder.gui.pattern_crafting.step.3",
+      "target": "widget.encodePattern",
+      "duration": 75,
+      "wait": {
+        "type": "slot_has",
+        "target": "slot.ENCODED_PATTERN.0"
+      },
+      "demo": [
+        {
+          "op": "click",
+          "target": "widget.encodePattern",
+          "at": 20
+        },
+        {
+          "op": "set_slot",
+          "target": "slot.BLANK_PATTERN.0",
+          "item": "",
+          "count": 0,
+          "at": 20
+        },
+        {
+          "op": "set_slot",
+          "target": "slot.ENCODED_PATTERN.0",
+          "item": "ae2:crafting_pattern",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.pattern_crafting.target.slot.ENCODED_PATTERN.0",
+      "text": "@ae2s_ponder.gui.pattern_crafting.step.4",
+      "target": "slot.ENCODED_PATTERN.0",
+      "duration": 75,
+      "wait": {
+        "type": "slot_empty"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.ENCODED_PATTERN.0",
+          "item": "",
+          "count": 0,
+          "at": 20
+        }
+      ]
+    }
+  ]
+}

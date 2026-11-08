@@ -1,0 +1,10 @@
+{
+  "production_sha256": "c134dd24dff406d417e9d631f17c9a03bf68e6e5a902d6ca379608949c7080a3",
+  "source_and_standalone_byte_identical": true,
+  "ponder_ci": {
+    "run_url": "https://github.com/mcyudream/ponder-legacy/actions/runs/42484277038",
+    "artifact_sha256": "86e072acb375b28dd68051c87ae2c752a6e9df81794e8da701fb641943f35041",
+    "local_sha256": "86e072acb375b28dd68051c87ae2c752a6e9df81794e8da701fb641943f35041",
+    "byte_identical": true
+  }
+}

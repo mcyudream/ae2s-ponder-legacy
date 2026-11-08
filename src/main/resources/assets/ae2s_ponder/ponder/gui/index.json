@@ -1,0 +1,12 @@
+{
+  "tutorials": [
+    "ae2s_ponder:drive",
+    "ae2s_ponder:terminal",
+    "ae2s_ponder:cell_workbench",
+    "ae2s_ponder:inscriber",
+    "ae2s_ponder:pattern_crafting",
+    "ae2s_ponder:pattern_processing",
+    "ae2s_ponder:pattern_provider",
+    "ae2s_ponder:interface"
+  ]
+}

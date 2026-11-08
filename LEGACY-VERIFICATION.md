@@ -1,4 +1,28 @@
-# AE2S Ponder Legacy 0.2.0 正式基线验收
+# AE2S Ponder Legacy 安装包验收
+
+## 当前开发构建：0.3.0（共享 GUI 教程）
+
+- 日期：2026-11-08。Minecraft 1.12.2 / **Cleanroom 0.4.0 正式版（无 -alpha）** / Java 25.0.5。
+- 安装包：`ae2s-ponder-legacy-0.3.0.jar`；SHA-256：`c134dd24dff406d417e9d631f17c9a03bf68e6e5a902d6ca379608949c7080a3`。
+- AE2S / Supergiant **1.1.0**；独立安装 Ponder Legacy **1.7.0**，SHA-256：`86e072acb375b28dd68051c87ae2c752a6e9df81794e8da701fb641943f35041`。
+- 4 项版本／可选依赖单元测试通过；开发目录与独立发布目录构建产物逐字节一致。Ponder 的 main CI 产物也与验收包一致。
+
+| 组合 | 结果 | 检查项 |
+| --- | --- | --- |
+| client-with-ponder | PASS | 1872 |
+| client-without-ponder | PASS | 5 |
+| server-with-ponder | PASS | 3 |
+| server-without-ponder | PASS | 3 |
+
+8 套 GUI 均在 AE2S 原生界面上核对中英文、W 长按、语义槽位／动态控件、文本框焦点和演示状态隔离；样板终端按当前模式匹配引导。真实驱动器与元件工作台通过原生容器点击放入元件，验证同步后的步骤推进和配置槽启用。引导面板避让 AE2S 工具栏与扩展控件，缩放后高亮保持对齐。压印器同时用同步状态 fixture 核对加工进度与已完成产物条件，未声称完整运行自动生产线。
+
+24 个机器动画与 25 篇双语图文回归通过；Java／Markdown 的 GUI 片段与实机引导解析同一数据，场景跳转和重播重建相同 GUI 帧。真实 P2P、内存卡、机器供电及投影材料继续通过。四种组合使用实际生产 SRG jar，未装 CraftTweaker、GuideME、Mouse Tweaks、FTB Quests、Media API 或 Revo UI。
+
+[报告、运行指纹、截图与范围](docs/verification/development-0.3.0/summary.json) · [构建一致性](docs/verification/development-0.3.0/reproducibility.json)。Linux x64 / llvmpipe；不背书其他 AE2 实现或任意整合包。本次为 main CI 构建，正式发行状态见 PUBLICATION.md。
+
+---
+
+## 历史：0.2.0 正式基线验收
 
 - 日期：2026-11-06。Minecraft 1.12.2 / **Cleanroom 0.4.0 正式版（不带 -alpha）** / Java 25.0.5。
 - 安装包：`ae2s-ponder-legacy-0.2.0.jar`，SHA-256：`1f6c095c8859cf0053a431b5c0535a0a45a33d25ac10f3d96eef3c67997e0614`。

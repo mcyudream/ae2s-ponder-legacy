@@ -16,35 +16,39 @@ Select processing mode in the Pattern Encoding Terminal. For this example, encod
 
 <GameScene scene="ae2s_ponder:processing" tick={45} />
 
+<GuiTutorial id="ae2s_ponder:pattern_processing" />
+
 ## 2
 
 Place the Pattern Provider above the furnace and configure it to output downward into the top input. Processing patterns describe a recipe but do not perform it.
 
-<GameScene scene="ae2s_ponder:processing" tick={215} />
+<GameScene scene="ae2s_ponder:processing" tick={616} />
+
+<GuiTutorial id="ae2s_ponder:pattern_provider" />
 
 ## 3
 
 A vanilla furnace accepts smelting input from above, fuel from a side and output from below. Add fuel manually for this example; a real machine must process the ingredients.
 
-<GameScene scene="ae2s_ponder:processing" tick={417} />
+<GameScene scene="ae2s_ponder:processing" tick={1219} />
 
 ## 4
 
 The Import Bus below the furnace faces upward and extracts the ingot from its bottom output. Keep this return path connected to the same crafting network.
 
-<GameScene scene="ae2s_ponder:processing" tick={619} />
+<GameScene scene="ae2s_ponder:processing" tick={1421} />
 
 ## 5
 
 Start the job from a Crafting Terminal. The CPU waits for the declared result to return to ME storage; correct input alone does not complete the job.
 
-<GameScene scene="ae2s_ponder:processing" tick={789} />
+<GameScene scene="ae2s_ponder:processing" tick={1591} />
 
 ## 6
 
 If a job stalls, check fuel, machine sides, output extraction, storage space and exact pattern amounts. Blocking mode can help prevent mixing batches when a machine still contains ingredients.
 
-<GameScene scene="ae2s_ponder:processing" tick={959} />
+<GameScene scene="ae2s_ponder:processing" tick={1761} />
 
 <GuideOnly>
 

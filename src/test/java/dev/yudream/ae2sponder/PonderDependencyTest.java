@@ -24,16 +24,17 @@ public class PonderDependencyTest {
     }
 
     @Test public void acceptsPublishedStablePonder() {
-        assertTrue("Ponder Legacy 1.5.0 must load", accepts("1.5.0"));
+        assertTrue("Ponder Legacy 1.7.0 must load", accepts("1.7.0"));
     }
 
     @Test public void acceptsNewerPresentationCompatiblePonder() {
-        assertTrue(accepts("1.5.1"));
+        assertTrue(accepts("1.7.1"));
     }
 
     @Test public void rejectsVersionsBeforeTheSupportedApi() {
         assertFalse(accepts("1.3.9"));
         assertFalse(accepts("1.4.1"));
+        assertFalse(accepts("1.6.2"));
     }
 
     @Test public void ponderRemainsOptional() {

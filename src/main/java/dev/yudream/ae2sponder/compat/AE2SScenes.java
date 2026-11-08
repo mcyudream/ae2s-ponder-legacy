@@ -40,6 +40,12 @@ public final class AE2SScenes {
             .rightClick().withItem(stack(item));
     }
 
+    private static void gui(SceneBuilder scene, String tutorial, int x, int y, int z) {
+        scene.overlay().showGui(400, PonderAE2SPlugin.id(tutorial)).onRight()
+            .pointAt(new Vec3d(x + .5, y + .5, z + .5));
+        scene.idle(401);
+    }
+
     private static ItemStack stack(String item) {
         return new ItemStack(Item.REGISTRY.getObject(PonderAE2SPlugin.ae2(item)));
     }
@@ -79,10 +85,12 @@ public final class AE2SScenes {
         scene.world().showSection(util.select().fromTo(2, 1, 3, 5, 1, 3), EnumFacing.DOWN);
         use(scene, util, "item_storage_cell_1k", 5, 1, 3);
         explain(scene, util, "first.storage", 5, 1, 3);
+        gui(scene, "drive", 5, 1, 3);
         highlight(scene, util, PonderPalette.GREEN, 3, 1, 3, 3, 1, 3);
         use(scene, util, "terminal", 3, 1, 3);
         flow(scene, util, new ItemStack(Items.IRON_INGOT), 3, 3, 5, 3);
         explain(scene, util, "first.terminal", 3, 1, 3);
+        gui(scene, "terminal", 3, 1, 3);
         explain(scene, util, "first.check", 2, 1, 3);
         scene.markAsFinished();
     }
@@ -92,11 +100,13 @@ public final class AE2SScenes {
         scene.world().showSection(util.select().fromTo(1, 1, 3, 4, 1, 3), EnumFacing.DOWN);
         use(scene, util, "item_storage_cell_1k", 2, 1, 3);
         explain(scene, util, "cells.insert", 2, 1, 3);
+        gui(scene, "drive", 2, 1, 3);
         use(scene, util, "item_storage_cell_64k", 2, 1, 3);
         explain(scene, util, "cells.capacity", 2, 1, 3);
         show(scene, util, 4, 1, 1);
         use(scene, util, "item_storage_cell_1k", 4, 1, 1);
         explain(scene, util, "cells.partition", 4, 1, 1);
+        gui(scene, "cell_workbench", 4, 1, 1);
         flow(scene, util, stack("item_storage_cell_1k"), 4, 1, 2, 3);
         explain(scene, util, "cells.return", 2, 1, 3);
         explain(scene, util, "cells.safety", 2, 1, 3);
@@ -156,10 +166,12 @@ public final class AE2SScenes {
         show(scene, util, 1, 1, 2);
         use(scene, util, "blank_pattern", 2, 1, 3);
         explain(scene, util, "craft.encode", 2, 1, 3);
+        gui(scene, "pattern_crafting", 2, 1, 3);
         show(scene, util, 4, 1, 3);
         show(scene, util, 5, 1, 3);
         use(scene, util, "crafting_pattern", 4, 1, 3);
         explain(scene, util, "craft.provider", 4, 1, 3);
+        gui(scene, "pattern_provider", 4, 1, 3);
         scene.world().showSection(util.select().fromTo(2, 1, 1, 3, 1, 1), EnumFacing.DOWN);
         show(scene, util, 2, 1, 2);
         highlight(scene, util, PonderPalette.GREEN, 2, 1, 1, 3, 1, 1);
@@ -180,9 +192,11 @@ public final class AE2SScenes {
         scene.world().showSection(util.select().layersFrom(1), EnumFacing.DOWN);
         use(scene, util, "blank_pattern", 2, 1, 3);
         explain(scene, util, "processing.encode", 2, 1, 3);
+        gui(scene, "pattern_processing", 2, 1, 3);
         use(scene, util, "processing_pattern", 5, 3, 3);
         highlight(scene, util, PonderPalette.INPUT, 5, 2, 3, 5, 3, 3);
         explain(scene, util, "processing.provider", 5, 3, 3);
+        gui(scene, "pattern_provider", 5, 3, 3);
         scene.overlay().showControls(util.vector().topOf(5, 2, 3), Pointing.DOWN, 75)
             .rightClick().withItem(new ItemStack(Items.COAL));
         flow(scene, util, new ItemStack(Item.getItemFromBlock(net.minecraft.init.Blocks.IRON_ORE)), 4, 3, 5, 3);

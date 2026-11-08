@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'dev.yudream.ae2sponder'
-version = '0.2.0'
+version = '0.3.0'
 base.archivesName = 'ae2s-ponder-legacy'
 java {
     toolchain.languageVersion = JavaLanguageVersion.of(25)
@@ -12,6 +12,7 @@ java {
 }
 repositories {
     mavenCentral()
+    maven { url = 'https://cursemaven.com' ; content { includeGroup 'curse.maven' } }
     maven {
         url = 'https://api.modrinth.com/maven'
         content { includeGroup 'maven.modrinth' }
@@ -35,6 +36,9 @@ def ae2sInstallation = files(ae2sRuntimeJar).builtBy('fetchAE2SRuntime')
 dependencies {
     implementation cleanroom.userdev(cleanroom_version)
     compileOnly project(':ponder')
+    compileOnly ae2sDevelopment
+    // AE2S exposes this optional API in AEBaseGui's signature. Never package or require Mouse Tweaks.
+    compileOnly 'curse.maven:mouse-tweaks-unofficial-461660:5876158'
     testImplementation 'junit:junit:4.13.2'
     runtimeOnly(project.hasProperty('packagedSmoke') ? ae2sInstallation : ae2sDevelopment)
     if (project.hasProperty('withPonder')) runtimeOnly project(':ponder')

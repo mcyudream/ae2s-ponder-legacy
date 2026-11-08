@@ -1,0 +1,132 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:terminal",
+  "title": "@ae2s_ponder.gui.terminal.title",
+  "components": [
+    "ae2:terminal",
+    "ae2:crafting_terminal"
+  ],
+  "screen": "ae2.client.gui.me.common.GuiMEStorage",
+  "adapter": "ae2s",
+  "width": 195,
+  "height": 170,
+  "texture": "ae2:textures/guis/terminal.png",
+  "targets": {
+    "widget.search": {
+      "type": "region",
+      "x": 80,
+      "y": 4,
+      "width": 89,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.terminal.target.widget.search",
+      "item": "",
+      "count": 0
+    },
+    "repo.0": {
+      "type": "slot",
+      "x": 8,
+      "y": 18,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.terminal.target.repo.0",
+      "item": "",
+      "count": 0
+    },
+    "slot.PLAYER_INVENTORY.0": {
+      "type": "slot",
+      "x": 8,
+      "y": 88,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.terminal.target.slot.PLAYER_INVENTORY.0",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.terminal.target.widget.search",
+      "text": "@ae2s_ponder.gui.terminal.step.0",
+      "target": "widget.search",
+      "duration": 75,
+      "wait": {
+        "type": "click"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.search",
+          "value": "iron",
+          "at": 20
+        },
+        {
+          "op": "set_slot",
+          "target": "repo.0",
+          "item": "minecraft:iron_ingot",
+          "count": 64,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.terminal.target.repo.0",
+      "text": "@ae2s_ponder.gui.terminal.step.1",
+      "target": "repo.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "repo.0",
+          "item": "minecraft:iron_ingot",
+          "count": 64,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.terminal.target.slot.PLAYER_INVENTORY.0",
+      "text": "@ae2s_ponder.gui.terminal.step.2",
+      "target": "slot.PLAYER_INVENTORY.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "repo.0",
+          "item": "minecraft:iron_ingot",
+          "count": 32,
+          "at": 20
+        },
+        {
+          "op": "set_slot",
+          "target": "slot.PLAYER_INVENTORY.0",
+          "item": "minecraft:iron_ingot",
+          "count": 32,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.terminal.target.widget.search",
+      "text": "@ae2s_ponder.gui.terminal.step.3",
+      "target": "widget.search",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.search",
+          "value": "",
+          "at": 20
+        }
+      ]
+    }
+  ]
+}

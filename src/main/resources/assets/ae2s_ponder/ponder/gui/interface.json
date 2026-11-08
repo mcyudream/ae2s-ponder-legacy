@@ -1,0 +1,111 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:interface",
+  "title": "@ae2s_ponder.gui.interface.title",
+  "components": [
+    "ae2:interface",
+    "ae2:cable_interface"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiInterface",
+  "adapter": "ae2s",
+  "width": 176,
+  "height": 253,
+  "texture": "ae2:textures/guis/interface.png",
+  "targets": {
+    "slot.CONFIG.0": {
+      "type": "slot",
+      "x": 8,
+      "y": 53,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.interface.target.slot.CONFIG.0",
+      "item": "",
+      "count": 0
+    },
+    "slot.STORAGE.0": {
+      "type": "slot",
+      "x": 8,
+      "y": 71,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.interface.target.slot.STORAGE.0",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.interface.target.slot.CONFIG.0",
+      "text": "@ae2s_ponder.gui.interface.step.0",
+      "target": "slot.CONFIG.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.CONFIG.0",
+          "item": "minecraft:iron_ingot",
+          "count": 16,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.interface.target.slot.STORAGE.0",
+      "text": "@ae2s_ponder.gui.interface.step.1",
+      "target": "slot.STORAGE.0",
+      "duration": 75,
+      "wait": {
+        "type": "slot_has",
+        "item": "minecraft:iron_ingot"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.STORAGE.0",
+          "item": "minecraft:iron_ingot",
+          "count": 16,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.interface.target.slot.STORAGE.0",
+      "text": "@ae2s_ponder.gui.interface.step.2",
+      "target": "slot.STORAGE.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.STORAGE.0",
+          "item": "minecraft:iron_ingot",
+          "count": 8,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.interface.target.slot.STORAGE.0",
+      "text": "@ae2s_ponder.gui.interface.step.3",
+      "target": "slot.STORAGE.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.STORAGE.0",
+          "item": "minecraft:iron_ingot",
+          "count": 16,
+          "at": 20
+        }
+      ]
+    }
+  ]
+}

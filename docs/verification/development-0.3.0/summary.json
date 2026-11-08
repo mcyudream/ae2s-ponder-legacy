@@ -1,0 +1,62 @@
+{
+  "version": "0.3.0",
+  "date": "2026-11-08",
+  "minecraft": "1.12.2",
+  "cleanroom": "0.4.0",
+  "java": "25.0.5",
+  "ae2s": "1.1.0",
+  "production_jar": "ae2s-ponder-legacy-0.3.0.jar",
+  "sha256": "c134dd24dff406d417e9d631f17c9a03bf68e6e5a902d6ca379608949c7080a3",
+  "ponder_version": "1.7.0",
+  "ponder_sha256": "86e072acb375b28dd68051c87ae2c752a6e9df81794e8da701fb641943f35041",
+  "tutorial_pages": 25,
+  "animated_tutorials": 24,
+  "shared_gui_tutorials": 8,
+  "unit_tests": {
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "fixtures": [
+    {
+      "fixture": "client-with-ponder",
+      "result": "PASS",
+      "checks": 1872,
+      "report": "client-with-ponder/report.json"
+    },
+    {
+      "fixture": "client-without-ponder",
+      "result": "PASS",
+      "checks": 5,
+      "report": "client-without-ponder/report.json"
+    },
+    {
+      "fixture": "server-with-ponder",
+      "result": "PASS",
+      "checks": 3,
+      "report": "server-with-ponder/report.json"
+    },
+    {
+      "fixture": "server-without-ponder",
+      "result": "PASS",
+      "checks": 3,
+      "report": "server-without-ponder/report.json"
+    }
+  ],
+  "main_source_sha256": "16f89a486c92c70bcc0155a700ba6d613e858432b120fa1af02f67ce8503c28c",
+  "main_source_hash_format": "Sorted src/main relative path UTF-8 + NUL + content for every regular file.",
+  "scope": [
+    "Eight AE2S native GUI lessons in both languages: W hold, search focus, live semantic targets, matching encoding modes, native containers preserved after independent demos.",
+    "Actual drive and cell-workbench item insertion synchronizes and advances the guide; disabled ghost slots stay unresolved until available.",
+    "Machine clips share the live/demo resource; forward/backward scene seeking reconstructs deterministic GUI frames in Java and Markdown scenes.",
+    "Guide placement includes actual AE2S toolbar/side-panel exclusions; resizing uses native slot coordinates.",
+    "24 animations, 25 guide pages, P2P and powered-machine regressions, optional Ponder client/world and dedicated-server startup."
+  ],
+  "limitations": [
+    "Linux x64 llvmpipe; arbitrary GPUs, modpacks, and other AE2 implementations are not certified.",
+    "Demonstration inventories are declarative. Native drive/workbench insertion is performed in acceptance; Inscriber progress and fast-result conditions are additionally checked with synchronized-state fixtures, not a full automated production network.",
+    "External Revo UI/FTB Quests/Media/CraftTweaker are not installed for this AE2S-specific acceptance.",
+    "Main CI build; no tag or formal GitHub Release created by this change."
+  ]
+}

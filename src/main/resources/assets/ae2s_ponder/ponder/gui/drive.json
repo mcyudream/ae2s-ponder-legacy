@@ -1,0 +1,96 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:drive",
+  "title": "@ae2s_ponder.gui.drive.title",
+  "components": [
+    "ae2:drive",
+    "ae2:item_storage_cell_1k",
+    "ae2:item_storage_cell_64k"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiDrive",
+  "adapter": "ae2s",
+  "width": 176,
+  "height": 201,
+  "texture": "ae2:textures/guis/drive.png",
+  "targets": {
+    "slot.STORAGE_CELL.0": {
+      "type": "slot",
+      "x": 71,
+      "y": 14,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.drive.target.slot.STORAGE_CELL.0",
+      "item": "",
+      "count": 0
+    },
+    "slot.STORAGE_CELL.1": {
+      "type": "slot",
+      "x": 89,
+      "y": 14,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.drive.target.slot.STORAGE_CELL.1",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.drive.target.slot.STORAGE_CELL.0",
+      "text": "@ae2s_ponder.gui.drive.step.0",
+      "target": "slot.STORAGE_CELL.0",
+      "duration": 75,
+      "wait": {
+        "type": "slot_has",
+        "item": ""
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.STORAGE_CELL.0",
+          "item": "ae2:item_storage_cell_1k",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.drive.target.slot.STORAGE_CELL.1",
+      "text": "@ae2s_ponder.gui.drive.step.1",
+      "target": "slot.STORAGE_CELL.1",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.STORAGE_CELL.1",
+          "item": "ae2:item_storage_cell_64k",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.drive.target.slot.STORAGE_CELL.0",
+      "text": "@ae2s_ponder.gui.drive.step.2",
+      "target": "slot.STORAGE_CELL.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.drive.target.slot.STORAGE_CELL.0",
+      "text": "@ae2s_ponder.gui.drive.step.3",
+      "target": "slot.STORAGE_CELL.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

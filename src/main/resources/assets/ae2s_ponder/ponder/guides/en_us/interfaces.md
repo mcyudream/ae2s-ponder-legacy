@@ -56,6 +56,8 @@ Put ghost filter entries and quantities in the configuration slots. The interfac
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:interface" duration={400} side="right" />
+
 ## Consume locally
 
 Let an adjacent machine or pipe consume the stocked items. Verify it reads the intended interface inventory, then watch replenishment. Keep extraction paths from feeding the same items straight back.

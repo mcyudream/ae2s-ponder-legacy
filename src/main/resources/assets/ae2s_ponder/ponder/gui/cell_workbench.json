@@ -1,0 +1,102 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:cell_workbench",
+  "title": "@ae2s_ponder.gui.cell_workbench.title",
+  "components": [
+    "ae2:cell_workbench"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiCellWorkbench",
+  "adapter": "ae2s",
+  "width": 176,
+  "height": 253,
+  "texture": "ae2:textures/guis/cellworkbench.png",
+  "targets": {
+    "slot.STORAGE_CELL.0": {
+      "type": "slot",
+      "x": 152,
+      "y": 8,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.cell_workbench.target.slot.STORAGE_CELL.0",
+      "item": "",
+      "count": 0
+    },
+    "slot.CONFIG.0": {
+      "type": "slot",
+      "x": 8,
+      "y": 29,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.cell_workbench.target.slot.CONFIG.0",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.cell_workbench.target.slot.STORAGE_CELL.0",
+      "text": "@ae2s_ponder.gui.cell_workbench.step.0",
+      "target": "slot.STORAGE_CELL.0",
+      "duration": 75,
+      "wait": {
+        "type": "slot_has",
+        "item": ""
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.STORAGE_CELL.0",
+          "item": "ae2:item_storage_cell_1k",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.cell_workbench.target.slot.CONFIG.0",
+      "text": "@ae2s_ponder.gui.cell_workbench.step.1",
+      "target": "slot.CONFIG.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.CONFIG.0",
+          "item": "minecraft:iron_ingot",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.cell_workbench.target.slot.CONFIG.0",
+      "text": "@ae2s_ponder.gui.cell_workbench.step.2",
+      "target": "slot.CONFIG.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.cell_workbench.target.slot.STORAGE_CELL.0",
+      "text": "@ae2s_ponder.gui.cell_workbench.step.3",
+      "target": "slot.STORAGE_CELL.0",
+      "duration": 75,
+      "wait": {
+        "type": "slot_empty"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.STORAGE_CELL.0",
+          "item": "",
+          "count": 0,
+          "at": 20
+        }
+      ]
+    }
+  ]
+}

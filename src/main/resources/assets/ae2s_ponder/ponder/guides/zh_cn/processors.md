@@ -33,6 +33,8 @@ step_ticks: 180
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:inscriber" duration={400} side="right" />
+
 ## 合成处理器
 
 第二道工序将电路、硅板和红石组合为处理器。使用独立的组装压印器，可避免反复移动模板。
@@ -101,6 +103,8 @@ step_ticks: 180
   }
 ]
 ```
+
+<GuiTutorial id="ae2s_ponder:pattern_processing" duration={400} side="right" />
 
 ## 排查停滞任务
 

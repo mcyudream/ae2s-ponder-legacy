@@ -16,6 +16,10 @@ import net.minecraft.util.ResourceLocation;
 public final class PonderAE2SPlugin implements PonderPlugin {
     @Override public String getModId() { return AE2SPonder.MOD_ID; }
 
+    @Override public void registerGuiTutorials(java.util.function.Consumer<net.createmod.ponder.api.gui.GuiTutorial> register) {
+        net.createmod.ponder.client.guitutorial.GuiTutorials.registerAdapter("ae2s", new AE2SGuiAdapter());
+    }
+
     @Override public void registerTutorials(net.createmod.ponder.api.guide.TutorialRegistrationHelper helper) {
         helper.addMarkdownIndex(id("index"));
     }

@@ -56,6 +56,8 @@ step_ticks: 180
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:interface" duration={400} side="right" />
+
 ## 从本地库存取用
 
 让相邻机器或管道消耗备货物品，确认其读取的是目标接口库存，再观察补货。避免取出路线将同批物品立即送回而形成循环。

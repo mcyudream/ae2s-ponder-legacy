@@ -7,6 +7,7 @@ import sys
 
 root = Path(__file__).resolve().parents[1]
 subprocess.run([sys.executable, str(root / "tools/generate-structures.py"), "--check"], check=True)
+subprocess.run([sys.executable, str(root / "tools/generate-guis.py"), "--check"], check=True)
 
 def language(code):
     entries = {}

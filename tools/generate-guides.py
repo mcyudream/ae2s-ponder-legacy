@@ -29,7 +29,10 @@ def files():
             # Derive exact annotation cursor times, including reversible item-flow delays.
             method=re.search(r'public static void \w+\(SceneBuilder scene, SceneBuildingUtil util\) \{\s*begin\(scene, "'+id+r'".*?(?=\n    public static void|\n\})',source,re.S).group()
             cursor=15;step=0
-            for call in re.finditer(r'flow\(scene,.*?;|explain\(scene, util, "([^"]+)"[^;]*;',method):
+            for call in re.finditer(r'flow\(scene,.*?;|explain\(scene, util, "([^"]+)"[^;]*;|gui\(scene, "([^"]+)"[^;]*;',method):
+                if call.group(2):
+                    page+=f'\n<GuiTutorial id="ae2s_ponder:{call.group(2)}" />\n'
+                    cursor+=401;continue
                 if call.group(1) is None:cursor+=32;continue
                 step+=1;key=call.group(1);narration=text[f'ae2s_ponder.ponder.shared.{key}'];tick=cursor+30;cursor+=170
                 page+=f'\n## {step}\n\n{narration}\n\n<GameScene scene="ae2s_ponder:{id}" tick={{{tick}}} />\n'
@@ -40,6 +43,8 @@ def files():
             for i,(en_h,zh_h,en,zh,pos) in enumerate(steps):
                 page+=f'\n## {en_h if l==0 else zh_h}\n\n{en if l==0 else zh}\n'+actions(pos,
                     'certus_quartz_crystal' if id=='charger' and i==1 else 'logic_processor' if id=='processors' and i==4 else None,i)
+                gui = 'inscriber' if id=='processors' and i==0 else 'pattern_processing' if id=='processors' and i==3 else 'interface' if id=='interfaces' and i==1 else None
+                if gui:page+=f'\n<GuiTutorial id="ae2s_ponder:{gui}" duration={{400}} side="right" />\n'
             page+='\n<GuideOnly>\n\n'+('[排查与索引](troubleshooting.md)' if l else '[Troubleshooting and topic index](troubleshooting.md)')+'\n\n</GuideOnly>\n'
             result[f'ponder/guides/{code}/{id}.md']=page
         title='Tutorial Index and Troubleshooting' if l==0 else '教程索引与故障排查'

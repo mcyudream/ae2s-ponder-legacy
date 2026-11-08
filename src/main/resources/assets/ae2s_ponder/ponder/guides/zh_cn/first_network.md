@@ -28,17 +28,21 @@ step_ticks: 180
 
 <GameScene scene="ae2s_ponder:first_network" tick={385} />
 
+<GuiTutorial id="ae2s_ponder:drive" />
+
 ## 4
 
 在线缆表面安装 ME 终端。打开终端，即可存入、搜索并取出网络中存储的物品。
 
-<GameScene scene="ae2s_ponder:first_network" tick={587} />
+<GameScene scene="ae2s_ponder:first_network" tick={988} />
+
+<GuiTutorial id="ae2s_ponder:terminal" />
 
 ## 5
 
 终端离线时，依次检查供电、线缆连接与剩余频道。演示中的物品移动用于说明传输路径。
 
-<GameScene scene="ae2s_ponder:first_network" tick={757} />
+<GameScene scene="ae2s_ponder:first_network" tick={1559} />
 
 <GuideOnly>
 

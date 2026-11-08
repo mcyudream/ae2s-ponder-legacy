@@ -7,4 +7,6 @@ pluginManagement {
 plugins { id 'com.cleanroommc.cleanroomgradle.settings' version '0.22.0' }
 rootProject.name = 'ae2s-ponder-legacy'
 include ':ponder'
-project(':ponder').projectDir = file('../ponder/build.gradle').exists() ? file('../ponder') : file('.legacy-deps/ponder')
+project(':ponder').projectDir = providers.gradleProperty('ponderSourceDir').isPresent()
+    ? file(providers.gradleProperty('ponderSourceDir').get())
+    : file('../ponder/build.gradle').exists() ? file('../ponder') : file('.legacy-deps/ponder')

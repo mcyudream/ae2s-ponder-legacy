@@ -26,6 +26,7 @@ public final class PonderVerification implements ClientVerification.OptionalVeri
     private Language previousLanguage;
     private P2PNetworkVerification topology = new P2PNetworkVerification();
     private MachineNetworkVerification wiring = new MachineNetworkVerification();
+    private GuiLessonVerification guis = new GuiLessonVerification();
 
     @Override public void prepare(ClientVerification host) {
         for (var entry : PonderIndex.getSceneAccess().getRegisteredEntries()) {
@@ -70,6 +71,8 @@ public final class PonderVerification implements ClientVerification.OptionalVeri
                 host.check(tile != null && block.getTileData().getString("id").equals(TileEntity.getKey(tile.getClass()).toString()), currentGuide.id()+": real native tile " + block.getPosition());
             }
             scene.seek(scene.getTotalTicks());host.check(scene.isFinished(), currentGuide.id()+": full Markdown animation executes");
+            if (currentGuide.id().getPath().equals("processors") || currentGuide.id().getPath().equals("interfaces"))
+                verifyGuiClips(host,scene,currentGuide.id().getPath());
             scene.seek(0);host.check(scene.getCurrentTick()==0,currentGuide.id()+": Markdown animation can rewind");
             host.check(scene.getNarration().size()>=4,currentGuide.id()+": every authored section has animation narration");
             host.check(scene.getTitle().equals(currentGuide.title()),currentGuide.id()+": " + code + " shared title resolves");
@@ -93,6 +96,10 @@ public final class PonderVerification implements ClientVerification.OptionalVeri
         if (wiring != null) {
             if (!wiring.tick(host)) return false;
             wiring = null;
+        }
+        if (guis != null) {
+            if (!guis.tick(host)) return false;
+            guis = null;
         }
         if (lesson >= Lesson.values().length) {
             if (!verifyGuides(host)) return false;
@@ -132,6 +139,8 @@ public final class PonderVerification implements ClientVerification.OptionalVeri
             }
             scene.seek(scene.getTotalTicks());
             host.check(scene.isFinished(), current.id + ": full timeline executes");
+            if (current==Lesson.FIRST_NETWORK||current==Lesson.STORAGE_CELLS||current==Lesson.AUTOCRAFTING||current==Lesson.PROCESSING)
+                verifyGuiClips(host,scene,current.id);
             if (current == Lesson.P2P) {
                 var output = ((TileCableBus) scene.getWorld().getTileEntity(new net.minecraft.util.math.BlockPos(6, 1, 3)))
                     .getPart(EnumFacing.EAST);
@@ -184,5 +193,18 @@ public final class PonderVerification implements ClientVerification.OptionalVeri
             if (++lesson == Lesson.values().length && language == 0) { language = 1; lesson = 0; }
         }
         return false;
+    }
+
+    private void verifyGuiClips(ClientVerification host, net.createmod.ponder.foundation.PonderScene scene, String name) {
+        host.check(!scene.getGuiAnimations().isEmpty(),name+": machine animation includes authored GUI clips");
+        for(var clip:scene.getGuiAnimations()) {
+            var tutorial=net.createmod.ponder.client.guitutorial.GuiTutorials.resolve(clip.tutorial().toString());
+            host.check(tutorial.id().equals(clip.tutorial()),name+": GUI clip resolves the same live/demo definition");
+            scene.seek(clip.start()+100);
+            host.check(scene.getActiveGuiAnimations().contains(clip),name+": seeking activates its GUI segment");
+            int frame=clip.tutorialTick(scene,new net.createmod.ponder.gui.GuiTutorialSession(tutorial).lastTick());
+            scene.seek(0);scene.seek(clip.start()+100);
+            host.check(frame==clip.tutorialTick(scene,new net.createmod.ponder.gui.GuiTutorialSession(tutorial).lastTick()),name+": GUI replay uses the same scene clock");
+        }
     }
 }

@@ -1,0 +1,187 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:inscriber",
+  "title": "@ae2s_ponder.gui.inscriber.title",
+  "components": [
+    "ae2:inscriber",
+    "ae2:silicon_press"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiInscriber",
+  "adapter": "ae2s",
+  "width": 176,
+  "height": 178,
+  "texture": "ae2:textures/guis/inscriber.png",
+  "targets": {
+    "slot.INSCRIBER_PLATE_TOP.0": {
+      "type": "slot",
+      "x": 39,
+      "y": 23,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.inscriber.target.slot.INSCRIBER_PLATE_TOP.0",
+      "item": "",
+      "count": 0
+    },
+    "slot.INSCRIBER_PLATE_BOTTOM.0": {
+      "type": "slot",
+      "x": 39,
+      "y": 55,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.inscriber.target.slot.INSCRIBER_PLATE_BOTTOM.0",
+      "item": "",
+      "count": 0
+    },
+    "slot.MACHINE_INPUT.0": {
+      "type": "slot",
+      "x": 63,
+      "y": 39,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.inscriber.target.slot.MACHINE_INPUT.0",
+      "item": "",
+      "count": 0
+    },
+    "progress": {
+      "type": "region",
+      "x": 135,
+      "y": 39,
+      "width": 12,
+      "height": 18,
+      "label": "@ae2s_ponder.gui.inscriber.target.progress",
+      "item": "",
+      "count": 0
+    },
+    "slot.MACHINE_OUTPUT.0": {
+      "type": "slot",
+      "x": 113,
+      "y": 40,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.inscriber.target.slot.MACHINE_OUTPUT.0",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.inscriber.target.slot.INSCRIBER_PLATE_TOP.0",
+      "text": "@ae2s_ponder.gui.inscriber.step.0",
+      "target": "slot.INSCRIBER_PLATE_TOP.0",
+      "duration": 75,
+      "wait": {
+        "type": "slot_has",
+        "item": "ae2:silicon_press"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.INSCRIBER_PLATE_TOP.0",
+          "item": "ae2:silicon_press",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.inscriber.target.slot.MACHINE_INPUT.0",
+      "text": "@ae2s_ponder.gui.inscriber.step.1",
+      "target": "slot.MACHINE_INPUT.0",
+      "duration": 75,
+      "wait": {
+        "type": "slot_has",
+        "item": "ae2:silicon"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.MACHINE_INPUT.0",
+          "item": "ae2:silicon",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.inscriber.target.progress",
+      "text": "@ae2s_ponder.gui.inscriber.step.2",
+      "target": "progress",
+      "duration": 75,
+      "wait": {
+        "type": "value_at_least",
+        "field": "inscriber.work_observed",
+        "value": "1"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "inscriber.progress",
+          "value": "50",
+          "at": 20
+        },
+        {
+          "op": "set_value",
+          "field": "inscriber.work_observed",
+          "value": "1",
+          "at": 20
+        },
+        {
+          "op": "set_value",
+          "field": "progress",
+          "value": "50%",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.inscriber.target.slot.MACHINE_OUTPUT.0",
+      "text": "@ae2s_ponder.gui.inscriber.step.3",
+      "target": "slot.MACHINE_OUTPUT.0",
+      "duration": 75,
+      "wait": {
+        "type": "slot_has",
+        "item": "ae2:printed_silicon"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.MACHINE_INPUT.0",
+          "item": "",
+          "count": 0,
+          "at": 20
+        },
+        {
+          "op": "set_slot",
+          "target": "slot.MACHINE_OUTPUT.0",
+          "item": "ae2:printed_silicon",
+          "count": 1,
+          "at": 20
+        },
+        {
+          "op": "set_value",
+          "field": "progress",
+          "value": "100%",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.inscriber.target.slot.MACHINE_OUTPUT.0",
+      "text": "@ae2s_ponder.gui.inscriber.step.4",
+      "target": "slot.MACHINE_OUTPUT.0",
+      "duration": 75,
+      "wait": {
+        "type": "slot_empty"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.MACHINE_OUTPUT.0",
+          "item": "",
+          "count": 0,
+          "at": 20
+        }
+      ]
+    }
+  ]
+}

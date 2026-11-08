@@ -28,17 +28,21 @@ Connect an ME Drive with Fluix Cable and insert an item storage cell. An empty d
 
 <GameScene scene="ae2s_ponder:first_network" tick={385} />
 
+<GuiTutorial id="ae2s_ponder:drive" />
+
 ## 4
 
 Place an ME Terminal on a cable face. Open it to insert, find and withdraw items stored on the network.
 
-<GameScene scene="ae2s_ponder:first_network" tick={587} />
+<GameScene scene="ae2s_ponder:first_network" tick={988} />
+
+<GuiTutorial id="ae2s_ponder:terminal" />
 
 ## 5
 
 If the terminal is offline, check power, cable connections and available channels. Item movement here is a schematic animation.
 
-<GameScene scene="ae2s_ponder:first_network" tick={757} />
+<GameScene scene="ae2s_ponder:first_network" tick={1559} />
 
 <GuideOnly>
 

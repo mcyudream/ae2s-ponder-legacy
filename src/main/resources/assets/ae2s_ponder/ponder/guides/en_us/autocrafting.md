@@ -16,35 +16,39 @@ In a Pattern Encoding Terminal, insert a Blank Pattern and select crafting mode.
 
 <GameScene scene="ae2s_ponder:autocrafting" tick={45} />
 
+<GuiTutorial id="ae2s_ponder:pattern_crafting" />
+
 ## 2
 
 Put the encoded Crafting Pattern in a Pattern Provider touching a Molecular Assembler. Connect the provider to the powered ME network.
 
-<GameScene scene="ae2s_ponder:autocrafting" tick={215} />
+<GameScene scene="ae2s_ponder:autocrafting" tick={616} />
+
+<GuiTutorial id="ae2s_ponder:pattern_provider" />
 
 ## 3
 
 Build a solid cuboid Crafting CPU containing Crafting Storage. A Co-Processing Unit adds parallel operations; it does not replace Crafting Storage.
 
-<GameScene scene="ae2s_ponder:autocrafting" tick={385} />
+<GameScene scene="ae2s_ponder:autocrafting" tick={1187} />
 
 ## 4
 
 Store enough ingredients on the network. Open a Crafting Terminal, select the craftable result, choose an amount and confirm the crafting plan.
 
-<GameScene scene="ae2s_ponder:autocrafting" tick={555} />
+<GameScene scene="ae2s_ponder:autocrafting" tick={1357} />
 
 ## 5
 
 The provider supplies the assembler. The assembler crafts the encoded recipe and returns its result through the provider to the network.
 
-<GameScene scene="ae2s_ponder:autocrafting" tick={789} />
+<GameScene scene="ae2s_ponder:autocrafting" tick={1591} />
 
 ## 6
 
 AE2S has a dedicated Pattern Provider. An ME Interface is not a substitute for the provider used in this layout. These arrows illustrate the item path.
 
-<GameScene scene="ae2s_ponder:autocrafting" tick={959} />
+<GameScene scene="ae2s_ponder:autocrafting" tick={1761} />
 
 <GuideOnly>
 
