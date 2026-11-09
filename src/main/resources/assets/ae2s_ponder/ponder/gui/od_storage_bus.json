@@ -1,0 +1,84 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:od_storage_bus",
+  "title": "@ae2s_ponder.gui.od_storage_bus.title",
+  "components": [
+    "ae2:od_storage_bus"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiODStorageBus",
+  "adapter": "ae2s",
+  "width": 235,
+  "height": 222,
+  "texture": "ae2:textures/guis/od_storage_bus.png",
+  "targets": {
+    "widget.whiteExpression": {
+      "type": "button",
+      "x": 31,
+      "y": 35,
+      "width": 160,
+      "height": 26,
+      "label": "@ae2s_ponder.gui.od_storage_bus.target.widget.whiteExpression",
+      "item": "",
+      "count": 0
+    },
+    "widget.blackExpression": {
+      "type": "button",
+      "x": 31,
+      "y": 75,
+      "width": 160,
+      "height": 26,
+      "label": "@ae2s_ponder.gui.od_storage_bus.target.widget.blackExpression",
+      "item": "",
+      "count": 0
+    },
+    "widget.verticalToolbar": {
+      "type": "region",
+      "x": 6,
+      "y": 10,
+      "width": 20,
+      "height": 90,
+      "label": "@ae2s_ponder.gui.od_storage_bus.target.widget.verticalToolbar",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.od_storage_bus.target.widget.whiteExpression",
+      "text": "@ae2s_ponder.gui.od_storage_bus.step.0",
+      "target": "widget.whiteExpression",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.whiteExpression",
+          "value": "ingotIron",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.od_storage_bus.target.widget.blackExpression",
+      "text": "@ae2s_ponder.gui.od_storage_bus.step.1",
+      "target": "widget.blackExpression",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.od_storage_bus.target.widget.verticalToolbar",
+      "text": "@ae2s_ponder.gui.od_storage_bus.step.2",
+      "target": "widget.verticalToolbar",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

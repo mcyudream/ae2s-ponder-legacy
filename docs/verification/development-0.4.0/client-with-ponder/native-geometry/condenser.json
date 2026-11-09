@@ -1,0 +1,25 @@
+{
+  "screen": "ae2.client.gui.implementations.GuiCondenser",
+  "width": 176,
+  "height": 199,
+  "widgets": {
+    "mode": {
+      "kind": "ServerSettingToggleButton",
+      "bounds": [
+        129,
+        53,
+        16,
+        16
+      ]
+    },
+    "progressBar": {
+      "kind": "ProgressBar",
+      "bounds": [
+        120,
+        25,
+        6,
+        18
+      ]
+    }
+  }
+}

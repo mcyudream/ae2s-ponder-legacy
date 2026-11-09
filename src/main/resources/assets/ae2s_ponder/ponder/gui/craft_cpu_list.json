@@ -1,0 +1,85 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:craft_cpu_list",
+  "title": "@ae2s_ponder.gui.craft_cpu_list.title",
+  "components": [
+    "ae2:crafting_terminal",
+    "ae2:1k_crafting_storage"
+  ],
+  "screen": "ae2.client.gui.me.crafting.GuiCraftConfirmCpuList",
+  "adapter": "ae2s",
+  "width": 265,
+  "height": 207,
+  "texture": "ae2:textures/guis/craft_confirm_cpu_list.png",
+  "targets": {
+    "widget.search": {
+      "type": "region",
+      "x": 144,
+      "y": 25,
+      "width": 90,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.craft_cpu_list.target.widget.search",
+      "item": "",
+      "count": 0
+    },
+    "widget.sort": {
+      "type": "button",
+      "x": 31,
+      "y": 178,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.craft_cpu_list.target.widget.sort",
+      "item": "",
+      "count": 0
+    },
+    "view.body": {
+      "type": "region",
+      "x": 31,
+      "y": 37,
+      "width": 208,
+      "height": 140,
+      "label": "@ae2s_ponder.gui.craft_cpu_list.target.view.body",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.craft_cpu_list.target.widget.search",
+      "text": "@ae2s_ponder.gui.craft_cpu_list.step.0",
+      "target": "widget.search",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.search",
+          "value": "processors",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.craft_cpu_list.target.widget.sort",
+      "text": "@ae2s_ponder.gui.craft_cpu_list.step.1",
+      "target": "widget.sort",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.craft_cpu_list.target.view.body",
+      "text": "@ae2s_ponder.gui.craft_cpu_list.step.2",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

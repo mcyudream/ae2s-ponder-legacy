@@ -4,14 +4,14 @@
   "java": 25,
   "ponder": {
     "modid": "ponder-legacy",
-    "version": "1.7.0",
+    "version": "1.7.1",
     "project": "../ponder",
     "optional": true,
     "runtime": {
-      "file": "ponder-legacy-1.7.0.jar",
-      "sha256": "86e072acb375b28dd68051c87ae2c752a6e9df81794e8da701fb641943f35041",
+      "file": "ponder-legacy-1.7.1.jar",
+      "sha256": "0b4039c5e8cf01e740612136ac188cc41406431d0553f462109bebaf3b2f0f3e",
       "source_repository": "mcyudream/ponder-legacy",
-      "source_revision": "edd0d499362fbca24ea13375ad76034d1e8dc909",
+      "source_revision": "48f17efd3bd2249ba3c0b41351b55c5482e7a437",
       "ci_workflow": "https://github.com/mcyudream/ponder-legacy/actions/workflows/ci.yml",
       "channel": "main-ci"
     }

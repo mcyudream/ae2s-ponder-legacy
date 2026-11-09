@@ -102,6 +102,8 @@ A Storage Bus facing an Interface can expose another network through a controlle
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:storage_bus" duration={400} side="right" />
+
 <GuideOnly>
 
 [Troubleshooting and topic index](troubleshooting.md)

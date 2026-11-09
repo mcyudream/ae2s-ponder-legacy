@@ -1,0 +1,115 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:wireless_access_point",
+  "title": "@ae2s_ponder.gui.wireless_access_point.title",
+  "components": [
+    "ae2:wireless_access_point",
+    "ae2:wireless_terminal",
+    "ae2:wireless_universal_terminal"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiWirelessAccessPoint",
+  "adapter": "ae2s",
+  "width": 232,
+  "height": 176,
+  "texture": "ae2:textures/guis/wireless_access_point.png",
+  "targets": {
+    "slot.MACHINE_INPUT.0": {
+      "type": "slot",
+      "x": 202,
+      "y": 10,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.wireless_access_point.target.slot.MACHINE_INPUT.0",
+      "item": "",
+      "count": 0
+    },
+    "slot.MACHINE_OUTPUT.0": {
+      "type": "slot",
+      "x": 202,
+      "y": 68,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.wireless_access_point.target.slot.MACHINE_OUTPUT.0",
+      "item": "",
+      "count": 0
+    },
+    "text.range": {
+      "type": "region",
+      "x": 111,
+      "y": 24,
+      "width": 80,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.wireless_access_point.target.text.range",
+      "item": "",
+      "count": 0
+    },
+    "slot.STORAGE.0": {
+      "type": "slot",
+      "x": 103,
+      "y": 51,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.wireless_access_point.target.slot.STORAGE.0",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.wireless_access_point.target.slot.MACHINE_INPUT.0",
+      "text": "@ae2s_ponder.gui.wireless_access_point.step.0",
+      "target": "slot.MACHINE_INPUT.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.MACHINE_INPUT.0",
+          "item": "ae2:wireless_terminal",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.wireless_access_point.target.slot.MACHINE_OUTPUT.0",
+      "text": "@ae2s_ponder.gui.wireless_access_point.step.1",
+      "target": "slot.MACHINE_OUTPUT.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.MACHINE_OUTPUT.0",
+          "item": "ae2:wireless_terminal",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.wireless_access_point.target.text.range",
+      "text": "@ae2s_ponder.gui.wireless_access_point.step.2",
+      "target": "text.range",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.wireless_access_point.target.slot.STORAGE.0",
+      "text": "@ae2s_ponder.gui.wireless_access_point.step.3",
+      "target": "slot.STORAGE.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

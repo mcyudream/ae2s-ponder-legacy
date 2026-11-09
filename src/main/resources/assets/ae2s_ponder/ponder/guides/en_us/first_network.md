@@ -16,17 +16,19 @@ Connect a Vibration Chamber to the network and add fuel. An Energy Cell stores e
 
 <GameScene scene="ae2s_ponder:first_network" tick={45} />
 
+<GuiTutorial id="ae2s_ponder:vibration_chamber" />
+
 ## 2
 
 Alternatively, connect an external power source through an Energy Acceptor. A powered small network can work without an ME Controller.
 
-<GameScene scene="ae2s_ponder:first_network" tick={215} />
+<GameScene scene="ae2s_ponder:first_network" tick={616} />
 
 ## 3
 
 Connect an ME Drive with Fluix Cable and insert an item storage cell. An empty drive provides no storage.
 
-<GameScene scene="ae2s_ponder:first_network" tick={385} />
+<GameScene scene="ae2s_ponder:first_network" tick={786} />
 
 <GuiTutorial id="ae2s_ponder:drive" />
 
@@ -34,7 +36,7 @@ Connect an ME Drive with Fluix Cable and insert an item storage cell. An empty d
 
 Place an ME Terminal on a cable face. Open it to insert, find and withdraw items stored on the network.
 
-<GameScene scene="ae2s_ponder:first_network" tick={988} />
+<GameScene scene="ae2s_ponder:first_network" tick={1389} />
 
 <GuiTutorial id="ae2s_ponder:terminal" />
 
@@ -42,7 +44,7 @@ Place an ME Terminal on a cable face. Open it to insert, find and withdraw items
 
 If the terminal is offline, check power, cable connections and available channels. Item movement here is a schematic animation.
 
-<GameScene scene="ae2s_ponder:first_network" tick={1559} />
+<GameScene scene="ae2s_ponder:first_network" tick={1960} />
 
 <GuideOnly>
 

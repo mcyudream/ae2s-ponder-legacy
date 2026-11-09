@@ -26,6 +26,7 @@ public final class ClientVerification extends VerificationMod.CommonVerification
     public interface OptionalVerification {
         void prepare(ClientVerification host) throws Exception;
         boolean next(ClientVerification host) throws Exception;
+        void afterDisconnect(ClientVerification host) throws Exception;
     }
 
     @Override public void init() {
@@ -54,7 +55,7 @@ public final class ClientVerification extends VerificationMod.CommonVerification
         if (ticks >= exitAt) { mc.shutdown(); return; }
         if (exitAt != Integer.MAX_VALUE || ticks < waitUntil || capture != null) return;
         try {
-            if (ticks > 4800) throw new IllegalStateException("Client verification timeout at phase " + phase);
+            if (ticks > 18000) throw new IllegalStateException("Client verification timeout at phase " + phase);
             switch (phase) {
                 case 0:
                     if (!(mc.currentScreen instanceof GuiMainMenu)) return;
@@ -81,8 +82,19 @@ public final class ClientVerification extends VerificationMod.CommonVerification
                         finish();
                     }
                     break;
+                case 2:
+                    if (ponder.next(this)) {
+                        mc.world.sendQuittingDisconnectingPacket();
+                        mc.loadWorld(null);
+                        mc.displayGuiScreen(new GuiMainMenu());
+                        waitUntil=ticks+20;
+                        phase++;
+                    }
+                    break;
                 default:
-                    if (ponder.next(this)) finish();
+                    check(mc.world==null&&mc.currentScreen instanceof GuiMainMenu,"Actual client exits the world and returns to the main menu");
+                    ponder.afterDisconnect(this);
+                    finish();
             }
         } catch (Throwable failure) {
             failure.printStackTrace();

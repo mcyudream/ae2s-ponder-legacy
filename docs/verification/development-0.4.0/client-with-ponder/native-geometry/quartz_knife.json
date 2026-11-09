@@ -1,0 +1,16 @@
+{
+  "screen": "ae2.client.gui.implementations.GuiQuartzKnife",
+  "width": 176,
+  "height": 186,
+  "widgets": {
+    "name": {
+      "kind": "field",
+      "bounds": [
+        21,
+        25,
+        90,
+        12
+      ]
+    }
+  }
+}

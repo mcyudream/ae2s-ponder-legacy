@@ -23,18 +23,19 @@ public class PonderDependencyTest {
         return requirement.containsVersion(new DefaultArtifactVersion("ponder-legacy", version));
     }
 
-    @Test public void acceptsPublishedStablePonder() {
-        assertTrue("Ponder Legacy 1.7.0 must load", accepts("1.7.0"));
+    @Test public void acceptsCompleteDemoRenderingApi() {
+        assertTrue("Ponder Legacy 1.7.1 supplies complete demo rendering", accepts("1.7.1"));
     }
 
     @Test public void acceptsNewerPresentationCompatiblePonder() {
-        assertTrue(accepts("1.7.1"));
+        assertTrue(accepts("1.8.0"));
     }
 
     @Test public void rejectsVersionsBeforeTheSupportedApi() {
         assertFalse(accepts("1.3.9"));
         assertFalse(accepts("1.4.1"));
         assertFalse(accepts("1.6.2"));
+        assertFalse(accepts("1.7.0"));
     }
 
     @Test public void ponderRemainsOptional() {

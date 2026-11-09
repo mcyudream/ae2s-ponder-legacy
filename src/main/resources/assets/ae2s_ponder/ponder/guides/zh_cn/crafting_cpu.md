@@ -102,6 +102,8 @@ step_ticks: 180
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:crafting_status" duration={400} side="right" />
+
 <GuideOnly>
 
 [排查与索引](troubleshooting.md)

@@ -1,0 +1,104 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:craft_confirm",
+  "title": "@ae2s_ponder.gui.craft_confirm.title",
+  "components": [
+    "ae2:crafting_terminal"
+  ],
+  "screen": "ae2.client.gui.me.crafting.GuiCraftConfirm",
+  "adapter": "ae2s",
+  "width": 265,
+  "height": 219,
+  "texture": "ae2:textures/guis/craftingreport.png",
+  "targets": {
+    "widget.search": {
+      "type": "region",
+      "x": 155,
+      "y": 14,
+      "width": 81,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.craft_confirm.target.widget.search",
+      "item": "",
+      "count": 0
+    },
+    "widget.selectCpuList": {
+      "type": "button",
+      "x": 159,
+      "y": 147,
+      "width": 63,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.craft_confirm.target.widget.selectCpuList",
+      "item": "",
+      "count": 0
+    },
+    "widget.craftTree": {
+      "type": "button",
+      "x": 237,
+      "y": 4,
+      "width": 20,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.craft_confirm.target.widget.craftTree",
+      "item": "",
+      "count": 0
+    },
+    "widget.start": {
+      "type": "button",
+      "x": 185,
+      "y": 190,
+      "width": 50,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.craft_confirm.target.widget.start",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.craft_confirm.target.widget.search",
+      "text": "@ae2s_ponder.gui.craft_confirm.step.0",
+      "target": "widget.search",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.search",
+          "value": "iron",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.craft_confirm.target.widget.selectCpuList",
+      "text": "@ae2s_ponder.gui.craft_confirm.step.1",
+      "target": "widget.selectCpuList",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.craft_confirm.target.widget.craftTree",
+      "text": "@ae2s_ponder.gui.craft_confirm.step.2",
+      "target": "widget.craftTree",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.craft_confirm.target.widget.start",
+      "text": "@ae2s_ponder.gui.craft_confirm.step.3",
+      "target": "widget.start",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

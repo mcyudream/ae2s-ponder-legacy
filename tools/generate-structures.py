@@ -11,6 +11,8 @@ import gzip
 import io
 from pathlib import Path
 import struct
+import copy
+import json
 
 ROOT = Path(__file__).resolve().parents[1]
 DEST = ROOT / "src/main/resources/assets/ae2s_ponder/ponder"
@@ -257,6 +259,15 @@ def main():
     scenes = (first_network, storage_cells, channels, storage_bus, import_export, autocrafting, processing, p2p)
     structures = {factory.__name__: factory() for factory in scenes}
     structures.update(guide_structures())
+    coverage=ROOT/'src/main/resources/assets/ae2s_ponder/ponder/gui/coverage.json'
+    if coverage.is_file():
+        for row in json.loads(coverage.read_text())['lessons']:
+            structure=copy.deepcopy(structures[row['scene']]);subject=row['subject']
+            if subject['kind']=='block':
+                structure.block(4,1,3,'ae2:'+subject['id'])
+            elif subject['kind']=='part':
+                structure.cable(4,1,3,connections=('west',),south=subject['id'])
+            structures['gui/'+row['id']]=structure
     for name, structure in structures.items():
         output = DEST / (name + ".nbt")
         data = structure.data()

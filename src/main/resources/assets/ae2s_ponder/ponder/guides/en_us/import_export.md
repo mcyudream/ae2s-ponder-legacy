@@ -16,29 +16,33 @@ An Import Bus pulls items from the inventory it faces into ME storage. The arrow
 
 <GameScene scene="ae2s_ponder:import_export" tick={77} />
 
+<GuiTutorial id="ae2s_ponder:import_bus" />
+
 ## 2
 
 An Export Bus pushes selected items from ME storage into its target. Open it and add a filter item first.
 
-<GameScene scene="ae2s_ponder:import_export" tick={247} />
+<GameScene scene="ae2s_ponder:import_export" tick={648} />
+
+<GuiTutorial id="ae2s_ponder:export_bus" />
 
 ## 3
 
 The export arrow points from the network into the destination chest. The target must accept the item and have free space.
 
-<GameScene scene="ae2s_ponder:import_export" tick={449} />
+<GameScene scene="ae2s_ponder:import_export" tick={1251} />
 
 ## 4
 
 Imports need available ME storage. Both buses need power and channels. A Storage Bus exposes an inventory instead of continuously moving all its items.
 
-<GameScene scene="ae2s_ponder:import_export" tick={619} />
+<GameScene scene="ae2s_ponder:import_export" tick={1421} />
 
 ## 5
 
 An unregulated Export Bus keeps exporting while space is available. Use redstone control and an appropriate upgrade to control transfers; test with a small batch.
 
-<GameScene scene="ae2s_ponder:import_export" tick={789} />
+<GameScene scene="ae2s_ponder:import_export" tick={1591} />
 
 <GuideOnly>
 

@@ -1,0 +1,97 @@
+{
+  "screen": "ae2.client.gui.implementations.GuiPatternModifier",
+  "width": 176,
+  "height": 212,
+  "widgets": {
+    "mode": {
+      "kind": "DynamicIconButton",
+      "bounds": [
+        -18,
+        7,
+        18,
+        20
+      ]
+    },
+    "clear": {
+      "kind": "TooltipButton",
+      "bounds": [
+        133,
+        26,
+        36,
+        20
+      ]
+    },
+    "amount_0": {
+      "kind": "TooltipButton",
+      "bounds": [
+        7,
+        16,
+        23,
+        20
+      ]
+    },
+    "amount_1": {
+      "kind": "TooltipButton",
+      "bounds": [
+        37,
+        16,
+        23,
+        20
+      ]
+    },
+    "amount_2": {
+      "kind": "TooltipButton",
+      "bounds": [
+        67,
+        16,
+        23,
+        20
+      ]
+    },
+    "amount_3": {
+      "kind": "TooltipButton",
+      "bounds": [
+        97,
+        16,
+        23,
+        20
+      ]
+    },
+    "amount_4": {
+      "kind": "TooltipButton",
+      "bounds": [
+        7,
+        38,
+        23,
+        20
+      ]
+    },
+    "amount_5": {
+      "kind": "TooltipButton",
+      "bounds": [
+        37,
+        38,
+        23,
+        20
+      ]
+    },
+    "amount_6": {
+      "kind": "TooltipButton",
+      "bounds": [
+        67,
+        38,
+        23,
+        20
+      ]
+    },
+    "amount_7": {
+      "kind": "TooltipButton",
+      "bounds": [
+        97,
+        38,
+        23,
+        20
+      ]
+    }
+  }
+}

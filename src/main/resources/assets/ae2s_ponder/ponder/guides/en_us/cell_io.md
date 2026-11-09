@@ -56,6 +56,8 @@ Use the direction control in the IO Port to choose cell-to-network or network-to
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:io_port" duration={400} side="right" />
+
 ## Choose completion behavior
 
 Choose when the processed cell moves to the output side: empty, full, or work complete. Speed Cards improve transfer throughput; Redstone Cards add redstone controls.

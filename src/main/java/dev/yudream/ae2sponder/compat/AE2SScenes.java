@@ -80,6 +80,7 @@ public final class AE2SScenes {
         scene.overlay().showControls(util.vector().topOf(1, 1, 2), Pointing.DOWN, 75)
             .rightClick().withItem(new ItemStack(Items.COAL));
         explain(scene, util, "first.power", 1, 1, 2);
+        gui(scene, "vibration_chamber", 1, 1, 2);
         show(scene, util, 1, 1, 4);
         explain(scene, util, "first.acceptor", 1, 1, 4);
         scene.world().showSection(util.select().fromTo(2, 1, 3, 5, 1, 3), EnumFacing.DOWN);
@@ -118,6 +119,7 @@ public final class AE2SScenes {
         scene.world().showSection(util.select().layersFrom(1), EnumFacing.DOWN);
         highlight(scene, util, PonderPalette.GREEN, 1, 1, 3, 1, 1, 3);
         explain(scene, util, "channels.controller", 1, 1, 3);
+        gui(scene, "network_status", 1, 1, 3);
         highlight(scene, util, PonderPalette.INPUT, 2, 1, 3, 4, 1, 3);
         explain(scene, util, "channels.eight", 3, 1, 3);
         highlight(scene, util, PonderPalette.OUTPUT, 5, 1, 3, 7, 1, 3);
@@ -137,6 +139,7 @@ public final class AE2SScenes {
         explain(scene, util, "storage.attach", 4, 1, 3);
         use(scene, util, "storage_bus", 4, 1, 3);
         explain(scene, util, "storage.access", 4, 1, 3);
+        gui(scene, "storage_bus", 4, 1, 3);
         flow(scene, util, new ItemStack(Items.IRON_INGOT), 3, 3, 5, 3);
         explain(scene, util, "storage.priority", 5, 1, 3);
         explain(scene, util, "storage.filter", 4, 1, 3);
@@ -150,9 +153,11 @@ public final class AE2SScenes {
         highlight(scene, util, PonderPalette.INPUT, 1, 1, 1, 2, 1, 1);
         flow(scene, util, new ItemStack(Items.IRON_INGOT), 1, 1, 3, 3);
         explain(scene, util, "io.import", 2, 1, 1);
+        gui(scene, "import_bus", 2, 1, 1);
         use(scene, util, "export_bus", 4, 1, 5);
         highlight(scene, util, PonderPalette.OUTPUT, 4, 1, 5, 5, 1, 5);
         explain(scene, util, "io.filter", 4, 1, 5);
+        gui(scene, "export_bus", 4, 1, 5);
         flow(scene, util, new ItemStack(Items.IRON_INGOT), 3, 3, 5, 5);
         explain(scene, util, "io.export", 4, 1, 5);
         explain(scene, util, "io.storage", 3, 1, 3);
@@ -176,8 +181,11 @@ public final class AE2SScenes {
         show(scene, util, 2, 1, 2);
         highlight(scene, util, PonderPalette.GREEN, 2, 1, 1, 3, 1, 1);
         explain(scene, util, "craft.cpu", 2, 1, 1);
+        gui(scene, "crafting_cpu", 2, 1, 1);
         use(scene, util, "crafting_terminal", 2, 1, 3);
         explain(scene, util, "craft.request", 2, 1, 3);
+        gui(scene, "craft_amount", 2, 1, 3);
+        gui(scene, "craft_confirm", 2, 1, 3);
         flow(scene, util, new ItemStack(Items.IRON_INGOT), 3, 3, 5, 3);
         flow(scene, util, new ItemStack(Item.getItemFromBlock(net.minecraft.init.Blocks.IRON_BLOCK)), 5, 3, 3, 3);
         explain(scene, util, "craft.result", 5, 1, 3);
@@ -230,6 +238,7 @@ public final class AE2SScenes {
         highlight(scene, util, PonderPalette.OUTPUT, 7, 1, 3, 8, 1, 3);
         explain(scene, util, "p2p.capacity", 7, 1, 3);
         explain(scene, util, "p2p.check", 4, 1, 5);
+        gui(scene, "advanced_memory_card", 2, 1, 3);
         scene.markAsFinished();
     }
 }

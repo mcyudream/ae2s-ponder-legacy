@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:ingredient_buffer",
+  "title": "@ae2s_ponder.gui.ingredient_buffer.title",
+  "components": [
+    "ae2:ingredient_buffer"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiIngredientBuffer",
+  "adapter": "ae2s",
+  "width": 184,
+  "height": 202,
+  "texture": "ae2:textures/guis/ingredient_buffer.png",
+  "targets": {
+    "slot.STORAGE.0": {
+      "type": "slot",
+      "x": 12,
+      "y": 25,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.ingredient_buffer.target.slot.STORAGE.0",
+      "item": "",
+      "count": 0
+    },
+    "slot.STORAGE.1": {
+      "type": "slot",
+      "x": 30,
+      "y": 25,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.ingredient_buffer.target.slot.STORAGE.1",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.ingredient_buffer.target.slot.STORAGE.0",
+      "text": "@ae2s_ponder.gui.ingredient_buffer.step.0",
+      "target": "slot.STORAGE.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.STORAGE.0",
+          "item": "minecraft:iron_ore",
+          "count": 8,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.ingredient_buffer.target.slot.STORAGE.1",
+      "text": "@ae2s_ponder.gui.ingredient_buffer.step.1",
+      "target": "slot.STORAGE.1",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.ingredient_buffer.target.slot.STORAGE.0",
+      "text": "@ae2s_ponder.gui.ingredient_buffer.step.2",
+      "target": "slot.STORAGE.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

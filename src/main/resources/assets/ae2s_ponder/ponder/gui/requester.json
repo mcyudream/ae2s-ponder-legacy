@@ -1,0 +1,84 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:requester",
+  "title": "@ae2s_ponder.gui.requester.title",
+  "components": [
+    "ae2:requester"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiRequester",
+  "adapter": "ae2s",
+  "width": 203,
+  "height": 223,
+  "texture": "ae2:textures/guis/requester.png",
+  "targets": {
+    "view.body": {
+      "type": "region",
+      "x": 12,
+      "y": 32,
+      "width": 165,
+      "height": 95,
+      "label": "@ae2s_ponder.gui.requester.target.view.body",
+      "item": "",
+      "count": 0
+    },
+    "widget.scrollbar": {
+      "type": "region",
+      "x": 179,
+      "y": 22,
+      "width": 12,
+      "height": 96,
+      "label": "@ae2s_ponder.gui.requester.target.widget.scrollbar",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.requester.target.view.body",
+      "text": "@ae2s_ponder.gui.requester.step.0",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "view.body",
+          "value": "Iron ingot x 64",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.requester.target.widget.scrollbar",
+      "text": "@ae2s_ponder.gui.requester.step.1",
+      "target": "widget.scrollbar",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.requester.target.view.body",
+      "text": "@ae2s_ponder.gui.requester.step.2",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.requester.target.view.body",
+      "text": "@ae2s_ponder.gui.requester.step.3",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

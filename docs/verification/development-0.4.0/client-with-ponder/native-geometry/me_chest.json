@@ -1,0 +1,16 @@
+{
+  "screen": "ae2.client.gui.implementations.GuiMEChest",
+  "width": 176,
+  "height": 168,
+  "widgets": {
+    "openPriority": {
+      "kind": "TabButton",
+      "bounds": [
+        152,
+        -5,
+        20,
+        20
+      ]
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:terminal_settings",
+  "title": "@ae2s_ponder.gui.terminal_settings.title",
+  "components": [
+    "ae2:terminal",
+    "ae2:crafting_terminal",
+    "ae2:wireless_terminal"
+  ],
+  "screen": "ae2.client.gui.me.common.GuiTerminalSettings",
+  "adapter": "ae2s",
+  "width": 227,
+  "height": 229,
+  "texture": "",
+  "targets": {
+    "view.body": {
+      "type": "region",
+      "x": 31,
+      "y": 37,
+      "width": 170,
+      "height": 162,
+      "label": "@ae2s_ponder.gui.terminal_settings.target.view.body",
+      "item": "",
+      "count": 0
+    },
+    "widget.back": {
+      "type": "button",
+      "x": 199,
+      "y": 4,
+      "width": 20,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.terminal_settings.target.widget.back",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.terminal_settings.target.view.body",
+      "text": "@ae2s_ponder.gui.terminal_settings.step.0",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.terminal_settings.target.view.body",
+      "text": "@ae2s_ponder.gui.terminal_settings.step.1",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.terminal_settings.target.view.body",
+      "text": "@ae2s_ponder.gui.terminal_settings.step.2",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.terminal_settings.target.widget.back",
+      "text": "@ae2s_ponder.gui.terminal_settings.step.3",
+      "target": "widget.back",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

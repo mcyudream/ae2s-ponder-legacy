@@ -1,0 +1,98 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:network_status",
+  "title": "@ae2s_ponder.gui.network_status.title",
+  "components": [
+    "ae2:controller",
+    "ae2:network_tool"
+  ],
+  "screen": "ae2.client.gui.me.networktool.GuiNetworkStatus",
+  "adapter": "ae2s",
+  "width": 222,
+  "height": 165,
+  "texture": "ae2:textures/guis/networkstatus.png",
+  "targets": {
+    "text.stored_power": {
+      "type": "region",
+      "x": 36,
+      "y": 20,
+      "width": 174,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.network_status.target.text.stored_power",
+      "item": "",
+      "count": 0
+    },
+    "text.power_usage_rate": {
+      "type": "region",
+      "x": 36,
+      "y": 137,
+      "width": 174,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.network_status.target.text.power_usage_rate",
+      "item": "",
+      "count": 0
+    },
+    "widget.scrollbar": {
+      "type": "region",
+      "x": 198,
+      "y": 43,
+      "width": 12,
+      "height": 78,
+      "label": "@ae2s_ponder.gui.network_status.target.widget.scrollbar",
+      "item": "",
+      "count": 0
+    },
+    "text.channel_power_rate": {
+      "type": "region",
+      "x": 36,
+      "y": 127,
+      "width": 174,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.network_status.target.text.channel_power_rate",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.network_status.target.text.stored_power",
+      "text": "@ae2s_ponder.gui.network_status.step.0",
+      "target": "text.stored_power",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.network_status.target.text.power_usage_rate",
+      "text": "@ae2s_ponder.gui.network_status.step.1",
+      "target": "text.power_usage_rate",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.network_status.target.widget.scrollbar",
+      "text": "@ae2s_ponder.gui.network_status.step.2",
+      "target": "widget.scrollbar",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.network_status.target.text.channel_power_rate",
+      "text": "@ae2s_ponder.gui.network_status.step.3",
+      "target": "text.channel_power_rate",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

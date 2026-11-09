@@ -1,0 +1,77 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:spatial_anchor",
+  "title": "@ae2s_ponder.gui.spatial_anchor.title",
+  "components": [
+    "ae2:spatial_anchor"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiSpatialAnchor",
+  "adapter": "ae2s",
+  "width": 222,
+  "height": 108,
+  "texture": "ae2:textures/guis/spatialanchor.png",
+  "targets": {
+    "text.loaded_chunks": {
+      "type": "region",
+      "x": 36,
+      "y": 35,
+      "width": 174,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.spatial_anchor.target.text.loaded_chunks",
+      "item": "",
+      "count": 0
+    },
+    "text.used_power": {
+      "type": "region",
+      "x": 36,
+      "y": 25,
+      "width": 174,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.spatial_anchor.target.text.used_power",
+      "item": "",
+      "count": 0
+    },
+    "widget.verticalToolbar": {
+      "type": "region",
+      "x": 6,
+      "y": 5,
+      "width": 20,
+      "height": 46,
+      "label": "@ae2s_ponder.gui.spatial_anchor.target.widget.verticalToolbar",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.spatial_anchor.target.text.loaded_chunks",
+      "text": "@ae2s_ponder.gui.spatial_anchor.step.0",
+      "target": "text.loaded_chunks",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.spatial_anchor.target.text.used_power",
+      "text": "@ae2s_ponder.gui.spatial_anchor.step.1",
+      "target": "text.used_power",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.spatial_anchor.target.widget.verticalToolbar",
+      "text": "@ae2s_ponder.gui.spatial_anchor.step.2",
+      "target": "widget.verticalToolbar",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

@@ -40,6 +40,7 @@ if args.require_verified_hash:
         report = json.loads((evidence / variant / 'report.json').read_text())
         runtime = json.loads((evidence / variant / 'runtime.json').read_text())
         if (report.get('result') != 'PASS' or report.get('cleanroom') != '0.4.0'
+                or report.get('scenario','full') != 'full' or runtime.get('scenario','full') != 'full'
                 or runtime.get('cleanroom') != '0.4.0'
                 or runtime['jars'].get(jars[0].name) != sha256
                 or report.get('ponder') != ('-with-ponder' in variant)

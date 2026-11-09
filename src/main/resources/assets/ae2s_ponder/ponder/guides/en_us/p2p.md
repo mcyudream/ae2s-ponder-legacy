@@ -46,6 +46,8 @@ Each tunnel needs power and a channel on the carrier. Check input/output roles, 
 
 <GameScene scene="ae2s_ponder:p2p" tick={895} />
 
+<GuiTutorial id="ae2s_ponder:advanced_memory_card" />
+
 <GuideOnly>
 
 [Troubleshooting and topic index](troubleshooting.md)

@@ -1,0 +1,88 @@
+{
+  "screen": "ae2.client.gui.me.items.GuiCraftingTerm",
+  "width": 195,
+  "height": 233,
+  "widgets": {
+    "verticalToolbar": {
+      "kind": "VerticalButtonBar",
+      "bounds": [
+        -17,
+        1,
+        20,
+        156
+      ]
+    },
+    "scrollbar": {
+      "kind": "Scrollbar",
+      "bounds": [
+        175,
+        18,
+        12,
+        36
+      ]
+    },
+    "craftingStatus": {
+      "kind": "TabButton",
+      "bounds": [
+        171,
+        -5,
+        20,
+        20
+      ]
+    },
+    "viewCells": {
+      "kind": "ViewCellsPanel",
+      "bounds": [
+        -44,
+        0,
+        24,
+        102
+      ]
+    },
+    "search": {
+      "kind": "field",
+      "bounds": [
+        80,
+        4,
+        89,
+        12
+      ]
+    },
+    "clearCraftingGrid": {
+      "kind": "ActionButton",
+      "bounds": [
+        81,
+        74,
+        8,
+        8
+      ]
+    },
+    "clearToPlayerInv": {
+      "kind": "ActionButton",
+      "bounds": [
+        91,
+        74,
+        8,
+        8
+      ]
+    },
+    "rotateCraftingGrid": {
+      "kind": "CompactCraftingIconButton",
+      "bounds": [
+        11,
+        75,
+        12,
+        12
+      ]
+    },
+    "balanceCraftingGrid": {
+      "kind": "CompactCraftingIconButton",
+      "bounds": [
+        11,
+        93,
+        12,
+        12
+      ]
+    }
+  }
+}

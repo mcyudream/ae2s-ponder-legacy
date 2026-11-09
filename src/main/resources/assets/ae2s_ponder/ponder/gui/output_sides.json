@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:output_sides",
+  "title": "@ae2s_ponder.gui.output_sides.title",
+  "components": [
+    "ae2:inscriber",
+    "ae2:crystal_assembler",
+    "ae2:molecular_assembler"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiOutputSides",
+  "adapter": "ae2s",
+  "width": 184,
+  "height": 138,
+  "texture": "ae2:textures/guis/priority.png",
+  "targets": {
+    "widget.side_front": {
+      "type": "button",
+      "x": 84,
+      "y": 59,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.output_sides.target.widget.side_front",
+      "item": "",
+      "count": 0
+    },
+    "widget.side_top": {
+      "type": "button",
+      "x": 84,
+      "y": 35,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.output_sides.target.widget.side_top",
+      "item": "",
+      "count": 0
+    },
+    "widget.returnToParent": {
+      "type": "button",
+      "x": 156,
+      "y": 4,
+      "width": 20,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.output_sides.target.widget.returnToParent",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.output_sides.target.widget.side_front",
+      "text": "@ae2s_ponder.gui.output_sides.step.0",
+      "target": "widget.side_front",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.output_sides.target.widget.side_top",
+      "text": "@ae2s_ponder.gui.output_sides.step.1",
+      "target": "widget.side_top",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.output_sides.target.widget.returnToParent",
+      "text": "@ae2s_ponder.gui.output_sides.step.2",
+      "target": "widget.returnToParent",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

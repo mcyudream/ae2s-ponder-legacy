@@ -1,0 +1,74 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:config_modifier",
+  "title": "@ae2s_ponder.gui.config_modifier.title",
+  "components": [
+    "ae2:config_modifier"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiConfigModifier",
+  "adapter": "ae2s",
+  "width": 199,
+  "height": 68,
+  "texture": "ae2:textures/guis/config_modifier.png",
+  "targets": {
+    "widget.data_input": {
+      "type": "region",
+      "x": 76,
+      "y": 30,
+      "width": 100,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.config_modifier.target.widget.data_input",
+      "item": "",
+      "count": 0
+    },
+    "widget.mode": {
+      "type": "button",
+      "x": 16,
+      "y": 26,
+      "width": 50,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.config_modifier.target.widget.mode",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.config_modifier.target.widget.data_input",
+      "text": "@ae2s_ponder.gui.config_modifier.step.0",
+      "target": "widget.data_input",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.data_input",
+          "value": "2",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.config_modifier.target.widget.mode",
+      "text": "@ae2s_ponder.gui.config_modifier.step.1",
+      "target": "widget.mode",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.config_modifier.target.widget.data_input",
+      "text": "@ae2s_ponder.gui.config_modifier.step.2",
+      "target": "widget.data_input",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

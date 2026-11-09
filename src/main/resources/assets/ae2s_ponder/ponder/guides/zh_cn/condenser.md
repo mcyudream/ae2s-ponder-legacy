@@ -56,6 +56,8 @@ step_ticks: 180
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:condenser" duration={400} side="right" />
+
 ## 安装支持的储能组件
 
 需要积累物质能量的输出模式应在指定槽位安装支持的存储组件。先核对槽位要求，不要将装有物品的存储元件当成替代品。

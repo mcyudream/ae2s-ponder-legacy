@@ -33,7 +33,29 @@ assert len(scene_ids) == len(set(scene_ids))
 subprocess.run([sys.executable, str(root / "tools/generate-guides.py"), "--check"], check=True)
 import json
 index = json.loads((root / "src/main/resources/assets/ae2s_ponder/ponder/guides/index.json").read_text())["pages"]
-assert len(index) == 25 and len(set(index)) == len(index)
+coverage=json.loads((root / 'src/main/resources/assets/ae2s_ponder/ponder/gui/coverage.json').read_text())
+assert len(index)==25+len(coverage['lessons']) and len(set(index))==len(index)
+guis=root/'src/main/resources/assets/ae2s_ponder/ponder/gui'
+gui_index=json.loads((guis/'index.json').read_text())['tutorials']
+assert len(gui_index)==len(coverage['lessons']) and len(set(gui_index))==len(gui_index)
+covered={row['screen'] for row in coverage['lessons']}
+assert set(coverage['native_screens'])==covered, 'Catalog must describe every concrete native AE2S screen'
+for row in coverage['lessons']:
+    data=json.loads((guis/(row['id']+'.json')).read_text())
+    assert data['id'] in gui_index and data['screen']==row['screen']
+    assert data['adapter']=='ae2s' and len(data['steps'])>=2
+    for target in data['targets'].values():
+        if target['label'].startswith('@'):assert target['label'][1:] in en
+        assert target['width']>0 and target['height']>0
+    for step in data['steps']:
+        assert step['target'] in data['targets']
+        for field in ('title','text'):
+            if step[field].startswith('@'):assert step[field][1:] in en
+        for action in step['demo']:
+            if action['op']!='set_value':assert action['target'] in data['targets']
+    for code in ('en_us','zh_cn'):
+        page=(root/f'src/main/resources/assets/ae2s_ponder/ponder/guides/{code}/gui/{row["id"]}.md').read_text()
+        assert f'<GuiTutorial id="{data["id"]}"' in page, 'Every GUI must have a discoverable dual-presentation tutorial'
 for page in index:
     for code in ("en_us", "zh_cn"):
         assert (root / f"src/main/resources/assets/ae2s_ponder/ponder/guides/{code}/{page}.md").is_file()

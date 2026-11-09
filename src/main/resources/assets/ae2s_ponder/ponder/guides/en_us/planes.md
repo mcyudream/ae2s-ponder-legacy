@@ -79,6 +79,8 @@ Configure the Formation Plane filter and any supported upgrades before supplying
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:formation_plane" duration={400} side="right" />
+
 ## Confirm real drops
 
 Check the Annihilation Plane behavior against the target block, collection mode and installed upgrades. Test where the drops go and what happens when destination storage is full.
@@ -101,6 +103,8 @@ Check the Annihilation Plane behavior against the target block, collection mode 
   }
 ]
 ```
+
+<GuiTutorial id="ae2s_ponder:annihilation_plane" duration={400} side="right" />
 
 <GuideOnly>
 

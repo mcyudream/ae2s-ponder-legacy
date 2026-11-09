@@ -1,0 +1,97 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:crafting_tree",
+  "title": "@ae2s_ponder.gui.crafting_tree.title",
+  "components": [
+    "ae2:crafting_terminal"
+  ],
+  "screen": "ae2.client.gui.me.crafting.GuiCraftingTree",
+  "adapter": "ae2s",
+  "width": 264,
+  "height": 228,
+  "texture": "ae2:textures/guis/crafting_tree.png",
+  "targets": {
+    "widget.tree": {
+      "type": "region",
+      "x": 12,
+      "y": 32,
+      "width": 240,
+      "height": 184,
+      "label": "@ae2s_ponder.gui.crafting_tree.target.widget.tree",
+      "item": "",
+      "count": 0
+    },
+    "widget.missingOnly": {
+      "type": "button",
+      "x": 36,
+      "y": 8,
+      "width": 20,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.crafting_tree.target.widget.missingOnly",
+      "item": "",
+      "count": 0
+    },
+    "widget.screenshot": {
+      "type": "button",
+      "x": 60,
+      "y": 8,
+      "width": 20,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.crafting_tree.target.widget.screenshot",
+      "item": "",
+      "count": 0
+    },
+    "widget.back": {
+      "type": "button",
+      "x": 12,
+      "y": 8,
+      "width": 20,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.crafting_tree.target.widget.back",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.crafting_tree.target.widget.tree",
+      "text": "@ae2s_ponder.gui.crafting_tree.step.0",
+      "target": "widget.tree",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.crafting_tree.target.widget.missingOnly",
+      "text": "@ae2s_ponder.gui.crafting_tree.step.1",
+      "target": "widget.missingOnly",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.crafting_tree.target.widget.screenshot",
+      "text": "@ae2s_ponder.gui.crafting_tree.step.2",
+      "target": "widget.screenshot",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.crafting_tree.target.widget.back",
+      "text": "@ae2s_ponder.gui.crafting_tree.step.3",
+      "target": "widget.back",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

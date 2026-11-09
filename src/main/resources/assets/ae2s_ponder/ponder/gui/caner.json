@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:caner",
+  "title": "@ae2s_ponder.gui.caner.title",
+  "components": [
+    "ae2:caner"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiCaner",
+  "adapter": "ae2s",
+  "width": 203,
+  "height": 180,
+  "texture": "ae2:textures/guis/caner.png",
+  "targets": {
+    "slot.CANER_CONTAINER.0": {
+      "type": "slot",
+      "x": 132,
+      "y": 41,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.caner.target.slot.CANER_CONTAINER.0",
+      "item": "",
+      "count": 0
+    },
+    "slot.CANER_CONTENT.0": {
+      "type": "slot",
+      "x": 69,
+      "y": 41,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.caner.target.slot.CANER_CONTENT.0",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.caner.target.slot.CANER_CONTAINER.0",
+      "text": "@ae2s_ponder.gui.caner.step.0",
+      "target": "slot.CANER_CONTAINER.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.CANER_CONTAINER.0",
+          "item": "minecraft:bucket",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.caner.target.slot.CANER_CONTENT.0",
+      "text": "@ae2s_ponder.gui.caner.step.1",
+      "target": "slot.CANER_CONTENT.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.caner.target.slot.CANER_CONTAINER.0",
+      "text": "@ae2s_ponder.gui.caner.step.2",
+      "target": "slot.CANER_CONTAINER.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

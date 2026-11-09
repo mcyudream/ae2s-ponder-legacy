@@ -1,0 +1,123 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:condenser",
+  "title": "@ae2s_ponder.gui.condenser.title",
+  "components": [
+    "ae2:condenser",
+    "ae2:singularity",
+    "ae2:matter_ball"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiCondenser",
+  "adapter": "ae2s",
+  "width": 184,
+  "height": 207,
+  "texture": "ae2:textures/guis/condenser.png",
+  "targets": {
+    "slot.MACHINE_INPUT.0": {
+      "type": "slot",
+      "x": 55,
+      "y": 56,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.condenser.target.slot.MACHINE_INPUT.0",
+      "item": "",
+      "count": 0
+    },
+    "widget.mode": {
+      "type": "button",
+      "x": 133,
+      "y": 57,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.condenser.target.widget.mode",
+      "item": "",
+      "count": 0
+    },
+    "slot.STORAGE_CELL.0": {
+      "type": "slot",
+      "x": 105,
+      "y": 30,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.condenser.target.slot.STORAGE_CELL.0",
+      "item": "",
+      "count": 0
+    },
+    "slot.MACHINE_OUTPUT.0": {
+      "type": "slot",
+      "x": 109,
+      "y": 56,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.condenser.target.slot.MACHINE_OUTPUT.0",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.condenser.target.slot.MACHINE_INPUT.0",
+      "text": "@ae2s_ponder.gui.condenser.step.0",
+      "target": "slot.MACHINE_INPUT.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.MACHINE_INPUT.0",
+          "item": "minecraft:cobblestone",
+          "count": 64,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.condenser.target.widget.mode",
+      "text": "@ae2s_ponder.gui.condenser.step.1",
+      "target": "widget.mode",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.condenser.target.slot.STORAGE_CELL.0",
+      "text": "@ae2s_ponder.gui.condenser.step.2",
+      "target": "slot.STORAGE_CELL.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.STORAGE_CELL.0",
+          "item": "ae2:cell_component_64k",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.condenser.target.slot.MACHINE_OUTPUT.0",
+      "text": "@ae2s_ponder.gui.condenser.step.3",
+      "target": "slot.MACHINE_OUTPUT.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.MACHINE_OUTPUT.0",
+          "item": "ae2:singularity",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    }
+  ]
+}

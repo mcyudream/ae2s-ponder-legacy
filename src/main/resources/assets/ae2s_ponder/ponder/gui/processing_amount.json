@@ -1,0 +1,65 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:processing_amount",
+  "title": "@ae2s_ponder.gui.processing_amount.title",
+  "components": [
+    "ae2:pattern_encoding_terminal",
+    "ae2:processing_pattern"
+  ],
+  "screen": "ae2.client.gui.me.items.GuiSetProcessingPatternAmount",
+  "adapter": "ae2s",
+  "width": 184,
+  "height": 120,
+  "texture": "ae2:textures/guis/craft_amt.png",
+  "targets": {
+    "widget.amountToStock": {
+      "type": "region",
+      "x": 24,
+      "y": 39,
+      "width": 138,
+      "height": 62,
+      "label": "@ae2s_ponder.gui.processing_amount.target.widget.amountToStock",
+      "item": "",
+      "count": 0
+    },
+    "widget.back": {
+      "type": "button",
+      "x": 156,
+      "y": 4,
+      "width": 20,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.processing_amount.target.widget.back",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.processing_amount.target.widget.amountToStock",
+      "text": "@ae2s_ponder.gui.processing_amount.step.0",
+      "target": "widget.amountToStock",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.amountToStock",
+          "value": "1000",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.processing_amount.target.widget.back",
+      "text": "@ae2s_ponder.gui.processing_amount.step.1",
+      "target": "widget.back",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

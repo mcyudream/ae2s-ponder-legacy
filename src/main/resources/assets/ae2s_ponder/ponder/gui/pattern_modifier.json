@@ -1,0 +1,105 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:pattern_modifier",
+  "title": "@ae2s_ponder.gui.pattern_modifier.title",
+  "components": [
+    "ae2:pattern_modifier"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiPatternModifier",
+  "adapter": "ae2s",
+  "width": 202,
+  "height": 225,
+  "texture": "ae2:textures/guis/pattern_editor_1.png",
+  "targets": {
+    "widget.mode": {
+      "type": "button",
+      "x": 4,
+      "y": 16,
+      "width": 18,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.pattern_modifier.target.widget.mode",
+      "item": "",
+      "count": 0
+    },
+    "slot.ENCODED_PATTERN.0": {
+      "type": "slot",
+      "x": 30,
+      "y": 70,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.pattern_modifier.target.slot.ENCODED_PATTERN.0",
+      "item": "",
+      "count": 0
+    },
+    "widget.replace": {
+      "type": "button",
+      "x": 145,
+      "y": 35,
+      "width": 46,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.pattern_modifier.target.widget.replace",
+      "item": "",
+      "count": 0
+    },
+    "widget.clear": {
+      "type": "button",
+      "x": 155,
+      "y": 35,
+      "width": 36,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.pattern_modifier.target.widget.clear",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.pattern_modifier.target.widget.mode",
+      "text": "@ae2s_ponder.gui.pattern_modifier.step.0",
+      "target": "widget.mode",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.pattern_modifier.target.slot.ENCODED_PATTERN.0",
+      "text": "@ae2s_ponder.gui.pattern_modifier.step.1",
+      "target": "slot.ENCODED_PATTERN.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.ENCODED_PATTERN.0",
+          "item": "ae2:processing_pattern",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.pattern_modifier.target.widget.replace",
+      "text": "@ae2s_ponder.gui.pattern_modifier.step.2",
+      "target": "widget.replace",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.pattern_modifier.target.widget.clear",
+      "text": "@ae2s_ponder.gui.pattern_modifier.step.3",
+      "target": "widget.clear",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

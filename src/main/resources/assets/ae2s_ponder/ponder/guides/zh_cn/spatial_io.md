@@ -79,6 +79,8 @@ step_ticks: 180
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:spatial_io" duration={400} side="right" />
+
 ## 触发并完成交换
 
 向空间 IO 端口提供所需红石触发，区域中的世界内容会与元件中的内容交换。首次实测前移走玩家和不可替代的物品。

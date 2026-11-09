@@ -3,6 +3,8 @@
 import argparse
 import json
 from pathlib import Path
+from gui_catalog import CATALOG, LEGACY
+from gui_layouts import Layouts, BASE_CLASSES, target_geometry
 
 ASSETS = Path(__file__).resolve().parents[1] / 'src/main/resources/assets/ae2s_ponder'
 LANG_MARKER = '# Generated GUI lessons (tools/generate-guis.py)'
@@ -178,12 +180,55 @@ step(d, stock, 'An interface can accept machine output into network storage. Use
      '接口也可接收机器产物并存入网络。按处理样板投送原料，应使用样板供应器。', demo=[put(stock, 'minecraft:iron_ingot', 16)])
 
 
+def expanded():
+    layouts = Layouts()
+    rows = []
+    for id, (cls, style, category, scene) in LEGACY.items():
+        rows.append(dict(id=id, screen=layouts.screen(cls), style='/screens/'+style+'.json', category=category,
+                         scene=scene, components=[c.split(':',1)[1] for c in LESSONS[id]['components']],
+                         widgets=list(layouts.style(style).get('widgets',{})), host=''))
+    for source in CATALOG:
+        id = source['id']; cls = source['cls']; style = layouts.style(source['style'])
+        (width,height), texture = layouts.dimensions(style,cls)
+        d = dict(format=1, id='ae2s_ponder:'+id, title=text(id,'title',*source['title']),
+                 components=['ae2:'+c for c in source['components']], screen=layouts.screen(cls),
+                 adapter='ae2s',width=width,height=height,texture=texture,targets={},steps=[])
+        for index, operation in enumerate(source['steps']):
+            key = operation['target']
+            if key not in d['targets']:
+                kind, (x,y,w,h) = target_geometry(style,key,width,height)
+                d['targets'][key]=dict(type=kind,x=x,y=y,width=w,height=h,
+                    label=text(id,'target.'+key,*operation['label']),item='',count=0)
+            demo=[]
+            if operation['item']:
+                if d['targets'][key]['type']!='slot':raise ValueError('Demo item requires a slot: '+id+' '+key)
+                demo.append(put(key,operation['item'],operation['count']))
+            if operation['sample']:demo.append(value(key,operation['sample']))
+            step(d,key,*operation['text'],wait=operation['wait'],demo=demo)
+        LESSONS[id]=d
+        rows.append(dict(id=id,screen=d['screen'],style='/screens/'+source['style']+'.json' if source['style'] else '',
+                         category=source['category'],scene=source['scene'],components=source['components'],
+                         widgets=list(style.get('widgets',{})),host=source.get('host','')))
+    covered={r['screen'] for r in rows}
+    missing=set(layouts.concrete_screens())-covered
+    if missing:raise ValueError('Native GUI without an authored lesson: '+repr(sorted(missing)))
+    for row in rows:row['subject']=layouts.subject(row['components'][0])
+    return dict(ae2s='1.1.0',runtime_sha256=layouts.sha256,native_screens=layouts.concrete_screens(),
+                implementation_bases=BASE_CLASSES,lessons=rows)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check', action='store_true')
     args = parser.parse_args()
+    coverage=expanded()
+    from gui_demo_layouts import appearance
+    layouts = Layouts()
+    appearances = {row['id']: appearance(layouts,row,LESSONS[row['id']]) for row in coverage['lessons']}
     files = {f'ponder/gui/{id}.json': json.dumps(data, ensure_ascii=False, indent=2) + '\n' for id, data in LESSONS.items()}
+    files['ponder/gui/appearances.json'] = json.dumps(appearances, ensure_ascii=False, indent=2) + '\n'
     files['ponder/gui/index.json'] = json.dumps({'tutorials': ['ae2s_ponder:' + id for id in LESSONS]}, indent=2) + '\n'
+    files['ponder/gui/coverage.json']=json.dumps(coverage,ensure_ascii=False,indent=2)+'\n'
     for code, entries in TRANSLATIONS.items():
         relative = f'lang/{code}.lang'
         original = (ASSETS / relative).read_text().split(LANG_MARKER)[0].rstrip()

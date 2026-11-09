@@ -1,0 +1,74 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:priority_tuner",
+  "title": "@ae2s_ponder.gui.priority_tuner.title",
+  "components": [
+    "ae2:priority_tuner"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiPriorityTuner",
+  "adapter": "ae2s",
+  "width": 184,
+  "height": 133,
+  "texture": "ae2:textures/guis/priority.png",
+  "targets": {
+    "widget.priority": {
+      "type": "region",
+      "x": 24,
+      "y": 29,
+      "width": 138,
+      "height": 62,
+      "label": "@ae2s_ponder.gui.priority_tuner.target.widget.priority",
+      "item": "",
+      "count": 0
+    },
+    "view.body": {
+      "type": "region",
+      "x": 12,
+      "y": 32,
+      "width": 146,
+      "height": 71,
+      "label": "@ae2s_ponder.gui.priority_tuner.target.view.body",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.priority_tuner.target.widget.priority",
+      "text": "@ae2s_ponder.gui.priority_tuner.step.0",
+      "target": "widget.priority",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.priority",
+          "value": "10",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.priority_tuner.target.view.body",
+      "text": "@ae2s_ponder.gui.priority_tuner.step.1",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.priority_tuner.target.widget.priority",
+      "text": "@ae2s_ponder.gui.priority_tuner.step.2",
+      "target": "widget.priority",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

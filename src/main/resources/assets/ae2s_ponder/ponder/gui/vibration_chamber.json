@@ -1,0 +1,85 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:vibration_chamber",
+  "title": "@ae2s_ponder.gui.vibration_chamber.title",
+  "components": [
+    "ae2:vibration_chamber"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiVibrationChamber",
+  "adapter": "ae2s",
+  "width": 235,
+  "height": 176,
+  "texture": "ae2:textures/guis/vibchamber.png",
+  "targets": {
+    "slot.MACHINE_INPUT.0": {
+      "type": "slot",
+      "x": 103,
+      "y": 41,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.vibration_chamber.target.slot.MACHINE_INPUT.0",
+      "item": "",
+      "count": 0
+    },
+    "widget.generationRateBar": {
+      "type": "region",
+      "x": 122,
+      "y": 40,
+      "width": 6,
+      "height": 18,
+      "label": "@ae2s_ponder.gui.vibration_chamber.target.widget.generationRateBar",
+      "item": "",
+      "count": 0
+    },
+    "widget.upgrades": {
+      "type": "region",
+      "x": 200,
+      "y": 4,
+      "width": 29,
+      "height": 66,
+      "label": "@ae2s_ponder.gui.vibration_chamber.target.widget.upgrades",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.vibration_chamber.target.slot.MACHINE_INPUT.0",
+      "text": "@ae2s_ponder.gui.vibration_chamber.step.0",
+      "target": "slot.MACHINE_INPUT.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.MACHINE_INPUT.0",
+          "item": "minecraft:coal",
+          "count": 16,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.vibration_chamber.target.widget.generationRateBar",
+      "text": "@ae2s_ponder.gui.vibration_chamber.step.1",
+      "target": "widget.generationRateBar",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.vibration_chamber.target.widget.upgrades",
+      "text": "@ae2s_ponder.gui.vibration_chamber.step.2",
+      "target": "widget.upgrades",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

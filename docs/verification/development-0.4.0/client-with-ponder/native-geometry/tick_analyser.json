@@ -1,0 +1,70 @@
+{
+  "screen": "ae2.client.gui.implementations.GuiTickAnalyser",
+  "width": 207,
+  "height": 131,
+  "widgets": {
+    "duration_input": {
+      "kind": "field",
+      "bounds": [
+        87,
+        21,
+        36,
+        13
+      ]
+    },
+    "start": {
+      "kind": "AE2Button",
+      "bounds": [
+        15,
+        98,
+        56,
+        19
+      ]
+    },
+    "cancel": {
+      "kind": "AE2Button",
+      "bounds": [
+        136,
+        98,
+        56,
+        19
+      ]
+    },
+    "dot_0": {
+      "kind": "ColorArea",
+      "bounds": [
+        83,
+        47,
+        4,
+        4
+      ]
+    },
+    "dot_1": {
+      "kind": "ColorArea",
+      "bounds": [
+        180,
+        47,
+        4,
+        4
+      ]
+    },
+    "dot_2": {
+      "kind": "ColorArea",
+      "bounds": [
+        83,
+        76,
+        4,
+        4
+      ]
+    },
+    "dot_3": {
+      "kind": "ColorArea",
+      "bounds": [
+        180,
+        76,
+        4,
+        4
+      ]
+    }
+  }
+}

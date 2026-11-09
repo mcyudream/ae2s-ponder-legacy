@@ -56,6 +56,8 @@ Open the access point. Insert the wireless terminal in its link input slot, then
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:wireless_access_point" duration={400} side="right" />
+
 ## Charge and stay in range
 
 Charge the terminal with a Charger or another supported charging method. Open it within access-point range. Range boosters increase coverage and power use; they do not give unlimited range.
@@ -78,6 +80,8 @@ Charge the terminal with a Charger or another supported charging method. Open it
   }
 ]
 ```
+
+<GuiTutorial id="ae2s_ponder:wireless_terminal" duration={400} side="right" />
 
 ## Diagnose disconnection
 

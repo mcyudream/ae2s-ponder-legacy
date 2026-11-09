@@ -33,6 +33,8 @@ Configure a Level Emitter with the desired item and a threshold, such as 64 iron
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:level_emitter" duration={400} side="right" />
+
 ## Enable bus redstone control
 
 Install a Redstone Card in the bus when required, then select its redstone mode. An emitter only supplies a signal; the receiving device must be configured to use it.
@@ -55,6 +57,8 @@ Install a Redstone Card in the bus when required, then select its redstone mode.
   }
 ]
 ```
+
+<GuiTutorial id="ae2s_ponder:export_bus" duration={400} side="right" />
 
 ## Return the product
 

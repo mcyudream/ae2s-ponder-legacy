@@ -1,0 +1,34 @@
+{
+  "screen": "ae2.client.gui.implementations.GuiCellTerminal",
+  "width": 208,
+  "height": 225,
+  "widgets": {
+    "verticalToolbar": {
+      "kind": "VerticalButtonBar",
+      "bounds": [
+        -17,
+        1,
+        20,
+        156
+      ]
+    },
+    "search": {
+      "kind": "field",
+      "bounds": [
+        95,
+        4,
+        90,
+        12
+      ]
+    },
+    "scrollbar": {
+      "kind": "Scrollbar",
+      "bounds": [
+        192,
+        19,
+        12,
+        108
+      ]
+    }
+  }
+}

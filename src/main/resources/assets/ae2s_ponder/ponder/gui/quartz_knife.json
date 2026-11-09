@@ -1,0 +1,85 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:quartz_knife",
+  "title": "@ae2s_ponder.gui.quartz_knife.title",
+  "components": [
+    "ae2:certus_quartz_cutting_knife",
+    "ae2:nether_quartz_cutting_knife"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiQuartzKnife",
+  "adapter": "ae2s",
+  "width": 184,
+  "height": 194,
+  "texture": "ae2:textures/guis/quartzknife.png",
+  "targets": {
+    "widget.name": {
+      "type": "region",
+      "x": 25,
+      "y": 29,
+      "width": 90,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.quartz_knife.target.widget.name",
+      "item": "",
+      "count": 0
+    },
+    "slot.MACHINE_INPUT.0": {
+      "type": "slot",
+      "x": 98,
+      "y": 48,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.quartz_knife.target.slot.MACHINE_INPUT.0",
+      "item": "",
+      "count": 0
+    },
+    "slot.MACHINE_OUTPUT.0": {
+      "type": "slot",
+      "x": 138,
+      "y": 48,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.quartz_knife.target.slot.MACHINE_OUTPUT.0",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.quartz_knife.target.widget.name",
+      "text": "@ae2s_ponder.gui.quartz_knife.step.0",
+      "target": "widget.name",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.name",
+          "value": "Main storage",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.quartz_knife.target.slot.MACHINE_INPUT.0",
+      "text": "@ae2s_ponder.gui.quartz_knife.step.1",
+      "target": "slot.MACHINE_INPUT.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.quartz_knife.target.slot.MACHINE_OUTPUT.0",
+      "text": "@ae2s_ponder.gui.quartz_knife.step.2",
+      "target": "slot.MACHINE_OUTPUT.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

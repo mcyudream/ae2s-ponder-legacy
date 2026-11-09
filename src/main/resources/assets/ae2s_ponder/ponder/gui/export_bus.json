@@ -1,0 +1,95 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:export_bus",
+  "title": "@ae2s_ponder.gui.export_bus.title",
+  "components": [
+    "ae2:export_bus"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiIOBus",
+  "adapter": "ae2s",
+  "width": 235,
+  "height": 261,
+  "texture": "ae2:textures/guis/storagebus.png",
+  "targets": {
+    "slot.CONFIG.0": {
+      "type": "slot",
+      "x": 31,
+      "y": 33,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.export_bus.target.slot.CONFIG.0",
+      "item": "",
+      "count": 0
+    },
+    "widget.verticalToolbar": {
+      "type": "region",
+      "x": 6,
+      "y": 5,
+      "width": 20,
+      "height": 112,
+      "label": "@ae2s_ponder.gui.export_bus.target.widget.verticalToolbar",
+      "item": "",
+      "count": 0
+    },
+    "widget.upgrades": {
+      "type": "region",
+      "x": 200,
+      "y": 4,
+      "width": 29,
+      "height": 84,
+      "label": "@ae2s_ponder.gui.export_bus.target.widget.upgrades",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.export_bus.target.slot.CONFIG.0",
+      "text": "@ae2s_ponder.gui.export_bus.step.0",
+      "target": "slot.CONFIG.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.CONFIG.0",
+          "item": "minecraft:iron_ingot",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.export_bus.target.widget.verticalToolbar",
+      "text": "@ae2s_ponder.gui.export_bus.step.1",
+      "target": "widget.verticalToolbar",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.export_bus.target.widget.upgrades",
+      "text": "@ae2s_ponder.gui.export_bus.step.2",
+      "target": "widget.upgrades",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.export_bus.target.slot.CONFIG.0",
+      "text": "@ae2s_ponder.gui.export_bus.step.3",
+      "target": "slot.CONFIG.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

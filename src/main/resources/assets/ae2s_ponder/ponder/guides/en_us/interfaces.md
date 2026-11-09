@@ -81,6 +81,8 @@ Let an adjacent machine or pipe consume the stocked items. Verify it reads the i
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:stock_amount" duration={400} side="right" />
+
 ## Request missing stock
 
 A supported Crafting Card can let the interface request craftable stock. The network still needs valid patterns, available ingredients and a Crafting CPU. Use a Pattern Provider for processing-pattern output.

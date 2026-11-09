@@ -1,0 +1,25 @@
+{
+  "screen": "ae2.client.gui.implementations.GuiWirelessAccessPoint",
+  "width": 176,
+  "height": 168,
+  "widgets": {
+    "verticalToolbar": {
+      "kind": "VerticalButtonBar",
+      "bounds": [
+        -17,
+        1,
+        20,
+        24
+      ]
+    },
+    "linkPanel": {
+      "kind": "BackgroundPanel",
+      "bounds": [
+        174,
+        0,
+        31,
+        92
+      ]
+    }
+  }
+}

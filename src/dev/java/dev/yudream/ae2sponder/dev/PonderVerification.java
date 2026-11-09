@@ -27,6 +27,8 @@ public final class PonderVerification implements ClientVerification.OptionalVeri
     private P2PNetworkVerification topology = new P2PNetworkVerification();
     private MachineNetworkVerification wiring = new MachineNetworkVerification();
     private GuiLessonVerification guis = new GuiLessonVerification();
+    private GuiCoverageVerification coverage = new GuiCoverageVerification();
+    private ExtendedGuiLiveVerification extended = new ExtendedGuiLiveVerification();
 
     @Override public void prepare(ClientVerification host) {
         for (var entry : PonderIndex.getSceneAccess().getRegisteredEntries()) {
@@ -34,13 +36,22 @@ public final class PonderVerification implements ClientVerification.OptionalVeri
             entries.putIfAbsent(entry.getValue().getDeclaredSceneId().getPath(), entry.getValue());
             host.check(Item.REGISTRY.containsKey(entry.getKey()), "Real AE2S scene subject: " + entry.getKey());
         }
-        host.check(entries.size() == 24, "All 24 AE2S tutorial animations registered by guarded IMC");
+        host.check(entries.size() == 108, "All 108 AE2S tutorial animations registered by guarded IMC");
         var diagnostics = PonderIndex.getDiagnosticSnapshot(net.createmod.ponder.api.diagnostic.PonderDiagnosticView.EFFECTIVE);
         host.check(diagnostics.getScenes().stream()
             .filter(scene -> AE2SPonder.MOD_ID.equals(scene.getPluginId()))
             .noneMatch(net.createmod.ponder.api.diagnostic.PonderSceneDiagnostic::hasErrors),
             "All AE2S tutorial registrations are free of Ponder diagnostic errors");
         previousLanguage = mc.getLanguageManager().getCurrentLanguage();
+    }
+
+    @Override public void afterDisconnect(ClientVerification host) {
+        host.check(!net.createmod.ponder.client.guitutorial.GuiTutorialEvents.active(),"World disconnect clears live GUI guidance");
+        host.check(Item.REGISTRY.containsKey(new ResourceLocation("ae2:fluix_glass_cable")),"AE2S item registry remains available after world disconnect");
+        long scenes=PonderIndex.getSceneAccess().getRegisteredEntries().stream()
+            .map(e->e.getValue()).filter(e->AE2SPonder.MOD_ID.equals(e.getNamespace()))
+            .map(e->e.getDeclaredSceneId()).distinct().count();
+        host.check(scenes==108,"Client-thread disconnect reload preserves all 108 AE2S animations");
     }
 
     private int guideIndex, guideLanguage, guidePhase;
@@ -53,7 +64,7 @@ public final class PonderVerification implements ClientVerification.OptionalVeri
             mc.refreshResources();
         }
         var pages = PonderIndex.getTutorials().all().stream().filter(p -> p.id().getNamespace().equals(AE2SPonder.MOD_ID)).toList();
-        host.check(pages.size() == 25, "All 25 bilingual AE2S guide pages register");
+        host.check(pages.size() == 109, "All 109 bilingual AE2S guide pages register");
         var generated = pages.stream().filter(p -> !p.scenes().isEmpty()).toList();
         if (guideIndex >= generated.size()) {
             if (guideLanguage++ == 0) { guideIndex = 0; return false; }
@@ -66,29 +77,41 @@ public final class PonderVerification implements ClientVerification.OptionalVeri
             var source = new PonderStructureLoader().load(definition.getStructure());
             host.check(source.getDiagnostics().isEmpty(), currentGuide.id()+": native Markdown structure resolves");
             var scene = net.createmod.ponder.client.guide.Tutorials.compile(definition);
-            for (var block : source.getBlocks()) if (block.getTileData() != null) {
+            for (var block : source.getBlocks()) if (!currentGuide.id().getPath().startsWith("gui/") && block.getTileData() != null) {
                 var tile = scene.getWorld().getTileEntity(block.getPosition());
                 host.check(tile != null && block.getTileData().getString("id").equals(TileEntity.getKey(tile.getClass()).toString()), currentGuide.id()+": real native tile " + block.getPosition());
             }
             scene.seek(scene.getTotalTicks());host.check(scene.isFinished(), currentGuide.id()+": full Markdown animation executes");
-            if (currentGuide.id().getPath().equals("processors") || currentGuide.id().getPath().equals("interfaces"))
+            if (currentGuide.id().getPath().startsWith("gui/") || currentGuide.id().getPath().equals("processors") || currentGuide.id().getPath().equals("interfaces"))
                 verifyGuiClips(host,scene,currentGuide.id().getPath());
             scene.seek(0);host.check(scene.getCurrentTick()==0,currentGuide.id()+": Markdown animation can rewind");
             host.check(scene.getNarration().size()>=4,currentGuide.id()+": every authored section has animation narration");
             host.check(scene.getTitle().equals(currentGuide.title()),currentGuide.id()+": " + code + " shared title resolves");
-            mc.displayGuiScreen(new PonderUI(List.of(scene)));((PonderUI)mc.currentScreen).seekToTime(70);guidePhase=1;
+            mc.displayGuiScreen(new PonderUI(List.of(scene)));
+            ((PonderUI)mc.currentScreen).seekToTime(currentGuide.id().getPath().startsWith("gui/") ? scene.getGuiAnimations().get(0).start()+130 : 70);guidePhase=1;
         } else if (guidePhase == 1) {
-            host.screenshot(currentGuide.id().getPath()+"-markdown-"+code+".png");
+            host.screenshot(currentGuide.id().getPath().replace('/','-')+"-markdown-"+code+".png");
             if (guideIndex==0 || currentGuide.id().getPath().equals("spatial_io")) {
                 mc.displayGuiScreen(new net.createmod.ponder.client.guide.GuideScreen(currentGuide.components().get(0),currentGuide.id()));guidePhase=2;
             } else {guideIndex++;guidePhase=0;}
         } else {
-            host.screenshot(currentGuide.id().getPath()+"-guide-"+code+".png");guideIndex++;guidePhase=0;
+            host.screenshot(currentGuide.id().getPath().replace('/','-')+"-guide-"+code+".png");guideIndex++;guidePhase=0;
         }
         return false;
     }
 
     @Override public boolean next(ClientVerification host) throws Exception {
+        String scenario=System.getProperty("ae2sponder.scenario","full");
+        if(scenario.equals("native-gui"))return extended.tick(host);
+        if(scenario.equals("catalog"))return coverage.tick(host);
+        if(extended!=null) {
+            if(!extended.tick(host))return false;
+            extended=null;
+        }
+        if (coverage != null) {
+            if (!coverage.tick(host)) return false;
+            coverage = null;
+        }
         if (topology != null) {
             if (!topology.tick(host)) return false;
             topology = null;

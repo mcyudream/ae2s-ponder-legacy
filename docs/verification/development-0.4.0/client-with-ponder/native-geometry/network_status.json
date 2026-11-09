@@ -1,0 +1,25 @@
+{
+  "screen": "ae2.client.gui.me.networktool.GuiNetworkStatus",
+  "width": 195,
+  "height": 157,
+  "widgets": {
+    "verticalToolbar": {
+      "kind": "VerticalButtonBar",
+      "bounds": [
+        -17,
+        1,
+        20,
+        68
+      ]
+    },
+    "scrollbar": {
+      "kind": "Scrollbar",
+      "bounds": [
+        175,
+        39,
+        12,
+        78
+      ]
+    }
+  }
+}

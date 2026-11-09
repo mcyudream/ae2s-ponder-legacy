@@ -33,6 +33,8 @@ step_ticks: 180
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:level_emitter" duration={400} side="right" />
+
 ## 启用总线红石控制
 
 按需给总线安装红石卡，并设置红石控制模式。发信器只负责提供信号，接收信号的设备必须配置为按信号工作。
@@ -55,6 +57,8 @@ step_ticks: 180
   }
 ]
 ```
+
+<GuiTutorial id="ae2s_ponder:export_bus" duration={400} side="right" />
 
 ## 让成品回到网络
 

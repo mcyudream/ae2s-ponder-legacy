@@ -1,0 +1,21 @@
+{
+  "overview_sheets_reviewed": 7,
+  "overview_entries": 84,
+  "overview_language": "en_us",
+  "selected_operation_languages": [
+    "en_us",
+    "zh_cn"
+  ],
+  "reported_pages": "reported-pages.png",
+  "additional_pages": "additional-pages.png",
+  "full_local_archive": "build/reports/verification/client-with-ponder/screenshots",
+  "focus": [
+    "Network formatting and native device list",
+    "Access terminal headers, provider groups and rows",
+    "Registered import priority names and numbering",
+    "Pattern modifier multiply and replacement modes",
+    "Search settings visibility and radio state",
+    "Cell terminal top tabs, CPU search/list separation, requester 19-pixel rows",
+    "Read-only recipe examples, color modal layering, threshold fields and footer separation"
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "screen": "ae2.client.gui.me.patternencode.GuiPatternEncodingTerm",
+  "width": 195,
+  "height": 233,
+  "widgets": {
+    "verticalToolbar": {
+      "kind": "VerticalButtonBar",
+      "bounds": [
+        -17,
+        1,
+        20,
+        156
+      ]
+    },
+    "scrollbar": {
+      "kind": "Scrollbar",
+      "bounds": [
+        175,
+        18,
+        12,
+        36
+      ]
+    },
+    "craftingStatus": {
+      "kind": "TabButton",
+      "bounds": [
+        171,
+        -5,
+        20,
+        20
+      ]
+    },
+    "viewCells": {
+      "kind": "ViewCellsPanel",
+      "bounds": [
+        -44,
+        0,
+        24,
+        102
+      ]
+    },
+    "search": {
+      "kind": "field",
+      "bounds": [
+        80,
+        4,
+        89,
+        12
+      ]
+    },
+    "craftingSubstitutions": {
+      "kind": "ToggleButton",
+      "bounds": [
+        80,
+        74,
+        8,
+        8
+      ]
+    },
+    "craftingFluidSubstitutions": {
+      "kind": "ToggleButton",
+      "bounds": [
+        90,
+        74,
+        8,
+        8
+      ]
+    },
+    "craftingClearPattern": {
+      "kind": "ActionButton",
+      "bounds": [
+        70,
+        74,
+        8,
+        8
+      ]
+    },
+    "modeTabButton0": {
+      "kind": "TabButton",
+      "bounds": [
+        173,
+        59,
+        22,
+        22
+      ]
+    },
+    "modeTabButton1": {
+      "kind": "TabButton",
+      "bounds": [
+        173,
+        80,
+        22,
+        22
+      ]
+    },
+    "encodePattern": {
+      "kind": "ActionButton",
+      "bounds": [
+        147,
+        88,
+        16,
+        16
+      ]
+    },
+    "uploadPattern": {
+      "kind": "DynamicIconButton",
+      "bounds": [
+        165,
+        93,
+        8,
+        8
+      ]
+    }
+  }
+}

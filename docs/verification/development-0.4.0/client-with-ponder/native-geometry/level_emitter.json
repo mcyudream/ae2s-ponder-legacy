@@ -1,0 +1,34 @@
+{
+  "screen": "ae2.client.gui.implementations.GuiStorageLevelEmitter",
+  "width": 176,
+  "height": 186,
+  "widgets": {
+    "verticalToolbar": {
+      "kind": "VerticalButtonBar",
+      "bounds": [
+        -17,
+        1,
+        20,
+        24
+      ]
+    },
+    "upgrades": {
+      "kind": "UpgradesPanel",
+      "bounds": [
+        177,
+        0,
+        29,
+        30
+      ]
+    },
+    "level": {
+      "kind": "NumberEntryWidget",
+      "bounds": [
+        20,
+        17,
+        138,
+        62
+      ]
+    }
+  }
+}

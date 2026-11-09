@@ -1,0 +1,79 @@
+{
+  "screen": "ae2.client.gui.implementations.GuiOutputSides",
+  "width": 176,
+  "height": 125,
+  "widgets": {
+    "returnToParent": {
+      "kind": "TabButton",
+      "bounds": [
+        152,
+        -5,
+        20,
+        20
+      ]
+    },
+    "clear": {
+      "kind": "ActionButton",
+      "bounds": [
+        128,
+        -5,
+        20,
+        20
+      ]
+    },
+    "side_top": {
+      "kind": "OutputSideSelectionButton",
+      "bounds": [
+        80,
+        26,
+        16,
+        16
+      ]
+    },
+    "side_left": {
+      "kind": "OutputSideSelectionButton",
+      "bounds": [
+        54,
+        50,
+        16,
+        16
+      ]
+    },
+    "side_front": {
+      "kind": "OutputSideSelectionButton",
+      "bounds": [
+        80,
+        50,
+        16,
+        16
+      ]
+    },
+    "side_right": {
+      "kind": "OutputSideSelectionButton",
+      "bounds": [
+        106,
+        50,
+        16,
+        16
+      ]
+    },
+    "side_bottom": {
+      "kind": "OutputSideSelectionButton",
+      "bounds": [
+        80,
+        74,
+        16,
+        16
+      ]
+    },
+    "side_back": {
+      "kind": "OutputSideSelectionButton",
+      "bounds": [
+        80,
+        98,
+        16,
+        16
+      ]
+    }
+  }
+}

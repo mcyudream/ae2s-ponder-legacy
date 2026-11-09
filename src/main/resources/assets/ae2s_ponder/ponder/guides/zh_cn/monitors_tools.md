@@ -79,6 +79,8 @@ step_ticks: 180
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:network_status" duration={400} side="right" />
+
 ## 正确使用扳手与存储卡
 
 用扳手执行设备支持的旋转或拆卸。存储卡可复制支持的设置或隧道连接，操作时对准准确部件面，并在应用前查看卡片提示。

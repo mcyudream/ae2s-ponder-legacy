@@ -1,0 +1,105 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:pea_terminal",
+  "title": "@ae2s_ponder.gui.pea_terminal.title",
+  "components": [
+    "ae2:pattern_encoding_access_terminal",
+    "ae2:wireless_pattern_encoding_access_terminal"
+  ],
+  "screen": "ae2.client.gui.me.patternencode.GuiPEATerm",
+  "adapter": "ae2s",
+  "width": 240,
+  "height": 290,
+  "texture": "",
+  "targets": {
+    "widget.search": {
+      "type": "region",
+      "x": 39,
+      "y": 21,
+      "width": 65,
+      "height": 10,
+      "label": "@ae2s_ponder.gui.pea_terminal.target.widget.search",
+      "item": "",
+      "count": 0
+    },
+    "widget.inputSearch": {
+      "type": "region",
+      "x": 136,
+      "y": 8,
+      "width": 65,
+      "height": 10,
+      "label": "@ae2s_ponder.gui.pea_terminal.target.widget.inputSearch",
+      "item": "",
+      "count": 0
+    },
+    "widget.modeTabButton0": {
+      "type": "button",
+      "x": 214,
+      "y": 112,
+      "width": 22,
+      "height": 22,
+      "label": "@ae2s_ponder.gui.pea_terminal.target.widget.modeTabButton0",
+      "item": "",
+      "count": 0
+    },
+    "widget.encodePattern": {
+      "type": "button",
+      "x": 179,
+      "y": 141,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.pea_terminal.target.widget.encodePattern",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.pea_terminal.target.widget.search",
+      "text": "@ae2s_ponder.gui.pea_terminal.step.0",
+      "target": "widget.search",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.search",
+          "value": "processor",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.pea_terminal.target.widget.inputSearch",
+      "text": "@ae2s_ponder.gui.pea_terminal.step.1",
+      "target": "widget.inputSearch",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.pea_terminal.target.widget.modeTabButton0",
+      "text": "@ae2s_ponder.gui.pea_terminal.step.2",
+      "target": "widget.modeTabButton0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.pea_terminal.target.widget.encodePattern",
+      "text": "@ae2s_ponder.gui.pea_terminal.step.3",
+      "target": "widget.encodePattern",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

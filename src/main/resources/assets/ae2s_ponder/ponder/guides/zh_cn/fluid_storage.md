@@ -56,6 +56,8 @@ step_ticks: 180
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:storage_bus" duration={400} side="right" />
+
 ## 区分访问与搬运
 
 存储总线直接暴露储罐中的内容，输入总线从储罐抽取，输出总线向其发送所选流体。明确源和目标，避免建立无意义的循环。

@@ -1,0 +1,25 @@
+{
+  "screen": "ae2.client.gui.implementations.GuiAdvancedIOBus",
+  "width": 176,
+  "height": 253,
+  "widgets": {
+    "verticalToolbar": {
+      "kind": "VerticalButtonBar",
+      "bounds": [
+        -17,
+        1,
+        20,
+        46
+      ]
+    },
+    "upgrades": {
+      "kind": "ScrollingUpgradesPanel",
+      "bounds": [
+        177,
+        0,
+        33,
+        100
+      ]
+    }
+  }
+}

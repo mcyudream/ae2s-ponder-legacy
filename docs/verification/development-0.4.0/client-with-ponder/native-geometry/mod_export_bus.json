@@ -1,0 +1,25 @@
+{
+  "screen": "ae2.client.gui.implementations.GuiModFilterBus",
+  "width": 176,
+  "height": 144,
+  "widgets": {
+    "upgrades": {
+      "kind": "ScrollingUpgradesPanel",
+      "bounds": [
+        177,
+        0,
+        33,
+        100
+      ]
+    },
+    "modExpression": {
+      "kind": "field",
+      "bounds": [
+        8,
+        27,
+        120,
+        12
+      ]
+    }
+  }
+}

@@ -1,6 +1,33 @@
 # AE2S Ponder Legacy 安装包验收
 
-## 当前开发构建：0.3.0（共享 GUI 教程）
+## 当前开发构建：0.4.0（完整 GUI 覆盖与布局适配）
+
+- 日期：2026-11-08。Minecraft 1.12.2 / **Cleanroom 0.4.0 正式版（无 -alpha）** / Java 25.0.5。
+- 生产包：`ae2s-ponder-legacy-0.4.0.jar`；SHA-256：`640e02545d29747567cc92db697bebc91f432260a9a385f9b115f45f268b8b81`。
+- AE2S / Supergiant **1.1.0**；Ponder Legacy **1.7.1** 独立安装，SHA-256：`0b4039c5e8cf01e740612136ac188cc41406431d0553f462109bebaf3b2f0f3e`。
+- 4 项单元测试通过；开发目录与独立发布目录的生产包逐字节一致。Ponder 的 CI 安装包与实测包也逐字节一致。
+
+| 组合 | 结果 | 检查项 |
+| --- | --- | --- |
+| client-with-ponder | PASS | 11004 |
+| client-without-ponder | PASS | 5 |
+| server-with-ponder | PASS | 3 |
+| server-without-ponder | PASS | 3 |
+
+
+84 套教程覆盖 78 种 AE2S 原生界面类型，共 108 个动画与 109 篇双语页面。全量演示检查每个步骤的中英文帧缓冲、分数缩放、高亮边缘、回放与小窗口；本地保存 1122 张截图，提交代表图。原生运行保存 61 份实际控件几何，核对 W 引导、文本输入焦点、容器及背包隔离。
+
+Ponder 的 `GuiDemoLayout` 统一负责分组偏移、祖先裁切、绘制层级和目标可见性。网络状态修正本地化参数；样板访问终端补齐标题、供应器分组和样板行；导入优先级显示真实注册项及编号；样板修改器按模式切换背景、控件和槽位。终端设置的互斥选项、发信器复合输入、颜色弹窗、元件终端标签页，以及 CPU／请求器列表也按各自原生布局处理。
+
+真实客户端退出世界后，GUI 清理与附属场景重载在主线程执行，108 个 AE2S 动画继续可用。未安装 Ponder 的客户端进入世界和两种专服启动均通过。使用生产 SRG 包，没有 userdev 运行时重映射。
+
+验收使用 Linux x64 / llvmpipe，禁用音频输出，未安装 CraftTweaker、HEI、GuideME、Mouse Tweaks、FTB Quests、Media API 或 Revo UI。静态演示的列表是独立示例数据，未据此声明所有生产任务均已逐项完成。原生 tick 分析仪 fixture 仍会记录 AE2S 的尾随 payload 警告；主动断开 fixture 可记录卸载世界后的原版过期实体／声音包。上述日志和检查范围保留于报告，没有将这些上游问题声明为已修复。
+
+[报告与范围](docs/verification/development-0.4.0/summary.json) · [构建一致性](docs/verification/development-0.4.0/reproducibility.json)。本次为 main CI 开发构建，未创建发行标签。
+
+---
+
+## 历史开发构建：0.3.0（共享 GUI 教程）
 
 - 日期：2026-11-08。Minecraft 1.12.2 / **Cleanroom 0.4.0 正式版（无 -alpha）** / Java 25.0.5。
 - 安装包：`ae2s-ponder-legacy-0.3.0.jar`；SHA-256：`c134dd24dff406d417e9d631f17c9a03bf68e6e5a902d6ca379608949c7080a3`。

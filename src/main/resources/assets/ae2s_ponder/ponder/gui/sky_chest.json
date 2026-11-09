@@ -1,0 +1,76 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:sky_chest",
+  "title": "@ae2s_ponder.gui.sky_chest.title",
+  "components": [
+    "ae2:sky_stone_chest",
+    "ae2:smooth_sky_stone_chest"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiSkyChest",
+  "adapter": "ae2s",
+  "width": 184,
+  "height": 195,
+  "texture": "ae2:textures/guis/skychest.png",
+  "targets": {
+    "slot.STORAGE.0": {
+      "type": "slot",
+      "x": 12,
+      "y": 22,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.sky_chest.target.slot.STORAGE.0",
+      "item": "",
+      "count": 0
+    },
+    "slot.PLAYER_INVENTORY.0": {
+      "type": "slot",
+      "x": 12,
+      "y": 107,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.sky_chest.target.slot.PLAYER_INVENTORY.0",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.sky_chest.target.slot.STORAGE.0",
+      "text": "@ae2s_ponder.gui.sky_chest.step.0",
+      "target": "slot.STORAGE.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.STORAGE.0",
+          "item": "minecraft:iron_ingot",
+          "count": 32,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.sky_chest.target.slot.PLAYER_INVENTORY.0",
+      "text": "@ae2s_ponder.gui.sky_chest.step.1",
+      "target": "slot.PLAYER_INVENTORY.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.sky_chest.target.slot.STORAGE.0",
+      "text": "@ae2s_ponder.gui.sky_chest.step.2",
+      "target": "slot.STORAGE.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

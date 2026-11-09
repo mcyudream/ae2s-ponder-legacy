@@ -6,9 +6,9 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLInterModComms;
 
 /** The entry point deliberately has no references to optional Ponder or client classes. */
-@Mod(modid = AE2SPonder.LEGACY_MOD_ID, name = "AE2S Ponder Legacy", version = "0.3.0",
+@Mod(modid = AE2SPonder.LEGACY_MOD_ID, name = "AE2S Ponder Legacy", version = "0.4.0",
     acceptedMinecraftVersions = "[1.12.2]", clientSideOnly = true, acceptableRemoteVersions = "*",
-    dependencies = "required-after:cleanroom@[0.4.0,);required-after:ae2@[1.1.0,1.2.0);after:ponder-legacy@[1.7.0,)")
+    dependencies = "required-after:cleanroom@[0.4.0,);required-after:ae2@[1.1.0,1.2.0);after:ponder-legacy@[1.7.1,)")
 public final class AE2SPonder {
     /** Loader identity; resource and saved registry namespaces remain unchanged. */
     public static final String LEGACY_MOD_ID = "ae2s-ponder-legacy";

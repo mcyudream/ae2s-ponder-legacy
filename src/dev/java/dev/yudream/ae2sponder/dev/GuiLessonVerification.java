@@ -68,8 +68,8 @@ final class GuiLessonVerification {
                     mc.getLanguageManager().setCurrentLanguage(mc.getLanguageManager().getLanguage(code)); mc.refreshResources();
                 }
                 tutorial = GuiTutorials.resolve("ae2s_ponder:" + f.id);
-                host.check(GuiTutorials.all().stream().filter(t -> t.id().getNamespace().equals("ae2s_ponder")).count() == 8,
-                    "Eight shared AE2S GUI lessons register without optional external GUI mods");
+                host.check(GuiTutorials.all().stream().filter(t -> t.id().getNamespace().equals("ae2s_ponder")).count() == 84,
+                    "All 84 shared AE2S GUI lessons register without optional external GUI mods");
                 host.check(!GuiTutorialDrawing.text(tutorial.title()).startsWith("ae2s_ponder."), f.id + ": localized GUI title resolves");
                 for (var step : tutorial.steps()) host.check(!GuiTutorialDrawing.text(step.text()).startsWith("ae2s_ponder."), f.id + ": localized step resolves");
                 for (var target : tutorial.targets().values()) if (!target.item().isEmpty())
@@ -134,6 +134,7 @@ final class GuiLessonVerification {
                 host.check(GuiTutorialEvents.liveSession()!=null && mc.currentScreen==gui && mc.player.openContainer.windowId==window,
                     f.id + ": W starts guidance within the same native screen and container");
                 before = fingerprint();
+                NativeGuiGeometryVerification.verify(host,f.id,gui,tutorial);
                 GuiTutorialEvents.preview(tutorial);
                 var field = GuiTutorialEvents.class.getDeclaredField("demo"); field.setAccessible(true);
                 var demo = (GuiDemoScreen)field.get(null); demo.session().playing(false);

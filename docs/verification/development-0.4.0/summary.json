@@ -1,0 +1,71 @@
+{
+  "version": "0.4.0",
+  "date": "2026-11-08",
+  "minecraft": "1.12.2",
+  "cleanroom": "0.4.0",
+  "java": "25.0.5",
+  "ae2s": "1.1.0",
+  "production_jar": "ae2s-ponder-legacy-0.4.0.jar",
+  "sha256": "640e02545d29747567cc92db697bebc91f432260a9a385f9b115f45f268b8b81",
+  "ponder_version": "1.7.1",
+  "ponder_sha256": "0b4039c5e8cf01e740612136ac188cc41406431d0553f462109bebaf3b2f0f3e",
+  "ponder_source_revision": "48f17efd3bd2249ba3c0b41351b55c5482e7a437",
+  "tutorial_pages": 109,
+  "animated_tutorials": 108,
+  "shared_gui_tutorials": 84,
+  "native_screen_types": 78,
+  "unit_tests": {
+    "tests": 4,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "fixtures": [
+    {
+      "fixture": "client-with-ponder",
+      "result": "PASS",
+      "checks": 11004,
+      "report": "client-with-ponder/report.json"
+    },
+    {
+      "fixture": "client-without-ponder",
+      "result": "PASS",
+      "checks": 5,
+      "report": "client-without-ponder/report.json"
+    },
+    {
+      "fixture": "server-with-ponder",
+      "result": "PASS",
+      "checks": 3,
+      "report": "server-with-ponder/report.json"
+    },
+    {
+      "fixture": "server-without-ponder",
+      "result": "PASS",
+      "checks": 3,
+      "report": "server-without-ponder/report.json"
+    }
+  ],
+  "native_geometry_files": 61,
+  "local_full_screenshots": 1122,
+  "main_source_sha256": "b51195d1a2ce51151d5ac965f9d6e415e45d2853d93dd009fd2af60a35659199",
+  "main_source_hash_format": "Sorted src/main relative path UTF-8 + NUL + content for every regular file.",
+  "scope": [
+    "84 independent GUI lessons in English and simplified Chinese, every operation framebuffer and four fractional scales.",
+    "Ponder layout tree shares group coordinates, ancestor clipping, stable paint layers, visible controls and highlight geometry.",
+    "Native AE2S GUI controls and W overlays: server-created containers, semantic targets, input focus, inventory isolation and resizing.",
+    "Network status translated values; access terminal grouped rows and header; actual registered import priorities; separate pattern modifier modes.",
+    "Settings page and search-option visibility; threshold numeric fields; color modal; cell terminal tabs and CPU/request lists.",
+    "108 Java animations and 109 bilingual guide pages, timeline seeks/replay, P2P, native machines and projection regression.",
+    "Actual client world exit preserves all addon scenes after client-thread reload.",
+    "Official Cleanroom 0.4.0 production-jar client/world and dedicated-server startup, both with and without Ponder."
+  ],
+  "limitations": [
+    "Linux x64 llvmpipe with audio disabled; other GPUs, arbitrary modpacks and other AE2 implementations are not certified.",
+    "Native controls are inspected on the exercised fixtures; independent demonstration lists use passive sample data. This does not certify every production recipe or all native subpage interactions.",
+    "AE2S 1.1.0 logs a malformed TickConfigSavePacket trailing payload warning during its native tick-analyser fixture. It remains an upstream limitation.",
+    "The explicit disconnect fixture may log stale vanilla entity/sound packets after the world is unloaded; Ponder addon reload and scene preservation checks pass.",
+    "CraftTweaker, HEI, GuideME, Mouse Tweaks, FTB Quests, Media API and Revo UI are absent. Main CI build; no release tag created."
+  ],
+  "visual_audit": "visual-audit.json"
+}

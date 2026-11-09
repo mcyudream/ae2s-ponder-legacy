@@ -1,0 +1,25 @@
+{
+  "screen": "ae2.client.gui.implementations.GuiConfigModifier",
+  "width": 191,
+  "height": 60,
+  "widgets": {
+    "mode": {
+      "kind": "AE2Button",
+      "bounds": [
+        12,
+        22,
+        50,
+        20
+      ]
+    },
+    "data_input": {
+      "kind": "field",
+      "bounds": [
+        72,
+        26,
+        100,
+        12
+      ]
+    }
+  }
+}

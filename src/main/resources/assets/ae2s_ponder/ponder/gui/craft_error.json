@@ -1,0 +1,57 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:craft_error",
+  "title": "@ae2s_ponder.gui.craft_error.title",
+  "components": [
+    "ae2:crafting_terminal"
+  ],
+  "screen": "ae2.client.gui.me.crafting.GuiCraftError",
+  "adapter": "ae2s",
+  "width": 227,
+  "height": 95,
+  "texture": "ae2:textures/guis/craft_error.png",
+  "targets": {
+    "text.errorText": {
+      "type": "region",
+      "x": 114,
+      "y": 14,
+      "width": 101,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.craft_error.target.text.errorText",
+      "item": "",
+      "count": 0
+    },
+    "view.body": {
+      "type": "region",
+      "x": 12,
+      "y": 32,
+      "width": 189,
+      "height": 33,
+      "label": "@ae2s_ponder.gui.craft_error.target.view.body",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.craft_error.target.text.errorText",
+      "text": "@ae2s_ponder.gui.craft_error.step.0",
+      "target": "text.errorText",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.craft_error.target.view.body",
+      "text": "@ae2s_ponder.gui.craft_error.step.1",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

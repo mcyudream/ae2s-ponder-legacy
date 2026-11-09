@@ -1,0 +1,34 @@
+{
+  "screen": "ae2.client.gui.implementations.GuiODFilterBus",
+  "width": 176,
+  "height": 209,
+  "widgets": {
+    "upgrades": {
+      "kind": "ScrollingUpgradesPanel",
+      "bounds": [
+        177,
+        0,
+        33,
+        100
+      ]
+    },
+    "whiteExpression": {
+      "kind": "field",
+      "bounds": [
+        8,
+        26,
+        160,
+        26
+      ]
+    },
+    "blackExpression": {
+      "kind": "field",
+      "bounds": [
+        8,
+        66,
+        160,
+        26
+      ]
+    }
+  }
+}

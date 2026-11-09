@@ -5,24 +5,30 @@
 
 ![AE2S Ponder Legacy 展示插画](branding/cover.png)
 
-为 **Applied Energistics 2 Supergiant（应用能源 2 超巨星，AE2S）** 制作的独立思索附属模组，由 **yudream** 编写。通过 25 篇中英文教程（24 个动画与静态双展示教程、1 篇排障索引），覆盖 ME 网络、存储、自动化、材料制备及进阶网络。
+为 **Applied Energistics 2 Supergiant（应用能源 2 超巨星，AE2S）** 制作的独立思索附属模组，由 **yudream** 编写。通过 **109 篇中英文教程（108 个动画与静态双展示教程、1 篇排障索引）**，包括 **84 套 GUI 操作教程、78 种原生界面类型**，覆盖 ME 网络、存储、自动化、材料制备及进阶网络。
 
-**当前开发版本：0.3.0（main CI）。运行基线：Minecraft 1.12.2 / Cleanroom 0.4.0 正式版（不带 `-alpha`）/ Java 25。**
+**当前开发版本：0.4.0（main CI）。运行基线：Minecraft 1.12.2 / Cleanroom 0.4.0 正式版（不带 `-alpha`）/ Java 25。**
 
 ## 下载与安装
 
 1. 准备 **Minecraft 1.12.2、Cleanroom 0.4.0 正式版、Java 25**。
 2. 安装 [AE2S / Supergiant 1.1.0](https://github.com/FormlessDragon/Applied-Energistics-2-Supergiant/releases/tag/v1.1.0)。请下载普通安装 jar。
-3. 观看本版教程另需 **Ponder Legacy 1.7.0 或更新版本**，当前从 [Ponder main CI](https://github.com/mcyudream/ponder-legacy/actions/workflows/ci.yml) 下载 `release-assets`。CraftTweaker、GuideME 和 Mouse Tweaks 均无需安装。
-4. 从 [本项目 main CI](https://github.com/mcyudream/ae2s-ponder-legacy/actions/workflows/ci.yml) 的 `release-assets` 下载 `ae2s-ponder-legacy-0.3.0.jar`，放入客户端的 `mods/`，替换本项目旧 jar。正式发行仍以 [GitHub Releases](https://github.com/mcyudream/ae2s-ponder-legacy/releases) 为准。
+3. 观看本版教程另需 **Ponder Legacy 1.7.1 或更新版本**，当前从 [Ponder main CI](https://github.com/mcyudream/ponder-legacy/actions/workflows/ci.yml) 下载 `release-assets`。CraftTweaker、GuideME 和 Mouse Tweaks 均无需安装。
+4. 从 [本项目 main CI](https://github.com/mcyudream/ae2s-ponder-legacy/actions/workflows/ci.yml) 的 `release-assets` 下载 `ae2s-ponder-legacy-0.4.0.jar`，放入客户端的 `mods/`，替换本项目旧 jar。正式发行仍以 [GitHub Releases](https://github.com/mcyudream/ae2s-ponder-legacy/releases) 为准。
 
 `-sources.jar` 供开发使用；`-mcp.jar` 和验证模组不作为安装文件发布。Ponder 与 AE2S 独立安装，均未打入本附属。
 
-本附属只需装在客户端。**Ponder 为可选依赖**：未安装时正常启动并进入世界，教程入口停用。本版使用独立构建的 **Ponder Legacy 1.7.0** 安装包验收，具体哈希见 [验收记录](LEGACY-VERIFICATION.md)。加载器验收基线为正式 **Cleanroom 0.4.0**，与 `0.4.0-alpha` 分别记录。
+本附属只需装在客户端。**Ponder 为可选依赖**：未安装时正常启动并进入世界，教程入口停用。本版使用独立构建的 **Ponder Legacy 1.7.1** 安装包验收，具体哈希见 [验收记录](LEGACY-VERIFICATION.md)。加载器验收基线为正式 **Cleanroom 0.4.0**，与 `0.4.0-alpha` 分别记录。
+
+## GUI 绘制修复
+
+完整界面由 Ponder 的统一布局模型绘制，包含标题、全部可见槽位、工具栏、升级栏、数值输入与列表。
+弹窗和设置页按当前状态显示；指引框与绘制节点共用坐标，修正侧栏、半尺寸按钮、文字对齐及分数缩放偏移。
+本版需要同步安装 **Ponder Legacy 1.7.1 或更新版本**。
 
 ## 升级
 
-0.3.0 新增 8 套共享 GUI 教程，使用 Ponder 1.7.0 的时间轴 GUI API；已安装 Ponder 时需同步升级至 1.7.0 或更新版本。未安装 Ponder 仍可正常进入游戏。
+0.4.0 将共享 GUI 教程从 8 套扩展到 84 套，覆盖当前 AE2S 1.1.0 中 78 种可用界面类型。使用 Ponder 1.7.1 的时间轴 GUI API；已安装 Ponder 时需同步升级至 1.7.1 或更新版本。未安装 Ponder 仍可正常进入游戏。
 
 历史 0.2.0 同装新版 FTB Quests 时，请使用 **Ponder Legacy 1.5.1 或更新版本**。1.5.0 与声明 `after:ponder-legacy` 的 FTBQ 会形成双向加载顺序循环；该问题由 Ponder 1.5.1 修复，**历史附属 0.2.0 无需更新**。联合安装的正式 Cleanroom 0.4.0 报告见 [Ponder 补丁验收](https://github.com/mcyudream/ponder-legacy/blob/v1.5.1/docs/verification/release-1.5.1-cleanroom-0.4.0/summary.json)。
 
@@ -41,7 +47,19 @@
 - 支持关键帧与回放；静态页可搜索、滚动和旋转 3D 场景，F7 编辑 Markdown。
 - 教程结构可投影到世界；材料按钮检查背包，清单可钉在 HUD／背包并拖拽保存位置。
 
-## 0.3.0：机器动画中的 GUI 讲解
+## 0.4.0：完整 GUI 覆盖目录
+
+84 套操作教程分为基础 16、存储与自动化 31、合成 25、网络 12。每套都有独立的物品关联、动画／静态页面和演示卡片，原有机器教程也同步加入相关 GUI 片段。
+
+- 存储与加工：ME 箱子、驱动器、元件工作台／限制、IO 端口、物质聚合器、水晶装配器、装罐器、原料缓存器、振动仓与分子装配室。
+- 自动化：普通及矿词／模组／精确／阈值／库存／高级 IO 总线、成形／破坏面板、三类发信器、备货数量、优先级、输出面与工作间隔。
+- 终端与任务：合成、样板编码／管理／编码管理、元件、请求器终端，以及数量、计划确认、CPU 选择、任务状态、合成树、任务优先级与错误详情。
+- 网络与便携：无线访问点、无线／便携元件、虚空元件、拾取与磁铁设置、量子桥、空间 IO、空间锚、网络状态、分析仪与高级内存卡。
+- 工具与子页面：配置修改器、优先级调整器、样板修改器、切割刀、重命名、配方导入优先级、终端偏好、资源类型与数量快捷设置。
+
+[逐项覆盖清单](docs/GUI-COVERAGE.md) 记录每个教程、原生界面和宿主上下文。布局从锁定的 AE2S jar 读取，未来升级时会检查新界面是否遗漏。无线与方块／部件共用控件的场合复用教程；无独立界面的功能通过关联教程说明。
+
+## 机器动画中的 GUI 讲解
 
 - 播放机器教程时，在同一个思索页面的侧边留白弹出 GUI 片段，介绍控件、物品流转与操作顺序；片段结束后继续 3D 演示。
 - GUI 与机器动画共用时间轴、暂停、跳转和重播。第一网络、元件分区、自动合成、处理样板、处理器生产与接口备货已接入。
@@ -100,7 +118,7 @@
 
 | 运行组合 | 结果 |
 | --- | --- |
-| 客户端，安装 Ponder 1.7.0 | 24 个动画、25 篇图文与 8 套 GUI，中英文播放、回退、静态演示和真实容器 W 引导 |
+| 客户端，安装 Ponder 1.7.1 | 108 个动画、109 篇图文与 84 套 GUI，中英文播放、回退、静态演示和真实容器 W 引导 |
 | 客户端，未安装 Ponder | 正常进入世界，教程入口停用 |
 | 专用服务器，安装／未安装 Ponder | 到达服务器启动完成事件，客户端代码隔离 |
 
@@ -108,7 +126,7 @@
 
 - 支持目标为 **AE2S / Supergiant 1.1.0**，实际 loader ID 为 `ae2`；不声明原版 AE2 1.12.2、AE2UEL 或现代官方 Ponder 的二进制兼容。
 - 频道数值按默认配置讲解；整合包更改配置后可能不同。
-- 高级内存卡专属界面、多输入 P2P、请求器等尚无专门教程。
+- 高级内存卡与请求器已提供独立 GUI 教程。P2P 频率、角色与连接检查使用同一组教程；外部 Mod 自带界面不自动计入 AE2S 覆盖数量。
 - 验收范围及图形环境见记录；没有覆盖任意整合包、硬件或音频输出。
 - [早期 0.4.0-alpha 验证档案](docs/VERIFICATION.md) 保留当时的安装包与失败记录，不能替代正式版验收。
 
@@ -125,11 +143,11 @@ python3 tools/verify_legacy_package.py --require-verified-hash
 python3 tools/prepare_release.py
 ```
 
-`build-dependencies.json` 固定 Ponder 编译源码提交，`dependency-lock.json` 固定 AE2S 官方 dev/runtime 文件摘要。也可使用同级 `../ponder` 开发工程，或用 `-PponderSourceDir=/absolute/path/to/ponder` 显式选择 1.7.0 SDK；源码依赖仅用于编译，Ponder 保持可选。
+`build-dependencies.json` 固定 Ponder 编译源码提交，`dependency-lock.json` 固定 AE2S 官方 dev/runtime 文件摘要。也可使用同级 `../ponder` 开发工程，或用 `-PponderSourceDir=/absolute/path/to/ponder` 显式选择 1.7.1 SDK；源码依赖仅用于编译，Ponder 保持可选。
 
 编译 SDK 使用 Cleanroom `0.7.14-alpha` userdev；实际最低加载器声明与生产验收基线为 **0.4.0 正式版**。SDK 上的运行结果不替代基线验收。
 
-GitHub Actions 在 push / PR 时构建、检查 24 个结构、25 篇双语教程、8 套 GUI 及语言资源，核对安装包 SHA-256 与四种正式基线报告，再生成归档。后续明确发布与包内版本一致的标签时，CI 才创建 GitHub Release，上传安装 jar、源码 jar 和 `SHA256SUMS`。本次仅提交 main；[0.3.0 更新说明](docs/releases/0.3.0.md)。
+GitHub Actions 在 push / PR 时构建、检查 108 个结构、109 篇双语教程、84 套 GUI 及语言资源，核对安装包 SHA-256 与四种正式基线报告，再生成归档。后续明确发布与包内版本一致的标签时，CI 才创建 GitHub Release，上传安装 jar、源码 jar 和 `SHA256SUMS`。本次仅提交 main；[0.4.0 更新说明](docs/releases/0.4.0.md)。
 
 ### 开发验证
 

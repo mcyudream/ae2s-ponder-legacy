@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:network_tool",
+  "title": "@ae2s_ponder.gui.network_tool.title",
+  "components": [
+    "ae2:network_tool"
+  ],
+  "screen": "ae2.client.gui.me.networktool.GuiNetworkTool",
+  "adapter": "ae2s",
+  "width": 184,
+  "height": 176,
+  "texture": "ae2:textures/guis/me_chest.png",
+  "targets": {
+    "slot.STORAGE.0": {
+      "type": "slot",
+      "x": 66,
+      "y": 23,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.network_tool.target.slot.STORAGE.0",
+      "item": "",
+      "count": 0
+    },
+    "view.body": {
+      "type": "region",
+      "x": 12,
+      "y": 32,
+      "width": 146,
+      "height": 48,
+      "label": "@ae2s_ponder.gui.network_tool.target.view.body",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.network_tool.target.slot.STORAGE.0",
+      "text": "@ae2s_ponder.gui.network_tool.step.0",
+      "target": "slot.STORAGE.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.STORAGE.0",
+          "item": "ae2:capacity_card",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.network_tool.target.view.body",
+      "text": "@ae2s_ponder.gui.network_tool.step.1",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.network_tool.target.slot.STORAGE.0",
+      "text": "@ae2s_ponder.gui.network_tool.step.2",
+      "target": "slot.STORAGE.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

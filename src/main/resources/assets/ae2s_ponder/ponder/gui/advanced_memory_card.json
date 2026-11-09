@@ -1,0 +1,95 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:advanced_memory_card",
+  "title": "@ae2s_ponder.gui.advanced_memory_card.title",
+  "components": [
+    "ae2:advanced_memory_card",
+    "ae2:me_p2p_tunnel"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiAdvancedMemoryCard",
+  "adapter": "ae2s",
+  "width": 283,
+  "height": 204,
+  "texture": "ae2:textures/guis/advanced_memory_card.png",
+  "targets": {
+    "widget.search": {
+      "type": "region",
+      "x": 151,
+      "y": 9,
+      "width": 105,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.advanced_memory_card.target.widget.search",
+      "item": "",
+      "count": 0
+    },
+    "view.body": {
+      "type": "region",
+      "x": 31,
+      "y": 32,
+      "width": 226,
+      "height": 142,
+      "label": "@ae2s_ponder.gui.advanced_memory_card.target.view.body",
+      "item": "",
+      "count": 0
+    },
+    "widget.scrollbar": {
+      "type": "region",
+      "x": 264,
+      "y": 23,
+      "width": 12,
+      "height": 125,
+      "label": "@ae2s_ponder.gui.advanced_memory_card.target.widget.scrollbar",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.advanced_memory_card.target.widget.search",
+      "text": "@ae2s_ponder.gui.advanced_memory_card.step.0",
+      "target": "widget.search",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.search",
+          "value": "main",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.advanced_memory_card.target.view.body",
+      "text": "@ae2s_ponder.gui.advanced_memory_card.step.1",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.advanced_memory_card.target.widget.scrollbar",
+      "text": "@ae2s_ponder.gui.advanced_memory_card.step.2",
+      "target": "widget.scrollbar",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.advanced_memory_card.target.view.body",
+      "text": "@ae2s_ponder.gui.advanced_memory_card.step.3",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

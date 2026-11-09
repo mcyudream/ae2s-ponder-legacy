@@ -41,6 +41,7 @@ public final class VerificationMod {
             Files.createDirectories(output);
             var json = new JsonObject();
             json.addProperty("result", result);
+            json.addProperty("scenario",System.getProperty("ae2sponder.scenario","full"));
             json.addProperty("cleanroom", cleanroomVersion());
             json.addProperty("java", System.getProperty("java.version"));
             json.addProperty("artifacts", Boolean.getBoolean("ae2sponder.packaged") ? "installation" : "development");

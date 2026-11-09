@@ -1,0 +1,85 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:pickup_filter",
+  "title": "@ae2s_ponder.gui.pickup_filter.title",
+  "components": [
+    "ae2:portable_item_cell_1k"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiPortableCellPickupFilter",
+  "adapter": "ae2s",
+  "width": 203,
+  "height": 266,
+  "texture": "ae2:textures/guis/portable_cell_pickup_filter.png",
+  "targets": {
+    "slot.PORTABLE_CELL_PICKUP_FILTER.0": {
+      "type": "slot",
+      "x": 31,
+      "y": 38,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.pickup_filter.target.slot.PORTABLE_CELL_PICKUP_FILTER.0",
+      "item": "",
+      "count": 0
+    },
+    "widget.verticalToolbar": {
+      "type": "region",
+      "x": 6,
+      "y": 10,
+      "width": 20,
+      "height": 112,
+      "label": "@ae2s_ponder.gui.pickup_filter.target.widget.verticalToolbar",
+      "item": "",
+      "count": 0
+    },
+    "widget.back": {
+      "type": "button",
+      "x": 175,
+      "y": 4,
+      "width": 20,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.pickup_filter.target.widget.back",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.pickup_filter.target.slot.PORTABLE_CELL_PICKUP_FILTER.0",
+      "text": "@ae2s_ponder.gui.pickup_filter.step.0",
+      "target": "slot.PORTABLE_CELL_PICKUP_FILTER.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.PORTABLE_CELL_PICKUP_FILTER.0",
+          "item": "minecraft:iron_ingot",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.pickup_filter.target.widget.verticalToolbar",
+      "text": "@ae2s_ponder.gui.pickup_filter.step.1",
+      "target": "widget.verticalToolbar",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.pickup_filter.target.widget.back",
+      "text": "@ae2s_ponder.gui.pickup_filter.step.2",
+      "target": "widget.back",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

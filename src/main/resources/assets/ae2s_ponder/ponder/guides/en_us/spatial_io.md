@@ -79,6 +79,8 @@ Read the IO Port energy requirement and efficiency. Charge enough network energy
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:spatial_io" duration={400} side="right" />
+
 ## Trigger and exchange
 
 Apply the required redstone trigger to the Spatial IO Port. It exchanges the bounded world contents with the cell contents. Remove players and irreplaceable objects before your first practical test.

@@ -46,6 +46,8 @@ step_ticks: 180
 
 <GameScene scene="ae2s_ponder:p2p" tick={895} />
 
+<GuiTutorial id="ae2s_ponder:advanced_memory_card" />
+
 <GuideOnly>
 
 [排查与索引](troubleshooting.md)

@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:me_chest",
+  "title": "@ae2s_ponder.gui.me_chest.title",
+  "components": [
+    "ae2:chest"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiMEChest",
+  "adapter": "ae2s",
+  "width": 184,
+  "height": 181,
+  "texture": "ae2:textures/guis/me_chest.png",
+  "targets": {
+    "slot.STORAGE_CELL.0": {
+      "type": "slot",
+      "x": 84,
+      "y": 46,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.me_chest.target.slot.STORAGE_CELL.0",
+      "item": "",
+      "count": 0
+    },
+    "view.body": {
+      "type": "region",
+      "x": 12,
+      "y": 37,
+      "width": 146,
+      "height": 48,
+      "label": "@ae2s_ponder.gui.me_chest.target.view.body",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.me_chest.target.slot.STORAGE_CELL.0",
+      "text": "@ae2s_ponder.gui.me_chest.step.0",
+      "target": "slot.STORAGE_CELL.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.STORAGE_CELL.0",
+          "item": "ae2:item_storage_cell_1k",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.me_chest.target.view.body",
+      "text": "@ae2s_ponder.gui.me_chest.step.1",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.me_chest.target.slot.STORAGE_CELL.0",
+      "text": "@ae2s_ponder.gui.me_chest.step.2",
+      "target": "slot.STORAGE_CELL.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:crafting_pattern_view",
+  "title": "@ae2s_ponder.gui.crafting_pattern_view.title",
+  "components": [
+    "ae2:crafting_pattern"
+  ],
+  "screen": "ae2.client.gui.pattern.GuiCraftingPattern",
+  "adapter": "ae2s",
+  "width": 184,
+  "height": 117,
+  "texture": "ae2:textures/guis/crafting_pattern_recipe.png",
+  "targets": {
+    "view.body": {
+      "type": "region",
+      "x": 12,
+      "y": 32,
+      "width": 146,
+      "height": 55,
+      "label": "@ae2s_ponder.gui.crafting_pattern_view.target.view.body",
+      "item": "",
+      "count": 0
+    },
+    "view.header": {
+      "type": "region",
+      "x": 12,
+      "y": 7,
+      "width": 160,
+      "height": 22,
+      "label": "@ae2s_ponder.gui.crafting_pattern_view.target.view.header",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.crafting_pattern_view.target.view.body",
+      "text": "@ae2s_ponder.gui.crafting_pattern_view.step.0",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.crafting_pattern_view.target.view.header",
+      "text": "@ae2s_ponder.gui.crafting_pattern_view.step.1",
+      "target": "view.header",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.crafting_pattern_view.target.view.body",
+      "text": "@ae2s_ponder.gui.crafting_pattern_view.step.2",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

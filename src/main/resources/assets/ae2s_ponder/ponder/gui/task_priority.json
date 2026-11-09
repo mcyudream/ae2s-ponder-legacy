@@ -1,0 +1,64 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:task_priority",
+  "title": "@ae2s_ponder.gui.task_priority.title",
+  "components": [
+    "ae2:crafting_terminal"
+  ],
+  "screen": "ae2.client.gui.me.crafting.GuiCraftingTaskPriority",
+  "adapter": "ae2s",
+  "width": 184,
+  "height": 120,
+  "texture": "ae2:textures/guis/craft_amt.png",
+  "targets": {
+    "widget.priority": {
+      "type": "region",
+      "x": 24,
+      "y": 39,
+      "width": 138,
+      "height": 62,
+      "label": "@ae2s_ponder.gui.task_priority.target.widget.priority",
+      "item": "",
+      "count": 0
+    },
+    "widget.back": {
+      "type": "button",
+      "x": 156,
+      "y": 4,
+      "width": 20,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.task_priority.target.widget.back",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.task_priority.target.widget.priority",
+      "text": "@ae2s_ponder.gui.task_priority.step.0",
+      "target": "widget.priority",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.priority",
+          "value": "10",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.task_priority.target.widget.back",
+      "text": "@ae2s_ponder.gui.task_priority.step.1",
+      "target": "widget.back",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

@@ -79,6 +79,8 @@ Use the Network Tool on the relevant network to inspect energy and device inform
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:network_status" duration={400} side="right" />
+
 ## Rotate and copy carefully
 
 Use the wrench for supported rotation or dismantling. A Memory Card copies supported device settings or tunnel links; aim at the exact face and inspect its tooltip before applying it elsewhere.

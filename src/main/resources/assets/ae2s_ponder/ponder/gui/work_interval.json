@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:work_interval",
+  "title": "@ae2s_ponder.gui.work_interval.title",
+  "components": [
+    "ae2:advanced_io_bus",
+    "ae2:import_export_bus",
+    "ae2:stock_export_bus"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiWorkInterval",
+  "adapter": "ae2s",
+  "width": 184,
+  "height": 138,
+  "texture": "ae2:textures/guis/priority.png",
+  "targets": {
+    "widget.workInterval": {
+      "type": "region",
+      "x": 24,
+      "y": 39,
+      "width": 138,
+      "height": 62,
+      "label": "@ae2s_ponder.gui.work_interval.target.widget.workInterval",
+      "item": "",
+      "count": 0
+    },
+    "view.body": {
+      "type": "region",
+      "x": 12,
+      "y": 37,
+      "width": 146,
+      "height": 71,
+      "label": "@ae2s_ponder.gui.work_interval.target.view.body",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.work_interval.target.widget.workInterval",
+      "text": "@ae2s_ponder.gui.work_interval.step.0",
+      "target": "widget.workInterval",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.workInterval",
+          "value": "20",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.work_interval.target.view.body",
+      "text": "@ae2s_ponder.gui.work_interval.step.1",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

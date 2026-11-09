@@ -1,0 +1,106 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:crafting_cpu",
+  "title": "@ae2s_ponder.gui.crafting_cpu.title",
+  "components": [
+    "ae2:1k_crafting_storage",
+    "ae2:crafting_monitor",
+    "ae2:crafting_terminal"
+  ],
+  "screen": "ae2.client.gui.me.crafting.GuiCraftingCPU",
+  "adapter": "ae2s",
+  "width": 265,
+  "height": 193,
+  "texture": "ae2:textures/guis/craftingcpu.png",
+  "targets": {
+    "widget.search": {
+      "type": "region",
+      "x": 153,
+      "y": 9,
+      "width": 83,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.crafting_cpu.target.widget.search",
+      "item": "",
+      "count": 0
+    },
+    "view.body": {
+      "type": "region",
+      "x": 31,
+      "y": 32,
+      "width": 208,
+      "height": 131,
+      "label": "@ae2s_ponder.gui.crafting_cpu.target.view.body",
+      "item": "",
+      "count": 0
+    },
+    "widget.suspend": {
+      "type": "button",
+      "x": 126,
+      "y": 164,
+      "width": 50,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.crafting_cpu.target.widget.suspend",
+      "item": "",
+      "count": 0
+    },
+    "widget.cancel": {
+      "type": "button",
+      "x": 186,
+      "y": 164,
+      "width": 50,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.crafting_cpu.target.widget.cancel",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.crafting_cpu.target.widget.search",
+      "text": "@ae2s_ponder.gui.crafting_cpu.step.0",
+      "target": "widget.search",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.search",
+          "value": "processor",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.crafting_cpu.target.view.body",
+      "text": "@ae2s_ponder.gui.crafting_cpu.step.1",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.crafting_cpu.target.widget.suspend",
+      "text": "@ae2s_ponder.gui.crafting_cpu.step.2",
+      "target": "widget.suspend",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.crafting_cpu.target.widget.cancel",
+      "text": "@ae2s_ponder.gui.crafting_cpu.step.3",
+      "target": "widget.cancel",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

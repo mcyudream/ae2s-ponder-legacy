@@ -56,6 +56,8 @@ Capacity Cards add filter capacity on supported devices; Speed Cards raise trans
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:export_bus" duration={400} side="right" />
+
 ## Use fuzzy and inversion carefully
 
 Fuzzy and Inverter Cards change matching behavior where supported. Test with similar damaged or tagged items; a reversed filter can send a much broader set than intended.

@@ -56,6 +56,8 @@ step_ticks: 180
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:io_port" duration={400} side="right" />
+
 ## 设置完成条件
 
 设置处理后的元件何时移到输出侧，例如清空、装满或工作完成。加速卡提升转移速度，红石卡增加红石控制。

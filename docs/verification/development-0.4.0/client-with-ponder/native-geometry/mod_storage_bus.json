@@ -1,0 +1,43 @@
+{
+  "screen": "ae2.client.gui.implementations.GuiModStorageBus",
+  "width": 176,
+  "height": 144,
+  "widgets": {
+    "verticalToolbar": {
+      "kind": "VerticalButtonBar",
+      "bounds": [
+        -17,
+        1,
+        20,
+        90
+      ]
+    },
+    "upgrades": {
+      "kind": "ScrollingUpgradesPanel",
+      "bounds": [
+        177,
+        0,
+        33,
+        100
+      ]
+    },
+    "modExpression": {
+      "kind": "field",
+      "bounds": [
+        8,
+        27,
+        120,
+        12
+      ]
+    },
+    "openPriority": {
+      "kind": "TabButton",
+      "bounds": [
+        152,
+        -5,
+        20,
+        20
+      ]
+    }
+  }
+}

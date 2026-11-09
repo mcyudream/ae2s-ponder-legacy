@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:pattern_import_priority",
+  "title": "@ae2s_ponder.gui.pattern_import_priority.title",
+  "components": [
+    "ae2:pattern_encoding_terminal",
+    "ae2:pattern_encoding_access_terminal"
+  ],
+  "screen": "ae2.client.gui.me.items.GuiPatternImportPrioritySettings",
+  "adapter": "ae2s",
+  "width": 208,
+  "height": 215,
+  "texture": "",
+  "targets": {
+    "view.body": {
+      "type": "region",
+      "x": 12,
+      "y": 37,
+      "width": 170,
+      "height": 148,
+      "label": "@ae2s_ponder.gui.pattern_import_priority.target.view.body",
+      "item": "",
+      "count": 0
+    },
+    "text.page_info": {
+      "type": "region",
+      "x": 90,
+      "y": 189,
+      "width": 106,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.pattern_import_priority.target.text.page_info",
+      "item": "",
+      "count": 0
+    },
+    "widget.back": {
+      "type": "button",
+      "x": 180,
+      "y": 4,
+      "width": 20,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.pattern_import_priority.target.widget.back",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.pattern_import_priority.target.view.body",
+      "text": "@ae2s_ponder.gui.pattern_import_priority.step.0",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.pattern_import_priority.target.text.page_info",
+      "text": "@ae2s_ponder.gui.pattern_import_priority.step.1",
+      "target": "text.page_info",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.pattern_import_priority.target.widget.back",
+      "text": "@ae2s_ponder.gui.pattern_import_priority.step.2",
+      "target": "widget.back",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

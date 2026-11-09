@@ -1,0 +1,25 @@
+{
+  "screen": "ae2.client.gui.implementations.GuiPriorityTuner",
+  "width": 176,
+  "height": 125,
+  "widgets": {
+    "mode": {
+      "kind": "TooltipButton",
+      "bounds": [
+        40,
+        95,
+        102,
+        20
+      ]
+    },
+    "priority": {
+      "kind": "NumberEntryWidget",
+      "bounds": [
+        20,
+        25,
+        138,
+        62
+      ]
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:wireless_magnet",
+  "title": "@ae2s_ponder.gui.wireless_magnet.title",
+  "components": [
+    "ae2:wireless_terminal",
+    "ae2:wireless_universal_terminal"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiWirelessMagnet",
+  "adapter": "ae2s",
+  "width": 184,
+  "height": 269,
+  "texture": "ae2:textures/guis/magnet.png",
+  "targets": {
+    "slot.MAGNET_PICKUP_CONFIG.0": {
+      "type": "slot",
+      "x": 12,
+      "y": 31,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.wireless_magnet.target.slot.MAGNET_PICKUP_CONFIG.0",
+      "item": "",
+      "count": 0
+    },
+    "slot.MAGNET_INSERT_CONFIG.0": {
+      "type": "slot",
+      "x": 12,
+      "y": 112,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.wireless_magnet.target.slot.MAGNET_INSERT_CONFIG.0",
+      "item": "",
+      "count": 0
+    },
+    "widget.pickup_mode": {
+      "type": "button",
+      "x": 49,
+      "y": 89,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.wireless_magnet.target.widget.pickup_mode",
+      "item": "",
+      "count": 0
+    },
+    "widget.switch": {
+      "type": "button",
+      "x": 85,
+      "y": 89,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.wireless_magnet.target.widget.switch",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.wireless_magnet.target.slot.MAGNET_PICKUP_CONFIG.0",
+      "text": "@ae2s_ponder.gui.wireless_magnet.step.0",
+      "target": "slot.MAGNET_PICKUP_CONFIG.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.MAGNET_PICKUP_CONFIG.0",
+          "item": "minecraft:iron_ingot",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.wireless_magnet.target.slot.MAGNET_INSERT_CONFIG.0",
+      "text": "@ae2s_ponder.gui.wireless_magnet.step.1",
+      "target": "slot.MAGNET_INSERT_CONFIG.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.MAGNET_INSERT_CONFIG.0",
+          "item": "minecraft:iron_ingot",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.wireless_magnet.target.widget.pickup_mode",
+      "text": "@ae2s_ponder.gui.wireless_magnet.step.2",
+      "target": "widget.pickup_mode",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.wireless_magnet.target.widget.switch",
+      "text": "@ae2s_ponder.gui.wireless_magnet.step.3",
+      "target": "widget.switch",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

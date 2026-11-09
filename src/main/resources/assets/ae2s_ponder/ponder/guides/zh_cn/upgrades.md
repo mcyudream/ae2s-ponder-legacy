@@ -56,6 +56,8 @@ step_ticks: 180
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:export_bus" duration={400} side="right" />
+
 ## 谨慎使用模糊与反相
 
 设备支持时，模糊卡与反相卡会改变匹配方式。用损耗、标签相似的物品测试，反相过滤可能让实际通过的资源远多于预期。

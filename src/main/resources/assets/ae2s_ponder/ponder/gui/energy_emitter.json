@@ -1,0 +1,64 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:energy_emitter",
+  "title": "@ae2s_ponder.gui.energy_emitter.title",
+  "components": [
+    "ae2:energy_level_emitter"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiEnergyLevelEmitter",
+  "adapter": "ae2s",
+  "width": 203,
+  "height": 194,
+  "texture": "ae2:textures/guis/energy_level_emitter.png",
+  "targets": {
+    "widget.level": {
+      "type": "region",
+      "x": 43,
+      "y": 21,
+      "width": 138,
+      "height": 62,
+      "label": "@ae2s_ponder.gui.energy_emitter.target.widget.level",
+      "item": "",
+      "count": 0
+    },
+    "widget.verticalToolbar": {
+      "type": "region",
+      "x": 6,
+      "y": 5,
+      "width": 20,
+      "height": 24,
+      "label": "@ae2s_ponder.gui.energy_emitter.target.widget.verticalToolbar",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.energy_emitter.target.widget.level",
+      "text": "@ae2s_ponder.gui.energy_emitter.step.0",
+      "target": "widget.level",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.level",
+          "value": "64",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.energy_emitter.target.widget.verticalToolbar",
+      "text": "@ae2s_ponder.gui.energy_emitter.step.1",
+      "target": "widget.verticalToolbar",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

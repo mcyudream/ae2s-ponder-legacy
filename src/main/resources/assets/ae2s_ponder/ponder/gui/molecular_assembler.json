@@ -1,0 +1,95 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:molecular_assembler",
+  "title": "@ae2s_ponder.gui.molecular_assembler.title",
+  "components": [
+    "ae2:molecular_assembler"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiMolecularAssembler",
+  "adapter": "ae2s",
+  "width": 235,
+  "height": 258,
+  "texture": "ae2:textures/guis/molecular_assembler_patterns.png",
+  "targets": {
+    "slot.ENCODED_PATTERN.0": {
+      "type": "slot",
+      "x": 31,
+      "y": 51,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.molecular_assembler.target.slot.ENCODED_PATTERN.0",
+      "item": "",
+      "count": 0
+    },
+    "widget.upgrades": {
+      "type": "region",
+      "x": 200,
+      "y": 9,
+      "width": 29,
+      "height": 102,
+      "label": "@ae2s_ponder.gui.molecular_assembler.target.widget.upgrades",
+      "item": "",
+      "count": 0
+    },
+    "widget.openPriority": {
+      "type": "button",
+      "x": 175,
+      "y": 4,
+      "width": 20,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.molecular_assembler.target.widget.openPriority",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.molecular_assembler.target.slot.ENCODED_PATTERN.0",
+      "text": "@ae2s_ponder.gui.molecular_assembler.step.0",
+      "target": "slot.ENCODED_PATTERN.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.ENCODED_PATTERN.0",
+          "item": "ae2:crafting_pattern",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.molecular_assembler.target.widget.upgrades",
+      "text": "@ae2s_ponder.gui.molecular_assembler.step.1",
+      "target": "widget.upgrades",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.molecular_assembler.target.slot.ENCODED_PATTERN.0",
+      "text": "@ae2s_ponder.gui.molecular_assembler.step.2",
+      "target": "slot.ENCODED_PATTERN.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.molecular_assembler.target.widget.openPriority",
+      "text": "@ae2s_ponder.gui.molecular_assembler.step.3",
+      "target": "widget.openPriority",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

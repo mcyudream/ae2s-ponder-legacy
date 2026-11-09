@@ -1,0 +1,106 @@
+{
+  "screen": "ae2.client.gui.implementations.GuiNetworkAnalyser",
+  "width": 251,
+  "height": 168,
+  "widgets": {
+    "mode_previous": {
+      "kind": "AE2Button",
+      "bounds": [
+        37,
+        18,
+        10,
+        16
+      ]
+    },
+    "mode_next": {
+      "kind": "AE2Button",
+      "bounds": [
+        105,
+        18,
+        10,
+        16
+      ]
+    },
+    "size_decrease": {
+      "kind": "AE2Button",
+      "bounds": [
+        37,
+        46,
+        10,
+        16
+      ]
+    },
+    "size_increase": {
+      "kind": "AE2Button",
+      "bounds": [
+        105,
+        46,
+        10,
+        16
+      ]
+    },
+    "reset_colors": {
+      "kind": "AE2Button",
+      "bounds": [
+        146,
+        142,
+        65,
+        20
+      ]
+    },
+    "color_0": {
+      "kind": "ColorArea",
+      "bounds": [
+        198,
+        22,
+        25,
+        9
+      ]
+    },
+    "color_1": {
+      "kind": "ColorArea",
+      "bounds": [
+        198,
+        43,
+        25,
+        9
+      ]
+    },
+    "color_2": {
+      "kind": "ColorArea",
+      "bounds": [
+        198,
+        64,
+        25,
+        9
+      ]
+    },
+    "color_3": {
+      "kind": "ColorArea",
+      "bounds": [
+        198,
+        85,
+        25,
+        9
+      ]
+    },
+    "color_4": {
+      "kind": "ColorArea",
+      "bounds": [
+        198,
+        106,
+        25,
+        9
+      ]
+    },
+    "color_5": {
+      "kind": "ColorArea",
+      "bounds": [
+        198,
+        127,
+        25,
+        9
+      ]
+    }
+  }
+}

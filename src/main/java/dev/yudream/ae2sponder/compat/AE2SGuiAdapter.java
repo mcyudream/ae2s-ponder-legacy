@@ -4,6 +4,7 @@ import ae2.client.gui.AEBaseGui;
 import ae2.client.gui.me.common.RepoSlot;
 import ae2.client.gui.me.patternencode.GuiPatternEncodingTerm;
 import ae2.client.gui.widgets.ITextFieldGui;
+import ae2.client.gui.widgets.NumberEntryWidget;
 import ae2.container.SlotSemantics;
 import ae2.container.implementations.ContainerCellWorkbench;
 import ae2.container.implementations.ContainerInscriber;
@@ -22,15 +23,36 @@ import net.minecraft.inventory.Slot;
 /** AE2S 1.1.0 semantic slots and widgets. All reads stay on the client; no container actions are sent. */
 public final class AE2SGuiAdapter implements GuiTutorialAdapter {
     private final StandardGuiAdapter generic = new StandardGuiAdapter();
+    private final AE2SGuiCatalog catalog = new AE2SGuiCatalog();
+    private final AE2SGuiDemoRenderer demo = new AE2SGuiDemoRenderer();
+
+    @Override public net.createmod.ponder.api.gui.GuiDemoLayout demoLayout(net.createmod.ponder.api.gui.GuiDemoState session) {
+        return demo.layout(session);
+    }
 
     @Override public boolean matches(GuiScreen screen, GuiTutorial tutorial) {
-        if (!(screen instanceof AEBaseGui<?>) || !generic.matches(screen, tutorial)) return false;
+        if (!(screen instanceof AEBaseGui<?> base)) return false;
+        var entry=catalog.get(tutorial.id().getPath());
+        if (entry==null || !screen.getClass().getName().equals(entry.screen())) return false;
+        Object host=base.getContainer().getTarget();
+        if (!entry.host().isEmpty()) {
+            if (entry.host().startsWith("item:")) {
+                var itemHost=base.getContainer().getItemGuiHost();
+                if (itemHost==null || !itemHost.getItemStack().getItem().getRegistryName().getPath().startsWith(entry.host().substring(5))) return false;
+            } else if (host==null || !named(host.getClass(),entry.host())) return false;
+        }
+        if (entry.id().equals("terminal") && base.getContainer().getItemGuiHost()!=null) return false;
+        if (entry.id().equals("cell_workbench") && host!=null && named(host.getClass(),"PortableCellWorkbenchGuiHost")) return false;
         if (screen instanceof GuiPatternEncodingTerm gui) {
             if (tutorial.id().getPath().equals("pattern_crafting")) return gui.getContainer().getMode() == EncodingMode.CRAFTING;
             if (tutorial.id().getPath().equals("pattern_processing")) return gui.getContainer().getMode() == EncodingMode.PROCESSING;
         }
-        // Specialized pattern tutorials have their own selection in W guidance.
-        return !tutorial.id().getPath().equals("terminal") || !(screen instanceof GuiPatternEncodingTerm);
+        return true;
+    }
+
+    private static boolean named(Class<?> type,String name) {
+        for (;type!=null;type=type.getSuperclass()) if(type.getSimpleName().equals(name))return true;
+        return false;
     }
 
     @Override public Rect window(GuiScreen screen, GuiTutorial tutorial) {
@@ -80,7 +102,25 @@ public final class AE2SGuiAdapter implements GuiTutorialAdapter {
                 return new Rect(r.x, r.y, r.width, r.height);
             }
             var button = gui.getWidgets().get(id);
-            return button != null && button.visible ? new Rect(button.x, button.y, button.width, button.height) : null;
+            if (button!=null) return button.visible ? new Rect(button.x, button.y, button.width, button.height) : null;
+            var composite=gui.getWidgets().getComposite(id);
+            if (composite!=null && composite.isVisible()) {
+                var r=composite.getBounds();
+                if(r.width>0&&r.height>0)return new Rect(gui.getGuiLeft()+r.x,gui.getGuiTop()+r.y,r.width,r.height);
+            }
+            return null;
+        }
+        if (key.startsWith("text.")) {
+            var text=gui.getStyle().getText().get(key.substring(5));
+            if(text==null||text.getPosition()==null)return null;
+            String content=AE2SGuiTextGeometry.content(gui,key.substring(5),text);
+            return content==null?null:AE2SGuiTextGeometry.bounds(text,gui.getBounds(true),content);
+        }
+        if (key.startsWith("view.")) {
+            var r=gui.getBounds(true);
+            if(key.equals("view.header"))return new Rect(r.x+8,r.y+3,Math.max(16,r.width-16),22);
+            boolean inventory=!gui.getContainer().getSlots(SlotSemantics.PLAYER_INVENTORY).isEmpty();
+            return new Rect(r.x+8,r.y+28,Math.max(16,r.width-30),Math.max(20,r.height-(inventory?120:54)));
         }
         return generic.target(screen, tutorial, key);
     }
@@ -107,7 +147,10 @@ public final class AE2SGuiAdapter implements GuiTutorialAdapter {
         if (!(screen instanceof AEBaseGui<?> gui)) return "";
         if (key.startsWith("widget.")) {
             var text = gui.getWidgets().getTextField(key.substring(7));
-            return text != null ? text.getText() : "";
+            if(text!=null)return text.getText();
+            var composite=gui.getWidgets().getComposite(key.substring(7));
+            if(composite instanceof NumberEntryWidget number)return number.getLongValue().isPresent()?Long.toString(number.getLongValue().getAsLong()):"";
+            return "";
         }
         if (gui.getContainer() instanceof ContainerInscriber container) {
             return switch (key) {
@@ -119,7 +162,7 @@ public final class AE2SGuiAdapter implements GuiTutorialAdapter {
             };
         }
         if (gui.getContainer() instanceof ContainerPatternEncodingTerm container && key.equals("pattern.mode"))
-            return container.getMode().name();
+            return container.getMode()==null?"":container.getMode().name();
         if (gui.getContainer() instanceof ContainerCellWorkbench container && key.equals("workbench.page"))
             return Integer.toString(container.getCurrentPage());
         return "";
@@ -127,6 +170,10 @@ public final class AE2SGuiAdapter implements GuiTutorialAdapter {
 
     @Override public boolean textFocused(GuiScreen screen) {
         if (screen instanceof AEBaseGui<?> gui && gui.getWidgets().getTextFields().stream().anyMatch(GuiTextField::isFocused)) return true;
+        if (screen instanceof AEBaseGui<?> gui) for(var entry:catalog.all()) {
+            if(!entry.screen().equals(screen.getClass().getName()))continue;
+            for(String id:entry.widgets())if(gui.getWidgets().getComposite(id) instanceof NumberEntryWidget number&&number.isFocused())return true;
+        }
         if (screen instanceof ITextFieldGui gui && gui.getTextFields().stream().anyMatch(GuiTextField::isFocused)) return true;
         return generic.textFocused(screen);
     }

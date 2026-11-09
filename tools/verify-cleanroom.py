@@ -134,13 +134,17 @@ def main():
     parser.add_argument("side", choices=["client", "server"])
     parser.add_argument("--with-ponder", action="store_true")
     parser.add_argument("--prepare-only", action="store_true")
+    parser.add_argument("--scenario", choices=["full","native-gui","catalog"], default="full")
+    parser.add_argument("--fixture-start", type=int, default=0, help="Focused native-GUI diagnosis only")
     args = parser.parse_args()
+    if args.fixture_start and args.scenario!="native-gui":parser.error("Fixture start is only available for focused native GUI diagnosis")
     if platform.system() != "Linux" or platform.machine() not in ("x86_64", "amd64"):
         parser.error("This verification launcher supports Linux x64")
     classpath, natives = prepare(args.side)
     if args.prepare_only:
         return
     variant = f"{args.side}-{'with' if args.with_ponder else 'without'}-ponder"
+    if args.scenario!="full":variant+="-"+args.scenario
     run = PROJECT / "run" / f"cleanroom-{VERSION}-legacy" / variant
     mods = run / "mods"
     if mods.exists():
@@ -174,6 +178,8 @@ def main():
                str(local_jdk) if (local_jdk / "bin/java").is_file() else os.environ.get("JAVA_HOME", "")))
     command = [str(jdk / "bin/java"), "-Xmx3G", "-Dfile.encoding=UTF-8", "--enable-native-access=ALL-UNNAMED",
                f"-Djava.library.path={natives}", "-Dae2sponder.smoke=true", "-Dae2sponder.packaged=true",
+               f"-Dae2sponder.scenario={args.scenario}",
+               f"-Dae2sponder.fixtureStart={args.fixture_start}",
                f"-Dae2sponder.expectedAddon={addon_version}",
                f"-Dae2sponder.expectedCleanroom={VERSION}", "-cp", os.pathsep.join(map(str, classpath))]
     if args.with_ponder:
@@ -194,7 +200,7 @@ def main():
             parser.error(f"The local test server owner must accept the Minecraft EULA in {eula}")
         (run / "server.properties").write_text("server-ip=127.0.0.1\nserver-port=0\nonline-mode=false\nview-distance=2\nlevel-type=FLAT\n")
         command += ["net.minecraftforge.fml.relauncher.ServerLaunchWrapper", "nogui"]
-    runtime = {"cleanroom": VERSION, "side": args.side, "ponder": args.with_ponder,
+    runtime = {"cleanroom": VERSION, "side": args.side, "ponder": args.with_ponder,"scenario":args.scenario,
                "installer_sha256": PACK_SHA256, "jars": {jar.name: digest(jar, "sha256") for jar in jars},
                "libraries": {str(jar.relative_to(CACHE)): digest(jar) for jar in classpath}}
     environment = os.environ.copy()
@@ -205,7 +211,7 @@ def main():
         runtime["audio_backend"] = "null"
     (run / "runtime.json").write_text(json.dumps(runtime, indent=2) + "\n")
     print(f"Starting official Cleanroom {VERSION}: {variant}; installation jars, no userdev remapping", flush=True)
-    result = subprocess.run(command, cwd=run, env=environment, timeout=600)
+    result = subprocess.run(command, cwd=run, env=environment, timeout=1200)
     report = output / "report.json"
     if result.returncode or not report.exists() or json.loads(report.read_text())["result"] != "PASS":
         raise SystemExit(f"Verification failed (exit={result.returncode}): {report}")

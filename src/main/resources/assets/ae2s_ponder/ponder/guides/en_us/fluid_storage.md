@@ -56,6 +56,8 @@ AE2S devices use their supported resource configuration. Select the desired flui
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:storage_bus" duration={400} side="right" />
+
 ## Distinguish storage and transfer
 
 A Storage Bus exposes a tank in place; an Import Bus pulls from it, while an Export Bus sends a selected fluid to it. Keep source and destination distinct to avoid circulation.

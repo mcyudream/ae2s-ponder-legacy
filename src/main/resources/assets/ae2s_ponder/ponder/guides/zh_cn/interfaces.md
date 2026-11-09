@@ -81,6 +81,8 @@ step_ticks: 180
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:stock_amount" duration={400} side="right" />
+
 ## 按需合成缺货物品
 
 接口支持的合成卡可用于请求能够自动合成的备货物品。网络仍需有效样板、可用原料和合成 CPU；向机器发送处理样板原料应使用样板供应器。

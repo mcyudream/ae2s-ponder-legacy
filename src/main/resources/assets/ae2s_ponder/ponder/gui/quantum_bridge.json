@@ -1,0 +1,77 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:quantum_bridge",
+  "title": "@ae2s_ponder.gui.quantum_bridge.title",
+  "components": [
+    "ae2:quantum_link",
+    "ae2:quantum_ring",
+    "ae2:quantum_entangled_singularity"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiQNB",
+  "adapter": "ae2s",
+  "width": 184,
+  "height": 176,
+  "texture": "ae2:textures/guis/me_chest.png",
+  "targets": {
+    "slot.STORAGE.0": {
+      "type": "slot",
+      "x": 84,
+      "y": 41,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.quantum_bridge.target.slot.STORAGE.0",
+      "item": "",
+      "count": 0
+    },
+    "view.body": {
+      "type": "region",
+      "x": 12,
+      "y": 32,
+      "width": 146,
+      "height": 48,
+      "label": "@ae2s_ponder.gui.quantum_bridge.target.view.body",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.quantum_bridge.target.slot.STORAGE.0",
+      "text": "@ae2s_ponder.gui.quantum_bridge.step.0",
+      "target": "slot.STORAGE.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.STORAGE.0",
+          "item": "ae2:quantum_entangled_singularity",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.quantum_bridge.target.view.body",
+      "text": "@ae2s_ponder.gui.quantum_bridge.step.1",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.quantum_bridge.target.slot.STORAGE.0",
+      "text": "@ae2s_ponder.gui.quantum_bridge.step.2",
+      "target": "slot.STORAGE.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

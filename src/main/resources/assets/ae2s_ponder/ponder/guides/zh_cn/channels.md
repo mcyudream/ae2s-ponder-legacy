@@ -16,29 +16,31 @@ step_ticks: 180
 
 <GameScene scene="ae2s_ponder:channels" tick={45} />
 
+<GuiTutorial id="ae2s_ponder:network_status" />
+
 ## 2
 
 普通玻璃、包覆与智能线缆最多承载 8 个频道。智能线缆的亮线显示使用量，并不会提高容量。
 
-<GameScene scene="ae2s_ponder:channels" tick={215} />
+<GameScene scene="ae2s_ponder:channels" tick={616} />
 
 ## 3
 
 致密线缆每个连接最多承载 32 个频道，在设备附近再分支为普通线缆。分支中的 8 频道瓶颈仍然有效。
 
-<GameScene scene="ae2s_ponder:channels" tick={385} />
+<GameScene scene="ae2s_ponder:channels" tick={786} />
 
 ## 4
 
 不同颜色的线缆不会直接连接；福鲁伊克斯线缆可以连接所有颜色。规划分支时要避免网络意外相连。
 
-<GameScene scene="ae2s_ponder:channels" tick={555} />
+<GameScene scene="ae2s_ponder:channels" tick={956} />
 
 ## 5
 
 石英纤维只在网络之间传递能量，不传递频道与存储内容。本演示的频道数量以正常设置为准，整合包可以调整这些规则。
 
-<GameScene scene="ae2s_ponder:channels" tick={725} />
+<GameScene scene="ae2s_ponder:channels" tick={1126} />
 
 <GuideOnly>
 

@@ -1,0 +1,77 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:network_analyser",
+  "title": "@ae2s_ponder.gui.network_analyser.title",
+  "components": [
+    "ae2:network_analyser"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiNetworkAnalyser",
+  "adapter": "ae2s",
+  "width": 259,
+  "height": 176,
+  "texture": "ae2:textures/guis/network_analyser.png",
+  "targets": {
+    "text.mode_value": {
+      "type": "region",
+      "x": 80,
+      "y": 27,
+      "width": 167,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.network_analyser.target.text.mode_value",
+      "item": "",
+      "count": 0
+    },
+    "text.normal_nodes": {
+      "type": "region",
+      "x": 20,
+      "y": 90,
+      "width": 190,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.network_analyser.target.text.normal_nodes",
+      "item": "",
+      "count": 0
+    },
+    "widget.color_window": {
+      "type": "region",
+      "x": 77,
+      "y": 52,
+      "width": 110,
+      "height": 95,
+      "label": "@ae2s_ponder.gui.network_analyser.target.widget.color_window",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.network_analyser.target.text.mode_value",
+      "text": "@ae2s_ponder.gui.network_analyser.step.0",
+      "target": "text.mode_value",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.network_analyser.target.text.normal_nodes",
+      "text": "@ae2s_ponder.gui.network_analyser.step.1",
+      "target": "text.normal_nodes",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.network_analyser.target.widget.color_window",
+      "text": "@ae2s_ponder.gui.network_analyser.step.2",
+      "target": "widget.color_window",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

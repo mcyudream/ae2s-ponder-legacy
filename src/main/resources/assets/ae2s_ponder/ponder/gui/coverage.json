@@ -1,0 +1,2433 @@
+{
+  "ae2s": "1.1.0",
+  "runtime_sha256": "1f15fcda479f6b6a15e0640e0bf0f8a86e88c08c2bbd20e63b4145ea7e5efe26",
+  "native_screens": [
+    "ae2.client.gui.implementations.GuiAdvancedIOBus",
+    "ae2.client.gui.implementations.GuiAdvancedMemoryCard",
+    "ae2.client.gui.implementations.GuiAnnihilationPlane",
+    "ae2.client.gui.implementations.GuiCaner",
+    "ae2.client.gui.implementations.GuiCellRestriction",
+    "ae2.client.gui.implementations.GuiCellTerminal",
+    "ae2.client.gui.implementations.GuiCellWorkbench",
+    "ae2.client.gui.implementations.GuiCondenser",
+    "ae2.client.gui.implementations.GuiConfigModifier",
+    "ae2.client.gui.implementations.GuiCrystalAssembler",
+    "ae2.client.gui.implementations.GuiDrive",
+    "ae2.client.gui.implementations.GuiEnergyLevelEmitter",
+    "ae2.client.gui.implementations.GuiFormationPlane",
+    "ae2.client.gui.implementations.GuiIOBus",
+    "ae2.client.gui.implementations.GuiIOPort",
+    "ae2.client.gui.implementations.GuiImportExportBus",
+    "ae2.client.gui.implementations.GuiIngredientBuffer",
+    "ae2.client.gui.implementations.GuiInscriber",
+    "ae2.client.gui.implementations.GuiInterface",
+    "ae2.client.gui.implementations.GuiKeyTypeSelection",
+    "ae2.client.gui.implementations.GuiMEChest",
+    "ae2.client.gui.implementations.GuiModFilterBus",
+    "ae2.client.gui.implementations.GuiModStorageBus",
+    "ae2.client.gui.implementations.GuiMolecularAssembler",
+    "ae2.client.gui.implementations.GuiNetworkAnalyser",
+    "ae2.client.gui.implementations.GuiODFilterBus",
+    "ae2.client.gui.implementations.GuiODStorageBus",
+    "ae2.client.gui.implementations.GuiOutputSides",
+    "ae2.client.gui.implementations.GuiPatternModifier",
+    "ae2.client.gui.implementations.GuiPatternProvider",
+    "ae2.client.gui.implementations.GuiPortableCellPickupFilter",
+    "ae2.client.gui.implementations.GuiPortableVoidCell",
+    "ae2.client.gui.implementations.GuiPreciseStorageBus",
+    "ae2.client.gui.implementations.GuiPriority",
+    "ae2.client.gui.implementations.GuiPriorityTuner",
+    "ae2.client.gui.implementations.GuiQNB",
+    "ae2.client.gui.implementations.GuiQuartzKnife",
+    "ae2.client.gui.implementations.GuiRenamer",
+    "ae2.client.gui.implementations.GuiRequester",
+    "ae2.client.gui.implementations.GuiSkyChest",
+    "ae2.client.gui.implementations.GuiSpatialAnchor",
+    "ae2.client.gui.implementations.GuiSpatialIOPort",
+    "ae2.client.gui.implementations.GuiSpecialPreciseExportBus",
+    "ae2.client.gui.implementations.GuiStockExportBus",
+    "ae2.client.gui.implementations.GuiStorageBus",
+    "ae2.client.gui.implementations.GuiStorageLevelEmitter",
+    "ae2.client.gui.implementations.GuiThresholdExportBus",
+    "ae2.client.gui.implementations.GuiThresholdLevelEmitter",
+    "ae2.client.gui.implementations.GuiTickAnalyser",
+    "ae2.client.gui.implementations.GuiVibrationChamber",
+    "ae2.client.gui.implementations.GuiVoidCell",
+    "ae2.client.gui.implementations.GuiWirelessAccessPoint",
+    "ae2.client.gui.implementations.GuiWirelessMagnet",
+    "ae2.client.gui.implementations.GuiWorkInterval",
+    "ae2.client.gui.me.common.GuiMEStorage",
+    "ae2.client.gui.me.common.GuiTerminalSettings",
+    "ae2.client.gui.me.crafting.GuiCraftAmount",
+    "ae2.client.gui.me.crafting.GuiCraftConfirm",
+    "ae2.client.gui.me.crafting.GuiCraftConfirmCpuList",
+    "ae2.client.gui.me.crafting.GuiCraftError",
+    "ae2.client.gui.me.crafting.GuiCraftingCPU",
+    "ae2.client.gui.me.crafting.GuiCraftingStatus",
+    "ae2.client.gui.me.crafting.GuiCraftingTaskPriority",
+    "ae2.client.gui.me.crafting.GuiCraftingTree",
+    "ae2.client.gui.me.crafting.GuiSetStockAmount",
+    "ae2.client.gui.me.items.GuiCraftingTerm",
+    "ae2.client.gui.me.items.GuiPatternImportPrioritySettings",
+    "ae2.client.gui.me.items.GuiPatternItemRenamer",
+    "ae2.client.gui.me.items.GuiSetProcessingPatternAmount",
+    "ae2.client.gui.me.networktool.GuiNetworkStatus",
+    "ae2.client.gui.me.networktool.GuiNetworkTool",
+    "ae2.client.gui.me.patternaccess.GuiPatternAccessTerm",
+    "ae2.client.gui.me.patternencode.GuiPEATerm",
+    "ae2.client.gui.me.patternencode.GuiPatternEncodingTerm",
+    "ae2.client.gui.me.requester.GuiRequesterTerm",
+    "ae2.client.gui.pattern.GuiCraftingPattern",
+    "ae2.client.gui.pattern.GuiProcessingPattern",
+    "ae2.client.gui.widgets.GuiNumberEntryButtonSettings"
+  ],
+  "implementation_bases": {
+    "ae2.client.gui.implementations.GuiUpgradeable": "Shared implementation; concrete variants have their own lessons.",
+    "ae2.client.gui.implementations.GuiSpecialStorageBus": "Shared implementation; concrete variants have their own lessons.",
+    "ae2.client.gui.implementations.GuiSpecialExportBus": "Shared implementation; concrete variants have their own lessons."
+  },
+  "lessons": [
+    {
+      "id": "drive",
+      "screen": "ae2.client.gui.implementations.GuiDrive",
+      "style": "/screens/drive.json",
+      "category": "basics",
+      "scene": "first_network",
+      "components": [
+        "drive",
+        "item_storage_cell_1k",
+        "item_storage_cell_64k"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "openPriority"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "drive"
+      }
+    },
+    {
+      "id": "terminal",
+      "screen": "ae2.client.gui.me.common.GuiMEStorage",
+      "style": "/screens/terminals/terminal.json",
+      "category": "basics",
+      "scene": "first_network",
+      "components": [
+        "terminal",
+        "crafting_terminal"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "scrollbar",
+        "craftingStatus",
+        "viewCells",
+        "search"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "terminal"
+      }
+    },
+    {
+      "id": "cell_workbench",
+      "screen": "ae2.client.gui.implementations.GuiCellWorkbench",
+      "style": "/screens/cell_workbench.json",
+      "category": "basics",
+      "scene": "storage_cells",
+      "components": [
+        "cell_workbench"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "previousPage",
+        "nextPage"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "cell_workbench"
+      }
+    },
+    {
+      "id": "inscriber",
+      "screen": "ae2.client.gui.implementations.GuiInscriber",
+      "style": "/screens/inscriber.json",
+      "category": "crafting",
+      "scene": "processors",
+      "components": [
+        "inscriber",
+        "silicon_press"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "progressBar"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "inscriber"
+      }
+    },
+    {
+      "id": "pattern_crafting",
+      "screen": "ae2.client.gui.me.patternencode.GuiPatternEncodingTerm",
+      "style": "/screens/terminals/pattern_encoding_terminal.json",
+      "category": "crafting",
+      "scene": "autocrafting",
+      "components": [
+        "pattern_encoding_terminal",
+        "crafting_pattern",
+        "blank_pattern"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "scrollbar",
+        "craftingStatus",
+        "viewCells",
+        "search",
+        "craftingSubstitutions",
+        "craftingFluidSubstitutions",
+        "craftingClearPattern",
+        "craftingRecipeConflictSelection",
+        "processingPatternModeScrollbar",
+        "processingCycleOutput",
+        "processingClearPattern",
+        "processingMergeHeiInputs",
+        "processingAmountButton0",
+        "processingAmountButton1",
+        "processingAmountButton2",
+        "processingAmountButton3",
+        "processingAmountButton4",
+        "processingAmountButton5",
+        "modeTabButton0",
+        "modeTabButton1",
+        "modePanel0",
+        "modePanel1",
+        "encodePattern",
+        "uploadPattern",
+        "providerSelectionOverlay",
+        "patternModifierPanel",
+        "patternModifierPanelAmount0",
+        "patternModifierPanelAmount1",
+        "patternModifierPanelAmount2",
+        "patternModifierPanelAmount3",
+        "patternModifierPanelAmount4",
+        "patternModifierPanelAmount5",
+        "patternModifierPanelClear"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "pattern_encoding_terminal"
+      }
+    },
+    {
+      "id": "pattern_processing",
+      "screen": "ae2.client.gui.me.patternencode.GuiPatternEncodingTerm",
+      "style": "/screens/terminals/pattern_encoding_terminal.json",
+      "category": "crafting",
+      "scene": "processing",
+      "components": [
+        "pattern_encoding_terminal",
+        "processing_pattern",
+        "blank_pattern"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "scrollbar",
+        "craftingStatus",
+        "viewCells",
+        "search",
+        "craftingSubstitutions",
+        "craftingFluidSubstitutions",
+        "craftingClearPattern",
+        "craftingRecipeConflictSelection",
+        "processingPatternModeScrollbar",
+        "processingCycleOutput",
+        "processingClearPattern",
+        "processingMergeHeiInputs",
+        "processingAmountButton0",
+        "processingAmountButton1",
+        "processingAmountButton2",
+        "processingAmountButton3",
+        "processingAmountButton4",
+        "processingAmountButton5",
+        "modeTabButton0",
+        "modeTabButton1",
+        "modePanel0",
+        "modePanel1",
+        "encodePattern",
+        "uploadPattern",
+        "providerSelectionOverlay",
+        "patternModifierPanel",
+        "patternModifierPanelAmount0",
+        "patternModifierPanelAmount1",
+        "patternModifierPanelAmount2",
+        "patternModifierPanelAmount3",
+        "patternModifierPanelAmount4",
+        "patternModifierPanelAmount5",
+        "patternModifierPanelClear"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "pattern_encoding_terminal"
+      }
+    },
+    {
+      "id": "pattern_provider",
+      "screen": "ae2.client.gui.implementations.GuiPatternProvider",
+      "style": "/screens/pattern_provider.json",
+      "category": "crafting",
+      "scene": "autocrafting",
+      "components": [
+        "pattern_provider",
+        "cable_pattern_provider"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "openPriority",
+        "previousPage",
+        "nextPage",
+        "lockReason",
+        "patternModifierPanel",
+        "patternModifierPanelAmount0",
+        "patternModifierPanelAmount1",
+        "patternModifierPanelAmount2",
+        "patternModifierPanelAmount3",
+        "patternModifierPanelAmount4",
+        "patternModifierPanelAmount5",
+        "patternModifierPanelClear"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "pattern_provider"
+      }
+    },
+    {
+      "id": "interface",
+      "screen": "ae2.client.gui.implementations.GuiInterface",
+      "style": "/screens/interface.json",
+      "category": "automation",
+      "scene": "interfaces",
+      "components": [
+        "interface",
+        "cable_interface"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "openPriority",
+        "previousPage",
+        "nextPage",
+        "amtButton1",
+        "amtButton2",
+        "amtButton3",
+        "amtButton4",
+        "amtButton5",
+        "amtButton6",
+        "amtButton7",
+        "amtButton8",
+        "amtButton9",
+        "amtButton10",
+        "amtButton11",
+        "amtButton12",
+        "amtButton13",
+        "amtButton14",
+        "amtButton15",
+        "amtButton16",
+        "amtButton17",
+        "amtButton18"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "interface"
+      }
+    },
+    {
+      "id": "me_chest",
+      "screen": "ae2.client.gui.implementations.GuiMEChest",
+      "style": "/screens/me_chest.json",
+      "category": "basics",
+      "scene": "storage_cells",
+      "components": [
+        "chest"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "openPriority"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "chest"
+      }
+    },
+    {
+      "id": "sky_chest",
+      "screen": "ae2.client.gui.implementations.GuiSkyChest",
+      "style": "/screens/sky_chest.json",
+      "category": "basics",
+      "scene": "storage_bus",
+      "components": [
+        "sky_stone_chest",
+        "smooth_sky_stone_chest"
+      ],
+      "widgets": [],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "sky_stone_chest"
+      }
+    },
+    {
+      "id": "io_port",
+      "screen": "ae2.client.gui.implementations.GuiIOPort",
+      "style": "/screens/io_port.json",
+      "category": "automation",
+      "scene": "cell_io",
+      "components": [
+        "io_port"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "operationMode"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "io_port"
+      }
+    },
+    {
+      "id": "condenser",
+      "screen": "ae2.client.gui.implementations.GuiCondenser",
+      "style": "/screens/condenser.json",
+      "category": "automation",
+      "scene": "condenser",
+      "components": [
+        "condenser",
+        "singularity",
+        "matter_ball"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "mode",
+        "progressBar"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "condenser"
+      }
+    },
+    {
+      "id": "vibration_chamber",
+      "screen": "ae2.client.gui.implementations.GuiVibrationChamber",
+      "style": "/screens/vibration_chamber.json",
+      "category": "basics",
+      "scene": "first_network",
+      "components": [
+        "vibration_chamber"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "generationRateBar"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "vibration_chamber"
+      }
+    },
+    {
+      "id": "crystal_assembler",
+      "screen": "ae2.client.gui.implementations.GuiCrystalAssembler",
+      "style": "/screens/crystal_assembler.json",
+      "category": "crafting",
+      "scene": "quartz_growth",
+      "components": [
+        "crystal_assembler"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "progressBar"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "crystal_assembler"
+      }
+    },
+    {
+      "id": "ingredient_buffer",
+      "screen": "ae2.client.gui.implementations.GuiIngredientBuffer",
+      "style": "/screens/ingredient_buffer.json",
+      "category": "automation",
+      "scene": "processing",
+      "components": [
+        "ingredient_buffer"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "ingredient_buffer"
+      }
+    },
+    {
+      "id": "caner",
+      "screen": "ae2.client.gui.implementations.GuiCaner",
+      "style": "/screens/caner.json",
+      "category": "automation",
+      "scene": "fluid_storage",
+      "components": [
+        "caner"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "caner"
+      }
+    },
+    {
+      "id": "molecular_assembler",
+      "screen": "ae2.client.gui.implementations.GuiMolecularAssembler",
+      "style": "/screens/molecular_assembler.json",
+      "category": "crafting",
+      "scene": "autocrafting",
+      "components": [
+        "molecular_assembler"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "openPriority",
+        "previousPage",
+        "nextPage",
+        "patternModifierPanel",
+        "patternModifierPanelAmount0",
+        "patternModifierPanelAmount1",
+        "patternModifierPanelAmount2",
+        "patternModifierPanelAmount3",
+        "patternModifierPanelAmount4",
+        "patternModifierPanelAmount5",
+        "patternModifierPanelClear"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "molecular_assembler"
+      }
+    },
+    {
+      "id": "import_bus",
+      "screen": "ae2.client.gui.implementations.GuiIOBus",
+      "style": "/screens/import_bus.json",
+      "category": "automation",
+      "scene": "import_export",
+      "components": [
+        "import_bus"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox"
+      ],
+      "host": "ImportBusPart",
+      "subject": {
+        "kind": "part",
+        "id": "import_bus"
+      }
+    },
+    {
+      "id": "export_bus",
+      "screen": "ae2.client.gui.implementations.GuiIOBus",
+      "style": "/screens/export_bus.json",
+      "category": "automation",
+      "scene": "import_export",
+      "components": [
+        "export_bus"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox"
+      ],
+      "host": "ExportBusPart",
+      "subject": {
+        "kind": "part",
+        "id": "export_bus"
+      }
+    },
+    {
+      "id": "storage_bus",
+      "screen": "ae2.client.gui.implementations.GuiStorageBus",
+      "style": "/screens/storage_bus.json",
+      "category": "automation",
+      "scene": "storage_bus",
+      "components": [
+        "storage_bus"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "openPriority"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "storage_bus"
+      }
+    },
+    {
+      "id": "precise_export_bus",
+      "screen": "ae2.client.gui.implementations.GuiSpecialPreciseExportBus",
+      "style": "/screens/precise_export_bus.json",
+      "category": "automation",
+      "scene": "import_export",
+      "components": [
+        "precise_export_bus"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "precise_export_bus"
+      }
+    },
+    {
+      "id": "threshold_export_bus",
+      "screen": "ae2.client.gui.implementations.GuiThresholdExportBus",
+      "style": "/screens/threshold_export_bus.json",
+      "category": "automation",
+      "scene": "level_stocking",
+      "components": [
+        "threshold_export_bus"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "threshold_export_bus"
+      }
+    },
+    {
+      "id": "stock_export_bus",
+      "screen": "ae2.client.gui.implementations.GuiStockExportBus",
+      "style": "/screens/stock_export_bus.json",
+      "category": "automation",
+      "scene": "level_stocking",
+      "components": [
+        "stock_export_bus"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "stock_export_bus"
+      }
+    },
+    {
+      "id": "import_export_bus",
+      "screen": "ae2.client.gui.implementations.GuiImportExportBus",
+      "style": "/screens/import_export_bus.json",
+      "category": "automation",
+      "scene": "import_export",
+      "components": [
+        "import_export_bus"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "import_export_bus"
+      }
+    },
+    {
+      "id": "advanced_io_bus",
+      "screen": "ae2.client.gui.implementations.GuiAdvancedIOBus",
+      "style": "/screens/advanced_io_bus.json",
+      "category": "automation",
+      "scene": "level_stocking",
+      "components": [
+        "advanced_io_bus"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "advanced_io_bus"
+      }
+    },
+    {
+      "id": "precise_storage_bus",
+      "screen": "ae2.client.gui.implementations.GuiPreciseStorageBus",
+      "style": "/screens/precise_storage_bus.json",
+      "category": "automation",
+      "scene": "storage_bus",
+      "components": [
+        "precise_storage_bus"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "openPriority"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "precise_storage_bus"
+      }
+    },
+    {
+      "id": "od_export_bus",
+      "screen": "ae2.client.gui.implementations.GuiODFilterBus",
+      "style": "/screens/od_export_bus.json",
+      "category": "automation",
+      "scene": "import_export",
+      "components": [
+        "od_export_bus"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "whiteExpression",
+        "blackExpression",
+        "openPriority"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "od_export_bus"
+      }
+    },
+    {
+      "id": "od_storage_bus",
+      "screen": "ae2.client.gui.implementations.GuiODStorageBus",
+      "style": "/screens/od_storage_bus.json",
+      "category": "automation",
+      "scene": "storage_bus",
+      "components": [
+        "od_storage_bus"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "whiteExpression",
+        "blackExpression",
+        "openPriority"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "od_storage_bus"
+      }
+    },
+    {
+      "id": "mod_export_bus",
+      "screen": "ae2.client.gui.implementations.GuiModFilterBus",
+      "style": "/screens/mod_export_bus.json",
+      "category": "automation",
+      "scene": "import_export",
+      "components": [
+        "mod_export_bus"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "modExpression",
+        "openPriority"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "mod_export_bus"
+      }
+    },
+    {
+      "id": "mod_storage_bus",
+      "screen": "ae2.client.gui.implementations.GuiModStorageBus",
+      "style": "/screens/mod_storage_bus.json",
+      "category": "automation",
+      "scene": "storage_bus",
+      "components": [
+        "mod_storage_bus"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "modExpression",
+        "openPriority"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "mod_storage_bus"
+      }
+    },
+    {
+      "id": "level_emitter",
+      "screen": "ae2.client.gui.implementations.GuiStorageLevelEmitter",
+      "style": "/screens/level_emitter.json",
+      "category": "automation",
+      "scene": "level_stocking",
+      "components": [
+        "level_emitter"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "level",
+        "levelInput"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "level_emitter"
+      }
+    },
+    {
+      "id": "energy_emitter",
+      "screen": "ae2.client.gui.implementations.GuiEnergyLevelEmitter",
+      "style": "/screens/energy_level_emitter.json",
+      "category": "automation",
+      "scene": "level_stocking",
+      "components": [
+        "energy_level_emitter"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "level",
+        "levelInput"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "energy_level_emitter"
+      }
+    },
+    {
+      "id": "threshold_emitter",
+      "screen": "ae2.client.gui.implementations.GuiThresholdLevelEmitter",
+      "style": "/screens/threshold_level_emitter.json",
+      "category": "automation",
+      "scene": "level_stocking",
+      "components": [
+        "threshold_level_emitter"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "upperLevel",
+        "upperLevelInput",
+        "lowerLevel",
+        "lowerLevelInput"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "threshold_level_emitter"
+      }
+    },
+    {
+      "id": "formation_plane",
+      "screen": "ae2.client.gui.implementations.GuiFormationPlane",
+      "style": "/screens/formation_plane.json",
+      "category": "automation",
+      "scene": "planes",
+      "components": [
+        "formation_plane"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "openPriority"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "formation_plane"
+      }
+    },
+    {
+      "id": "annihilation_plane",
+      "screen": "ae2.client.gui.implementations.GuiAnnihilationPlane",
+      "style": "/screens/annihilation_plane.json",
+      "category": "automation",
+      "scene": "planes",
+      "components": [
+        "annihilation_plane"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "openPriority"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "annihilation_plane"
+      }
+    },
+    {
+      "id": "crafting_terminal",
+      "screen": "ae2.client.gui.me.items.GuiCraftingTerm",
+      "style": "/screens/terminals/crafting_terminal.json",
+      "category": "crafting",
+      "scene": "autocrafting",
+      "components": [
+        "crafting_terminal",
+        "wireless_crafting_terminal"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "scrollbar",
+        "craftingStatus",
+        "viewCells",
+        "search",
+        "clearCraftingGrid",
+        "clearToPlayerInv",
+        "recipeConflictSelection",
+        "rotateCraftingGrid",
+        "balanceCraftingGrid"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "crafting_terminal"
+      }
+    },
+    {
+      "id": "pattern_access",
+      "screen": "ae2.client.gui.me.patternaccess.GuiPatternAccessTerm",
+      "style": "/screens/terminals/pattern_access_terminal.json",
+      "category": "crafting",
+      "scene": "autocrafting",
+      "components": [
+        "pattern_access_terminal",
+        "wireless_pattern_access_terminal"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "scrollbar",
+        "search",
+        "inputSearch",
+        "outputSearch",
+        "patternModifierPanel",
+        "patternModifierPanelAmount0",
+        "patternModifierPanelAmount1",
+        "patternModifierPanelAmount2",
+        "patternModifierPanelAmount3",
+        "patternModifierPanelAmount4",
+        "patternModifierPanelAmount5",
+        "patternModifierPanelClear"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "pattern_access_terminal"
+      }
+    },
+    {
+      "id": "pea_terminal",
+      "screen": "ae2.client.gui.me.patternencode.GuiPEATerm",
+      "style": "/screens/terminals/pattern_encoding_access_terminal.json",
+      "category": "crafting",
+      "scene": "autocrafting",
+      "components": [
+        "pattern_encoding_access_terminal",
+        "wireless_pattern_encoding_access_terminal"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "craftingSubstitutions",
+        "craftingFluidSubstitutions",
+        "craftingClearPattern",
+        "craftingRecipeConflictSelection",
+        "processingPatternModeScrollbar",
+        "processingCycleOutput",
+        "processingClearPattern",
+        "processingMergeHeiInputs",
+        "processingAmountButton0",
+        "processingAmountButton1",
+        "processingAmountButton2",
+        "processingAmountButton3",
+        "processingAmountButton4",
+        "processingAmountButton5",
+        "scrollbar",
+        "search",
+        "inputSearch",
+        "outputSearch",
+        "providerSelectionOverlay",
+        "patternModifierPanel",
+        "patternModifierPanelAmount0",
+        "patternModifierPanelAmount1",
+        "patternModifierPanelAmount2",
+        "patternModifierPanelAmount3",
+        "patternModifierPanelAmount4",
+        "patternModifierPanelAmount5",
+        "patternModifierPanelClear",
+        "modeTabButton0",
+        "modeTabButton1",
+        "modePanel0",
+        "modePanel1",
+        "encodePattern",
+        "uploadPattern"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "pattern_encoding_access_terminal"
+      }
+    },
+    {
+      "id": "cell_terminal",
+      "screen": "ae2.client.gui.implementations.GuiCellTerminal",
+      "style": "/screens/cell_terminal.json",
+      "category": "basics",
+      "scene": "storage_cells",
+      "components": [
+        "cell_terminal",
+        "wireless_cell_terminal"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "search",
+        "scrollbar"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "cell_terminal"
+      }
+    },
+    {
+      "id": "requester",
+      "screen": "ae2.client.gui.implementations.GuiRequester",
+      "style": "/screens/requester.json",
+      "category": "crafting",
+      "scene": "crafting_cpu",
+      "components": [
+        "requester"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "scrollbar"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "requester"
+      }
+    },
+    {
+      "id": "requester_terminal",
+      "screen": "ae2.client.gui.me.requester.GuiRequesterTerm",
+      "style": "/screens/terminals/requester_terminal.json",
+      "category": "crafting",
+      "scene": "crafting_cpu",
+      "components": [
+        "requester_terminal",
+        "wireless_requester_terminal"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "scrollbar",
+        "search"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "requester_terminal"
+      }
+    },
+    {
+      "id": "portable_item_cell",
+      "screen": "ae2.client.gui.me.common.GuiMEStorage",
+      "style": "/screens/terminals/portable_item_cell.json",
+      "category": "basics",
+      "scene": "storage_cells",
+      "components": [
+        "portable_item_cell_1k",
+        "portable_item_cell_4k"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "scrollbar",
+        "craftingStatus",
+        "viewCells",
+        "search"
+      ],
+      "host": "item:portable_item_cell_",
+      "subject": {
+        "kind": "item",
+        "id": "portable_item_cell_1k"
+      }
+    },
+    {
+      "id": "portable_fluid_cell",
+      "screen": "ae2.client.gui.me.common.GuiMEStorage",
+      "style": "/screens/terminals/portable_fluid_cell.json",
+      "category": "basics",
+      "scene": "storage_cells",
+      "components": [
+        "portable_fluid_cell_1k"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "scrollbar",
+        "craftingStatus",
+        "viewCells",
+        "search"
+      ],
+      "host": "item:portable_fluid_cell_",
+      "subject": {
+        "kind": "item",
+        "id": "portable_fluid_cell_1k"
+      }
+    },
+    {
+      "id": "wireless_terminal",
+      "screen": "ae2.client.gui.me.common.GuiMEStorage",
+      "style": "/screens/terminals/wireless_terminal.json",
+      "category": "networks",
+      "scene": "wireless",
+      "components": [
+        "wireless_terminal",
+        "wireless_universal_terminal"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "scrollbar",
+        "craftingStatus",
+        "viewCells",
+        "search"
+      ],
+      "host": "WirelessTerminalGuiHost",
+      "subject": {
+        "kind": "item",
+        "id": "wireless_terminal"
+      }
+    },
+    {
+      "id": "portable_workbench",
+      "screen": "ae2.client.gui.implementations.GuiCellWorkbench",
+      "style": "/screens/portable_cell_workbench.json",
+      "category": "basics",
+      "scene": "storage_cells",
+      "components": [
+        "portable_cell_workbench"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "toolbox",
+        "previousPage",
+        "nextPage"
+      ],
+      "host": "PortableCellWorkbenchGuiHost",
+      "subject": {
+        "kind": "item",
+        "id": "portable_cell_workbench"
+      }
+    },
+    {
+      "id": "craft_amount",
+      "screen": "ae2.client.gui.me.crafting.GuiCraftAmount",
+      "style": "/screens/craft_amount.json",
+      "category": "crafting",
+      "scene": "autocrafting",
+      "components": [
+        "crafting_terminal",
+        "pattern_encoding_terminal"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "next",
+        "back",
+        "numberEntryButtonConfig",
+        "amountToCraft",
+        "amountToCraftInput",
+        "amountToCraftPreview"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "crafting_terminal"
+      }
+    },
+    {
+      "id": "craft_confirm",
+      "screen": "ae2.client.gui.me.crafting.GuiCraftConfirm",
+      "style": "/screens/craft_confirm.json",
+      "category": "crafting",
+      "scene": "autocrafting",
+      "components": [
+        "crafting_terminal"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "scrollbar",
+        "search",
+        "selectCpu",
+        "selectCpuList",
+        "start",
+        "bookmarkMissing",
+        "cancel",
+        "taskPriority",
+        "taskSubscription",
+        "craftTree"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "crafting_terminal"
+      }
+    },
+    {
+      "id": "craft_cpu_list",
+      "screen": "ae2.client.gui.me.crafting.GuiCraftConfirmCpuList",
+      "style": "/screens/craft_confirm_cpu_list.json",
+      "category": "crafting",
+      "scene": "crafting_cpu",
+      "components": [
+        "crafting_terminal",
+        "1k_crafting_storage"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "search",
+        "scrollbar",
+        "sort",
+        "back"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "crafting_terminal"
+      }
+    },
+    {
+      "id": "crafting_cpu",
+      "screen": "ae2.client.gui.me.crafting.GuiCraftingCPU",
+      "style": "/screens/crafting_cpu.json",
+      "category": "crafting",
+      "scene": "crafting_cpu",
+      "components": [
+        "1k_crafting_storage",
+        "crafting_monitor",
+        "crafting_terminal"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "search",
+        "suspend",
+        "taskPriority",
+        "cancel",
+        "scrollbar"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "1k_crafting_storage"
+      }
+    },
+    {
+      "id": "crafting_status",
+      "screen": "ae2.client.gui.me.crafting.GuiCraftingStatus",
+      "style": "/screens/crafting_status.json",
+      "category": "crafting",
+      "scene": "crafting_cpu",
+      "components": [
+        "1k_crafting_storage",
+        "crafting_monitor",
+        "crafting_terminal"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "search",
+        "suspend",
+        "taskPriority",
+        "cancel",
+        "scrollbar",
+        "back",
+        "selectCpuList",
+        "selectCpuScrollbar",
+        "terminalStyle"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "1k_crafting_storage"
+      }
+    },
+    {
+      "id": "crafting_tree",
+      "screen": "ae2.client.gui.me.crafting.GuiCraftingTree",
+      "style": "",
+      "category": "crafting",
+      "scene": "crafting_cpu",
+      "components": [
+        "crafting_terminal"
+      ],
+      "widgets": [],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "crafting_terminal"
+      }
+    },
+    {
+      "id": "craft_error",
+      "screen": "ae2.client.gui.me.crafting.GuiCraftError",
+      "style": "/screens/craft_error.json",
+      "category": "crafting",
+      "scene": "crafting_cpu",
+      "components": [
+        "crafting_terminal"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "replan",
+        "retry",
+        "cancel"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "crafting_terminal"
+      }
+    },
+    {
+      "id": "task_priority",
+      "screen": "ae2.client.gui.me.crafting.GuiCraftingTaskPriority",
+      "style": "/screens/crafting_task_priority.json",
+      "category": "crafting",
+      "scene": "crafting_cpu",
+      "components": [
+        "crafting_terminal"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "save",
+        "back",
+        "numberEntryButtonConfig",
+        "priority",
+        "priorityInput",
+        "priorityPreview"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "crafting_terminal"
+      }
+    },
+    {
+      "id": "stock_amount",
+      "screen": "ae2.client.gui.me.crafting.GuiSetStockAmount",
+      "style": "/screens/set_stock_amount.json",
+      "category": "automation",
+      "scene": "interfaces",
+      "components": [
+        "interface",
+        "stock_export_bus"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "save",
+        "back",
+        "numberEntryButtonConfig",
+        "amountToStock",
+        "amountToStockInput",
+        "amountToStockPreview"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "interface"
+      }
+    },
+    {
+      "id": "wireless_access_point",
+      "screen": "ae2.client.gui.implementations.GuiWirelessAccessPoint",
+      "style": "/screens/wireless_access_point.json",
+      "category": "networks",
+      "scene": "wireless",
+      "components": [
+        "wireless_access_point",
+        "wireless_terminal",
+        "wireless_universal_terminal"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "linkPanel"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "wireless_access_point"
+      }
+    },
+    {
+      "id": "quantum_bridge",
+      "screen": "ae2.client.gui.implementations.GuiQNB",
+      "style": "/screens/qnb.json",
+      "category": "networks",
+      "scene": "quantum_bridge",
+      "components": [
+        "quantum_link",
+        "quantum_ring",
+        "quantum_entangled_singularity"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "quantum_link"
+      }
+    },
+    {
+      "id": "spatial_io",
+      "screen": "ae2.client.gui.implementations.GuiSpatialIOPort",
+      "style": "/screens/spatial_io_port.json",
+      "category": "networks",
+      "scene": "spatial_io",
+      "components": [
+        "spatial_io_port",
+        "spatial_storage_cell_2",
+        "spatial_storage_cell_16",
+        "spatial_storage_cell_128"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "spatial_io_port"
+      }
+    },
+    {
+      "id": "spatial_anchor",
+      "screen": "ae2.client.gui.implementations.GuiSpatialAnchor",
+      "style": "/screens/spatial_anchor.json",
+      "category": "networks",
+      "scene": "spatial_io",
+      "components": [
+        "spatial_anchor"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "spatial_anchor"
+      }
+    },
+    {
+      "id": "network_status",
+      "screen": "ae2.client.gui.me.networktool.GuiNetworkStatus",
+      "style": "/screens/network_status.json",
+      "category": "networks",
+      "scene": "channels",
+      "components": [
+        "controller",
+        "network_tool"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "scrollbar"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "controller"
+      }
+    },
+    {
+      "id": "network_tool",
+      "screen": "ae2.client.gui.me.networktool.GuiNetworkTool",
+      "style": "/screens/network_tool.json",
+      "category": "networks",
+      "scene": "monitors_tools",
+      "components": [
+        "network_tool"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "item",
+        "id": "network_tool"
+      }
+    },
+    {
+      "id": "network_analyser",
+      "screen": "ae2.client.gui.implementations.GuiNetworkAnalyser",
+      "style": "/screens/network_analyser.json",
+      "category": "networks",
+      "scene": "monitors_tools",
+      "components": [
+        "network_analyser"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "mode_previous",
+        "mode_next",
+        "size_decrease",
+        "size_increase",
+        "reset_colors",
+        "color_0",
+        "color_1",
+        "color_2",
+        "color_3",
+        "color_4",
+        "color_5",
+        "color_window",
+        "color_red",
+        "color_green",
+        "color_blue",
+        "color_alpha",
+        "color_preview",
+        "color_apply",
+        "color_cancel"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "item",
+        "id": "network_analyser"
+      }
+    },
+    {
+      "id": "tick_analyser",
+      "screen": "ae2.client.gui.implementations.GuiTickAnalyser",
+      "style": "/screens/tick_analyser.json",
+      "category": "networks",
+      "scene": "monitors_tools",
+      "components": [
+        "tick_analyser"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "duration_input",
+        "start",
+        "cancel",
+        "dot_0",
+        "dot_1",
+        "dot_2",
+        "dot_3"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "item",
+        "id": "tick_analyser"
+      }
+    },
+    {
+      "id": "advanced_memory_card",
+      "screen": "ae2.client.gui.implementations.GuiAdvancedMemoryCard",
+      "style": "/screens/advanced_memory_card.json",
+      "category": "networks",
+      "scene": "p2p",
+      "components": [
+        "advanced_memory_card",
+        "me_p2p_tunnel"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "search",
+        "entryList",
+        "emptyMessage",
+        "entryIcon",
+        "entryIoIcon",
+        "entryStatusIcon",
+        "entryName",
+        "entryType",
+        "entryFrequency",
+        "entryPosition",
+        "bindButton",
+        "scrollbar"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "item",
+        "id": "advanced_memory_card"
+      }
+    },
+    {
+      "id": "cell_restriction",
+      "screen": "ae2.client.gui.implementations.GuiCellRestriction",
+      "style": "/screens/cell_restriction.json",
+      "category": "basics",
+      "scene": "storage_cells",
+      "components": [
+        "cell_workbench"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "back",
+        "amountInput",
+        "typesInput",
+        "set",
+        "release"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "cell_workbench"
+      }
+    },
+    {
+      "id": "pickup_filter",
+      "screen": "ae2.client.gui.implementations.GuiPortableCellPickupFilter",
+      "style": "/screens/portable_cell_pickup_filter.json",
+      "category": "basics",
+      "scene": "storage_cells",
+      "components": [
+        "portable_item_cell_1k"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "back"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "item",
+        "id": "portable_item_cell_1k"
+      }
+    },
+    {
+      "id": "void_cell",
+      "screen": "ae2.client.gui.implementations.GuiVoidCell",
+      "style": "/screens/void_cell.json",
+      "category": "automation",
+      "scene": "condenser",
+      "components": [
+        "void_storage_cell"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "trash",
+        "matterBalls",
+        "singularity"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "item",
+        "id": "void_storage_cell"
+      }
+    },
+    {
+      "id": "portable_void_cell",
+      "screen": "ae2.client.gui.implementations.GuiPortableVoidCell",
+      "style": "/screens/portable_void_cell_condenser.json",
+      "category": "automation",
+      "scene": "condenser",
+      "components": [
+        "portable_void_cell"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "mode",
+        "progressBar"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "item",
+        "id": "portable_void_cell"
+      }
+    },
+    {
+      "id": "wireless_magnet",
+      "screen": "ae2.client.gui.implementations.GuiWirelessMagnet",
+      "style": "/screens/wireless_magnet.json",
+      "category": "networks",
+      "scene": "wireless",
+      "components": [
+        "wireless_terminal",
+        "wireless_universal_terminal"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "back",
+        "pickup_mode",
+        "insert_mode",
+        "copy_up",
+        "copy_down",
+        "switch"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "item",
+        "id": "wireless_terminal"
+      }
+    },
+    {
+      "id": "priority",
+      "screen": "ae2.client.gui.implementations.GuiPriority",
+      "style": "/screens/priority.json",
+      "category": "automation",
+      "scene": "storage_bus",
+      "components": [
+        "storage_bus",
+        "drive",
+        "interface",
+        "pattern_provider"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "back",
+        "priority",
+        "priorityInput"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "storage_bus"
+      }
+    },
+    {
+      "id": "priority_tuner",
+      "screen": "ae2.client.gui.implementations.GuiPriorityTuner",
+      "style": "/screens/priority_tuner.json",
+      "category": "automation",
+      "scene": "storage_bus",
+      "components": [
+        "priority_tuner"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "mode",
+        "priority",
+        "priorityInput"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "item",
+        "id": "priority_tuner"
+      }
+    },
+    {
+      "id": "config_modifier",
+      "screen": "ae2.client.gui.implementations.GuiConfigModifier",
+      "style": "/screens/config_modifier.json",
+      "category": "automation",
+      "scene": "interfaces",
+      "components": [
+        "config_modifier"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "mode",
+        "data_input"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "item",
+        "id": "config_modifier"
+      }
+    },
+    {
+      "id": "quartz_knife",
+      "screen": "ae2.client.gui.implementations.GuiQuartzKnife",
+      "style": "/screens/quartz_knife.json",
+      "category": "basics",
+      "scene": "monitors_tools",
+      "components": [
+        "certus_quartz_cutting_knife",
+        "nether_quartz_cutting_knife"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "name"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "item",
+        "id": "certus_quartz_cutting_knife"
+      }
+    },
+    {
+      "id": "renamer",
+      "screen": "ae2.client.gui.implementations.GuiRenamer",
+      "style": "/screens/renamer.json",
+      "category": "networks",
+      "scene": "monitors_tools",
+      "components": [
+        "network_tool",
+        "pattern_encoding_terminal"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "back",
+        "name"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "item",
+        "id": "network_tool"
+      }
+    },
+    {
+      "id": "pattern_renamer",
+      "screen": "ae2.client.gui.me.items.GuiPatternItemRenamer",
+      "style": "/screens/renamer.json",
+      "category": "crafting",
+      "scene": "autocrafting",
+      "components": [
+        "network_tool",
+        "pattern_encoding_terminal"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "back",
+        "name"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "item",
+        "id": "network_tool"
+      }
+    },
+    {
+      "id": "output_sides",
+      "screen": "ae2.client.gui.implementations.GuiOutputSides",
+      "style": "/screens/output_sides.json",
+      "category": "automation",
+      "scene": "processors",
+      "components": [
+        "inscriber",
+        "crystal_assembler",
+        "molecular_assembler"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "returnToParent",
+        "clear",
+        "side_top",
+        "side_left",
+        "side_front",
+        "side_right",
+        "side_bottom",
+        "side_back"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "block",
+        "id": "inscriber"
+      }
+    },
+    {
+      "id": "work_interval",
+      "screen": "ae2.client.gui.implementations.GuiWorkInterval",
+      "style": "/screens/work_interval.json",
+      "category": "automation",
+      "scene": "import_export",
+      "components": [
+        "advanced_io_bus",
+        "import_export_bus",
+        "stock_export_bus"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "back",
+        "workInterval",
+        "workIntervalInput"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "advanced_io_bus"
+      }
+    },
+    {
+      "id": "terminal_settings",
+      "screen": "ae2.client.gui.me.common.GuiTerminalSettings",
+      "style": "/screens/terminals/terminal_settings.json",
+      "category": "basics",
+      "scene": "first_network",
+      "components": [
+        "terminal",
+        "crafting_terminal",
+        "wireless_terminal"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "back",
+        "pinAutoCraftedItemsCheckbox",
+        "pinDisplaySortTopRadio",
+        "pinDisplayLockedGridRadio",
+        "playerPinRowsField",
+        "notifyForFinishedCraftingJobsCheckbox",
+        "clearGridOnCloseCheckbox",
+        "autoFillPatternsCheckbox",
+        "recursiveReserveField",
+        "pickBlockCheckbox",
+        "craftIfMissingCheckbox",
+        "restockCheckbox",
+        "magnetCheckbox",
+        "pickupToMECheckbox",
+        "magnetSettingsButton",
+        "useInternalSearchRadio",
+        "useExternalSearchRadio",
+        "rememberCheckbox",
+        "autoFocusCheckbox",
+        "syncWithExternalCheckbox",
+        "clearExternalCheckbox"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "terminal"
+      }
+    },
+    {
+      "id": "key_types",
+      "screen": "ae2.client.gui.implementations.GuiKeyTypeSelection",
+      "style": "/screens/key_type_selection.json",
+      "category": "basics",
+      "scene": "fluid_storage",
+      "components": [
+        "terminal",
+        "storage_bus"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "back",
+        "keytypes"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "terminal"
+      }
+    },
+    {
+      "id": "number_buttons",
+      "screen": "ae2.client.gui.widgets.GuiNumberEntryButtonSettings",
+      "style": "/screens/number_entry_button_settings.json",
+      "category": "basics",
+      "scene": "autocrafting",
+      "components": [
+        "crafting_terminal",
+        "interface"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "back",
+        "defaultMode",
+        "default0",
+        "default1",
+        "default2",
+        "default3",
+        "shiftMode",
+        "shift0",
+        "shift1",
+        "shift2",
+        "shift3",
+        "ctrlMode",
+        "ctrl0",
+        "ctrl1",
+        "ctrl2",
+        "ctrl3",
+        "altMode",
+        "alt0",
+        "alt1",
+        "alt2",
+        "alt3",
+        "resetDefaults",
+        "save"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "crafting_terminal"
+      }
+    },
+    {
+      "id": "pattern_modifier",
+      "screen": "ae2.client.gui.implementations.GuiPatternModifier",
+      "style": "/screens/pattern_modifier.json",
+      "category": "crafting",
+      "scene": "autocrafting",
+      "components": [
+        "pattern_modifier"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "mode",
+        "inventory",
+        "previousProviderPage",
+        "nextProviderPage",
+        "replace",
+        "clone",
+        "clear",
+        "amount_0",
+        "amount_1",
+        "amount_2",
+        "amount_3",
+        "amount_4",
+        "amount_5",
+        "amount_6",
+        "amount_7",
+        "property_0",
+        "property_1",
+        "property_2",
+        "property_3"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "item",
+        "id": "pattern_modifier"
+      }
+    },
+    {
+      "id": "pattern_import_priority",
+      "screen": "ae2.client.gui.me.items.GuiPatternImportPrioritySettings",
+      "style": "/screens/terminals/pattern_import_priority_settings.json",
+      "category": "crafting",
+      "scene": "autocrafting",
+      "components": [
+        "pattern_encoding_terminal",
+        "pattern_encoding_access_terminal"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "back",
+        "priorityButton0",
+        "priorityButton1",
+        "priorityButton2",
+        "priorityButton3",
+        "priorityButton4",
+        "priorityButton5",
+        "previousPage",
+        "nextPage"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "pattern_encoding_terminal"
+      }
+    },
+    {
+      "id": "processing_amount",
+      "screen": "ae2.client.gui.me.items.GuiSetProcessingPatternAmount",
+      "style": "/screens/set_processing_pattern_amount.json",
+      "category": "crafting",
+      "scene": "processing",
+      "components": [
+        "pattern_encoding_terminal",
+        "processing_pattern"
+      ],
+      "widgets": [
+        "verticalToolbar",
+        "upgrades",
+        "wirelessUniversalTerminalSelector",
+        "keyTypeSelectionWindow",
+        "upgradeScrollbar",
+        "save",
+        "back",
+        "numberEntryButtonConfig",
+        "amountToStock",
+        "amountToStockInput",
+        "amountToStockPreview"
+      ],
+      "host": "",
+      "subject": {
+        "kind": "part",
+        "id": "pattern_encoding_terminal"
+      }
+    },
+    {
+      "id": "crafting_pattern_view",
+      "screen": "ae2.client.gui.pattern.GuiCraftingPattern",
+      "style": "",
+      "category": "crafting",
+      "scene": "autocrafting",
+      "components": [
+        "crafting_pattern"
+      ],
+      "widgets": [],
+      "host": "",
+      "subject": {
+        "kind": "item",
+        "id": "crafting_pattern"
+      }
+    },
+    {
+      "id": "processing_pattern_view",
+      "screen": "ae2.client.gui.pattern.GuiProcessingPattern",
+      "style": "",
+      "category": "crafting",
+      "scene": "processing",
+      "components": [
+        "processing_pattern"
+      ],
+      "widgets": [],
+      "host": "",
+      "subject": {
+        "kind": "item",
+        "id": "processing_pattern"
+      }
+    }
+  ]
+}

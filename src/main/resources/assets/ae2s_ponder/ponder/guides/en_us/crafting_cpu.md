@@ -102,6 +102,8 @@ Recursive crafting requires a complete chain of patterns and available base ingr
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:crafting_status" duration={400} side="right" />
+
 <GuideOnly>
 
 [Troubleshooting and topic index](troubleshooting.md)

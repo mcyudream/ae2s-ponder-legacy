@@ -81,6 +81,8 @@ Inscriber automation depends on the accessible slot on each face. Test one item 
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:output_sides" duration={400} side="right" />
+
 ## Encode the stages
 
 Encode printing and final assembly as separate processing patterns. List consumed materials and exact products; do not include a press that remains installed. Return every intermediate and final product.

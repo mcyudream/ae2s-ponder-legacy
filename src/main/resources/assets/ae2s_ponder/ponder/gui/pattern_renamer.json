@@ -1,0 +1,65 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:pattern_renamer",
+  "title": "@ae2s_ponder.gui.pattern_renamer.title",
+  "components": [
+    "ae2:network_tool",
+    "ae2:pattern_encoding_terminal"
+  ],
+  "screen": "ae2.client.gui.me.items.GuiPatternItemRenamer",
+  "adapter": "ae2s",
+  "width": 184,
+  "height": 74,
+  "texture": "ae2:textures/guis/renamer.png",
+  "targets": {
+    "widget.name": {
+      "type": "region",
+      "x": 13,
+      "y": 42,
+      "width": 158,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.pattern_renamer.target.widget.name",
+      "item": "",
+      "count": 0
+    },
+    "view.body": {
+      "type": "region",
+      "x": 12,
+      "y": 37,
+      "width": 146,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.pattern_renamer.target.view.body",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.pattern_renamer.target.widget.name",
+      "text": "@ae2s_ponder.gui.pattern_renamer.step.0",
+      "target": "widget.name",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.name",
+          "value": "Processor line",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.pattern_renamer.target.view.body",
+      "text": "@ae2s_ponder.gui.pattern_renamer.step.1",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

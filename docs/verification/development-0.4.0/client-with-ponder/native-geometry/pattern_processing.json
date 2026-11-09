@@ -1,0 +1,160 @@
+{
+  "screen": "ae2.client.gui.me.patternencode.GuiPatternEncodingTerm",
+  "width": 195,
+  "height": 233,
+  "widgets": {
+    "verticalToolbar": {
+      "kind": "VerticalButtonBar",
+      "bounds": [
+        -17,
+        1,
+        20,
+        156
+      ]
+    },
+    "scrollbar": {
+      "kind": "Scrollbar",
+      "bounds": [
+        175,
+        18,
+        12,
+        36
+      ]
+    },
+    "craftingStatus": {
+      "kind": "TabButton",
+      "bounds": [
+        171,
+        -5,
+        20,
+        20
+      ]
+    },
+    "viewCells": {
+      "kind": "ViewCellsPanel",
+      "bounds": [
+        -44,
+        0,
+        24,
+        102
+      ]
+    },
+    "search": {
+      "kind": "field",
+      "bounds": [
+        80,
+        4,
+        89,
+        12
+      ]
+    },
+    "processingPatternModeScrollbar": {
+      "kind": "Scrollbar",
+      "bounds": [
+        15,
+        75,
+        7,
+        52
+      ]
+    },
+    "processingClearPattern": {
+      "kind": "ActionButton",
+      "bounds": [
+        79,
+        74,
+        8,
+        8
+      ]
+    },
+    "processingAmountButton0": {
+      "kind": "SmallTextTooltipButton",
+      "bounds": [
+        99,
+        75,
+        8,
+        8
+      ]
+    },
+    "processingAmountButton1": {
+      "kind": "SmallTextTooltipButton",
+      "bounds": [
+        128,
+        75,
+        8,
+        8
+      ]
+    },
+    "processingAmountButton2": {
+      "kind": "SmallTextTooltipButton",
+      "bounds": [
+        99,
+        85,
+        8,
+        8
+      ]
+    },
+    "processingAmountButton3": {
+      "kind": "SmallTextTooltipButton",
+      "bounds": [
+        128,
+        85,
+        8,
+        8
+      ]
+    },
+    "processingAmountButton4": {
+      "kind": "SmallTextTooltipButton",
+      "bounds": [
+        99,
+        110,
+        8,
+        8
+      ]
+    },
+    "processingAmountButton5": {
+      "kind": "SmallTextTooltipButton",
+      "bounds": [
+        128,
+        110,
+        8,
+        8
+      ]
+    },
+    "modeTabButton0": {
+      "kind": "TabButton",
+      "bounds": [
+        173,
+        59,
+        22,
+        22
+      ]
+    },
+    "modeTabButton1": {
+      "kind": "TabButton",
+      "bounds": [
+        173,
+        80,
+        22,
+        22
+      ]
+    },
+    "encodePattern": {
+      "kind": "ActionButton",
+      "bounds": [
+        147,
+        88,
+        16,
+        16
+      ]
+    },
+    "uploadPattern": {
+      "kind": "DynamicIconButton",
+      "bounds": [
+        165,
+        93,
+        8,
+        8
+      ]
+    }
+  }
+}

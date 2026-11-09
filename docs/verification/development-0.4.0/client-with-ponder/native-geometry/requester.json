@@ -1,0 +1,16 @@
+{
+  "screen": "ae2.client.gui.implementations.GuiRequester",
+  "width": 195,
+  "height": 215,
+  "widgets": {
+    "scrollbar": {
+      "kind": "Scrollbar",
+      "bounds": [
+        175,
+        18,
+        12,
+        96
+      ]
+    }
+  }
+}

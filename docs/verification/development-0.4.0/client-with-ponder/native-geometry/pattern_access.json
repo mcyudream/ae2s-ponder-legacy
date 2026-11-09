@@ -1,0 +1,52 @@
+{
+  "screen": "ae2.client.gui.me.patternaccess.GuiPatternAccessTerm",
+  "width": 213,
+  "height": 165,
+  "widgets": {
+    "verticalToolbar": {
+      "kind": "VerticalButtonBar",
+      "bounds": [
+        -17,
+        1,
+        20,
+        46
+      ]
+    },
+    "scrollbar": {
+      "kind": "Scrollbar",
+      "bounds": [
+        193,
+        31,
+        12,
+        34
+      ]
+    },
+    "search": {
+      "kind": "field",
+      "bounds": [
+        16,
+        17,
+        65,
+        12
+      ]
+    },
+    "inputSearch": {
+      "kind": "field",
+      "bounds": [
+        113,
+        4,
+        65,
+        12
+      ]
+    },
+    "outputSearch": {
+      "kind": "field",
+      "bounds": [
+        113,
+        17,
+        65,
+        12
+      ]
+    }
+  }
+}

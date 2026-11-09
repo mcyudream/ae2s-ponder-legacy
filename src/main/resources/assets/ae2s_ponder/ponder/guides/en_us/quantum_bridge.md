@@ -79,6 +79,8 @@ Place one paired singularity in each central chamber. Provide startup energy at 
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:quantum_bridge" duration={400} side="right" />
+
 ## Respect channel capacity
 
 A Quantum Bridge transports the network connection; it does not manufacture channels. Check channel settings, cable bottlenecks and controller topology. Test a terminal at the far end before connecting a whole base.

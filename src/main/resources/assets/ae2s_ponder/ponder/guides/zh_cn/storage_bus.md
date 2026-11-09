@@ -22,23 +22,25 @@ step_ticks: 180
 
 <GameScene scene="ae2s_ponder:storage_bus" tick={215} />
 
+<GuiTutorial id="ae2s_ponder:storage_bus" />
+
 ## 3
 
 如果希望新存入的匹配物品优先进入这个容器，将它的存储优先级设得高于其他存储设备。
 
-<GameScene scene="ae2s_ponder:storage_bus" tick={417} />
+<GameScene scene="ae2s_ponder:storage_bus" tick={818} />
 
 ## 4
 
 配置总线的过滤条目与访问模式，同时确认箱子有空间，所选模式允许需要的存入或取出操作。
 
-<GameScene scene="ae2s_ponder:storage_bus" tick={587} />
+<GameScene scene="ae2s_ponder:storage_bus" tick={988} />
 
 ## 5
 
 避免通过多条存储路径，把同一个容器重复暴露给同一个网络。ME 接口和存储总线的作用也不同。
 
-<GameScene scene="ae2s_ponder:storage_bus" tick={757} />
+<GameScene scene="ae2s_ponder:storage_bus" tick={1158} />
 
 <GuideOnly>
 

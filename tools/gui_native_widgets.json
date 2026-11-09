@@ -1,0 +1,1499 @@
+{
+  "ae2s": "1.1.0",
+  "description": "Reviewed native constructor widget registrations and inheritance; optional popups are enabled by the demo profile. Artwork and translations stay in AE2S.",
+  "classes": {
+    "AEBaseGui": {
+      "parent": "GuiContainer",
+      "widgets": {
+        "verticalToolbar": {
+          "kind": "add"
+        }
+      },
+      "toolbar": []
+    },
+    "AbstractGuiRequester": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "scrollbar": {
+          "kind": "addScrollBar"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiAdvancedIOBus": {
+      "parent": "GuiStockExportBus",
+      "widgets": {},
+      "toolbar": [
+        "REGULATE_STOCK_ON"
+      ]
+    },
+    "GuiAdvancedMemoryCard": {
+      "parent": "AEBaseGui",
+      "widgets": {},
+      "toolbar": [
+        "TERMINAL_STYLE_SMALL",
+        "TYPE_FILTER_ALL",
+        "ADVANCED_MEMORY_CARD_REFRESH"
+      ]
+    },
+    "GuiAnnihilationPlane": {
+      "parent": "GuiUpgradeable",
+      "widgets": {},
+      "toolbar": [
+        "FUZZY_PERCENT_25",
+        "WORK_INTERVAL"
+      ]
+    },
+    "GuiCaner": {
+      "parent": "AEBaseGui",
+      "widgets": {},
+      "toolbar": [
+        "ARROW_RIGHT"
+      ]
+    },
+    "GuiCellRestriction": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "amountInput": {
+          "kind": "addTextField"
+        },
+        "typesInput": {
+          "kind": "addTextField",
+          "label": "Set"
+        },
+        "set": {
+          "kind": "addButton",
+          "label": "Set"
+        },
+        "release": {
+          "kind": "add"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiCellTerminal": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "search": {
+          "kind": "addTextField"
+        },
+        "scrollbar": {
+          "kind": "addScrollBar"
+        },
+        "upgrades": {
+          "kind": "add"
+        },
+        "keyTypeSelectionWindow": {
+          "kind": "add"
+        },
+        "wirelessUniversalTerminalSelector": {
+          "kind": "add"
+        }
+      },
+      "toolbar": [
+        "TERMINAL_STYLE_SMALL",
+        "CELL_TERMINAL_SEARCH_MODE_INVENTORY",
+        "CELL_TERMINAL_CONTENT_FILTER_SHOW_ALL",
+        "CELL_TERMINAL_PARTITION_FILTER_SHOW_ALL",
+        "CELL_TERMINAL_SUBNET_VISIBILITY_SHOW_ALL"
+      ]
+    },
+    "GuiCellWorkbench": {
+      "parent": "GuiUpgradeable",
+      "widgets": {
+        "previousPage": {
+          "kind": "add"
+        },
+        "nextPage": {
+          "kind": "add"
+        }
+      },
+      "toolbar": [
+        "COG",
+        "CLEAR",
+        "COPY_MODE_ON",
+        "FUZZY_PERCENT_25",
+        "CELL_RESTRICTION"
+      ]
+    },
+    "GuiCondenser": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "mode": {
+          "kind": "add",
+          "label": "StoredEnergy"
+        },
+        "progressBar": {
+          "kind": "add",
+          "label": "StoredEnergy"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiConfigModifier": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "data_input": {
+          "kind": "addTextField",
+          "label": "ConfigModifierChangeMode"
+        },
+        "mode": {
+          "kind": "addButton",
+          "label": "ConfigModifierChangeMode"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiCraftAmount": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "next": {
+          "kind": "addButton",
+          "label": "ReturnToPreviousGui"
+        },
+        "numberEntryButtonConfig": {
+          "kind": "add"
+        },
+        "amountToCraft": {
+          "kind": "addNumberEntryWidget"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiCraftConfirm": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "scrollbar": {
+          "kind": "addScrollBar"
+        },
+        "search": {
+          "kind": "addTextField",
+          "label": "SearchTooltip"
+        },
+        "start": {
+          "kind": "addButton",
+          "label": "Start"
+        },
+        "bookmarkMissing": {
+          "kind": "addButton",
+          "label": "BookmarkMissing"
+        },
+        "selectCpu": {
+          "kind": "addButton",
+          "label": "SelectFromList"
+        },
+        "selectCpuList": {
+          "kind": "add",
+          "label": "CraftingTaskPriority",
+          "icon": "CRAFTING_TASK_PRIORITY"
+        },
+        "taskPriority": {
+          "kind": "add",
+          "label": "CraftingTaskSubscription",
+          "icon": "CRAFTING_TASK_SUBSCRIBED"
+        },
+        "taskSubscription": {
+          "kind": "add",
+          "label": "Cancel",
+          "icon": "CTL_CRAFT_TREE"
+        },
+        "cancel": {
+          "kind": "addButton",
+          "label": "Cancel",
+          "icon": "CTL_CRAFT_TREE"
+        },
+        "craftTree": {
+          "kind": "add"
+        }
+      },
+      "toolbar": [
+        "TERMINAL_STYLE_SMALL",
+        "CRAFTING_PLAN_SORT_AVAILABILITY",
+        "CRAFTING_PLAN_SORT_ASCENDING"
+      ]
+    },
+    "GuiCraftConfirmCpuList": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "back": {
+          "kind": "add",
+          "label": "ReturnToPreviousGui",
+          "icon": "BACK"
+        },
+        "search": {
+          "kind": "addTextField",
+          "label": "CraftingCpuListSearchTooltip"
+        },
+        "scrollbar": {
+          "kind": "addScrollBar"
+        },
+        "sort": {
+          "kind": "add"
+        }
+      },
+      "toolbar": [
+        "TERMINAL_STYLE_SMALL"
+      ]
+    },
+    "GuiCraftError": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "replan": {
+          "kind": "addButton",
+          "label": "CraftErrorReplan"
+        },
+        "retry": {
+          "kind": "addButton",
+          "label": "CraftErrorRetry"
+        },
+        "cancel": {
+          "kind": "addButton",
+          "label": "Cancel"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiCraftingCPU": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "scrollbar": {
+          "kind": "addScrollBar"
+        },
+        "search": {
+          "kind": "addTextField",
+          "label": "SearchTooltip"
+        },
+        "cancel": {
+          "kind": "addButton",
+          "label": "Cancel"
+        },
+        "suspend": {
+          "kind": "addButton",
+          "label": "Suspend"
+        },
+        "taskPriority": {
+          "kind": "addTooltipButton",
+          "label": "CraftingTaskPriority"
+        }
+      },
+      "toolbar": [
+        "CRAFT_HAMMER",
+        "TERMINAL_STYLE_SMALL"
+      ]
+    },
+    "GuiCraftingPattern": {
+      "parent": "GuiPattern",
+      "widgets": {},
+      "toolbar": []
+    },
+    "GuiCraftingStatus": {
+      "parent": "GuiCraftingCPU",
+      "widgets": {
+        "selectCpuScrollbar": {
+          "kind": "addScrollBar"
+        },
+        "selectCpuList": {
+          "kind": "add"
+        },
+        "terminalStyle": {
+          "kind": "add"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiCraftingTaskPriority": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "save": {
+          "kind": "addButton",
+          "label": "Set",
+          "icon": "BACK"
+        },
+        "back": {
+          "kind": "add",
+          "label": "ReturnToPreviousGui",
+          "icon": "BACK"
+        },
+        "numberEntryButtonConfig": {
+          "kind": "add"
+        },
+        "priority": {
+          "kind": "addNumberEntryWidget"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiCraftingTerm": {
+      "parent": "GuiMEStorage",
+      "widgets": {
+        "clearCraftingGrid": {
+          "kind": "add",
+          "icon": "S_STASH_TO_PLAYER_INV"
+        },
+        "clearToPlayerInv": {
+          "kind": "add"
+        },
+        "recipeConflictSelection": {
+          "kind": "add",
+          "icon": "CRAFTING_GRID_ROTATE"
+        },
+        "rotateCraftingGrid": {
+          "kind": "add",
+          "icon": "CRAFTING_GRID_BALANCE"
+        },
+        "balanceCraftingGrid": {
+          "kind": "add"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiCraftingTree": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "tree": {
+          "kind": "add",
+          "label": "CraftingTreeScreenshot",
+          "icon": "CRAFTING_TREE_SCREENSHOT"
+        },
+        "screenshot": {
+          "kind": "add",
+          "label": "CraftingTreeMissingOnly",
+          "icon": "CRAFTING_TREE_BRANCHES_FAILED"
+        },
+        "missingOnly": {
+          "kind": "add",
+          "label": "CraftingTreeBack",
+          "icon": "BACK"
+        },
+        "back": {
+          "kind": "add"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiCrystalAssembler": {
+      "parent": "GuiUpgradeable",
+      "widgets": {
+        "progressBar": {
+          "kind": "add",
+          "icon": "OUTPUT_SIDES"
+        }
+      },
+      "toolbar": [
+        "AUTO_EXPORT_OFF",
+        "OUTPUT_SIDE_CONFIG"
+      ]
+    },
+    "GuiDrive": {
+      "parent": "AEBaseGui",
+      "widgets": {},
+      "toolbar": []
+    },
+    "GuiEnergyLevelEmitter": {
+      "parent": "GuiUpgradeable",
+      "widgets": {
+        "level": {
+          "kind": "addNumberEntryWidget"
+        }
+      },
+      "toolbar": [
+        "REDSTONE_BELOW"
+      ]
+    },
+    "GuiFormationPlane": {
+      "parent": "GuiUpgradeable",
+      "widgets": {},
+      "toolbar": [
+        "AUTO_EXPORT_OFF",
+        "PLACEMENT_BLOCK",
+        "FUZZY_PERCENT_25",
+        "WORK_INTERVAL"
+      ]
+    },
+    "GuiIOBus": {
+      "parent": "GuiUpgradeable",
+      "widgets": {},
+      "toolbar": [
+        "TYPE_FILTER_ALL",
+        "SCHEDULING_DEFAULT",
+        "REDSTONE_IGNORE",
+        "FUZZY_PERCENT_25",
+        "VIEW_MODE_CRAFTING"
+      ]
+    },
+    "GuiIOPort": {
+      "parent": "GuiUpgradeable",
+      "widgets": {
+        "operationMode": {
+          "kind": "add"
+        }
+      },
+      "toolbar": [
+        "FULLNESS_EMPTY",
+        "REDSTONE_IGNORE"
+      ]
+    },
+    "GuiImportExportBus": {
+      "parent": "GuiUpgradeable",
+      "widgets": {},
+      "toolbar": [
+        "SCHEDULING_DEFAULT",
+        "REDSTONE_IGNORE",
+        "VIEW_MODE_CRAFTING"
+      ]
+    },
+    "GuiIngredientBuffer": {
+      "parent": "AEBaseGui",
+      "widgets": {},
+      "toolbar": []
+    },
+    "GuiInscriber": {
+      "parent": "GuiUpgradeable",
+      "widgets": {
+        "progressBar": {
+          "kind": "add"
+        }
+      },
+      "toolbar": [
+        "INSCRIBER_COMBINED_SIDES",
+        "AUTO_EXPORT_OFF",
+        "INSCRIBER_BUFFER_1",
+        "OUTPUT_SIDE_CONFIG"
+      ]
+    },
+    "GuiInterface": {
+      "parent": "GuiUpgradeable",
+      "widgets": {
+        "previousPage": {
+          "kind": "add"
+        },
+        "nextPage": {
+          "kind": "add"
+        },
+        "amtButton1": {
+          "kind": "add"
+        },
+        "amtButton2": {
+          "kind": "add"
+        },
+        "amtButton3": {
+          "kind": "add"
+        },
+        "amtButton4": {
+          "kind": "add"
+        },
+        "amtButton5": {
+          "kind": "add"
+        },
+        "amtButton6": {
+          "kind": "add"
+        },
+        "amtButton7": {
+          "kind": "add"
+        },
+        "amtButton8": {
+          "kind": "add"
+        },
+        "amtButton9": {
+          "kind": "add"
+        },
+        "amtButton10": {
+          "kind": "add"
+        },
+        "amtButton11": {
+          "kind": "add"
+        },
+        "amtButton12": {
+          "kind": "add"
+        },
+        "amtButton13": {
+          "kind": "add"
+        },
+        "amtButton14": {
+          "kind": "add"
+        },
+        "amtButton15": {
+          "kind": "add"
+        },
+        "amtButton16": {
+          "kind": "add"
+        },
+        "amtButton17": {
+          "kind": "add"
+        },
+        "amtButton18": {
+          "kind": "add"
+        }
+      },
+      "toolbar": [
+        "FUZZY_PERCENT_25"
+      ]
+    },
+    "GuiKeyTypeSelection": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "back": {
+          "kind": "add",
+          "icon": "BACK"
+        },
+        "keytypes": {
+          "kind": "add"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiMEChest": {
+      "parent": "AEBaseGui",
+      "widgets": {},
+      "toolbar": []
+    },
+    "GuiMEStorage": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "scrollbar": {
+          "kind": "addScrollBar"
+        },
+        "viewCells": {
+          "kind": "add"
+        },
+        "upgrades": {
+          "kind": "add"
+        },
+        "toolbox": {
+          "kind": "add",
+          "label": "CraftingStatus",
+          "icon": "CRAFT_HAMMER"
+        },
+        "craftingStatus": {
+          "kind": "add"
+        },
+        "keyTypeSelectionWindow": {
+          "kind": "add"
+        },
+        "search": {
+          "kind": "addTextField",
+          "label": "SearchTooltip"
+        },
+        "wirelessUniversalTerminalSelector": {
+          "kind": "add",
+          "label": "WirelessTerminalSelector"
+        }
+      },
+      "toolbar": [
+        "SORT_BY_NAME",
+        "VIEW_MODE_STORED",
+        "TYPE_FILTER_ALL",
+        "ARROW_UP",
+        "LOCKED",
+        "COG",
+        "TERMINAL_STYLE_SMALL"
+      ]
+    },
+    "GuiModFilterBus": {
+      "parent": "GuiSpecialExportBus",
+      "widgets": {
+        "modExpression": {
+          "kind": "addTextField"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiModStorageBus": {
+      "parent": "GuiSpecialStorageBus",
+      "widgets": {
+        "modExpression": {
+          "kind": "addTextField"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiMolecularAssembler": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "upgrades": {
+          "kind": "add",
+          "icon": "PATTERN_ACCESS_SHOW"
+        },
+        "previousPage": {
+          "kind": "add"
+        },
+        "nextPage": {
+          "kind": "add"
+        }
+      },
+      "toolbar": [
+        "PATTERN_ACCESS_SHOW",
+        "PATTERN_MODIFIER"
+      ]
+    },
+    "GuiNetworkAnalyser": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "mode_previous": {
+          "kind": "addButton",
+          "text": "<"
+        },
+        "mode_next": {
+          "kind": "addButton",
+          "text": ">"
+        },
+        "size_decrease": {
+          "kind": "addButton",
+          "label": "NetworkAnalyserReset",
+          "text": "<"
+        },
+        "size_increase": {
+          "kind": "addButton",
+          "label": "NetworkAnalyserReset",
+          "text": ">"
+        },
+        "reset_colors": {
+          "kind": "addButton",
+          "label": "NetworkAnalyserReset"
+        },
+        "color_window": {
+          "kind": "add"
+        },
+        "color_0": {
+          "kind": "add"
+        },
+        "color_1": {
+          "kind": "add"
+        },
+        "color_2": {
+          "kind": "add"
+        },
+        "color_3": {
+          "kind": "add"
+        },
+        "color_4": {
+          "kind": "add"
+        },
+        "color_5": {
+          "kind": "add"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiNetworkStatus": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "scrollbar": {
+          "kind": "addScrollBar",
+          "label": "ExportGrid",
+          "icon": "EXPORT_GRID"
+        }
+      },
+      "toolbar": [
+        "POWER_UNIT_AE",
+        "EXPORT_GRID",
+        "FLOW_TRACKING"
+      ]
+    },
+    "GuiNetworkTool": {
+      "parent": "AEBaseGui",
+      "widgets": {},
+      "toolbar": []
+    },
+    "GuiNumberEntryButtonSettings": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "back": {
+          "kind": "add",
+          "label": "NumberEntryButtonSettings",
+          "icon": "BACK"
+        },
+        "save": {
+          "kind": "addButton",
+          "label": "Set"
+        },
+        "resetDefaults": {
+          "kind": "addButton",
+          "label": "NumberEntryButtonSettingsReset"
+        },
+        "default0": {
+          "kind": "addTextField"
+        },
+        "default1": {
+          "kind": "addTextField"
+        },
+        "default2": {
+          "kind": "addTextField"
+        },
+        "default3": {
+          "kind": "addTextField"
+        },
+        "shift0": {
+          "kind": "addTextField"
+        },
+        "shift1": {
+          "kind": "addTextField"
+        },
+        "shift2": {
+          "kind": "addTextField"
+        },
+        "shift3": {
+          "kind": "addTextField"
+        },
+        "ctrl0": {
+          "kind": "addTextField"
+        },
+        "ctrl1": {
+          "kind": "addTextField"
+        },
+        "ctrl2": {
+          "kind": "addTextField"
+        },
+        "ctrl3": {
+          "kind": "addTextField"
+        },
+        "alt0": {
+          "kind": "addTextField"
+        },
+        "alt1": {
+          "kind": "addTextField"
+        },
+        "alt2": {
+          "kind": "addTextField"
+        },
+        "alt3": {
+          "kind": "addTextField"
+        },
+        "defaultMode": {
+          "kind": "add"
+        },
+        "shiftMode": {
+          "kind": "add"
+        },
+        "ctrlMode": {
+          "kind": "add"
+        },
+        "altMode": {
+          "kind": "add"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiODFilterBus": {
+      "parent": "GuiSpecialExportBus",
+      "widgets": {
+        "whiteExpression": {
+          "kind": "addTextField"
+        },
+        "blackExpression": {
+          "kind": "addTextField"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiODStorageBus": {
+      "parent": "GuiSpecialStorageBus",
+      "widgets": {
+        "whiteExpression": {
+          "kind": "addTextField"
+        },
+        "blackExpression": {
+          "kind": "addTextField"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiOutputSides": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "clear": {
+          "kind": "add",
+          "icon": "OUTPUT_SIDES_CLEAR"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiPEATerm": {
+      "parent": "AbstractPatternAccessTerm",
+      "widgets": {
+        "uploadPattern": {
+          "kind": "add",
+          "icon": "ENCODE"
+        },
+        "encodePattern": {
+          "kind": "add",
+          "icon": "ENCODE"
+        }
+      },
+      "toolbar": [
+        "PRIORITY",
+        "COG"
+      ]
+    },
+    "GuiPattern": {
+      "parent": "AEBaseGui",
+      "widgets": {},
+      "toolbar": []
+    },
+    "GuiPatternAccessTerm": {
+      "parent": "AbstractPatternAccessTerm",
+      "widgets": {},
+      "toolbar": []
+    },
+    "GuiPatternEncodingTerm": {
+      "parent": "GuiMEStorage",
+      "widgets": {
+        "uploadPattern": {
+          "kind": "add",
+          "icon": "ENCODE"
+        },
+        "encodePattern": {
+          "kind": "add",
+          "icon": "ENCODE"
+        }
+      },
+      "toolbar": [
+        "PRIORITY",
+        "PATTERN_MODIFIER"
+      ]
+    },
+    "GuiPatternImportPrioritySettings": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "back": {
+          "kind": "add",
+          "text": "<",
+          "icon": "BACK"
+        },
+        "previousPage": {
+          "kind": "addButton",
+          "text": "<"
+        },
+        "nextPage": {
+          "kind": "addButton",
+          "text": ">"
+        },
+        "priorityButton0": {
+          "kind": "add"
+        },
+        "priorityButton1": {
+          "kind": "add"
+        },
+        "priorityButton2": {
+          "kind": "add"
+        },
+        "priorityButton3": {
+          "kind": "add"
+        },
+        "priorityButton4": {
+          "kind": "add"
+        },
+        "priorityButton5": {
+          "kind": "add"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiPatternItemRenamer": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "name": {
+          "kind": "addTextField",
+          "icon": "BACK"
+        },
+        "back": {
+          "kind": "add",
+          "icon": "BACK"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiPatternModifier": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "mode": {
+          "kind": "add"
+        },
+        "previousProviderPage": {
+          "kind": "add"
+        },
+        "nextProviderPage": {
+          "kind": "add"
+        },
+        "replace": {
+          "kind": "add"
+        },
+        "clone": {
+          "kind": "add"
+        },
+        "clear": {
+          "kind": "add"
+        },
+        "inventory": {
+          "kind": "add"
+        },
+        "amount_0": {
+          "kind": "add"
+        },
+        "amount_1": {
+          "kind": "add"
+        },
+        "amount_2": {
+          "kind": "add"
+        },
+        "amount_3": {
+          "kind": "add"
+        },
+        "amount_4": {
+          "kind": "add"
+        },
+        "amount_5": {
+          "kind": "add"
+        },
+        "amount_6": {
+          "kind": "add"
+        },
+        "amount_7": {
+          "kind": "add"
+        },
+        "property_0": {
+          "kind": "add"
+        },
+        "property_1": {
+          "kind": "add"
+        },
+        "property_2": {
+          "kind": "add"
+        },
+        "property_3": {
+          "kind": "add"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiPatternProvider": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "upgrades": {
+          "kind": "add",
+          "icon": "PATTERN_ACCESS_SHOW"
+        },
+        "lockReason": {
+          "kind": "add",
+          "label": "PatternProviderPagePrevious",
+          "icon": "ARROW_LEFT"
+        },
+        "previousPage": {
+          "kind": "add"
+        },
+        "nextPage": {
+          "kind": "add"
+        }
+      },
+      "toolbar": [
+        "BLOCKING_MODE_YES",
+        "BLOCKING_MODE_TYPE_NORMAL",
+        "PATTERN_PROVIDER_INSERTION_DEFAULT",
+        "PATTERN_PROVIDER_OUTPUT_SIDE_SINGLE",
+        "UNLOCKED",
+        "PATTERN_ACCESS_SHOW",
+        "PATTERN_MODIFIER"
+      ]
+    },
+    "GuiPatternSlot": {
+      "parent": "AppEngSlot",
+      "widgets": {},
+      "toolbar": []
+    },
+    "GuiPortableCellPickupFilter": {
+      "parent": "AEBaseGui",
+      "widgets": {},
+      "toolbar": [
+        "PORTABLE_CELL_PICKUP_FILTER_CLEAR",
+        "WHITELIST",
+        "PORTABLE_CELL_PICKUP_MATCH_NBT_ENABLED",
+        "PORTABLE_CELL_PICKUP_MATCH_DAMAGE_ENABLED",
+        "COG"
+      ]
+    },
+    "GuiPortableVoidCell": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "mode": {
+          "kind": "add",
+          "label": "StoredEnergy"
+        },
+        "progressBar": {
+          "kind": "add",
+          "label": "StoredEnergy"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiPreciseStorageBus": {
+      "parent": "GuiSpecialStorageBus",
+      "widgets": {},
+      "toolbar": [
+        "COG"
+      ]
+    },
+    "GuiPriority": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "priority": {
+          "kind": "addNumberEntryWidget"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiPriorityTuner": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "mode": {
+          "kind": "addTooltipButton",
+          "label": "PriorityTunerChangeMode"
+        },
+        "priority": {
+          "kind": "addNumberEntryWidget"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiProcessingPattern": {
+      "parent": "GuiPattern",
+      "widgets": {},
+      "toolbar": []
+    },
+    "GuiQNB": {
+      "parent": "AEBaseGui",
+      "widgets": {},
+      "toolbar": []
+    },
+    "GuiQuartzKnife": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "name": {
+          "kind": "addTextField"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiRenamer": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "name": {
+          "kind": "addTextField"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiRequester": {
+      "parent": "AbstractGuiRequester",
+      "widgets": {},
+      "toolbar": []
+    },
+    "GuiRequesterTerm": {
+      "parent": "AbstractGuiRequester",
+      "widgets": {
+        "upgrades": {
+          "kind": "add"
+        },
+        "search": {
+          "kind": "addTextField",
+          "label": "SearchTooltip"
+        },
+        "wirelessUniversalTerminalSelector": {
+          "kind": "add",
+          "label": "WirelessTerminalSelector"
+        }
+      },
+      "toolbar": [
+        "TERMINAL_STYLE_SMALL",
+        "COG"
+      ]
+    },
+    "GuiSetProcessingPatternAmount": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "save": {
+          "kind": "addButton",
+          "label": "Set",
+          "icon": "BACK"
+        },
+        "back": {
+          "kind": "add",
+          "icon": "BACK"
+        },
+        "numberEntryButtonConfig": {
+          "kind": "add"
+        },
+        "amountToStock": {
+          "kind": "addNumberEntryWidget"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiSetStockAmount": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "save": {
+          "kind": "addButton",
+          "label": "Set"
+        },
+        "numberEntryButtonConfig": {
+          "kind": "add"
+        },
+        "amountToStock": {
+          "kind": "addNumberEntryWidget"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiSkyChest": {
+      "parent": "AEBaseGui",
+      "widgets": {},
+      "toolbar": []
+    },
+    "GuiSpatialAnchor": {
+      "parent": "AEBaseGui",
+      "widgets": {},
+      "toolbar": [
+        "POWER_UNIT_AE",
+        "OVERLAY_OFF"
+      ]
+    },
+    "GuiSpatialIOPort": {
+      "parent": "AEBaseGui",
+      "widgets": {},
+      "toolbar": [
+        "POWER_UNIT_AE"
+      ]
+    },
+    "GuiSpecialExportBus": {
+      "parent": "GuiUpgradeable",
+      "widgets": {},
+      "toolbar": [
+        "REDSTONE_IGNORE"
+      ]
+    },
+    "GuiSpecialPreciseExportBus": {
+      "parent": "GuiSpecialExportBus",
+      "widgets": {},
+      "toolbar": [
+        "SCHEDULING_DEFAULT",
+        "VIEW_MODE_CRAFTING"
+      ]
+    },
+    "GuiSpecialStorageBus": {
+      "parent": "GuiUpgradeable",
+      "widgets": {},
+      "toolbar": [
+        "CLEAR",
+        "STORAGE_FILTER_EXTRACTABLE_ONLY",
+        "FILTER_ON_EXTRACT_ENABLED",
+        "ACCESS_READ"
+      ]
+    },
+    "GuiStockExportBus": {
+      "parent": "GuiUpgradeable",
+      "widgets": {},
+      "toolbar": [
+        "SCHEDULING_DEFAULT",
+        "REDSTONE_IGNORE",
+        "VIEW_MODE_CRAFTING"
+      ]
+    },
+    "GuiStorageBus": {
+      "parent": "GuiUpgradeable",
+      "widgets": {},
+      "toolbar": [
+        "CLEAR",
+        "COG",
+        "STORAGE_FILTER_EXTRACTABLE_ONLY",
+        "FILTER_ON_EXTRACT_ENABLED",
+        "ACCESS_READ",
+        "FUZZY_PERCENT_25"
+      ]
+    },
+    "GuiStorageLevelEmitter": {
+      "parent": "GuiUpgradeable",
+      "widgets": {
+        "level": {
+          "kind": "addNumberEntryWidget"
+        }
+      },
+      "toolbar": [
+        "REDSTONE_BELOW",
+        "CRAFT_HAMMER",
+        "FUZZY_PERCENT_25"
+      ]
+    },
+    "GuiTerminalSettings": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "back": {
+          "kind": "add",
+          "icon": "BACK"
+        },
+        "pinAutoCraftedItemsCheckbox": {
+          "kind": "addCheckbox",
+          "label": "TerminalSettingsPinAutoCraftedItems"
+        },
+        "pinDisplaySortTopRadio": {
+          "kind": "addCheckbox",
+          "label": "TerminalSettingsPinDisplaySortTop"
+        },
+        "pinDisplayLockedGridRadio": {
+          "kind": "addCheckbox",
+          "label": "TerminalSettingsPinDisplayLockedGrid"
+        },
+        "notifyForFinishedCraftingJobsCheckbox": {
+          "kind": "addCheckbox",
+          "label": "TerminalSettingsNotifyForFinishedJobs"
+        },
+        "clearGridOnCloseCheckbox": {
+          "kind": "addCheckbox",
+          "label": "TerminalSettingsClearGridOnClose"
+        },
+        "autoFillPatternsCheckbox": {
+          "kind": "addCheckbox",
+          "label": "TerminalSettingsAutoFillBlankPatterns"
+        },
+        "useInternalSearchRadio": {
+          "kind": "addCheckbox",
+          "label": "SearchSettingsUseInternalSearch"
+        },
+        "useExternalSearchRadio": {
+          "kind": "addCheckbox",
+          "label": "SearchSettingsUseExternalSearch"
+        },
+        "rememberCheckbox": {
+          "kind": "addCheckbox",
+          "label": "SearchSettingsRememberSearch"
+        },
+        "autoFocusCheckbox": {
+          "kind": "addCheckbox",
+          "label": "SearchSettingsAutoFocus"
+        },
+        "syncWithExternalCheckbox": {
+          "kind": "addCheckbox",
+          "label": "SearchSettingsSyncWithExternal"
+        },
+        "clearExternalCheckbox": {
+          "kind": "addCheckbox",
+          "label": "SearchSettingsClearExternal"
+        },
+        "recursiveReserveField": {
+          "kind": "addTextField"
+        },
+        "playerPinRowsField": {
+          "kind": "addTextField"
+        },
+        "pickBlockCheckbox": {
+          "kind": "addCheckbox",
+          "label": "WirelessTerminalSettingsPickBlock"
+        },
+        "craftIfMissingCheckbox": {
+          "kind": "addCheckbox",
+          "label": "WirelessTerminalSettingsCraftIfMissing"
+        },
+        "restockCheckbox": {
+          "kind": "addCheckbox",
+          "label": "WirelessTerminalSettingsRestock"
+        },
+        "magnetCheckbox": {
+          "kind": "addCheckbox",
+          "label": "WirelessTerminalSettingsMagnet"
+        },
+        "pickupToMECheckbox": {
+          "kind": "addCheckbox",
+          "label": "WirelessTerminalSettingsPickupToME"
+        },
+        "magnetSettingsButton": {
+          "kind": "add"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiThresholdExportBus": {
+      "parent": "GuiSpecialExportBus",
+      "widgets": {},
+      "toolbar": [
+        "SCHEDULING_DEFAULT",
+        "ARROW_UP"
+      ]
+    },
+    "GuiThresholdLevelEmitter": {
+      "parent": "GuiUpgradeable",
+      "widgets": {
+        "upperLevel": {
+          "kind": "addNumberEntryWidget"
+        },
+        "lowerLevel": {
+          "kind": "addNumberEntryWidget"
+        }
+      },
+      "toolbar": [
+        "REDSTONE_BELOW",
+        "FUZZY_PERCENT_25"
+      ]
+    },
+    "GuiTickAnalyser": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "start": {
+          "kind": "addButton",
+          "label": "TickAnalyserStart"
+        },
+        "cancel": {
+          "kind": "addButton",
+          "label": "TickAnalyserCancel"
+        },
+        "duration_input": {
+          "kind": "addTextField"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiUpgradeable": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "upgrades": {
+          "kind": "add"
+        },
+        "toolbox": {
+          "kind": "add"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiVibrationChamber": {
+      "parent": "GuiUpgradeable",
+      "widgets": {},
+      "toolbar": [
+        "POWER_UNIT_AE"
+      ]
+    },
+    "GuiVoidCell": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "trash": {
+          "kind": "add"
+        },
+        "matterBalls": {
+          "kind": "add"
+        },
+        "singularity": {
+          "kind": "add"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiWirelessAccessPoint": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "linkPanel": {
+          "kind": "addBackgroundPanel"
+        }
+      },
+      "toolbar": [
+        "POWER_UNIT_AE"
+      ]
+    },
+    "GuiWirelessMagnet": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "pickup_mode": {
+          "kind": "add",
+          "label": "WirelessMagnetCopyPickup",
+          "icon": "ARROW_UP"
+        },
+        "insert_mode": {
+          "kind": "add",
+          "label": "WirelessMagnetCopyPickup",
+          "icon": "ARROW_UP"
+        },
+        "copy_up": {
+          "kind": "add",
+          "label": "WirelessMagnetCopyPickup",
+          "icon": "ARROW_UP"
+        },
+        "copy_down": {
+          "kind": "add",
+          "label": "WirelessMagnetCopyInsert",
+          "icon": "ARROW_DOWN"
+        },
+        "switch": {
+          "kind": "add",
+          "label": "WirelessMagnetSwap",
+          "icon": "CYCLE"
+        }
+      },
+      "toolbar": []
+    },
+    "GuiWorkInterval": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "workInterval": {
+          "kind": "addNumberEntryWidget"
+        }
+      },
+      "toolbar": []
+    },
+    "AbstractPatternAccessTerm": {
+      "parent": "AEBaseGui",
+      "widgets": {
+        "scrollbar": {
+          "kind": "addScrollBar"
+        },
+        "search": {
+          "kind": "addTextField"
+        },
+        "inputSearch": {
+          "kind": "addTextField"
+        },
+        "outputSearch": {
+          "kind": "addTextField"
+        },
+        "upgrades": {
+          "kind": "add"
+        },
+        "wirelessUniversalTerminalSelector": {
+          "kind": "add"
+        }
+      },
+      "toolbar": []
+    },
+    "CraftingEncodingPanel": {
+      "parent": "EncodingModePanel",
+      "widgets": {
+        "craftingClearPattern": {
+          "kind": "add"
+        },
+        "craftingSubstitutions": {
+          "kind": "add"
+        },
+        "craftingFluidSubstitutions": {
+          "kind": "add"
+        },
+        "craftingRecipeConflictSelection": {
+          "kind": "add"
+        }
+      },
+      "toolbar": []
+    },
+    "ProcessingEncodingPanel": {
+      "parent": "EncodingModePanel",
+      "widgets": {
+        "processingClearPattern": {
+          "kind": "add"
+        },
+        "processingCycleOutput": {
+          "kind": "add"
+        },
+        "processingMergeHeiInputs": {
+          "kind": "add"
+        },
+        "processingPatternModeScrollbar": {
+          "kind": "addScrollBar"
+        }
+      },
+      "toolbar": []
+    }
+  }
+}

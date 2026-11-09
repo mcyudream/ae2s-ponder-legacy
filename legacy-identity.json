@@ -14,15 +14,15 @@
   "original_authors": "yudream (original addon)",
   "original_repository": "https://github.com/mcyudream/ae2s-ponder-legacy",
   "verification_document": "LEGACY-VERIFICATION.md",
-  "verified_jar_sha256": "c134dd24dff406d417e9d631f17c9a03bf68e6e5a902d6ca379608949c7080a3",
-  "verified_main_source_sha256": "16f89a486c92c70bcc0155a700ba6d613e858432b120fa1af02f67ce8503c28c",
-  "release_tag": "v0.3.0",
-  "verified_ponder_release_sha256": "86e072acb375b28dd68051c87ae2c752a6e9df81794e8da701fb641943f35041",
+  "verified_jar_sha256": "640e02545d29747567cc92db697bebc91f432260a9a385f9b115f45f268b8b81",
+  "verified_main_source_sha256": "b51195d1a2ce51151d5ac965f9d6e415e45d2853d93dd009fd2af60a35659199",
+  "release_tag": "v0.4.0",
+  "verified_ponder_release_sha256": "0b4039c5e8cf01e740612136ac188cc41406431d0553f462109bebaf3b2f0f3e",
   "previous_verification": {
-    "release_tag": "v0.2.0",
-    "verified_jar_sha256": "1f6c095c8859cf0053a431b5c0535a0a45a33d25ac10f3d96eef3c67997e0614",
-    "verified_ponder_release_sha256": "bf668461d714313326ecf095614b58eee5b6fa5e5317c7ee5cb5de3bd92176d6",
-    "verification_directory": "docs/verification/release-0.2.0"
+    "release_tag": "v0.3.0",
+    "verified_jar_sha256": "c134dd24dff406d417e9d631f17c9a03bf68e6e5a902d6ca379608949c7080a3",
+    "verified_ponder_release_sha256": "86e072acb375b28dd68051c87ae2c752a6e9df81794e8da701fb641943f35041",
+    "verification_directory": "docs/verification/development-0.3.0"
   },
-  "verification_directory": "docs/verification/development-0.3.0"
+  "verification_directory": "docs/verification/development-0.4.0"
 }

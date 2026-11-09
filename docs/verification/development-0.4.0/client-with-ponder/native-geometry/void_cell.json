@@ -1,0 +1,34 @@
+{
+  "screen": "ae2.client.gui.implementations.GuiVoidCell",
+  "width": 121,
+  "height": 60,
+  "widgets": {
+    "trash": {
+      "kind": "ModeButton",
+      "bounds": [
+        22,
+        20,
+        16,
+        16
+      ]
+    },
+    "matterBalls": {
+      "kind": "ModeButton",
+      "bounds": [
+        54,
+        20,
+        16,
+        16
+      ]
+    },
+    "singularity": {
+      "kind": "ModeButton",
+      "bounds": [
+        84,
+        20,
+        16,
+        16
+      ]
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:crafting_terminal",
+  "title": "@ae2s_ponder.gui.crafting_terminal.title",
+  "components": [
+    "ae2:crafting_terminal",
+    "ae2:wireless_crafting_terminal"
+  ],
+  "screen": "ae2.client.gui.me.items.GuiCraftingTerm",
+  "adapter": "ae2s",
+  "width": 247,
+  "height": 264,
+  "texture": "ae2:textures/guis/crafting.png",
+  "targets": {
+    "widget.search": {
+      "type": "region",
+      "x": 128,
+      "y": 13,
+      "width": 89,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.crafting_terminal.target.widget.search",
+      "item": "",
+      "count": 0
+    },
+    "slot.CRAFTING_GRID.0": {
+      "type": "slot",
+      "x": 74,
+      "y": 102,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.crafting_terminal.target.slot.CRAFTING_GRID.0",
+      "item": "",
+      "count": 0
+    },
+    "slot.CRAFTING_RESULT.0": {
+      "type": "slot",
+      "x": 182,
+      "y": 120,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.crafting_terminal.target.slot.CRAFTING_RESULT.0",
+      "item": "",
+      "count": 0
+    },
+    "widget.clearCraftingGrid": {
+      "type": "button",
+      "x": 129,
+      "y": 101,
+      "width": 8,
+      "height": 8,
+      "label": "@ae2s_ponder.gui.crafting_terminal.target.widget.clearCraftingGrid",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.crafting_terminal.target.widget.search",
+      "text": "@ae2s_ponder.gui.crafting_terminal.step.0",
+      "target": "widget.search",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.search",
+          "value": "iron",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.crafting_terminal.target.slot.CRAFTING_GRID.0",
+      "text": "@ae2s_ponder.gui.crafting_terminal.step.1",
+      "target": "slot.CRAFTING_GRID.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.CRAFTING_GRID.0",
+          "item": "minecraft:iron_ingot",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.crafting_terminal.target.slot.CRAFTING_RESULT.0",
+      "text": "@ae2s_ponder.gui.crafting_terminal.step.2",
+      "target": "slot.CRAFTING_RESULT.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.CRAFTING_RESULT.0",
+          "item": "minecraft:iron_block",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.crafting_terminal.target.widget.clearCraftingGrid",
+      "text": "@ae2s_ponder.gui.crafting_terminal.step.3",
+      "target": "widget.clearCraftingGrid",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

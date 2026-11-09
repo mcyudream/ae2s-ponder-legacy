@@ -1,0 +1,95 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:cell_terminal",
+  "title": "@ae2s_ponder.gui.cell_terminal.title",
+  "components": [
+    "ae2:cell_terminal",
+    "ae2:wireless_cell_terminal"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiCellTerminal",
+  "adapter": "ae2s",
+  "width": 235,
+  "height": 252,
+  "texture": "ae2:textures/guis/cell_terminal.png",
+  "targets": {
+    "widget.search": {
+      "type": "region",
+      "x": 118,
+      "y": 27,
+      "width": 90,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.cell_terminal.target.widget.search",
+      "item": "",
+      "count": 0
+    },
+    "view.body": {
+      "type": "region",
+      "x": 31,
+      "y": 51,
+      "width": 178,
+      "height": 105,
+      "label": "@ae2s_ponder.gui.cell_terminal.target.view.body",
+      "item": "",
+      "count": 0
+    },
+    "widget.verticalToolbar": {
+      "type": "region",
+      "x": 6,
+      "y": 24,
+      "width": 20,
+      "height": 112,
+      "label": "@ae2s_ponder.gui.cell_terminal.target.widget.verticalToolbar",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.cell_terminal.target.widget.search",
+      "text": "@ae2s_ponder.gui.cell_terminal.step.0",
+      "target": "widget.search",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.search",
+          "value": "1k",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.cell_terminal.target.view.body",
+      "text": "@ae2s_ponder.gui.cell_terminal.step.1",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.cell_terminal.target.widget.verticalToolbar",
+      "text": "@ae2s_ponder.gui.cell_terminal.step.2",
+      "target": "widget.verticalToolbar",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.cell_terminal.target.view.body",
+      "text": "@ae2s_ponder.gui.cell_terminal.step.3",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

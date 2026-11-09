@@ -1,0 +1,112 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:pattern_access",
+  "title": "@ae2s_ponder.gui.pattern_access.title",
+  "components": [
+    "ae2:pattern_access_terminal",
+    "ae2:wireless_pattern_access_terminal"
+  ],
+  "screen": "ae2.client.gui.me.patternaccess.GuiPatternAccessTerm",
+  "adapter": "ae2s",
+  "width": 240,
+  "height": 209,
+  "texture": "",
+  "targets": {
+    "widget.search": {
+      "type": "region",
+      "x": 39,
+      "y": 21,
+      "width": 65,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.pattern_access.target.widget.search",
+      "item": "",
+      "count": 0
+    },
+    "widget.inputSearch": {
+      "type": "region",
+      "x": 136,
+      "y": 8,
+      "width": 65,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.pattern_access.target.widget.inputSearch",
+      "item": "",
+      "count": 0
+    },
+    "widget.outputSearch": {
+      "type": "region",
+      "x": 136,
+      "y": 21,
+      "width": 65,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.pattern_access.target.widget.outputSearch",
+      "item": "",
+      "count": 0
+    },
+    "view.body": {
+      "type": "region",
+      "x": 31,
+      "y": 32,
+      "width": 183,
+      "height": 81,
+      "label": "@ae2s_ponder.gui.pattern_access.target.view.body",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.pattern_access.target.widget.search",
+      "text": "@ae2s_ponder.gui.pattern_access.step.0",
+      "target": "widget.search",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.search",
+          "value": "smelting",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.pattern_access.target.widget.inputSearch",
+      "text": "@ae2s_ponder.gui.pattern_access.step.1",
+      "target": "widget.inputSearch",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.inputSearch",
+          "value": "iron",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.pattern_access.target.widget.outputSearch",
+      "text": "@ae2s_ponder.gui.pattern_access.step.2",
+      "target": "widget.outputSearch",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.pattern_access.target.view.body",
+      "text": "@ae2s_ponder.gui.pattern_access.step.3",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

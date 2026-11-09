@@ -1,0 +1,74 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:mod_storage_bus",
+  "title": "@ae2s_ponder.gui.mod_storage_bus.title",
+  "components": [
+    "ae2:mod_storage_bus"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiModStorageBus",
+  "adapter": "ae2s",
+  "width": 235,
+  "height": 157,
+  "texture": "ae2:textures/guis/mod_storage_bus.png",
+  "targets": {
+    "widget.modExpression": {
+      "type": "region",
+      "x": 31,
+      "y": 36,
+      "width": 120,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.mod_storage_bus.target.widget.modExpression",
+      "item": "",
+      "count": 0
+    },
+    "widget.verticalToolbar": {
+      "type": "region",
+      "x": 6,
+      "y": 10,
+      "width": 20,
+      "height": 90,
+      "label": "@ae2s_ponder.gui.mod_storage_bus.target.widget.verticalToolbar",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.mod_storage_bus.target.widget.modExpression",
+      "text": "@ae2s_ponder.gui.mod_storage_bus.step.0",
+      "target": "widget.modExpression",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.modExpression",
+          "value": "minecraft",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.mod_storage_bus.target.widget.modExpression",
+      "text": "@ae2s_ponder.gui.mod_storage_bus.step.1",
+      "target": "widget.modExpression",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.mod_storage_bus.target.widget.verticalToolbar",
+      "text": "@ae2s_ponder.gui.mod_storage_bus.step.2",
+      "target": "widget.verticalToolbar",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

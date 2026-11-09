@@ -1,0 +1,85 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:formation_plane",
+  "title": "@ae2s_ponder.gui.formation_plane.title",
+  "components": [
+    "ae2:formation_plane"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiFormationPlane",
+  "adapter": "ae2s",
+  "width": 235,
+  "height": 266,
+  "texture": "ae2:textures/guis/storagebus.png",
+  "targets": {
+    "slot.CONFIG.0": {
+      "type": "slot",
+      "x": 31,
+      "y": 38,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.formation_plane.target.slot.CONFIG.0",
+      "item": "",
+      "count": 0
+    },
+    "widget.verticalToolbar": {
+      "type": "region",
+      "x": 6,
+      "y": 10,
+      "width": 20,
+      "height": 90,
+      "label": "@ae2s_ponder.gui.formation_plane.target.widget.verticalToolbar",
+      "item": "",
+      "count": 0
+    },
+    "widget.upgrades": {
+      "type": "region",
+      "x": 200,
+      "y": 9,
+      "width": 29,
+      "height": 102,
+      "label": "@ae2s_ponder.gui.formation_plane.target.widget.upgrades",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.formation_plane.target.slot.CONFIG.0",
+      "text": "@ae2s_ponder.gui.formation_plane.step.0",
+      "target": "slot.CONFIG.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.CONFIG.0",
+          "item": "minecraft:cobblestone",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.formation_plane.target.widget.verticalToolbar",
+      "text": "@ae2s_ponder.gui.formation_plane.step.1",
+      "target": "widget.verticalToolbar",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.formation_plane.target.widget.upgrades",
+      "text": "@ae2s_ponder.gui.formation_plane.step.2",
+      "target": "widget.upgrades",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

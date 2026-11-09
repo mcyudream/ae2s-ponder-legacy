@@ -1,0 +1,25 @@
+{
+  "screen": "ae2.client.gui.implementations.GuiInterface",
+  "width": 176,
+  "height": 253,
+  "widgets": {
+    "upgrades": {
+      "kind": "UpgradesPanel",
+      "bounds": [
+        177,
+        0,
+        29,
+        30
+      ]
+    },
+    "openPriority": {
+      "kind": "TabButton",
+      "bounds": [
+        152,
+        -5,
+        20,
+        20
+      ]
+    }
+  }
+}

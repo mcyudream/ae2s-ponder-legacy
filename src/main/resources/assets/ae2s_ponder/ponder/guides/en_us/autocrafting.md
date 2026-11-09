@@ -32,23 +32,29 @@ Build a solid cuboid Crafting CPU containing Crafting Storage. A Co-Processing U
 
 <GameScene scene="ae2s_ponder:autocrafting" tick={1187} />
 
+<GuiTutorial id="ae2s_ponder:crafting_cpu" />
+
 ## 4
 
 Store enough ingredients on the network. Open a Crafting Terminal, select the craftable result, choose an amount and confirm the crafting plan.
 
-<GameScene scene="ae2s_ponder:autocrafting" tick={1357} />
+<GameScene scene="ae2s_ponder:autocrafting" tick={1758} />
+
+<GuiTutorial id="ae2s_ponder:craft_amount" />
+
+<GuiTutorial id="ae2s_ponder:craft_confirm" />
 
 ## 5
 
 The provider supplies the assembler. The assembler crafts the encoded recipe and returns its result through the provider to the network.
 
-<GameScene scene="ae2s_ponder:autocrafting" tick={1591} />
+<GameScene scene="ae2s_ponder:autocrafting" tick={2794} />
 
 ## 6
 
 AE2S has a dedicated Pattern Provider. An ME Interface is not a substitute for the provider used in this layout. These arrows illustrate the item path.
 
-<GameScene scene="ae2s_ponder:autocrafting" tick={1761} />
+<GameScene scene="ae2s_ponder:autocrafting" tick={2964} />
 
 <GuideOnly>
 

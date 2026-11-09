@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:key_types",
+  "title": "@ae2s_ponder.gui.key_types.title",
+  "components": [
+    "ae2:terminal",
+    "ae2:storage_bus"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiKeyTypeSelection",
+  "adapter": "ae2s",
+  "width": 208,
+  "height": 173,
+  "texture": "",
+  "targets": {
+    "widget.keytypes": {
+      "type": "region",
+      "x": 14,
+      "y": 29,
+      "width": 150,
+      "height": 64,
+      "label": "@ae2s_ponder.gui.key_types.target.widget.keytypes",
+      "item": "",
+      "count": 0
+    },
+    "widget.back": {
+      "type": "button",
+      "x": 180,
+      "y": 4,
+      "width": 20,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.key_types.target.widget.back",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.key_types.target.widget.keytypes",
+      "text": "@ae2s_ponder.gui.key_types.step.0",
+      "target": "widget.keytypes",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.key_types.target.widget.back",
+      "text": "@ae2s_ponder.gui.key_types.step.1",
+      "target": "widget.back",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:tick_analyser",
+  "title": "@ae2s_ponder.gui.tick_analyser.title",
+  "components": [
+    "ae2:tick_analyser"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiTickAnalyser",
+  "adapter": "ae2s",
+  "width": 215,
+  "height": 139,
+  "texture": "ae2:textures/guis/tick_analyser.png",
+  "targets": {
+    "widget.duration_input": {
+      "type": "region",
+      "x": 91,
+      "y": 25,
+      "width": 36,
+      "height": 13,
+      "label": "@ae2s_ponder.gui.tick_analyser.target.widget.duration_input",
+      "item": "",
+      "count": 0
+    },
+    "view.body": {
+      "type": "region",
+      "x": 12,
+      "y": 32,
+      "width": 177,
+      "height": 77,
+      "label": "@ae2s_ponder.gui.tick_analyser.target.view.body",
+      "item": "",
+      "count": 0
+    },
+    "text.range_1": {
+      "type": "region",
+      "x": 84,
+      "y": 49,
+      "width": 119,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.tick_analyser.target.text.range_1",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.tick_analyser.target.widget.duration_input",
+      "text": "@ae2s_ponder.gui.tick_analyser.step.0",
+      "target": "widget.duration_input",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.duration_input",
+          "value": "100",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.tick_analyser.target.view.body",
+      "text": "@ae2s_ponder.gui.tick_analyser.step.1",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.tick_analyser.target.text.range_1",
+      "text": "@ae2s_ponder.gui.tick_analyser.step.2",
+      "target": "text.range_1",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:cell_restriction",
+  "title": "@ae2s_ponder.gui.cell_restriction.title",
+  "components": [
+    "ae2:cell_workbench"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiCellRestriction",
+  "adapter": "ae2s",
+  "width": 184,
+  "height": 173,
+  "texture": "ae2:textures/guis/cell_restriction.png",
+  "targets": {
+    "widget.amountInput": {
+      "type": "region",
+      "x": 16,
+      "y": 52,
+      "width": 108,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.cell_restriction.target.widget.amountInput",
+      "item": "",
+      "count": 0
+    },
+    "widget.typesInput": {
+      "type": "region",
+      "x": 130,
+      "y": 52,
+      "width": 38,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.cell_restriction.target.widget.typesInput",
+      "item": "",
+      "count": 0
+    },
+    "widget.set": {
+      "type": "button",
+      "x": 16,
+      "y": 141,
+      "width": 48,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.cell_restriction.target.widget.set",
+      "item": "",
+      "count": 0
+    },
+    "widget.release": {
+      "type": "button",
+      "x": 70,
+      "y": 141,
+      "width": 98,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.cell_restriction.target.widget.release",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.cell_restriction.target.widget.amountInput",
+      "text": "@ae2s_ponder.gui.cell_restriction.step.0",
+      "target": "widget.amountInput",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.amountInput",
+          "value": "1024",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.cell_restriction.target.widget.typesInput",
+      "text": "@ae2s_ponder.gui.cell_restriction.step.1",
+      "target": "widget.typesInput",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.typesInput",
+          "value": "8",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.cell_restriction.target.widget.set",
+      "text": "@ae2s_ponder.gui.cell_restriction.step.2",
+      "target": "widget.set",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.cell_restriction.target.widget.release",
+      "text": "@ae2s_ponder.gui.cell_restriction.step.3",
+      "target": "widget.release",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

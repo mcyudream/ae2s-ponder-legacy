@@ -1,0 +1,87 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:priority",
+  "title": "@ae2s_ponder.gui.priority.title",
+  "components": [
+    "ae2:storage_bus",
+    "ae2:drive",
+    "ae2:interface",
+    "ae2:pattern_provider"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiPriority",
+  "adapter": "ae2s",
+  "width": 184,
+  "height": 138,
+  "texture": "ae2:textures/guis/priority.png",
+  "targets": {
+    "widget.priority": {
+      "type": "region",
+      "x": 24,
+      "y": 39,
+      "width": 138,
+      "height": 62,
+      "label": "@ae2s_ponder.gui.priority.target.widget.priority",
+      "item": "",
+      "count": 0
+    },
+    "text.priority_insertion_hint": {
+      "type": "region",
+      "x": 12,
+      "y": 107,
+      "width": 160,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.priority.target.text.priority_insertion_hint",
+      "item": "",
+      "count": 0
+    },
+    "text.priority_extraction_hint": {
+      "type": "region",
+      "x": 12,
+      "y": 119,
+      "width": 160,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.priority.target.text.priority_extraction_hint",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.priority.target.widget.priority",
+      "text": "@ae2s_ponder.gui.priority.step.0",
+      "target": "widget.priority",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.priority",
+          "value": "10",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.priority.target.text.priority_insertion_hint",
+      "text": "@ae2s_ponder.gui.priority.step.1",
+      "target": "text.priority_insertion_hint",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.priority.target.text.priority_extraction_hint",
+      "text": "@ae2s_ponder.gui.priority.step.2",
+      "target": "text.priority_extraction_hint",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

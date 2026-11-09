@@ -1,0 +1,115 @@
+{
+  "screen": "ae2.client.gui.me.patternencode.GuiPEATerm",
+  "width": 213,
+  "height": 244,
+  "widgets": {
+    "verticalToolbar": {
+      "kind": "VerticalButtonBar",
+      "bounds": [
+        -17,
+        1,
+        20,
+        68
+      ]
+    },
+    "craftingSubstitutions": {
+      "kind": "ToggleButton",
+      "bounds": [
+        89,
+        85,
+        8,
+        8
+      ]
+    },
+    "craftingFluidSubstitutions": {
+      "kind": "ToggleButton",
+      "bounds": [
+        99,
+        85,
+        8,
+        8
+      ]
+    },
+    "craftingClearPattern": {
+      "kind": "ActionButton",
+      "bounds": [
+        79,
+        85,
+        8,
+        8
+      ]
+    },
+    "scrollbar": {
+      "kind": "Scrollbar",
+      "bounds": [
+        193,
+        31,
+        12,
+        34
+      ]
+    },
+    "search": {
+      "kind": "field",
+      "bounds": [
+        16,
+        17,
+        65,
+        10
+      ]
+    },
+    "inputSearch": {
+      "kind": "field",
+      "bounds": [
+        113,
+        4,
+        65,
+        10
+      ]
+    },
+    "outputSearch": {
+      "kind": "field",
+      "bounds": [
+        113,
+        17,
+        65,
+        10
+      ]
+    },
+    "modeTabButton0": {
+      "kind": "TabButton",
+      "bounds": [
+        191,
+        70,
+        22,
+        22
+      ]
+    },
+    "modeTabButton1": {
+      "kind": "TabButton",
+      "bounds": [
+        191,
+        91,
+        22,
+        22
+      ]
+    },
+    "encodePattern": {
+      "kind": "ActionButton",
+      "bounds": [
+        156,
+        99,
+        16,
+        16
+      ]
+    },
+    "uploadPattern": {
+      "kind": "DynamicIconButton",
+      "bounds": [
+        174,
+        104,
+        8,
+        8
+      ]
+    }
+  }
+}

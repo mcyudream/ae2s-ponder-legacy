@@ -1,0 +1,113 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:crystal_assembler",
+  "title": "@ae2s_ponder.gui.crystal_assembler.title",
+  "components": [
+    "ae2:crystal_assembler"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiCrystalAssembler",
+  "adapter": "ae2s",
+  "width": 235,
+  "height": 191,
+  "texture": "ae2:textures/guis/crystal_assembler.png",
+  "targets": {
+    "slot.MACHINE_INPUT.0": {
+      "type": "slot",
+      "x": 49,
+      "y": 26,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.crystal_assembler.target.slot.MACHINE_INPUT.0",
+      "item": "",
+      "count": 0
+    },
+    "slot.STORAGE.0": {
+      "type": "slot",
+      "x": 104,
+      "y": 62,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.crystal_assembler.target.slot.STORAGE.0",
+      "item": "",
+      "count": 0
+    },
+    "widget.progressBar": {
+      "type": "region",
+      "x": 175,
+      "y": 43,
+      "width": 6,
+      "height": 18,
+      "label": "@ae2s_ponder.gui.crystal_assembler.target.widget.progressBar",
+      "item": "",
+      "count": 0
+    },
+    "slot.MACHINE_OUTPUT.0": {
+      "type": "slot",
+      "x": 153,
+      "y": 44,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.crystal_assembler.target.slot.MACHINE_OUTPUT.0",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.crystal_assembler.target.slot.MACHINE_INPUT.0",
+      "text": "@ae2s_ponder.gui.crystal_assembler.step.0",
+      "target": "slot.MACHINE_INPUT.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.MACHINE_INPUT.0",
+          "item": "ae2:certus_quartz_crystal",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.crystal_assembler.target.slot.STORAGE.0",
+      "text": "@ae2s_ponder.gui.crystal_assembler.step.1",
+      "target": "slot.STORAGE.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.crystal_assembler.target.widget.progressBar",
+      "text": "@ae2s_ponder.gui.crystal_assembler.step.2",
+      "target": "widget.progressBar",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.crystal_assembler.target.slot.MACHINE_OUTPUT.0",
+      "text": "@ae2s_ponder.gui.crystal_assembler.step.3",
+      "target": "slot.MACHINE_OUTPUT.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.MACHINE_OUTPUT.0",
+          "item": "ae2:charged_certus_quartz_crystal",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    }
+  ]
+}

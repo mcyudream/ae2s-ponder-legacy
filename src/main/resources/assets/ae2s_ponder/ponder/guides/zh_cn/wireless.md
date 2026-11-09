@@ -56,6 +56,8 @@ step_ticks: 180
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:wireless_access_point" duration={400} side="right" />
+
 ## 充电并保持在覆盖范围内
 
 用充能器或其他支持的方式给终端充电，并在访问点覆盖范围内打开。无线增程器会同时提高覆盖与耗电，不代表无限距离。
@@ -78,6 +80,8 @@ step_ticks: 180
   }
 ]
 ```
+
+<GuiTutorial id="ae2s_ponder:wireless_terminal" duration={400} side="right" />
 
 ## 排查无法连接
 

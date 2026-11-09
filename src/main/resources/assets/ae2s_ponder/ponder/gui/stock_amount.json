@@ -1,0 +1,85 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:stock_amount",
+  "title": "@ae2s_ponder.gui.stock_amount.title",
+  "components": [
+    "ae2:interface",
+    "ae2:stock_export_bus"
+  ],
+  "screen": "ae2.client.gui.me.crafting.GuiSetStockAmount",
+  "adapter": "ae2s",
+  "width": 184,
+  "height": 120,
+  "texture": "ae2:textures/guis/craft_amt.png",
+  "targets": {
+    "widget.amountToStock": {
+      "type": "region",
+      "x": 24,
+      "y": 39,
+      "width": 138,
+      "height": 62,
+      "label": "@ae2s_ponder.gui.stock_amount.target.widget.amountToStock",
+      "item": "",
+      "count": 0
+    },
+    "widget.save": {
+      "type": "button",
+      "x": 124,
+      "y": 60,
+      "width": 38,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.stock_amount.target.widget.save",
+      "item": "",
+      "count": 0
+    },
+    "widget.back": {
+      "type": "button",
+      "x": 156,
+      "y": 4,
+      "width": 20,
+      "height": 20,
+      "label": "@ae2s_ponder.gui.stock_amount.target.widget.back",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.stock_amount.target.widget.amountToStock",
+      "text": "@ae2s_ponder.gui.stock_amount.step.0",
+      "target": "widget.amountToStock",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.amountToStock",
+          "value": "16",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.stock_amount.target.widget.save",
+      "text": "@ae2s_ponder.gui.stock_amount.step.1",
+      "target": "widget.save",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.stock_amount.target.widget.back",
+      "text": "@ae2s_ponder.gui.stock_amount.step.2",
+      "target": "widget.back",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

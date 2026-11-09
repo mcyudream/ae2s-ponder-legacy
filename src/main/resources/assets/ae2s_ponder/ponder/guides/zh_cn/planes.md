@@ -79,6 +79,8 @@ step_ticks: 180
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:formation_plane" duration={400} side="right" />
+
 ## 核对实际掉落
 
 按目标方块、收集模式和已装升级检查湮灭面板行为，并测试掉落流向以及目标存储装满时的结果。
@@ -101,6 +103,8 @@ step_ticks: 180
   }
 ]
 ```
+
+<GuiTutorial id="ae2s_ponder:annihilation_plane" duration={400} side="right" />
 
 <GuideOnly>
 

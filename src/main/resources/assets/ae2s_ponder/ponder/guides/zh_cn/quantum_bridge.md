@@ -79,6 +79,8 @@ step_ticks: 180
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:quantum_bridge" duration={400} side="right" />
+
 ## 保留频道容量
 
 量子桥负责传输网络连接，不会生成额外频道。检查频道设置、线缆瓶颈和控制器拓扑，先在远端测试一个终端，再连接整座基地。

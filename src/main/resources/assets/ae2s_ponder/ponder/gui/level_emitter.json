@@ -1,0 +1,92 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:level_emitter",
+  "title": "@ae2s_ponder.gui.level_emitter.title",
+  "components": [
+    "ae2:level_emitter"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiStorageLevelEmitter",
+  "adapter": "ae2s",
+  "width": 203,
+  "height": 194,
+  "texture": "ae2:textures/guis/level_emitter.png",
+  "targets": {
+    "slot.CONFIG.0": {
+      "type": "slot",
+      "x": 160,
+      "y": 44,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.level_emitter.target.slot.CONFIG.0",
+      "item": "",
+      "count": 0
+    },
+    "widget.level": {
+      "type": "region",
+      "x": 43,
+      "y": 21,
+      "width": 138,
+      "height": 62,
+      "label": "@ae2s_ponder.gui.level_emitter.target.widget.level",
+      "item": "",
+      "count": 0
+    },
+    "widget.verticalToolbar": {
+      "type": "region",
+      "x": 6,
+      "y": 5,
+      "width": 20,
+      "height": 68,
+      "label": "@ae2s_ponder.gui.level_emitter.target.widget.verticalToolbar",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.level_emitter.target.slot.CONFIG.0",
+      "text": "@ae2s_ponder.gui.level_emitter.step.0",
+      "target": "slot.CONFIG.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.CONFIG.0",
+          "item": "minecraft:iron_ingot",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.level_emitter.target.widget.level",
+      "text": "@ae2s_ponder.gui.level_emitter.step.1",
+      "target": "widget.level",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_value",
+          "field": "widget.level",
+          "value": "64",
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.level_emitter.target.widget.verticalToolbar",
+      "text": "@ae2s_ponder.gui.level_emitter.step.2",
+      "target": "widget.verticalToolbar",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

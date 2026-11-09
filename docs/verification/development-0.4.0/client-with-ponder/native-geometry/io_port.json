@@ -1,0 +1,34 @@
+{
+  "screen": "ae2.client.gui.implementations.GuiIOPort",
+  "width": 176,
+  "height": 168,
+  "widgets": {
+    "verticalToolbar": {
+      "kind": "VerticalButtonBar",
+      "bounds": [
+        -17,
+        1,
+        20,
+        24
+      ]
+    },
+    "upgrades": {
+      "kind": "UpgradesPanel",
+      "bounds": [
+        177,
+        0,
+        29,
+        66
+      ]
+    },
+    "operationMode": {
+      "kind": "ServerSettingToggleButton",
+      "bounds": [
+        80,
+        17,
+        16,
+        16
+      ]
+    }
+  }
+}

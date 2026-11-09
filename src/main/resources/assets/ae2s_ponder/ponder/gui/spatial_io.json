@@ -1,0 +1,116 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:spatial_io",
+  "title": "@ae2s_ponder.gui.spatial_io.title",
+  "components": [
+    "ae2:spatial_io_port",
+    "ae2:spatial_storage_cell_2",
+    "ae2:spatial_storage_cell_16",
+    "ae2:spatial_storage_cell_128"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiSpatialIOPort",
+  "adapter": "ae2s",
+  "width": 203,
+  "height": 207,
+  "texture": "ae2:textures/guis/spatialio.png",
+  "targets": {
+    "slot.MACHINE_INPUT.0": {
+      "type": "slot",
+      "x": 75,
+      "y": 52,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.spatial_io.target.slot.MACHINE_INPUT.0",
+      "item": "",
+      "count": 0
+    },
+    "text.scs_size": {
+      "type": "region",
+      "x": 36,
+      "y": 97,
+      "width": 155,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.spatial_io.target.text.scs_size",
+      "item": "",
+      "count": 0
+    },
+    "text.required_power": {
+      "type": "region",
+      "x": 36,
+      "y": 77,
+      "width": 155,
+      "height": 12,
+      "label": "@ae2s_ponder.gui.spatial_io.target.text.required_power",
+      "item": "",
+      "count": 0
+    },
+    "slot.MACHINE_OUTPUT.0": {
+      "type": "slot",
+      "x": 136,
+      "y": 52,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.spatial_io.target.slot.MACHINE_OUTPUT.0",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.spatial_io.target.slot.MACHINE_INPUT.0",
+      "text": "@ae2s_ponder.gui.spatial_io.step.0",
+      "target": "slot.MACHINE_INPUT.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.MACHINE_INPUT.0",
+          "item": "ae2:spatial_storage_cell_2",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.spatial_io.target.text.scs_size",
+      "text": "@ae2s_ponder.gui.spatial_io.step.1",
+      "target": "text.scs_size",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.spatial_io.target.text.required_power",
+      "text": "@ae2s_ponder.gui.spatial_io.step.2",
+      "target": "text.required_power",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.spatial_io.target.slot.MACHINE_OUTPUT.0",
+      "text": "@ae2s_ponder.gui.spatial_io.step.3",
+      "target": "slot.MACHINE_OUTPUT.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.MACHINE_OUTPUT.0",
+          "item": "ae2:spatial_storage_cell_2",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    }
+  ]
+}

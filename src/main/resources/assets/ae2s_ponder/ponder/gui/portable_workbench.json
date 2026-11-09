@@ -1,0 +1,83 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:portable_workbench",
+  "title": "@ae2s_ponder.gui.portable_workbench.title",
+  "components": [
+    "ae2:portable_cell_workbench"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiCellWorkbench",
+  "adapter": "ae2s",
+  "width": 235,
+  "height": 266,
+  "texture": "ae2:textures/guis/cellworkbench.png",
+  "targets": {
+    "slot.STORAGE_CELL.0": {
+      "type": "slot",
+      "x": 175,
+      "y": 17,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.portable_workbench.target.slot.STORAGE_CELL.0",
+      "item": "",
+      "count": 0
+    },
+    "slot.CONFIG.0": {
+      "type": "slot",
+      "x": 31,
+      "y": 38,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.portable_workbench.target.slot.CONFIG.0",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.portable_workbench.target.slot.STORAGE_CELL.0",
+      "text": "@ae2s_ponder.gui.portable_workbench.step.0",
+      "target": "slot.STORAGE_CELL.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.STORAGE_CELL.0",
+          "item": "ae2:item_storage_cell_1k",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.portable_workbench.target.slot.CONFIG.0",
+      "text": "@ae2s_ponder.gui.portable_workbench.step.1",
+      "target": "slot.CONFIG.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.CONFIG.0",
+          "item": "minecraft:iron_ingot",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.portable_workbench.target.slot.STORAGE_CELL.0",
+      "text": "@ae2s_ponder.gui.portable_workbench.step.2",
+      "target": "slot.STORAGE_CELL.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

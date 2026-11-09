@@ -56,6 +56,8 @@ Choose the required output mode in the GUI. Matter Balls and Singularities have 
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:condenser" duration={400} side="right" />
+
 ## Install supported storage
 
 Insert a supported storage component when the selected output needs accumulated matter power. A normal filled storage cell is not a safe substitute for checking the accepted component slot.

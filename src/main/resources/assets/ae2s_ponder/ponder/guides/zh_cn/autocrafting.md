@@ -32,23 +32,29 @@ step_ticks: 180
 
 <GameScene scene="ae2s_ponder:autocrafting" tick={1187} />
 
+<GuiTutorial id="ae2s_ponder:crafting_cpu" />
+
 ## 4
 
 确保网络中有足够原料。打开合成终端，选中可合成的产物，填写数量并确认合成计划。
 
-<GameScene scene="ae2s_ponder:autocrafting" tick={1357} />
+<GameScene scene="ae2s_ponder:autocrafting" tick={1758} />
+
+<GuiTutorial id="ae2s_ponder:craft_amount" />
+
+<GuiTutorial id="ae2s_ponder:craft_confirm" />
 
 ## 5
 
 样板供应器向装配室提供原料。装配室按样板合成，再通过供应器把成品送回网络。
 
-<GameScene scene="ae2s_ponder:autocrafting" tick={1591} />
+<GameScene scene="ae2s_ponder:autocrafting" tick={2794} />
 
 ## 6
 
 AE2S 使用独立的样板供应器。此结构中的供应器不能直接用 ME 接口代替。箭头用于说明物品流向。
 
-<GameScene scene="ae2s_ponder:autocrafting" tick={1761} />
+<GameScene scene="ae2s_ponder:autocrafting" tick={2964} />
 
 <GuideOnly>
 

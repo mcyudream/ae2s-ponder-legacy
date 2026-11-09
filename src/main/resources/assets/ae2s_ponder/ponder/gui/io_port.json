@@ -1,0 +1,113 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:io_port",
+  "title": "@ae2s_ponder.gui.io_port.title",
+  "components": [
+    "ae2:io_port"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiIOPort",
+  "adapter": "ae2s",
+  "width": 235,
+  "height": 176,
+  "texture": "ae2:textures/guis/io_port.png",
+  "targets": {
+    "slot.MACHINE_INPUT.0": {
+      "type": "slot",
+      "x": 42,
+      "y": 21,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.io_port.target.slot.MACHINE_INPUT.0",
+      "item": "",
+      "count": 0
+    },
+    "widget.operationMode": {
+      "type": "button",
+      "x": 103,
+      "y": 21,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.io_port.target.widget.operationMode",
+      "item": "",
+      "count": 0
+    },
+    "slot.MACHINE_OUTPUT.0": {
+      "type": "slot",
+      "x": 145,
+      "y": 21,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.io_port.target.slot.MACHINE_OUTPUT.0",
+      "item": "",
+      "count": 0
+    },
+    "widget.upgrades": {
+      "type": "region",
+      "x": 200,
+      "y": 4,
+      "width": 29,
+      "height": 66,
+      "label": "@ae2s_ponder.gui.io_port.target.widget.upgrades",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.io_port.target.slot.MACHINE_INPUT.0",
+      "text": "@ae2s_ponder.gui.io_port.step.0",
+      "target": "slot.MACHINE_INPUT.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.MACHINE_INPUT.0",
+          "item": "ae2:item_storage_cell_1k",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.io_port.target.widget.operationMode",
+      "text": "@ae2s_ponder.gui.io_port.step.1",
+      "target": "widget.operationMode",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.io_port.target.slot.MACHINE_OUTPUT.0",
+      "text": "@ae2s_ponder.gui.io_port.step.2",
+      "target": "slot.MACHINE_OUTPUT.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": [
+        {
+          "op": "set_slot",
+          "target": "slot.MACHINE_OUTPUT.0",
+          "item": "ae2:item_storage_cell_1k",
+          "count": 1,
+          "at": 20
+        }
+      ]
+    },
+    {
+      "title": "@ae2s_ponder.gui.io_port.target.widget.upgrades",
+      "text": "@ae2s_ponder.gui.io_port.step.3",
+      "target": "widget.upgrades",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}

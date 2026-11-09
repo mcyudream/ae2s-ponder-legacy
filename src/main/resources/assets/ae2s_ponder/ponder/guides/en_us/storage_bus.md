@@ -22,23 +22,25 @@ The terminal can access the chest's contents through the bus. Items stay in the 
 
 <GameScene scene="ae2s_ponder:storage_bus" tick={215} />
 
+<GuiTutorial id="ae2s_ponder:storage_bus" />
+
 ## 3
 
 Set a higher storage priority if new matching items should go into this inventory before lower-priority storage.
 
-<GameScene scene="ae2s_ponder:storage_bus" tick={417} />
+<GameScene scene="ae2s_ponder:storage_bus" tick={818} />
 
 ## 4
 
 Configure the bus filter and access mode. Check the chest has room and the selected mode allows the operation you want.
 
-<GameScene scene="ae2s_ponder:storage_bus" tick={587} />
+<GameScene scene="ae2s_ponder:storage_bus" tick={988} />
 
 ## 5
 
 Avoid exposing the same inventory back into the same network through multiple storage paths. Interfaces and Storage Buses have different roles.
 
-<GameScene scene="ae2s_ponder:storage_bus" tick={757} />
+<GameScene scene="ae2s_ponder:storage_bus" tick={1158} />
 
 <GuideOnly>
 

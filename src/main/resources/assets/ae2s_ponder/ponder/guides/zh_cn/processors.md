@@ -81,6 +81,8 @@ step_ticks: 180
 ]
 ```
 
+<GuiTutorial id="ae2s_ponder:output_sides" duration={400} side="right" />
+
 ## 分阶段编码样板
 
 将压印和最终组装分别编码为处理样板，填写消耗的原料和准确产物，不把留在机器里的模板写成每次消耗的材料。中间产物与最终成品都要回网。

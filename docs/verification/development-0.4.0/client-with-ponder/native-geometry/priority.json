@@ -1,0 +1,25 @@
+{
+  "screen": "ae2.client.gui.implementations.GuiPriority",
+  "width": 176,
+  "height": 125,
+  "widgets": {
+    "back": {
+      "kind": "TabButton",
+      "bounds": [
+        152,
+        -5,
+        20,
+        20
+      ]
+    },
+    "priority": {
+      "kind": "NumberEntryWidget",
+      "bounds": [
+        20,
+        30,
+        138,
+        62
+      ]
+    }
+  }
+}

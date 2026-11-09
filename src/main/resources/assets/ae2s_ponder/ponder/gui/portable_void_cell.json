@@ -1,0 +1,77 @@
+{
+  "format": 1,
+  "id": "ae2s_ponder:portable_void_cell",
+  "title": "@ae2s_ponder.gui.portable_void_cell.title",
+  "components": [
+    "ae2:portable_void_cell"
+  ],
+  "screen": "ae2.client.gui.implementations.GuiPortableVoidCell",
+  "adapter": "ae2s",
+  "width": 184,
+  "height": 207,
+  "texture": "ae2:textures/guis/portable_void_cell_condenser.png",
+  "targets": {
+    "widget.mode": {
+      "type": "button",
+      "x": 133,
+      "y": 57,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.portable_void_cell.target.widget.mode",
+      "item": "",
+      "count": 0
+    },
+    "view.body": {
+      "type": "region",
+      "x": 12,
+      "y": 32,
+      "width": 146,
+      "height": 79,
+      "label": "@ae2s_ponder.gui.portable_void_cell.target.view.body",
+      "item": "",
+      "count": 0
+    },
+    "slot.MACHINE_OUTPUT.0": {
+      "type": "slot",
+      "x": 109,
+      "y": 56,
+      "width": 16,
+      "height": 16,
+      "label": "@ae2s_ponder.gui.portable_void_cell.target.slot.MACHINE_OUTPUT.0",
+      "item": "",
+      "count": 0
+    }
+  },
+  "steps": [
+    {
+      "title": "@ae2s_ponder.gui.portable_void_cell.target.widget.mode",
+      "text": "@ae2s_ponder.gui.portable_void_cell.step.0",
+      "target": "widget.mode",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.portable_void_cell.target.view.body",
+      "text": "@ae2s_ponder.gui.portable_void_cell.step.1",
+      "target": "view.body",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    },
+    {
+      "title": "@ae2s_ponder.gui.portable_void_cell.target.slot.MACHINE_OUTPUT.0",
+      "text": "@ae2s_ponder.gui.portable_void_cell.step.2",
+      "target": "slot.MACHINE_OUTPUT.0",
+      "duration": 75,
+      "wait": {
+        "type": "next"
+      },
+      "demo": []
+    }
+  ]
+}
