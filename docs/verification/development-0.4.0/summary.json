@@ -66,5 +66,6 @@
     "AE2S 1.1.0 logs a malformed TickConfigSavePacket trailing payload warning during its native tick-analyser fixture. It remains an upstream limitation.",
     "The explicit disconnect fixture may log stale vanilla entity/sound packets after the world is unloaded; Ponder addon reload and scene preservation checks pass.",
     "CraftTweaker, HEI, GuideME, Mouse Tweaks, FTB Quests, Media API and Revo UI are absent. See the matching release tag for published assets."
-  ]
+  ],
+  "visual_audit": "visual-audit.json"
 }
