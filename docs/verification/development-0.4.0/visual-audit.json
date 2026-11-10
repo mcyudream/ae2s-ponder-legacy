@@ -17,5 +17,22 @@
     "Search settings visibility and radio state",
     "Cell terminal top tabs, CPU search/list separation, requester 19-pixel rows",
     "Read-only recipe examples, color modal layering, threshold fields and footer separation"
-  ]
+  ],
+  "date": "2026-11-10",
+  "production_sha256": "b84391e619975b69c429bfa2712e33b106a1ce2b1b98d39ebc81c88e1970f88b",
+  "ponder_sha256": "923cb6653eee53c96e4fbd9ac871c897cb151b91b3e0759c40ed4687611c6dd4",
+  "reviewed_sheet_sha256": {
+    "additional-pages.png": "78364168f1d4b241b22cf78229cf456162fdc30eb984eb3b99d3f9145680142b",
+    "catalog-1.png": "e994de9d1197b80adc1398d7a0f6e9c83677570975fce13211e13814b92135f6",
+    "catalog-2.png": "0b66451fa3b22f77391336012537f45112e05ffe1aa69c8b4eefcfe673c71336",
+    "catalog-3.png": "cd6935bc7559df50ae3c57c4507f4c6441f882c00f8a864d93d2c5689b936c4c",
+    "catalog-4.png": "43d83569ef474bb3dbd9f68f907a978abd6a1850f4beb960ce18546b85be3106",
+    "catalog-5.png": "d12939183479b89bb14abc83a6fc0fe3826d0aa9d6731e24e4942ba3224c0130",
+    "catalog-6.png": "3fd92fee130242a51826b9d56f3c60e110bb4fc36b8d7d66ef11b01f2605956b",
+    "catalog-7.png": "5e008bcb6bf5e11ed2466de119d259afe5999de4d1f53b15ab0c9956b4cd9030",
+    "reported-pages.png": "8046b21ea505dc6dfe5944a814c0d4b351d9fed4ce6b6e877fc6296c7eb8063c"
+  },
+  "local_screenshot_count": 1122,
+  "local_screenshot_manifest_sha256": "a8eeb9ae2c191992536f74686208544f58b292da2affdbe21c772cbfa8f3de4f",
+  "manifest_format": "Sorted PNG filename UTF-8 + NUL + raw SHA-256 digest bytes."
 }
