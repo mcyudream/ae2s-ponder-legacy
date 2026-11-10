@@ -1,11 +1,10 @@
 # AE2S Ponder Legacy 安装包验收
 
-## 当前开发构建：0.4.0（完整 GUI 覆盖与布局适配）
+## 0.4.0 发行验收（完整 GUI 覆盖与布局适配）
 
-- 日期：2026-11-08。Minecraft 1.12.2 / **Cleanroom 0.4.0 正式版（无 -alpha）** / Java 25.0.5。
-- 生产包：`ae2s-ponder-legacy-0.4.0.jar`；SHA-256：`640e02545d29747567cc92db697bebc91f432260a9a385f9b115f45f268b8b81`。
-- AE2S / Supergiant **1.1.0**；Ponder Legacy **1.7.1** 独立安装，SHA-256：`0b4039c5e8cf01e740612136ac188cc41406431d0553f462109bebaf3b2f0f3e`。
-- 4 项单元测试通过；开发目录与独立发布目录的生产包逐字节一致。Ponder 的 CI 安装包与实测包也逐字节一致。
+日期：2026-11-10。Minecraft 1.12.2 / **Cleanroom 0.4.0 正式版（无 -alpha）** / Java 25.0.5。生产包 `ae2s-ponder-legacy-0.4.0.jar`；SHA-256：`b84391e619975b69c429bfa2712e33b106a1ce2b1b98d39ebc81c88e1970f88b`。
+
+AE2S / Supergiant **1.1.0**；Ponder Legacy **1.7.1** 独立安装，SHA-256：`923cb6653eee53c96e4fbd9ac871c897cb151b91b3e0759c40ed4687611c6dd4`。4 项单元测试通过；开发目录与独立发布目录的生产包逐字节一致。Ponder 的 CI 安装包与实测包逐字节一致。
 
 | 组合 | 结果 | 检查项 |
 | --- | --- | --- |
@@ -23,9 +22,7 @@ Ponder 的 `GuiDemoLayout` 统一负责分组偏移、祖先裁切、绘制层�
 
 验收使用 Linux x64 / llvmpipe，禁用音频输出，未安装 CraftTweaker、HEI、GuideME、Mouse Tweaks、FTB Quests、Media API 或 Revo UI。静态演示的列表是独立示例数据，未据此声明所有生产任务均已逐项完成。原生 tick 分析仪 fixture 仍会记录 AE2S 的尾随 payload 警告；主动断开 fixture 可记录卸载世界后的原版过期实体／声音包。上述日志和检查范围保留于报告，没有将这些上游问题声明为已修复。
 
-[报告与范围](docs/verification/development-0.4.0/summary.json) · [构建一致性](docs/verification/development-0.4.0/reproducibility.json)。本次为 main CI 开发构建，未创建发行标签。
-
----
+[报告与范围](docs/verification/development-0.4.0/summary.json) · [构建一致性](docs/verification/development-0.4.0/reproducibility.json) · [发行入口](https://github.com/mcyudream/ae2s-ponder-legacy/releases/tag/v0.4.0)。
 
 ## 历史开发构建：0.3.0（共享 GUI 教程）
 

@@ -5,10 +5,10 @@
   "scenario": "full",
   "installer_sha256": "882435d851a51e14b802e0a9384e4a05cfbb3890fca435c40c494af75e5a166f",
   "jars": {
-    "ae2s-ponder-legacy-0.4.0.jar": "640e02545d29747567cc92db697bebc91f432260a9a385f9b115f45f268b8b81",
+    "ae2s-ponder-legacy-0.4.0.jar": "b84391e619975b69c429bfa2712e33b106a1ce2b1b98d39ebc81c88e1970f88b",
     "AppliedEnergistics2-Supergiant-1.1.0.jar": "1f15fcda479f6b6a15e0640e0bf0f8a86e88c08c2bbd20e63b4145ea7e5efe26",
     "ae2s-ponder-verification-srg.jar": "32ea7da35b44745e66490db74c354ec0e9948ba2330b1e26f52c04a5b71b73f8",
-    "ponder-legacy-1.7.1.jar": "0b4039c5e8cf01e740612136ac188cc41406431d0553f462109bebaf3b2f0f3e"
+    "ponder-legacy-1.7.1.jar": "923cb6653eee53c96e4fbd9ac871c897cb151b91b3e0759c40ed4687611c6dd4"
   },
   "libraries": {
     "libraries/com/cleanroommc/cleanroom/0.4.0/cleanroom-0.4.0.jar": "2b697f6538c4d893ddbd876eb02d9ea55743a4f8",

@@ -1,13 +1,14 @@
 # AE2S Ponder Legacy 发布状态
 
-## 当前开发构建：0.4.0
+## 发行版本：0.4.0
 
 - 84 套 GUI 操作教程、78 种原生界面；108 个动画和 109 篇双语页面。
-- 使用 Ponder 的共享布局树处理完整界面、裁切、动态模式、弹窗和指引框；修正网络状态、样板列表、优先级与修改器等特殊页面。
+- 使用 Ponder 共享布局树处理完整界面、裁切、动态模式、弹窗和指引框；修正网络状态、样板列表、优先级与修改器等特殊页面。
 - 支持 AE2S / Supergiant 1.1.0；Minecraft 1.12.2 / Cleanroom 0.4.0 正式版 / Java 25。
 - Ponder 保持可选；安装时最低 1.7.1。不打包前置或开发验证模组。
 - 4 项单元测试、11015 项正式基线运行检查通过；[报告与范围](LEGACY-VERIFICATION.md)。
-- 生产 SHA-256：`640e02545d29747567cc92db697bebc91f432260a9a385f9b115f45f268b8b81`。本次仅推送 main CI，未创建标签或 GitHub Release。
+- 生产 SHA-256：`b84391e619975b69c429bfa2712e33b106a1ce2b1b98d39ebc81c88e1970f88b`。
+- [GitHub Release](https://github.com/mcyudream/ae2s-ponder-legacy/releases/tag/v0.4.0)；标签流水线强制核对已验收产物与四组合报告。
 
 ## 历史开发构建：0.3.0
 
